@@ -1,0 +1,635 @@
+{
+  "id": "boeing-777-200lr",
+  "name": "Boeing 777-200LR Worldliner",
+  "manufacturer": "Boeing",
+  "variant": "777-200LR",
+  "description": "The Boeing 777-200LR Worldliner is the longest-range commercial aircraft ever built, capable of flying 9,395 nautical miles nonstop. First delivered in 2006, it features GE90-115BL engines (the most powerful jet engines ever built), raked wingtips for improved fuel efficiency, and three optional auxiliary fuel tanks in the aft cargo hold. The 777-200LR set a world record in 2005 by flying eastbound from Hong Kong to London, the longest nonstop flight by a commercial aircraft at that time.",
+  "dimensions": {
+    "lengthMeters": 63.7,
+    "wingspanMeters": 64.8,
+    "heightMeters": 18.5,
+    "cabinWidthMeters": 5.87
+  },
+  "gridBounds": {
+    "minX": -65,
+    "maxX": 65,
+    "minY": 0,
+    "maxY": 127,
+    "minZ": 0,
+    "maxZ": 37
+  },
+  "entryPosition": [0, 18, 9],
+  "cockpitSeatPosition": [-1, 3, 10],
+  "zones": [
+    {
+      "name": "Cockpit",
+      "type": "Cockpit",
+      "description": "The 777-200LR flight deck features the same fly-by-wire glass cockpit as other 777 variants, with additional fuel management displays for the auxiliary tank system.",
+      "minBound": [-4, 0, 8],
+      "maxBound": [4, 6, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Galley",
+      "type": "ForwardGalley",
+      "description": "The forward galley provisioned for ultra-long-haul flights exceeding 17 hours, with enhanced catering storage.",
+      "minBound": [-5, 7, 8],
+      "maxBound": [5, 12, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Lavatory",
+      "type": "ForwardLavatory",
+      "description": "Forward lavatories near the premium cabin, designed for extended service on ultra-long-haul routes.",
+      "minBound": [-5, 13, 8],
+      "maxBound": [-2, 16, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Vestibule",
+      "type": "Vestibule",
+      "description": "The forward entry vestibule at door 1L/1R.",
+      "minBound": [-5, 16, 8],
+      "maxBound": [5, 19, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin",
+      "type": "ForwardCabin",
+      "description": "The forward cabin configured for premium passengers on ultra-long-haul routes. Airlines typically offer generous business class seating due to the LR's lower total passenger count.",
+      "minBound": [-5, 20, 8],
+      "maxBound": [5, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin",
+      "type": "MidCabin",
+      "description": "The center cabin section with premium economy or economy seating. The LR typically seats fewer passengers than other 777-200 variants to accommodate fuel tank weight.",
+      "minBound": [-5, 49, 8],
+      "maxBound": [5, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin",
+      "type": "AftCabin",
+      "description": "The aft economy cabin, typically with reduced seating capacity compared to other 777-200 variants due to the LR's focus on range over density.",
+      "minBound": [-5, 81, 8],
+      "maxBound": [5, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Vestibule",
+      "type": "Vestibule",
+      "description": "The aft entry vestibule with rear boarding doors.",
+      "minBound": [-5, 109, 8],
+      "maxBound": [5, 112, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Galley",
+      "type": "AftGalley",
+      "description": "The aft galley with provisions for multiple meal services on ultra-long-haul flights.",
+      "minBound": [-5, 113, 8],
+      "maxBound": [5, 117, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Lavatory",
+      "type": "AftLavatory",
+      "description": "Aft lavatories serving the economy cabin on routes lasting up to 19 hours.",
+      "minBound": [-5, 118, 8],
+      "maxBound": [5, 121, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Nose",
+      "type": "Nose",
+      "description": "The nose section with weather radar and avionics, identical to other 777-200 variants.",
+      "minBound": [-3, 0, 0],
+      "maxBound": [3, 10, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Forward Fuselage",
+      "type": "ForwardFuselage",
+      "description": "The forward lower fuselage with forward cargo hold.",
+      "minBound": [-6, 11, 0],
+      "maxBound": [6, 45, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Mid Fuselage",
+      "type": "MidFuselage",
+      "description": "The center lower fuselage with wing box structure, center fuel tank, and additional fuel plumbing for the auxiliary tank system.",
+      "minBound": [-6, 46, 0],
+      "maxBound": [6, 82, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Aft Fuselage",
+      "type": "AftFuselage",
+      "description": "The aft lower fuselage. Up to three auxiliary fuel tanks can be installed in the aft cargo hold, displacing cargo capacity but extending range to over 9,000 nm.",
+      "minBound": [-6, 83, 0],
+      "maxBound": [6, 112, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Tail",
+      "type": "Tail",
+      "description": "The tail section with APU and empennage structures.",
+      "minBound": [-4, 113, 0],
+      "maxBound": [4, 127, 15],
+      "isExterior": true
+    },
+    {
+      "name": "Left Wing",
+      "type": "LeftWing",
+      "description": "The port wing with raked wingtips extending the wingspan to 64.8m, improving fuel efficiency by reducing induced drag. The raked tips are a distinguishing feature of the LR and 300ER variants.",
+      "minBound": [-65, 46, 5],
+      "maxBound": [-6, 82, 12],
+      "isExterior": true
+    },
+    {
+      "name": "Right Wing",
+      "type": "RightWing",
+      "description": "The starboard wing with raked wingtips, matching the port wing configuration.",
+      "minBound": [6, 46, 5],
+      "maxBound": [65, 82, 12],
+      "isExterior": true
+    },
+    {
+      "name": "Left Engine",
+      "type": "LeftEngine",
+      "description": "The left GE90-115BL engine rated at 115,540 lbs of thrust, the most powerful jet engine ever certified. The 'L' designates the LR-specific variant.",
+      "minBound": [-37, 50, 1],
+      "maxBound": [-23, 62, 9],
+      "isExterior": true
+    },
+    {
+      "name": "Right Engine",
+      "type": "RightEngine",
+      "description": "The right GE90-115BL engine, identical to the left. Together these engines provide the thrust needed for ultra-long-range operations at maximum weight.",
+      "minBound": [23, 50, 1],
+      "maxBound": [37, 62, 9],
+      "isExterior": true
+    },
+    {
+      "name": "Left Main Gear",
+      "type": "LeftMainGear",
+      "description": "The left six-wheel bogie strengthened for the LR's maximum takeoff weight of 347,450 kg.",
+      "minBound": [-10, 62, 0],
+      "maxBound": [-4, 70, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Right Main Gear",
+      "type": "RightMainGear",
+      "description": "The right six-wheel bogie, identical to the left.",
+      "minBound": [4, 62, 0],
+      "maxBound": [10, 70, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Nose Gear",
+      "type": "NoseGear",
+      "description": "The steerable nose gear with dual wheels.",
+      "minBound": [-3, 14, 0],
+      "maxBound": [3, 20, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Vertical Stabilizer",
+      "type": "VerticalStabilizer",
+      "description": "The vertical stabilizer identical to other 777 variants.",
+      "minBound": [-2, 110, 15],
+      "maxBound": [2, 127, 37],
+      "isExterior": true
+    },
+    {
+      "name": "Horizontal Stabilizer",
+      "type": "HorizontalStabilizer",
+      "description": "The trimmable horizontal stabilizer with elevators.",
+      "minBound": [-21, 118, 14],
+      "maxBound": [21, 127, 18],
+      "isExterior": true
+    },
+    {
+      "name": "APU",
+      "type": "APU",
+      "description": "The Honeywell 331-500 APU essential for ETOPS-330 dispatch requirements on ultra-long-haul routes.",
+      "minBound": [-2, 124, 6],
+      "maxBound": [2, 127, 10],
+      "isExterior": true
+    }
+  ],
+  "components": [
+    {
+      "id": "captain-yoke",
+      "name": "Captain's Control Column",
+      "category": "CockpitInstrument",
+      "description": "The captain's fly-by-wire control column, identical to other 777 variants.",
+      "position": [-1, 3, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Grasp the captain's yoke. Fly-by-wire converts inputs to electronic signals for the flight computers.",
+      "educationTopicIds": ["flight-controls-overview", "fly-by-wire"]
+    },
+    {
+      "id": "first-officer-yoke",
+      "name": "First Officer's Control Column",
+      "category": "CockpitInstrument",
+      "description": "The first officer's fly-by-wire control column.",
+      "position": [1, 3, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "The first officer's yoke provides independent fly-by-wire authority.",
+      "educationTopicIds": ["flight-controls-overview", "fly-by-wire"]
+    },
+    {
+      "id": "throttle-quadrant",
+      "name": "Throttle Quadrant",
+      "category": "CockpitInstrument",
+      "description": "Twin thrust levers for the GE90-115BL engines, the most powerful jet engines ever built.",
+      "position": [0, 4, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Command the world's most powerful jet engines. Each GE90-115BL produces over 115,000 lbs of thrust at maximum power.",
+      "educationTopicIds": ["engine-thrust-management", "ge90-engine", "ge90-115b"]
+    },
+    {
+      "id": "rudder-pedals",
+      "name": "Rudder Pedals",
+      "category": "CockpitInstrument",
+      "description": "Fly-by-wire rudder pedals with speed-dependent authority.",
+      "position": [0, 2, 9],
+      "interactionRadius": 1.0,
+      "interactionText": "Rudder pedals with automatic authority reduction at higher speeds.",
+      "educationTopicIds": ["rudder-control", "fly-by-wire"]
+    },
+    {
+      "id": "pfd",
+      "name": "Primary Flight Display (PFD)",
+      "category": "CockpitInstrument",
+      "description": "Large-format PFD with full flight data integration.",
+      "position": [-3, 2, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "The PFD displays attitude, speeds, altitude, heading, and flight modes.",
+      "educationTopicIds": ["primary-flight-display", "glass-cockpit"]
+    },
+    {
+      "id": "nd",
+      "name": "Navigation Display (ND)",
+      "category": "CockpitInstrument",
+      "description": "Navigation display essential for ultra-long-range oceanic and polar route navigation.",
+      "position": [-3, 2, 10],
+      "interactionRadius": 1.5,
+      "interactionText": "View routes spanning entire hemispheres with ETOPS-330 alternate airports displayed along the way.",
+      "educationTopicIds": ["navigation-display", "etops", "polar-navigation"]
+    },
+    {
+      "id": "eicas",
+      "name": "Engine Indicating and Crew Alerting System",
+      "category": "CockpitInstrument",
+      "description": "EICAS monitoring the GE90-115BL engines and auxiliary fuel tank system status.",
+      "position": [0, 2, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "Monitor the GE90-115BL engine parameters and auxiliary fuel tank transfer status.",
+      "educationTopicIds": ["engine-instruments", "ge90-engine", "fuel-management"]
+    },
+    {
+      "id": "overhead-panel",
+      "name": "Overhead Panel",
+      "category": "CockpitInstrument",
+      "description": "Systems panel with additional controls for the auxiliary fuel tank transfer system unique to the LR variant.",
+      "position": [0, 3, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "The overhead panel includes auxiliary fuel tank pump controls for managing fuel transfer from the cargo hold tanks.",
+      "educationTopicIds": ["aircraft-systems-overview", "fuel-system", "777-lr-fuel"]
+    },
+    {
+      "id": "mcp",
+      "name": "Mode Control Panel (MCP)",
+      "category": "CockpitInstrument",
+      "description": "Autopilot interface for managing ultra-long-range flight profiles with multiple step climbs.",
+      "position": [0, 2, 12],
+      "interactionRadius": 1.5,
+      "interactionText": "Program step climbs as fuel burns off during 17+ hour flights to maintain optimal cruise altitude.",
+      "educationTopicIds": ["autopilot-modes", "cruise-optimization", "step-climbs"]
+    },
+    {
+      "id": "fmc",
+      "name": "Flight Management Computer (FMC)",
+      "category": "Avionics",
+      "description": "Triple-redundant FMC with ETOPS-330 and polar navigation capability for the world's longest nonstop routes.",
+      "position": [0, 4, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "Program routes spanning entire hemispheres. The FMC manages ETOPS-330 alternate airports and polar route waypoints.",
+      "educationTopicIds": ["flight-management-system", "etops", "polar-navigation"]
+    },
+    {
+      "id": "forward-exit-door",
+      "name": "Forward Left Entry Door (1L)",
+      "category": "Door",
+      "description": "The main wide-body boarding door with dual-lane evacuation slide.",
+      "position": [-5, 17, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "The main boarding door for the Worldliner, identical to other 777 variants.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+    },
+    {
+      "id": "aft-exit-door",
+      "name": "Aft Left Entry Door (4L)",
+      "category": "Door",
+      "description": "The aft left entry door for rear boarding and emergency evacuation.",
+      "position": [-5, 110, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "The aft door for passenger operations.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+    },
+    {
+      "id": "forward-galley-unit",
+      "name": "Forward Galley Unit",
+      "category": "Galley",
+      "description": "Premium class galley with extended provisions for ultra-long-haul operations exceeding 17 hours.",
+      "position": [0, 9, 9],
+      "interactionRadius": 2.5,
+      "interactionText": "The galley stocks provisions for up to three full meal services and continuous snack availability on ultra-long flights.",
+      "educationTopicIds": ["galley-equipment", "ultra-long-haul-operations"]
+    },
+    {
+      "id": "aft-galley-unit",
+      "name": "Aft Galley Unit",
+      "category": "Galley",
+      "description": "The aft galley serving economy class on ultra-long-haul routes.",
+      "position": [0, 115, 9],
+      "interactionRadius": 2.5,
+      "interactionText": "Extended catering storage for flights lasting nearly a full day.",
+      "educationTopicIds": ["galley-equipment", "cabin-service"]
+    },
+    {
+      "id": "overhead-bins",
+      "name": "Overhead Storage Bins",
+      "category": "OverheadBin",
+      "description": "Wide-body overhead bins across three rows.",
+      "position": [0, 60, 12],
+      "interactionRadius": 3.0,
+      "interactionText": "Three rows of bins provide ample storage for the Worldliner's typically lower passenger count.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "passenger-seats-row-1",
+      "name": "Row 1 Business Class Seats",
+      "category": "Seat",
+      "description": "Premium seating designed for maximum comfort on the world's longest nonstop routes.",
+      "position": [0, 21, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Business class seats on the Worldliner feature lie-flat beds essential for flights lasting 17+ hours.",
+      "educationTopicIds": ["passenger-safety-equipment", "ultra-long-haul-comfort"]
+    },
+    {
+      "id": "passenger-seats-forward-economy",
+      "name": "Forward Cabin Business Class Seats",
+      "category": "Seat",
+      "description": "Premium business class seats on the Worldliner, configured for the longest nonstop flights in commercial aviation. With routes exceeding 17 hours, these seats are designed for maximum rest with full lie-flat capability and enhanced personal space.",
+      "position": [0, 35, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a Worldliner business class seat designed for ultra-long-haul comfort. The fully flat bed and direct aisle access are essential on 17-plus hour flights. Find the large entertainment screen, multiple power outlets, and personal storage compartment.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior", "ultra-long-haul-comfort"]
+    },
+    {
+      "id": "passenger-seats-mid-cabin",
+      "name": "Mid Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Economy seats in the mid cabin of the 777-200LR Worldliner. With fewer total passengers than other 777-200 variants due to auxiliary fuel tanks, the mid cabin may feel less crowded. Seats are configured for ultra-long-haul comfort with enhanced pitch on some airlines.",
+      "position": [0, 65, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a mid cabin economy seat on the Worldliner. This aircraft can fly over 17 hours nonstop. The reduced passenger count means a potentially quieter cabin. Check the entertainment system, designed with extra content for ultra-long flights.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior", "ultra-long-haul-comfort"]
+    },
+    {
+      "id": "passenger-seats-aft-cabin",
+      "name": "Aft Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Aft economy seats on the 777-200LR. Beneath this section, auxiliary fuel tanks in the cargo hold enable the aircraft's record-breaking range of over 9,400 nautical miles. The reduced passenger capacity means fewer seats in this section compared to the standard 777-200.",
+      "position": [0, 95, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in an aft cabin seat on the Worldliner. The auxiliary fuel tanks below enable flights like New York to Singapore. Check the seatback screen, overhead bin, and safety card.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior", "ultra-long-haul-comfort"]
+    },
+    {
+      "id": "left-engine",
+      "name": "Left GE90-115BL Engine",
+      "category": "Engine",
+      "description": "The left GE90-115BL produces 115,540 lbs of thrust, making it the most powerful jet engine ever certified. The 134-inch fan is the world's largest.",
+      "position": [-30, 56, 5],
+      "interactionRadius": 3.0,
+      "interactionText": "The GE90-115BL holds the world record for thrust. Its 134-inch fan with composite blades produces over 115,000 lbs of thrust.",
+      "educationTopicIds": ["ge90-engine", "ge90-115b", "turbofan-principles", "world-records"]
+    },
+    {
+      "id": "right-engine",
+      "name": "Right GE90-115BL Engine",
+      "category": "Engine",
+      "description": "The right GE90-115BL, identical to the left. The 'L' suffix denotes the LR-specific engine variant.",
+      "position": [30, 56, 5],
+      "interactionRadius": 3.0,
+      "interactionText": "Each GE90-115BL consumes fuel at roughly 3,600 kg/hour at cruise, enabling the Worldliner's extraordinary range.",
+      "educationTopicIds": ["ge90-engine", "ge90-115b", "fuel-efficiency"]
+    },
+    {
+      "id": "nose-gear-assembly",
+      "name": "Nose Landing Gear Assembly",
+      "category": "LandingGear",
+      "description": "The nose gear with dual wheels for the ultra-long-range variant.",
+      "position": [0, 17, 2],
+      "interactionRadius": 2.0,
+      "interactionText": "The nose gear is identical to other 777 variants.",
+      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering"]
+    },
+    {
+      "id": "left-main-gear",
+      "name": "Left Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The left six-wheel bogie rated for the LR's 347,450 kg maximum takeoff weight, the heaviest of any 777-200 variant.",
+      "position": [-7, 66, 2],
+      "interactionRadius": 2.5,
+      "interactionText": "The main gear supports the Worldliner's high takeoff weight fully loaded with fuel for 19-hour flights.",
+      "educationTopicIds": ["landing-gear-systems", "bogie-gear"]
+    },
+    {
+      "id": "right-main-gear",
+      "name": "Right Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The right six-wheel bogie, identical to the left.",
+      "position": [7, 66, 2],
+      "interactionRadius": 2.5,
+      "interactionText": "Six wheels distribute the enormous takeoff weight across the runway surface.",
+      "educationTopicIds": ["landing-gear-systems", "weight-distribution"]
+    },
+    {
+      "id": "left-aileron",
+      "name": "Left Aileron",
+      "category": "ControlSurface",
+      "description": "The left fly-by-wire aileron, with the wing extended by raked wingtips.",
+      "position": [-52, 70, 8],
+      "interactionRadius": 2.0,
+      "interactionText": "The aileron is positioned inboard of the raked wingtips that extend the wingspan to 64.8 meters.",
+      "educationTopicIds": ["how-ailerons-work", "fly-by-wire", "raked-wingtips"]
+    },
+    {
+      "id": "right-aileron",
+      "name": "Right Aileron",
+      "category": "ControlSurface",
+      "description": "The right fly-by-wire aileron on the extended-span wing.",
+      "position": [52, 70, 8],
+      "interactionRadius": 2.0,
+      "interactionText": "The right aileron works opposite to the left for roll control on the extended wing.",
+      "educationTopicIds": ["how-ailerons-work", "fly-by-wire"]
+    },
+    {
+      "id": "left-flap",
+      "name": "Left Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "Single-slotted Fowler flaps and flaperon on the left wing.",
+      "position": [-25, 75, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "Fowler flaps extend on tracks. Flaperons provide combined flap and aileron function.",
+      "educationTopicIds": ["how-flaps-work", "flaperon"]
+    },
+    {
+      "id": "right-flap",
+      "name": "Right Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "Single-slotted Fowler flaps and flaperon on the right wing.",
+      "position": [25, 75, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "Right flaps deploy symmetrically with the left for balanced lift.",
+      "educationTopicIds": ["how-flaps-work", "flaperon"]
+    },
+    {
+      "id": "left-slat",
+      "name": "Left Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Full-span slats on the left wing of the extended-span design.",
+      "position": [-37, 52, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "Full-span slats work with the raked wingtip design to maximize low-speed lift performance.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "right-slat",
+      "name": "Right Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Full-span slats on the right wing.",
+      "position": [37, 52, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "Symmetric slat deployment for balanced lift augmentation.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "elevator",
+      "name": "Elevator",
+      "category": "ControlSurface",
+      "description": "Fly-by-wire elevators with pitch envelope protection.",
+      "position": [0, 124, 16],
+      "interactionRadius": 2.5,
+      "interactionText": "Fly-by-wire elevators with envelope protection against excessive pitch attitudes.",
+      "educationTopicIds": ["how-elevators-work", "fly-by-wire"]
+    },
+    {
+      "id": "rudder",
+      "name": "Rudder",
+      "category": "ControlSurface",
+      "description": "Fly-by-wire rudder with triple-redundant actuators for ETOPS-330 reliability.",
+      "position": [0, 124, 26],
+      "interactionRadius": 2.5,
+      "interactionText": "Triple-redundant rudder actuators ensure reliability for ETOPS-330 operations up to 5.5 hours from a diversion airport.",
+      "educationTopicIds": ["how-rudder-works", "fly-by-wire", "etops"]
+    },
+    {
+      "id": "spoilers",
+      "name": "Wing Spoilers / Speed Brakes",
+      "category": "ControlSurface",
+      "description": "Fly-by-wire spoiler panels for speed brakes and roll augmentation.",
+      "position": [-15, 65, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "Spoilers manage descent rate and augment roll control on the extended-span wings.",
+      "educationTopicIds": ["spoiler-systems", "speed-brakes"]
+    },
+    {
+      "id": "weather-radar",
+      "name": "Weather Radar Antenna",
+      "category": "Avionics",
+      "description": "Advanced weather radar for ultra-long-range route weather detection across remote oceanic and polar regions.",
+      "position": [0, 2, 5],
+      "interactionRadius": 2.0,
+      "interactionText": "The weather radar detects weather hundreds of miles ahead on routes crossing remote oceanic and polar regions.",
+      "educationTopicIds": ["weather-radar", "polar-navigation"]
+    },
+    {
+      "id": "apu-exhaust",
+      "name": "APU Exhaust",
+      "category": "APU",
+      "description": "The Honeywell 331-500 APU essential for ETOPS-330 dispatch on the world's longest routes.",
+      "position": [0, 127, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "The APU must be serviceable for ETOPS-330 dispatch, the highest ETOPS rating achieved by the 777.",
+      "educationTopicIds": ["apu-operations", "etops"]
+    }
+  ],
+  "controlSurfaces": [
+    {
+      "id": "cs-ailerons",
+      "name": "Ailerons",
+      "axis": "roll",
+      "movementDescription": "Yoke turned: fly-by-wire commands aileron deflection on the extended-span wings with raked wingtips.",
+      "flightEffect": "Roll control with envelope protection. The raked wingtips improve roll damping characteristics.",
+      "componentId": "left-aileron"
+    },
+    {
+      "id": "cs-elevator",
+      "name": "Elevator",
+      "axis": "pitch",
+      "movementDescription": "Yoke pulled back: elevators up. Pushed forward: elevators down.",
+      "flightEffect": "Pitch control with envelope protection against stall and overspeed.",
+      "componentId": "elevator"
+    },
+    {
+      "id": "cs-rudder",
+      "name": "Rudder",
+      "axis": "yaw",
+      "movementDescription": "Left pedal: rudder left. Right pedal: rudder right. Speed-dependent authority limiting.",
+      "flightEffect": "Yaw control essential for single-engine operations during ETOPS-330 diversion scenarios.",
+      "componentId": "rudder"
+    },
+    {
+      "id": "cs-flaps",
+      "name": "Trailing Edge Flaps",
+      "axis": "pitch",
+      "movementDescription": "Flap lever positions: UP, 1, 5, 15, 20, 25, 30. Fowler flaps extend on tracks.",
+      "flightEffect": "Flap extension provides critical lift augmentation for heavy-weight takeoffs on the highest MTOW 777-200 variant.",
+      "componentId": "left-flap"
+    },
+    {
+      "id": "cs-slats",
+      "name": "Leading Edge Slats",
+      "axis": "pitch",
+      "movementDescription": "Full-span slats deploy automatically with flap selection.",
+      "flightEffect": "Slats increase maximum angle of attack for safe approach speeds at the LR's high landing weights.",
+      "componentId": "left-slat"
+    },
+    {
+      "id": "cs-spoilers",
+      "name": "Spoilers / Speed Brakes",
+      "axis": "roll",
+      "movementDescription": "Speedbrake lever: symmetric deployment. Roll input: asymmetric deployment.",
+      "flightEffect": "Speed brakes manage descent. Ground spoilers deploy on landing for maximum braking effectiveness.",
+      "componentId": "spoilers"
+    },
+    {
+      "id": "cs-flaperon",
+      "name": "Flaperons",
+      "axis": "roll",
+      "movementDescription": "Flaperons droop with flap extension and deflect differentially for roll control.",
+      "flightEffect": "Combined flap and aileron function optimized for the extended-span wing design.",
+      "componentId": "left-flap"
+    }
+  ]
+}

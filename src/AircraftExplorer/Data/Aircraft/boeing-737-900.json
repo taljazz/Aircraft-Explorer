@@ -1,0 +1,647 @@
+{
+  "id": "boeing-737-900",
+  "name": "Boeing 737-900",
+  "manufacturer": "Boeing",
+  "variant": "737-900",
+  "description": "The Boeing 737-900 is the longest variant of the 737 Next Generation family, stretched 2.6 meters over the 737-800. First delivered in 2001, it seats up to 220 passengers in a single-class configuration. The 737-900 was produced in limited numbers before being superseded by the more popular 737-900ER with additional exit doors and higher capacity.",
+  "dimensions": {
+    "lengthMeters": 42.1,
+    "wingspanMeters": 35.8,
+    "heightMeters": 12.5,
+    "cabinWidthMeters": 3.54
+  },
+  "gridBounds": {
+    "minX": -36,
+    "maxX": 36,
+    "minY": 0,
+    "maxY": 84,
+    "minZ": 0,
+    "maxZ": 25
+  },
+  "entryPosition": [0, 12, 7],
+  "cockpitSeatPosition": [-1, 2, 7],
+  "zones": [
+    {
+      "name": "Cockpit",
+      "type": "Cockpit",
+      "description": "The 737-900 flight deck is identical to the 737-800, featuring a modern glass cockpit with six LCD displays and CAT IIIb autoland capability.",
+      "minBound": [-3, 0, 6],
+      "maxBound": [3, 4, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Galley",
+      "type": "ForwardGalley",
+      "description": "The forward galley located just aft of the cockpit bulkhead, serving the forward cabin passengers.",
+      "minBound": [-3, 5, 6],
+      "maxBound": [3, 8, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Lavatory",
+      "type": "ForwardLavatory",
+      "description": "A single forward lavatory located adjacent to the forward galley area.",
+      "minBound": [-3, 9, 6],
+      "maxBound": [-1, 11, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Vestibule",
+      "type": "Vestibule",
+      "description": "The forward entry vestibule at door 1L/1R, the primary boarding entrance.",
+      "minBound": [-3, 11, 6],
+      "maxBound": [3, 13, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin",
+      "type": "ForwardCabin",
+      "description": "The forward passenger cabin section with approximately rows 1 through 16. The longer fuselage allows for additional rows compared to the 737-800.",
+      "minBound": [-3, 14, 6],
+      "maxBound": [3, 38, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin",
+      "type": "MidCabin",
+      "description": "The center passenger cabin section with overwing emergency exits. The stretched fuselage provides more rows in this section compared to the 737-800.",
+      "minBound": [-3, 39, 6],
+      "maxBound": [3, 58, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin",
+      "type": "AftCabin",
+      "description": "The rear passenger cabin extending further aft due to the 2.6m fuselage stretch compared to the 737-800.",
+      "minBound": [-3, 59, 6],
+      "maxBound": [3, 73, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Vestibule",
+      "type": "Vestibule",
+      "description": "The aft entry vestibule at door 2L/2R for rear boarding and emergency evacuation.",
+      "minBound": [-3, 74, 6],
+      "maxBound": [3, 76, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Galley",
+      "type": "AftGalley",
+      "description": "The aft galley serving the majority of economy class passengers in the extended rear cabin.",
+      "minBound": [-3, 77, 6],
+      "maxBound": [3, 79, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Lavatory",
+      "type": "AftLavatory",
+      "description": "Aft lavatories located behind the last row of economy seating in the stretched fuselage.",
+      "minBound": [-3, 77, 6],
+      "maxBound": [3, 79, 10],
+      "isExterior": false
+    },
+    {
+      "name": "Nose",
+      "type": "Nose",
+      "description": "The nose section with weather radar antenna and radome, identical to the 737-800.",
+      "minBound": [-2, 0, 0],
+      "maxBound": [2, 6, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Forward Fuselage",
+      "type": "ForwardFuselage",
+      "description": "The forward lower fuselage containing the forward cargo hold and avionics bays.",
+      "minBound": [-4, 7, 0],
+      "maxBound": [4, 32, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Mid Fuselage",
+      "type": "MidFuselage",
+      "description": "The center lower fuselage with the wing box structure and main landing gear wheel wells.",
+      "minBound": [-4, 33, 0],
+      "maxBound": [4, 55, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Aft Fuselage",
+      "type": "AftFuselage",
+      "description": "The aft lower fuselage with the aft cargo hold. The fuselage stretch adds cargo volume compared to the 737-800.",
+      "minBound": [-4, 56, 0],
+      "maxBound": [4, 75, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Tail",
+      "type": "Tail",
+      "description": "The tail cone section with APU and empennage structures, identical to the 737-800.",
+      "minBound": [-3, 76, 0],
+      "maxBound": [3, 84, 10],
+      "isExterior": true
+    },
+    {
+      "name": "Left Wing",
+      "type": "LeftWing",
+      "description": "The port wing, structurally identical to the 737-800 wing with the same fuel capacity and control surfaces.",
+      "minBound": [-36, 32, 4],
+      "maxBound": [-4, 55, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Right Wing",
+      "type": "RightWing",
+      "description": "The starboard wing, identical to the port wing in structure, fuel capacity, and control surface configuration.",
+      "minBound": [4, 32, 4],
+      "maxBound": [36, 55, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Left Engine",
+      "type": "LeftEngine",
+      "description": "The left CFM56-7B26 engine, identical to the 737-800 powerplant producing 27,300 lbs of thrust.",
+      "minBound": [-20, 35, 1],
+      "maxBound": [-12, 42, 5],
+      "isExterior": true
+    },
+    {
+      "name": "Right Engine",
+      "type": "RightEngine",
+      "description": "The right CFM56-7B26 engine mounted beneath the starboard wing.",
+      "minBound": [12, 35, 1],
+      "maxBound": [20, 42, 5],
+      "isExterior": true
+    },
+    {
+      "name": "Left Main Gear",
+      "type": "LeftMainGear",
+      "description": "The left main landing gear, a dual-wheel unit identical to the 737-800 configuration.",
+      "minBound": [-6, 40, 0],
+      "maxBound": [-3, 44, 4],
+      "isExterior": true
+    },
+    {
+      "name": "Right Main Gear",
+      "type": "RightMainGear",
+      "description": "The right main landing gear, identical to the left main gear unit.",
+      "minBound": [3, 40, 0],
+      "maxBound": [6, 44, 4],
+      "isExterior": true
+    },
+    {
+      "name": "Nose Gear",
+      "type": "NoseGear",
+      "description": "The steerable nose landing gear, identical to the 737-800.",
+      "minBound": [-2, 8, 0],
+      "maxBound": [2, 12, 4],
+      "isExterior": true
+    },
+    {
+      "name": "Vertical Stabilizer",
+      "type": "VerticalStabilizer",
+      "description": "The vertical stabilizer providing directional stability, identical to the 737-800.",
+      "minBound": [-1, 73, 10],
+      "maxBound": [1, 84, 25],
+      "isExterior": true
+    },
+    {
+      "name": "Horizontal Stabilizer",
+      "type": "HorizontalStabilizer",
+      "description": "The trimmable horizontal stabilizer with elevators for pitch control.",
+      "minBound": [-13, 78, 10],
+      "maxBound": [13, 84, 13],
+      "isExterior": true
+    },
+    {
+      "name": "APU",
+      "type": "APU",
+      "description": "The Honeywell 131-9B APU in the tail cone, providing ground power and bleed air.",
+      "minBound": [-1, 82, 4],
+      "maxBound": [1, 84, 7],
+      "isExterior": true
+    }
+  ],
+  "components": [
+    {
+      "id": "captain-yoke",
+      "name": "Captain's Control Yoke",
+      "category": "CockpitInstrument",
+      "description": "The captain's control column and yoke for pitch and roll inputs.",
+      "position": [-1, 2, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Grasp the captain's yoke. Turn left or right for roll, push forward or pull back for pitch control.",
+      "educationTopicIds": ["flight-controls-overview", "yoke-vs-sidestick"]
+    },
+    {
+      "id": "first-officer-yoke",
+      "name": "First Officer's Control Yoke",
+      "category": "CockpitInstrument",
+      "description": "The first officer's control column, mechanically linked to the captain's yoke.",
+      "position": [1, 2, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Grasp the first officer's yoke. Both yokes move in unison through mechanical linkage.",
+      "educationTopicIds": ["flight-controls-overview", "dual-control-system"]
+    },
+    {
+      "id": "throttle-quadrant",
+      "name": "Throttle Quadrant",
+      "category": "CockpitInstrument",
+      "description": "Twin thrust levers on the center pedestal controlling both CFM56-7B engines.",
+      "position": [0, 3, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Advance thrust levers forward for more power, pull back to reduce. Includes reverse thrust and speedbrake controls.",
+      "educationTopicIds": ["engine-thrust-management", "autothrottle-system", "cfm56-engine"]
+    },
+    {
+      "id": "rudder-pedals",
+      "name": "Rudder Pedals",
+      "category": "CockpitInstrument",
+      "description": "Dual rudder pedal assemblies controlling the rudder and nose wheel steering.",
+      "position": [0, 1, 6],
+      "interactionRadius": 1.0,
+      "interactionText": "Press left pedal for left yaw, right pedal for right yaw. Toe brakes at the top of each pedal for ground braking.",
+      "educationTopicIds": ["rudder-control", "yaw-damper"]
+    },
+    {
+      "id": "pfd",
+      "name": "Primary Flight Display (PFD)",
+      "category": "CockpitInstrument",
+      "description": "The Primary Flight Display showing attitude, airspeed, altitude, heading, and flight director commands.",
+      "position": [-2, 1, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "View the PFD with attitude indicator, airspeed and altitude tapes, vertical speed, and flight mode annunciations.",
+      "educationTopicIds": ["primary-flight-display", "glass-cockpit"]
+    },
+    {
+      "id": "nd",
+      "name": "Navigation Display (ND)",
+      "category": "CockpitInstrument",
+      "description": "The Navigation Display showing flight plan, terrain, and weather information on a moving map.",
+      "position": [-2, 1, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "View the navigation display with route, airports, terrain, and weather overlay.",
+      "educationTopicIds": ["navigation-display", "flight-planning"]
+    },
+    {
+      "id": "eicas",
+      "name": "Engine Indicating and Crew Alerting System",
+      "category": "CockpitInstrument",
+      "description": "Center display showing engine parameters and crew alerts for both CFM56-7B engines.",
+      "position": [0, 1, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "Monitor engine N1, N2, EGT, fuel flow, and oil parameters. Warning and caution messages appear here.",
+      "educationTopicIds": ["engine-instruments", "cfm56-engine"]
+    },
+    {
+      "id": "overhead-panel",
+      "name": "Overhead Panel",
+      "category": "CockpitInstrument",
+      "description": "Systems controls for electrical, hydraulic, pneumatic, pressurization, and fire protection.",
+      "position": [0, 2, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Scan the overhead panel systems: electrical, hydraulic, fuel, air conditioning, and pressurization controls.",
+      "educationTopicIds": ["aircraft-systems-overview", "electrical-system"]
+    },
+    {
+      "id": "mcp",
+      "name": "Mode Control Panel (MCP)",
+      "category": "CockpitInstrument",
+      "description": "The autopilot interface panel for setting speed, heading, altitude, and vertical speed targets.",
+      "position": [0, 1, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Set desired speed, heading, altitude, and vertical speed. Engage LNAV, VNAV, HDG SEL, and APP modes.",
+      "educationTopicIds": ["autopilot-modes", "mode-control-panel"]
+    },
+    {
+      "id": "fmc",
+      "name": "Flight Management Computer (FMC)",
+      "category": "Avionics",
+      "description": "The FMC CDU for programming flight plans, performance data, and navigation queries.",
+      "position": [0, 3, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "Program routes, enter performance data, and manage navigation via the FMC keypad and line-select keys.",
+      "educationTopicIds": ["flight-management-system", "navigation-database"]
+    },
+    {
+      "id": "forward-exit-door",
+      "name": "Forward Left Entry Door (1L)",
+      "category": "Door",
+      "description": "The main boarding door on the forward left fuselage, equipped with an evacuation slide.",
+      "position": [-3, 12, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "The forward entry door with armed evacuation slide. Crew must disarm before opening for normal operations.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+    },
+    {
+      "id": "aft-exit-door",
+      "name": "Aft Left Entry Door (2L)",
+      "category": "Door",
+      "description": "The aft left entry door for rear boarding, equipped with an evacuation slide.",
+      "position": [-3, 75, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "The aft entry door enables dual-boarding operations for faster turnaround.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+    },
+    {
+      "id": "overwing-exit-left",
+      "name": "Left Overwing Emergency Exit",
+      "category": "Door",
+      "description": "The left overwing emergency exit hatch located over the wing.",
+      "position": [-3, 44, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Pull the handle, remove the hatch, and step onto the wing for evacuation.",
+      "educationTopicIds": ["emergency-exits", "overwing-evacuation"]
+    },
+    {
+      "id": "overwing-exit-right",
+      "name": "Right Overwing Emergency Exit",
+      "category": "Door",
+      "description": "The right overwing emergency exit, identical to the left side.",
+      "position": [3, 44, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Examine the overwing exit. Passengers seated here must be capable of operating the exit.",
+      "educationTopicIds": ["emergency-exits", "overwing-evacuation"]
+    },
+    {
+      "id": "forward-galley-unit",
+      "name": "Forward Galley Unit",
+      "category": "Galley",
+      "description": "The forward galley with beverage carts, coffee maker, and meal heating ovens.",
+      "position": [0, 6, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "The forward galley contains ATLAS containers, hot water boilers, and convection ovens.",
+      "educationTopicIds": ["galley-equipment", "cabin-service"]
+    },
+    {
+      "id": "aft-galley-unit",
+      "name": "Aft Galley Unit",
+      "category": "Galley",
+      "description": "The main aft galley serving the extended economy cabin.",
+      "position": [0, 78, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "The primary economy class galley with multiple beverage and meal carts.",
+      "educationTopicIds": ["galley-equipment", "cabin-service"]
+    },
+    {
+      "id": "overhead-bins",
+      "name": "Overhead Storage Bins",
+      "category": "OverheadBin",
+      "description": "Pivot-style overhead bins running the length of the cabin on both sides.",
+      "position": [0, 42, 9],
+      "interactionRadius": 3.0,
+      "interactionText": "Open the bin by pressing the latch. Boeing Sky Interior bins accommodate standard roller bags.",
+      "educationTopicIds": ["cabin-interior-design", "sky-interior"]
+    },
+    {
+      "id": "passenger-seats-row-1",
+      "name": "Row 1 Passenger Seats",
+      "category": "Seat",
+      "description": "First row seats, typically configured as business class or premium economy with extra legroom.",
+      "position": [0, 15, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a row 1 seat. Examine the seat belt, tray table, reading light, and service unit with oxygen mask.",
+      "educationTopicIds": ["passenger-safety-equipment", "seat-design"]
+    },
+    {
+      "id": "passenger-seats-forward-mid",
+      "name": "Forward Economy Seats",
+      "category": "Seat",
+      "description": "Economy class seating in a 3-3 configuration. The 737-900's stretched fuselage adds extra rows compared to the 737-800. Standard seat pitch is 30-31 inches with fold-down tray tables on the seatback ahead.",
+      "position": [0, 27, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a forward economy seat. The 3-3 layout means seats A, B, C on the left and D, E, F on the right. Check the seat pocket, tray table, and overhead reading light.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "passenger-seats-mid-cabin",
+      "name": "Mid Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Economy seats in the mid cabin near the overwing emergency exits. The 737-900 features larger overwing exits than the 737-800 to meet evacuation requirements for its higher passenger capacity. Exit row seats offer extra legroom with armrest-mounted tray tables.",
+      "position": [0, 48, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a mid cabin seat near the overwing exits. Notice the extra legroom in exit rows. The 737-900's larger exits are clearly marked. Window passengers can see the wing, flaps, and spoilers.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "emergency-exits", "737-exit-configuration"]
+    },
+    {
+      "id": "passenger-seats-aft-cabin",
+      "name": "Aft Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Economy seats in the aft cabin of the stretched 737-900. The additional fuselage length compared to the 737-800 means more rows of economy seating here. Aft seats are closer to the engines and the rear galley. The last rows may have limited recline.",
+      "position": [0, 66, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in an aft cabin seat. You can feel the proximity to the CFM56 engines. The stretched fuselage gives the 737-900 about 20 more seats than the 737-800. The rear galley and lavatories are just behind.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "left-engine",
+      "name": "Left CFM56-7B26 Engine",
+      "category": "Engine",
+      "description": "The left CFM56-7B26 turbofan producing 27,300 lbs of thrust with the distinctive flat-bottomed nacelle.",
+      "position": [-16, 38, 3],
+      "interactionRadius": 3.0,
+      "interactionText": "Examine the CFM56-7B engine with its 61-inch fan and 5.1:1 bypass ratio.",
+      "educationTopicIds": ["cfm56-engine", "turbofan-principles"]
+    },
+    {
+      "id": "right-engine",
+      "name": "Right CFM56-7B26 Engine",
+      "category": "Engine",
+      "description": "The right CFM56-7B26 turbofan, identical to the left engine.",
+      "position": [16, 38, 3],
+      "interactionRadius": 3.0,
+      "interactionText": "Examine the right engine with cascade-type thrust reverser system.",
+      "educationTopicIds": ["cfm56-engine", "thrust-reversers"]
+    },
+    {
+      "id": "nose-gear-assembly",
+      "name": "Nose Landing Gear Assembly",
+      "category": "LandingGear",
+      "description": "The steerable nose gear with dual wheels, retracting forward into the nose wheel well.",
+      "position": [0, 10, 1],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the nose gear with oleo-pneumatic shock absorbers and shimmy damper.",
+      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering"]
+    },
+    {
+      "id": "left-main-gear",
+      "name": "Left Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The left main gear with dual wheels and carbon brakes, retracting inward.",
+      "position": [-5, 42, 1],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the main gear with carbon brakes rated for maximum landing weight.",
+      "educationTopicIds": ["landing-gear-systems", "braking-systems"]
+    },
+    {
+      "id": "right-main-gear",
+      "name": "Right Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The right main gear, identical to the left unit.",
+      "position": [5, 42, 1],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the right main gear with anti-skid braking system.",
+      "educationTopicIds": ["landing-gear-systems", "anti-skid-system"]
+    },
+    {
+      "id": "left-aileron",
+      "name": "Left Aileron",
+      "category": "ControlSurface",
+      "description": "The left outboard aileron on the trailing edge of the port wing.",
+      "position": [-30, 47, 6],
+      "interactionRadius": 2.0,
+      "interactionText": "The left aileron deflects upward when turning left, reducing lift on this wing.",
+      "educationTopicIds": ["how-ailerons-work", "roll-control"]
+    },
+    {
+      "id": "right-aileron",
+      "name": "Right Aileron",
+      "category": "ControlSurface",
+      "description": "The right outboard aileron, working in opposition to the left aileron for roll control.",
+      "position": [30, 47, 6],
+      "interactionRadius": 2.0,
+      "interactionText": "The right aileron works opposite to the left aileron for differential lift.",
+      "educationTopicIds": ["how-ailerons-work", "roll-control"]
+    },
+    {
+      "id": "left-flap",
+      "name": "Left Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "Double-slotted trailing edge flaps on the left wing for increased lift at low speeds.",
+      "position": [-15, 50, 5],
+      "interactionRadius": 2.5,
+      "interactionText": "The Fowler flaps extend rearward and downward in settings from 1 to 40 degrees.",
+      "educationTopicIds": ["how-flaps-work", "high-lift-devices"]
+    },
+    {
+      "id": "right-flap",
+      "name": "Right Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "Double-slotted trailing edge flaps on the right wing, deploying symmetrically with the left.",
+      "position": [15, 50, 5],
+      "interactionRadius": 2.5,
+      "interactionText": "Watch the flaps extend on rails for additional lift during takeoff and landing.",
+      "educationTopicIds": ["how-flaps-work", "high-lift-devices"]
+    },
+    {
+      "id": "left-slat",
+      "name": "Left Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Leading edge slats on the left wing that extend to delay stall.",
+      "position": [-20, 36, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "The slats deploy with flap extension, delaying stall to higher angles of attack.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "right-slat",
+      "name": "Right Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Leading edge slats on the right wing, operating symmetrically with the left.",
+      "position": [20, 36, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "Right leading edge slats deploy in concert with the left side.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "elevator",
+      "name": "Elevator",
+      "category": "ControlSurface",
+      "description": "Elevators on the horizontal stabilizer for pitch control.",
+      "position": [0, 82, 11],
+      "interactionRadius": 2.5,
+      "interactionText": "The elevators deflect upward when the yoke is pulled back, pitching the nose up.",
+      "educationTopicIds": ["how-elevators-work", "pitch-control"]
+    },
+    {
+      "id": "rudder",
+      "name": "Rudder",
+      "category": "ControlSurface",
+      "description": "The rudder on the vertical stabilizer for yaw control, with dual-actuator safety system.",
+      "position": [0, 82, 18],
+      "interactionRadius": 2.5,
+      "interactionText": "The rudder deflects to yaw the aircraft, with yaw damper for Dutch roll suppression.",
+      "educationTopicIds": ["how-rudder-works", "yaw-control"]
+    },
+    {
+      "id": "spoilers",
+      "name": "Wing Spoilers / Speed Brakes",
+      "category": "ControlSurface",
+      "description": "Spoiler panels on both wings for speed brakes, ground spoilers, and roll assist.",
+      "position": [-10, 44, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "Spoilers deploy symmetrically as speed brakes or asymmetrically to assist roll control.",
+      "educationTopicIds": ["spoiler-systems", "speed-brakes"]
+    },
+    {
+      "id": "weather-radar",
+      "name": "Weather Radar Antenna",
+      "category": "Avionics",
+      "description": "The weather radar housed in the nose radome for detecting storms ahead of the aircraft.",
+      "position": [0, 1, 4],
+      "interactionRadius": 2.0,
+      "interactionText": "The MultiScan radar detects weather at multiple altitudes simultaneously.",
+      "educationTopicIds": ["weather-radar", "thunderstorm-avoidance"]
+    },
+    {
+      "id": "apu-exhaust",
+      "name": "APU Exhaust",
+      "category": "APU",
+      "description": "The Honeywell 131-9B APU exhaust at the tail cone.",
+      "position": [0, 84, 5],
+      "interactionRadius": 1.5,
+      "interactionText": "The APU provides ground power and bleed air for engine starting.",
+      "educationTopicIds": ["apu-operations", "ground-power"]
+    }
+  ],
+  "controlSurfaces": [
+    {
+      "id": "cs-ailerons",
+      "name": "Ailerons",
+      "axis": "roll",
+      "movementDescription": "Yoke turned left: left aileron up, right aileron down. Yoke turned right: opposite deflection.",
+      "flightEffect": "Differential lift between wings rolls the aircraft in the direction of yoke input, initiating a banked turn.",
+      "componentId": "left-aileron"
+    },
+    {
+      "id": "cs-elevator",
+      "name": "Elevator",
+      "axis": "pitch",
+      "movementDescription": "Yoke pulled back: elevators deflect upward. Yoke pushed forward: elevators deflect downward.",
+      "flightEffect": "Upward elevator creates downward tail force, pitching the nose up for climb. Forward yoke pitches nose down for descent.",
+      "componentId": "elevator"
+    },
+    {
+      "id": "cs-rudder",
+      "name": "Rudder",
+      "axis": "yaw",
+      "movementDescription": "Left rudder pedal pressed: rudder deflects left. Right pedal: rudder deflects right.",
+      "flightEffect": "Rudder deflection yaws the aircraft nose in the direction of pedal input. Used for coordinated turns and crosswind correction.",
+      "componentId": "rudder"
+    },
+    {
+      "id": "cs-flaps",
+      "name": "Trailing Edge Flaps",
+      "axis": "pitch",
+      "movementDescription": "Flap lever moved through detents 1, 2, 5, 10, 15, 25, 30, 40. Flaps extend progressively.",
+      "flightEffect": "Extending flaps increases lift and drag, reducing takeoff and landing speeds. Higher settings enable steeper approaches.",
+      "componentId": "left-flap"
+    },
+    {
+      "id": "cs-slats",
+      "name": "Leading Edge Slats",
+      "axis": "pitch",
+      "movementDescription": "Slats extend automatically with flap selection, deploying forward and down from the leading edge.",
+      "flightEffect": "Extended slats delay stall by energizing airflow over the wing, allowing safe flight at lower speeds.",
+      "componentId": "left-slat"
+    },
+    {
+      "id": "cs-spoilers",
+      "name": "Spoilers / Speed Brakes",
+      "axis": "roll",
+      "movementDescription": "Speed brake lever raised: symmetric deployment. During roll: asymmetric deployment assists ailerons.",
+      "flightEffect": "Symmetric deployment increases drag and reduces lift for descent. Ground deployment destroys lift for maximum braking.",
+      "componentId": "spoilers"
+    }
+  ]
+}

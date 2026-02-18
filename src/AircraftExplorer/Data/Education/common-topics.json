@@ -1,0 +1,586 @@
+[
+  {
+    "id": "how-lift-works",
+    "title": "How Airplane Wings Generate Lift",
+    "category": "HowItWorks",
+    "content": "Airplane wings generate lift through a combination of Bernoulli's principle and angle of attack. The wing's curved upper surface causes air to travel faster over the top, creating lower pressure compared to the underside. Simultaneously, the wing is angled slightly upward relative to the oncoming airflow, deflecting air downward and producing an equal and opposite upward force. These two mechanisms work together to overcome gravity and keep the aircraft airborne.",
+    "componentIds": [],
+    "aircraftIds": []
+  },
+  {
+    "id": "how-jet-engines-work",
+    "title": "How Turbofan Jet Engines Work",
+    "category": "HowItWorks",
+    "content": "Modern jet engines are turbofans that operate on the suck, squeeze, bang, blow principle. Air is sucked in by a large front fan, squeezed by a series of compressor stages to high pressure, mixed with fuel and ignited in the combustion chamber (bang), and blown out the back through turbines and an exhaust nozzle. The bypass ratio describes how much air goes around the engine core versus through it; high-bypass turbofans used on airliners route most air around the core for quieter, more fuel-efficient operation.",
+    "componentIds": ["left-engine", "right-engine"],
+    "aircraftIds": []
+  },
+  {
+    "id": "flight-control-basics",
+    "title": "Primary Flight Controls Overview",
+    "category": "HowItWorks",
+    "content": "Aircraft have three primary flight controls that rotate the plane around its three axes. Ailerons on the trailing edge of each wing control roll (banking left or right). The elevator on the horizontal stabilizer controls pitch (nose up or down). The rudder on the vertical stabilizer controls yaw (nose left or right). Pilots use a combination of all three controls to maneuver the aircraft smoothly through the air.",
+    "componentIds": ["left-aileron", "right-aileron", "elevator", "rudder"],
+    "aircraftIds": []
+  },
+  {
+    "id": "how-ailerons-work",
+    "title": "How Ailerons Control Roll",
+    "category": "HowItWorks",
+    "content": "Ailerons are hinged surfaces on the trailing edge of each wing, near the wingtips. They move in opposite directions: when the left aileron goes up, the right goes down. The raised aileron reduces lift on its wing while the lowered aileron increases lift on the opposite wing, causing the aircraft to roll. Many aircraft use differential ailerons, where the upward deflection is greater than the downward deflection, to counteract adverse yaw, an unwanted yawing motion caused by increased drag on the lowered aileron side.",
+    "componentIds": ["left-aileron", "right-aileron"],
+    "aircraftIds": []
+  },
+  {
+    "id": "how-elevators-work",
+    "title": "How Elevators Control Pitch",
+    "category": "HowItWorks",
+    "content": "The elevator is a movable surface on the trailing edge of the horizontal stabilizer at the tail. When the pilot pulls back on the control column, the elevator deflects upward, creating a downward force on the tail that pitches the nose up. Pushing forward deflects the elevator downward, pitching the nose down. Trim tabs or an adjustable stabilizer allow pilots to set a hands-off pitch angle, reducing workload during cruise flight. Proper pitch control is essential for maintaining desired airspeed and altitude.",
+    "componentIds": ["elevator"],
+    "aircraftIds": []
+  },
+  {
+    "id": "how-rudder-works",
+    "title": "How the Rudder Controls Yaw",
+    "category": "HowItWorks",
+    "content": "The rudder is a movable surface on the trailing edge of the vertical stabilizer. Pressing the left rudder pedal deflects the rudder to the left, pushing the tail right and yawing the nose left. The rudder is essential for coordinated turns, where it counteracts adverse yaw to keep the aircraft balanced. During crosswind landings, pilots use the rudder to align the aircraft with the runway centerline. The rudder is also critical for maintaining directional control if an engine fails on a multi-engine aircraft.",
+    "componentIds": ["rudder"],
+    "aircraftIds": []
+  },
+  {
+    "id": "how-flaps-work",
+    "title": "How Flaps Increase Lift and Drag",
+    "category": "HowItWorks",
+    "content": "Flaps are movable panels on the trailing edge of the wings, closer to the fuselage than ailerons. When extended, they increase the wing's camber and surface area, generating more lift at lower speeds. This allows the aircraft to fly slower during takeoff and landing without stalling. Common types include plain flaps, split flaps, slotted flaps, and Fowler flaps. Each successive flap setting increases both lift and drag; pilots select the appropriate setting based on the phase of flight and runway conditions.",
+    "componentIds": ["left-flap", "right-flap"],
+    "aircraftIds": []
+  },
+  {
+    "id": "how-slats-work",
+    "title": "How Leading Edge Slats Prevent Stalls",
+    "category": "HowItWorks",
+    "content": "Slats are movable panels on the leading edge of the wing that extend forward and downward during slow flight. When deployed, they create a slot between the slat and the wing, allowing high-energy air from below to flow over the upper wing surface. This re-energizes the boundary layer and delays airflow separation, allowing the wing to operate at higher angles of attack without stalling. Slats typically deploy automatically at low speeds or can be selected manually by the flight crew along with the flaps.",
+    "componentIds": ["left-slat", "right-slat"],
+    "aircraftIds": []
+  },
+  {
+    "id": "how-spoilers-work",
+    "title": "How Spoilers Reduce Lift and Add Drag",
+    "category": "HowItWorks",
+    "content": "Spoilers are flat panels on the upper surface of the wings that hinge upward to disrupt airflow and reduce lift. They serve multiple functions: as speed brakes in flight to increase drag and allow steeper descents, as ground spoilers that deploy on landing to dump lift and press the wheels onto the runway for effective braking, and as roll spoilers that assist ailerons by deploying asymmetrically during turns. On the ground, full spoiler deployment can reduce landing distance significantly by improving brake effectiveness.",
+    "componentIds": ["spoilers"],
+    "aircraftIds": []
+  },
+  {
+    "id": "landing-gear-basics",
+    "title": "Landing Gear Systems",
+    "category": "HowItWorks",
+    "content": "Most modern airliners use a tricycle landing gear configuration with a steerable nose gear and two main gear assemblies under the wings or fuselage. The gear retracts after takeoff to reduce drag and extends before landing using hydraulic actuators. Multiple redundant extension systems ensure the gear can always be lowered, including gravity-drop backups. The main gear carries the bulk of the aircraft weight and houses large carbon or steel brakes, along with anti-skid systems similar to automotive ABS.",
+    "componentIds": ["nose-gear-assembly", "left-main-gear", "right-main-gear"],
+    "aircraftIds": []
+  },
+  {
+    "id": "navigation-basics",
+    "title": "Aircraft Navigation Systems",
+    "category": "Operations",
+    "content": "Modern aircraft use multiple navigation systems for redundancy and precision. GPS provides global position accuracy within a few meters. VOR ground-based beacons define airways by transmitting radial bearings that aircraft can track. For precision approaches, the Instrument Landing System (ILS) provides both lateral guidance via a localizer beam and vertical guidance via a glideslope beam, enabling landings in low visibility. Flight management systems integrate all these sources to compute optimal routes and guide autopilot systems.",
+    "componentIds": [],
+    "aircraftIds": []
+  },
+  {
+    "id": "pressurization",
+    "title": "Cabin Pressurization",
+    "category": "HowItWorks",
+    "content": "Aircraft cabins are pressurized to maintain a breathable atmosphere at cruise altitudes above 30,000 feet where outside air pressure is too low for human survival. Bleed air from the jet engines is cooled and regulated to maintain a cabin altitude equivalent of 6,000 to 8,000 feet. An outflow valve in the fuselage controls the rate at which air exits the cabin, maintaining the desired pressure differential. The fuselage skin is reinforced to withstand this pressure difference, and safety valves prevent over-pressurization or excessive differential.",
+    "componentIds": [],
+    "aircraftIds": []
+  },
+  {
+    "id": "weather-radar",
+    "title": "Airborne Weather Radar",
+    "category": "Operations",
+    "content": "Weather radar systems use a nose-mounted antenna to transmit pulses of microwave energy that reflect off precipitation. The strength of the return signal indicates rain intensity, displayed in green, yellow, and red on cockpit screens. Pilots use radar to identify and avoid thunderstorms, which contain severe turbulence, hail, and windshear. Modern radar systems can also detect windshear and turbulence ahead of the aircraft, providing critical warnings. The antenna tilts to scan different altitude layers and can be adjusted by the crew.",
+    "componentIds": ["weather-radar"],
+    "aircraftIds": []
+  },
+  {
+    "id": "flight-controls-overview",
+    "title": "Flight Controls System Overview",
+    "category": "HowItWorks",
+    "content": "The flight control system connects the pilot's inputs to the control surfaces that maneuver the aircraft. In conventional systems, cables and pushrods run from the cockpit controls to hydraulic actuators at each surface. In fly-by-wire systems, electronic signals replace mechanical linkages entirely. The pilot commands are processed by flight control computers that can augment inputs with stability enhancements, envelope protection, and autopilot integration. Regardless of the technology, the fundamental layout remains the same: a control column or sidestick for pitch and roll, rudder pedals for yaw, and a trim system to relieve sustained control forces.",
+    "componentIds": ["captain-yoke", "first-officer-yoke"],
+    "aircraftIds": []
+  },
+  {
+    "id": "fly-by-wire",
+    "title": "Fly-By-Wire Flight Control Technology",
+    "category": "HowItWorks",
+    "content": "Fly-by-wire replaces traditional mechanical flight control linkages with electronic signal paths. When the pilot moves the controls, sensors convert the input into digital commands sent to flight control computers. These computers process the commands, apply stability augmentation and envelope protection, then send signals to electrically-driven hydraulic actuators at each control surface. Redundancy is achieved through multiple independent computers with dissimilar hardware and software, ensuring no single failure can cause loss of control. Fly-by-wire enables features impossible with mechanical systems, including automatic angle-of-attack limiting, turn coordination, and gust load alleviation.",
+    "componentIds": ["captain-yoke", "first-officer-yoke"],
+    "aircraftIds": []
+  },
+  {
+    "id": "dual-control-system",
+    "title": "Dual Control System and Crew Coordination",
+    "category": "Operations",
+    "content": "All commercial aircraft have dual flight controls, one set for the captain on the left and one for the first officer on the right. Both control columns are mechanically interconnected so that input from either seat moves both yokes simultaneously, providing tactile feedback to the other pilot. This interconnection is critical for crew coordination during training, monitoring, and emergency situations. Either pilot can fully control the aircraft from their seat. The dual control requirement is a fundamental safety principle ensuring that incapacitation of one pilot never prevents the other from maintaining control of the aircraft.",
+    "componentIds": ["captain-yoke", "first-officer-yoke"],
+    "aircraftIds": []
+  },
+  {
+    "id": "rudder-control",
+    "title": "Rudder Pedal Operation and Nosewheel Steering",
+    "category": "HowItWorks",
+    "content": "Rudder pedals serve dual functions in the cockpit. In flight, pushing a pedal deflects the rudder on the vertical stabilizer, yawing the aircraft nose in that direction. On the ground, the pedals connect to the nosewheel steering system, allowing the pilot to steer during taxi. The pedals also incorporate toe brakes at the top of each pedal for differential braking during ground operations. Rudder pedal force is typically augmented by a feel and centering unit that provides artificial resistance proportional to airspeed, giving the pilot consistent control feel across the speed range.",
+    "componentIds": ["rudder-pedals"],
+    "aircraftIds": []
+  },
+  {
+    "id": "yaw-control",
+    "title": "Yaw Control and Directional Stability",
+    "category": "HowItWorks",
+    "content": "Yaw control maintains the aircraft's directional alignment during flight. The rudder provides direct yaw authority, but several other systems contribute to directional stability. The vertical stabilizer acts as a weathervane, naturally correcting small yaw disturbances. During engine-out scenarios on multi-engine aircraft, the rudder must counteract asymmetric thrust to maintain straight flight. The maximum rudder deflection available is typically limited at high speeds to prevent structural overload, while full deflection is available at low speeds where maximum yaw authority is needed for crosswind operations and engine failure recovery.",
+    "componentIds": ["rudder"],
+    "aircraftIds": []
+  },
+  {
+    "id": "crosswind-technique",
+    "title": "Crosswind Landing Techniques",
+    "category": "Operations",
+    "content": "Crosswind landings require pilots to counteract wind blowing across the runway. Two primary techniques are used. The crab method involves approaching at an angle into the wind, keeping the aircraft tracking straight toward the runway, then kicking the rudder just before touchdown to align with the centerline. The wing-low method uses aileron to bank slightly into the wind and opposite rudder to prevent turning, maintaining a sideslip all the way to touchdown. Most pilots use a combination of both techniques. Each aircraft type has a maximum demonstrated crosswind component, typically between 25 and 38 knots for large commercial aircraft.",
+    "componentIds": ["rudder-pedals"],
+    "aircraftIds": []
+  },
+  {
+    "id": "roll-control",
+    "title": "Roll Control and Bank Angle Management",
+    "category": "HowItWorks",
+    "content": "Roll control is achieved primarily through ailerons, with spoilers providing supplementary roll authority on large aircraft. When the pilot turns the control wheel, the ailerons deflect asymmetrically to create a lift differential between the wings, rolling the aircraft into a bank. At high speeds, only the outboard ailerons may be active, while at low speeds both inboard and outboard ailerons work together for maximum authority. Many large aircraft also use roll spoilers, panels on the upper wing surface that deploy on the descending wing to augment the aileron roll rate, particularly important during approach and landing.",
+    "componentIds": ["left-aileron", "right-aileron"],
+    "aircraftIds": []
+  },
+  {
+    "id": "spoiler-systems",
+    "title": "Spoiler System Functions and Modes",
+    "category": "HowItWorks",
+    "content": "The spoiler system operates in multiple modes depending on the phase of flight. In-flight speed brakes are deployed symmetrically by pulling the speedbrake lever in the cockpit, increasing drag for descent management without changing pitch significantly. Roll spoilers deploy asymmetrically during turns to augment aileron authority, rising on the wing that needs to descend. Ground spoilers deploy automatically on touchdown when the weight-on-wheels sensors detect landing, extending fully to destroy remaining wing lift and transfer the aircraft's weight onto the wheels for maximum braking effectiveness. The ground spoiler function can reduce landing roll distance by up to 20 percent.",
+    "componentIds": ["spoilers"],
+    "aircraftIds": []
+  },
+  {
+    "id": "speed-brakes",
+    "title": "Speed Brake Operations",
+    "category": "Operations",
+    "content": "Speed brakes are spoiler panels deployed symmetrically in flight to increase drag without significantly affecting lift. Pilots use them primarily during descent to increase the rate of descent while keeping airspeed under control, avoiding the need to reduce thrust to idle for extended periods which can cool engine components unevenly. Speed brakes are also used to lose excess altitude quickly when air traffic control assigns a lower altitude. The speedbrake lever in the cockpit provides proportional control from fully retracted to fully extended. Pilots must retract speed brakes before landing to ensure full wing lift is available during the flare.",
+    "componentIds": ["spoilers"],
+    "aircraftIds": []
+  },
+  {
+    "id": "high-lift-devices",
+    "title": "High-Lift Devices for Takeoff and Landing",
+    "category": "HowItWorks",
+    "content": "High-lift devices are movable wing components that allow aircraft to fly safely at the low speeds required for takeoff and landing. Trailing-edge flaps increase both the camber and effective area of the wing, generating more lift at a given speed. Leading-edge slats and Krueger flaps extend the wing's leading edge, allowing higher angles of attack before the wing stalls. Used together, these devices can increase the wing's maximum lift coefficient by 80 percent or more. Pilots select specific flap and slat positions for each phase of flight based on aircraft weight, runway length, and obstacles in the departure or approach path.",
+    "componentIds": ["left-flap", "right-flap", "left-slat", "right-slat"],
+    "aircraftIds": []
+  },
+  {
+    "id": "leading-edge-devices",
+    "title": "Leading Edge Slats and Krueger Flaps",
+    "category": "HowItWorks",
+    "content": "Leading-edge devices reshape the front of the wing to improve low-speed performance. Slats are curved panels that slide forward and down on tracks, opening a slot between the slat and the wing that channels high-energy air over the upper surface to delay stall. Krueger flaps are flat panels hinged at the bottom of the leading edge that swing forward and down, effectively extending the wing chord and increasing camber. The 737 uses a combination of slats outboard and Krueger flaps inboard, while most other Boeing aircraft use full-span slats. These devices extend automatically with the trailing-edge flaps and are essential for achieving the low approach speeds needed for safe landing.",
+    "componentIds": ["left-slat", "right-slat"],
+    "aircraftIds": []
+  },
+  {
+    "id": "stall-prevention",
+    "title": "Stall Prevention and Warning Systems",
+    "category": "Safety",
+    "content": "Modern aircraft incorporate multiple layers of stall prevention. Angle-of-attack vanes on the fuselage continuously measure the wing's angle relative to the airflow. As the angle increases toward the stall threshold, a stick shaker motor vibrates the control column to provide an unmistakable tactile warning. If the angle continues to increase, a stick pusher may activate, automatically pushing the control column forward to reduce the angle of attack and prevent a full stall. Slats deploy automatically at low speeds to raise the stall angle, and fly-by-wire aircraft include angle-of-attack limiting that prevents the pilot from commanding inputs that would exceed the stall angle.",
+    "componentIds": ["left-slat", "right-slat"],
+    "aircraftIds": []
+  },
+  {
+    "id": "primary-flight-display",
+    "title": "Primary Flight Display",
+    "category": "HowItWorks",
+    "content": "The Primary Flight Display, or PFD, is the most critical instrument in a glass cockpit. It integrates the information from six traditional instruments into a single screen: the attitude indicator showing aircraft pitch and roll, the airspeed indicator with speed trend and reference bugs, the altimeter with altitude trend, the vertical speed indicator, the heading indicator, and the flight director command bars. The PFD also displays approach guidance including ILS localizer and glideslope deviation, decision height annunciations, and autopilot mode status. Its central position directly in front of each pilot reflects its importance as the primary reference for aircraft state.",
+    "componentIds": ["pfd"],
+    "aircraftIds": []
+  },
+  {
+    "id": "glass-cockpit",
+    "title": "Glass Cockpit Technology",
+    "category": "Design",
+    "content": "Glass cockpits replace traditional analog instruments with digital displays, consolidating dozens of individual gauges onto a few multi-function screens. This revolution began in the 1980s and is now standard on all modern airliners. Key benefits include reduced pilot workload through integrated information presentation, automated system monitoring with intelligent alerting, customizable display formats for different phases of flight, and the ability to show synthetic vision terrain imagery. Glass cockpits typically feature a PFD and ND for each pilot, plus shared engine and systems displays. The electronic architecture also enables easy software updates to add capabilities without hardware changes.",
+    "componentIds": ["pfd", "nd", "eicas"],
+    "aircraftIds": []
+  },
+  {
+    "id": "navigation-display",
+    "title": "Navigation Display",
+    "category": "HowItWorks",
+    "content": "The Navigation Display, or ND, shows a plan view of the aircraft's position relative to its programmed route, nearby waypoints, airports, navaids, and terrain. It operates in several modes: MAP mode shows a moving map with the route, ARC mode shows a partial compass rose with route information ahead, PLAN mode shows the full flight plan for review, and VOR or ILS modes show traditional needle-based navigation. The ND also overlays weather radar returns, traffic from the TCAS system, and terrain from the EGPWS database. Pilots can adjust the display range from as close as 10 miles to as far as 640 miles to suit the phase of flight.",
+    "componentIds": ["nd"],
+    "aircraftIds": []
+  },
+  {
+    "id": "engine-instruments",
+    "title": "Engine Indication Systems",
+    "category": "HowItWorks",
+    "content": "Engine indication displays present critical engine parameters in real time, allowing pilots to monitor performance and detect anomalies. Key parameters include N1 (fan speed, used as the primary thrust setting reference), N2 (core speed), EGT (exhaust gas temperature, the most critical limit), fuel flow, oil pressure, oil temperature, and engine vibration. The displays use color coding: green for normal ranges, amber for caution, and red for limits that must not be exceeded. Trend monitoring compares current values against expected performance to detect gradual engine deterioration before it becomes a safety issue.",
+    "componentIds": ["eicas"],
+    "aircraftIds": []
+  },
+  {
+    "id": "crew-alerting",
+    "title": "Crew Alerting and Warning Systems",
+    "category": "Safety",
+    "content": "The Engine Indication and Crew Alerting System, or EICAS, provides a centralized warning and caution system that monitors hundreds of aircraft parameters. Alerts are prioritized into three levels: warnings (red) for conditions requiring immediate action, cautions (amber) for conditions requiring awareness and timely action, and advisories (blue or white) for information. When a warning triggers, the master warning light flashes, an aural tone sounds, and the alert message appears on the EICAS display along with a checklist reference. This hierarchical system ensures pilots address the most critical issues first and prevents alert fatigue from low-priority messages.",
+    "componentIds": ["eicas"],
+    "aircraftIds": []
+  },
+  {
+    "id": "autopilot-modes",
+    "title": "Autopilot Modes and Functions",
+    "category": "Operations",
+    "content": "Modern autopilot systems offer numerous modes for different phases of flight. Basic modes include heading hold, altitude hold, and vertical speed. Advanced modes include LNAV (lateral navigation following a programmed route), VNAV (vertical navigation following a computed profile), and approach modes for ILS, GPS, and visual approaches. The autopilot can manage the aircraft from shortly after takeoff through landing, including autoland capability in low visibility. Pilots engage modes via the mode control panel and monitor autopilot performance continuously. Understanding mode logic and transitions is one of the most important aspects of modern airline pilot training.",
+    "componentIds": ["mcp"],
+    "aircraftIds": []
+  },
+  {
+    "id": "mode-control-panel",
+    "title": "Mode Control Panel",
+    "category": "HowItWorks",
+    "content": "The Mode Control Panel, or MCP, is the primary interface between the pilots and the autoflight system. Located on the glareshield above the main instrument panel, it contains rotary knobs and push buttons for setting target speed, heading, altitude, and vertical speed. Pushing the knobs typically engages the selected value as a target, while pulling them (on Boeing aircraft) switches to a different mode. The MCP also has buttons for engaging and disengaging the autopilot, autothrottle, and flight director. Status annunciations on the flight mode annunciator above the PFD confirm which modes are active, armed, or captured.",
+    "componentIds": ["mcp"],
+    "aircraftIds": []
+  },
+  {
+    "id": "flight-management-system",
+    "title": "Flight Management System",
+    "category": "HowItWorks",
+    "content": "The Flight Management Computer, or FMC, is the brain of the aircraft's navigation and performance management system. Pilots program it before each flight with the route, departure and arrival procedures, cruise altitude, cost index, and aircraft weight. The FMC contains a navigation database with worldwide waypoints, airways, and procedures that is updated every 28 days. It computes the optimal flight path, speed schedule, fuel predictions, and time estimates. In flight, it continuously updates predictions based on actual winds and aircraft performance. The FMC drives the autopilot in LNAV and VNAV modes, providing precise four-dimensional navigation from departure to arrival.",
+    "componentIds": ["fmc"],
+    "aircraftIds": []
+  },
+  {
+    "id": "flight-planning",
+    "title": "Flight Planning and Route Selection",
+    "category": "Operations",
+    "content": "Flight planning involves selecting the optimal route considering weather, airspace restrictions, fuel requirements, and alternate airports. Dispatchers and pilots use the navigation display to review programmed routes and verify they avoid hazardous weather and restricted airspace. The ND shows published airways, intersections, and navaids that form the building blocks of instrument flight routes. Modern flight planning software optimizes routes for minimum fuel burn or minimum time based on forecast winds at multiple altitudes. Oceanic flights use organized track systems that change daily based on jet stream position, and polar routes enable shorter great-circle distances between city pairs.",
+    "componentIds": ["nd"],
+    "aircraftIds": []
+  },
+  {
+    "id": "performance-calculations",
+    "title": "Aircraft Performance Calculations",
+    "category": "Operations",
+    "content": "The FMC performs continuous performance calculations critical to flight safety and efficiency. Before takeoff, it computes V-speeds (V1, VR, V2) based on aircraft weight, runway length, temperature, altitude, wind, and runway condition. During climb, it calculates the optimal speed and engine thrust setting to balance fuel efficiency with time. At cruise, it determines the ideal altitude and speed for the current weight and wind conditions. For approach, it computes approach speed (Vref) and landing distance. These calculations account for engine-out scenarios, ensuring the aircraft can always safely complete the current phase of flight even with an engine failure.",
+    "componentIds": ["fmc"],
+    "aircraftIds": []
+  },
+  {
+    "id": "navigation-database",
+    "title": "Navigation Database and AIRAC Cycles",
+    "category": "Operations",
+    "content": "The FMC navigation database contains a comprehensive digital catalog of the world's airways, waypoints, airports, runways, instrument procedures, and navigation aids. This database follows the Aeronautical Information Regulation and Control (AIRAC) cycle, updating every 28 days to reflect changes in airspace structure, new procedures, and modified restrictions. Loading the current database before each flight is a critical pre-flight task, as an outdated database could contain incorrect procedures or missing waypoints. The database also includes terrain and obstacle data used for ground proximity warnings and terrain-referenced navigation.",
+    "componentIds": ["fmc"],
+    "aircraftIds": []
+  },
+  {
+    "id": "engine-thrust-management",
+    "title": "Engine Thrust Management",
+    "category": "Operations",
+    "content": "Pilots manage engine thrust through the throttle quadrant, which contains thrust levers for each engine plus a reverse thrust mechanism. Moving the thrust levers forward increases fuel flow to the engines, raising N1 fan speed and thrust. The FADEC system translates lever position into precise fuel metering, accounting for altitude, temperature, and bleed air demands. Derated takeoff thrust is commonly used when full thrust is not required, reducing engine wear and extending time between overhauls. The thrust lever position is indicated on the engine instruments, and N1 targets appear as bugs on the gauges for the crew to match.",
+    "componentIds": ["throttle-quadrant"],
+    "aircraftIds": []
+  },
+  {
+    "id": "autothrottle-system",
+    "title": "Autothrottle System",
+    "category": "HowItWorks",
+    "content": "The autothrottle, also called autothrust, automatically adjusts engine power to maintain a target speed or thrust setting. When engaged, servo motors physically move the thrust levers to the required position, providing visual and tactile confirmation to the pilots. In speed mode, the autothrottle varies thrust to hold a specific airspeed. In thrust mode, it holds a fixed thrust setting while the autopilot controls speed through pitch changes. During approach, the autothrottle maintains approach speed precisely, adding thrust in gusts and reducing it in tailwinds. Pilots can always override the autothrottle by manually moving the thrust levers.",
+    "componentIds": ["throttle-quadrant"],
+    "aircraftIds": []
+  },
+  {
+    "id": "turbofan-principles",
+    "title": "Turbofan Engine Principles",
+    "category": "HowItWorks",
+    "content": "A turbofan engine generates thrust through two streams of air. The core stream passes through the compressor, combustion chamber, and turbines, similar to a pure turbojet. The bypass stream is accelerated by the large front fan but flows around the core without being combusted. Modern high-bypass turbofans route five to ten times more air through the bypass duct than through the core. This produces thrust more efficiently because accelerating a large mass of air by a small amount creates the same thrust as accelerating a small mass by a large amount, but with far less energy wasted as noise and heat. This principle explains why modern engines are both quieter and more fuel-efficient than older designs.",
+    "componentIds": ["left-engine", "right-engine"],
+    "aircraftIds": []
+  },
+  {
+    "id": "bypass-ratio",
+    "title": "Engine Bypass Ratio and Efficiency",
+    "category": "Specs",
+    "content": "Bypass ratio is the ratio of air flowing around the engine core to air flowing through it. A higher bypass ratio generally means better fuel efficiency and lower noise. Early turbofans had bypass ratios around 1:1, while modern engines like the CFM56 achieve 5:1 and the GE90 reaches 9:1. The latest engines like the GE9X exceed 10:1. Higher bypass ratios require larger fan diameters, which is why modern engines appear so much wider than older designs. The trade-off is that very large fans create more drag and weight, so engine designers optimize the bypass ratio for the intended flight regime and aircraft configuration.",
+    "componentIds": ["left-engine", "right-engine"],
+    "aircraftIds": []
+  },
+  {
+    "id": "thrust-reversers",
+    "title": "Thrust Reverser Systems",
+    "category": "HowItWorks",
+    "content": "Thrust reversers redirect engine exhaust forward to help decelerate the aircraft after landing. Two main types exist: cascade reversers that use blocker doors to divert bypass air through fixed cascades in the nacelle, and target reversers that deploy clamshell doors into the exhaust stream to redirect it forward. On most aircraft, only the bypass air is reversed, not the core exhaust, as this provides sufficient deceleration force. Thrust reversers are particularly valuable on wet or contaminated runways where wheel braking is less effective. They are deployed immediately after touchdown and stowed before the aircraft slows below approximately 60 knots to prevent foreign object ingestion.",
+    "componentIds": ["left-engine", "right-engine"],
+    "aircraftIds": []
+  },
+  {
+    "id": "engine-maintenance",
+    "title": "Engine Maintenance and Monitoring",
+    "category": "Operations",
+    "content": "Modern jet engines are maintained using condition-based monitoring rather than fixed time intervals. Engine health monitoring systems continuously record parameters like vibration levels, exhaust gas temperature margins, oil consumption rates, and fuel flow deviations. This data is transmitted to the airline's maintenance center and the engine manufacturer via satellite link during flight. Trend analysis detects gradual degradation that could indicate developing problems like bearing wear, compressor blade erosion, or combustion chamber hot spots. Engines typically remain on wing for 15,000 to 30,000 flight hours between shop visits, with routine tasks like borescope inspections performed periodically without removing the engine.",
+    "componentIds": ["left-engine", "right-engine"],
+    "aircraftIds": []
+  },
+  {
+    "id": "landing-gear-systems",
+    "title": "Landing Gear Retraction and Extension Systems",
+    "category": "HowItWorks",
+    "content": "The landing gear retraction system uses hydraulic actuators to swing the gear assemblies into wheel wells in the fuselage or wings after takeoff. The process is initiated by the pilot moving the gear lever in the cockpit. Uplocks hold the gear in the retracted position, while downlocks secure it when extended. Multiple safety systems prevent inadvertent retraction on the ground, including weight-on-wheels switches and a ground-shift mechanism on the gear lever. If hydraulic power is lost, an alternate extension system allows the gear to free-fall and lock into the down position under gravity. The gear doors open automatically during the retraction and extension cycle.",
+    "componentIds": ["nose-gear-assembly", "left-main-gear", "right-main-gear"],
+    "aircraftIds": []
+  },
+  {
+    "id": "nose-wheel-steering",
+    "title": "Nosewheel Steering System",
+    "category": "HowItWorks",
+    "content": "The nosewheel steering system allows pilots to maneuver the aircraft on the ground. Two control inputs are available: the rudder pedals provide limited steering authority of about five to seven degrees for runway alignment during takeoff and landing, while a separate tiller wheel mounted on the side console provides full steering authority up to approximately 70 degrees for tight turns during taxi. The steering is hydraulically powered and includes a centering mechanism that returns the nosewheel to straight ahead when no input is applied. On the ground, differential braking supplements steering for very tight turns and parking maneuvers.",
+    "componentIds": ["nose-gear-assembly"],
+    "aircraftIds": []
+  },
+  {
+    "id": "braking-systems",
+    "title": "Aircraft Braking Systems",
+    "category": "HowItWorks",
+    "content": "Aircraft braking systems must absorb enormous amounts of kinetic energy during landing and rejected takeoffs. The brakes are mounted on the main landing gear wheels and are applied through hydraulic pressure controlled by pilot toe-brake inputs or the autobrake system. The autobrake can be set to various deceleration levels before landing, automatically applying brakes at touchdown for a consistent stopping force. An accumulator provides backup hydraulic pressure for braking if normal hydraulic systems fail. The brake system also includes brake temperature monitoring, as overheated brakes can lead to tire failure or fire. After a heavy braking event, a cooling period is required before the next takeoff.",
+    "componentIds": ["left-main-gear", "right-main-gear"],
+    "aircraftIds": []
+  },
+  {
+    "id": "anti-skid-system",
+    "title": "Anti-Skid Braking System",
+    "category": "HowItWorks",
+    "content": "The anti-skid system prevents wheel lockup during braking, similar to ABS in automobiles but far more sophisticated. Speed sensors on each wheel measure rotational velocity. If a wheel begins to decelerate faster than the aircraft, indicating an impending skid, the system momentarily releases brake pressure on that wheel until it spins back up, then reapplies pressure. This happens many times per second on each wheel independently. The system also includes touchdown protection that prevents brake application until wheel spin-up confirms ground contact, and hydroplaning protection that adapts braking strategy on wet runways. Anti-skid optimization ensures maximum braking energy is applied without ever exceeding the tire's grip on the runway surface.",
+    "componentIds": ["left-main-gear", "right-main-gear"],
+    "aircraftIds": []
+  },
+  {
+    "id": "carbon-brakes",
+    "title": "Carbon Brake Technology",
+    "category": "Design",
+    "content": "Modern commercial aircraft use carbon-carbon composite brake discs that offer significant advantages over traditional steel brakes. Carbon brakes weigh approximately 40 percent less than equivalent steel assemblies, saving 500 to 700 pounds per aircraft. They can absorb more heat energy, which is critical during high-energy events like rejected takeoffs at maximum weight. Carbon brakes also last two to three times longer than steel, with typical life spans of 1,500 to 3,000 landings. The carbon discs are made from carbon fiber reinforced with carbon matrix, created through a process of layering carbon fiber fabric and repeatedly carbonizing it at extreme temperatures. Their main limitation is reduced effectiveness when cold and wet, which is compensated by slightly earlier brake application.",
+    "componentIds": ["left-main-gear", "right-main-gear"],
+    "aircraftIds": []
+  },
+  {
+    "id": "aircraft-doors",
+    "title": "Aircraft Door Design and Operation",
+    "category": "Design",
+    "content": "Aircraft doors are engineered as plug-type structures that use cabin pressure to reinforce the seal. The door is slightly larger than its frame opening, so when the cabin is pressurized, the internal pressure pushes the door against the frame, making it impossible to open in flight. To open on the ground, the handle mechanism first moves the door inward slightly, then slides it aside or swings it open. Each door contains an integral escape slide that automatically inflates when the door is opened with the slide armed. Door status is monitored on the cockpit displays, and a warning system alerts the crew if any door is not properly latched. Typical operating doors can be opened in under two seconds for emergency evacuation.",
+    "componentIds": ["forward-exit-door", "aft-exit-door"],
+    "aircraftIds": []
+  },
+  {
+    "id": "evacuation-procedures",
+    "title": "Emergency Evacuation Procedures",
+    "category": "Safety",
+    "content": "Commercial aircraft are certified to evacuate all passengers through half the available exits within 90 seconds. This requirement drives door sizing, slide design, aisle width, and crew training. Flight attendants are positioned at each door pair and trained to assess conditions outside before opening any exit, checking for fire, water, or structural damage. Once initiated, escape slides inflate automatically and passengers slide to the ground. Overwing exits provide additional escape paths via the wing surface. The cabin lighting system includes floor-level emergency track lighting that guides passengers to exits in smoke-filled conditions. Crews rehearse evacuation commands and procedures regularly in realistic simulators.",
+    "componentIds": ["forward-exit-door", "aft-exit-door"],
+    "aircraftIds": []
+  },
+  {
+    "id": "emergency-exits",
+    "title": "Overwing Emergency Exits",
+    "category": "Safety",
+    "content": "Overwing exits are hatches in the fuselage above the wing that provide additional escape routes during emergencies. Passengers seated in exit rows are briefed before each flight and must be physically capable of operating the exit. The exit hatch is removed by pulling a handle and pushing or pulling the hatch out of the opening. Passengers then step onto the wing surface and slide off the trailing edge via a wing slide or step down from the wing. Overwing exits are particularly important because they provide escape routes in the center of the cabin, away from the door exits at the front and rear. The number and size of overwing exits is determined by the aircraft's maximum passenger capacity.",
+    "componentIds": ["overwing-exit-left", "overwing-exit-right"],
+    "aircraftIds": []
+  },
+  {
+    "id": "galley-equipment",
+    "title": "Aircraft Galley Equipment",
+    "category": "Design",
+    "content": "Aircraft galleys are compact kitchens designed to prepare and serve meals to hundreds of passengers efficiently. They contain convection ovens for heating meals, coffee makers, water boilers, and refrigerated compartments. Standard galley carts fit into locking tracks and can be quickly loaded and unloaded through the service doors. Power is supplied by the aircraft electrical system at 115V AC. Galleys are strategically located at the front and rear of the cabin to minimize service disruption and balance the aircraft's weight distribution. Modern galleys feature modular designs that allow airlines to reconfigure the equipment based on route length and service class requirements.",
+    "componentIds": ["forward-galley-unit", "aft-galley-unit"],
+    "aircraftIds": []
+  },
+  {
+    "id": "cabin-service",
+    "title": "Cabin Service and Meal Operations",
+    "category": "Operations",
+    "content": "In-flight cabin service is coordinated from the galley areas by the cabin crew. Catering trucks load pre-prepared meal carts through service doors before departure. Meals are stored in insulated containers and heated in the galley ovens during flight at the appropriate time. The forward galley typically services business and first class with more elaborate meal preparation, while the aft galley handles economy class. Beverage service is conducted from separate carts. Waste is collected and stored in the galleys for removal after landing. The entire service operation is carefully timed and choreographed to serve all passengers within the available flight time while accommodating turbulence-related interruptions.",
+    "componentIds": ["forward-galley-unit", "aft-galley-unit"],
+    "aircraftIds": []
+  },
+  {
+    "id": "cabin-interior-design",
+    "title": "Cabin Interior Design and Ergonomics",
+    "category": "Design",
+    "content": "Aircraft cabin interiors are designed to balance passenger comfort, safety, and airline revenue. Overhead bins must accommodate standard carry-on luggage while providing sufficient headroom. Modern pivot bins open downward, allowing passengers to load bags at a lower height. Seat pitch (distance between rows) typically ranges from 28 to 34 inches in economy, with airlines choosing configurations based on market and route length. Cabin lighting uses LED systems with programmable color temperatures to simulate natural light cycles and reduce jet lag. Materials must meet strict flammability, smoke, and toxicity requirements. The entire cabin interior, including seats, bins, sidewalls, and ceiling panels, can be replaced or reconfigured during maintenance checks.",
+    "componentIds": ["overhead-bins"],
+    "aircraftIds": []
+  },
+  {
+    "id": "seat-design",
+    "title": "Aircraft Seat Engineering",
+    "category": "Design",
+    "content": "Aircraft seats are sophisticated safety devices engineered to protect passengers during turbulence and survivable impacts. Each seat must withstand forces of 16G forward and 14G downward without the structure failing or the seat detaching from its track. Seats are mounted on floor tracks that allow airlines to adjust spacing and configuration. Modern economy seats weigh approximately 10 to 12 kilograms each, using advanced materials like carbon fiber reinforced seat pans and titanium buckle hardware. Seat cushions are made from fire-blocking materials that resist ignition and slow flame spread. The recline mechanism, fold-down tray table, and in-flight entertainment screen are integrated into a remarkably compact package.",
+    "componentIds": ["passenger-seats-row-1"],
+    "aircraftIds": []
+  },
+  {
+    "id": "oxygen-system",
+    "title": "Passenger Oxygen System",
+    "category": "Safety",
+    "content": "Each passenger seat position has an overhead oxygen mask that deploys automatically if cabin pressure altitude exceeds approximately 14,000 feet. Chemical oxygen generators activated by pulling the mask produce breathable oxygen for 12 to 22 minutes, sufficient time for the pilots to descend to a safe altitude below 10,000 feet. The generators use a chemical reaction involving sodium chlorate that produces oxygen when triggered by a spring-loaded firing pin. The masks use a continuous-flow design with a reservoir bag that collects oxygen between breaths for efficient delivery. Passengers are instructed to secure their own mask before assisting others because hypoxia at high altitude can cause unconsciousness within seconds.",
+    "componentIds": ["passenger-seats-row-1"],
+    "aircraftIds": []
+  },
+  {
+    "id": "cabin-windows",
+    "title": "Aircraft Cabin Windows",
+    "category": "Design",
+    "content": "Aircraft cabin windows consist of three acrylic layers designed to withstand pressurization loads and provide passenger comfort. The outer pane is structural, bearing the pressure differential between the cabin and outside atmosphere. The middle pane serves as a fail-safe backup in case the outer pane cracks. The inner pane is a scratch guard that passengers can touch. A small breather hole in the middle pane allows pressure to equalize across it during normal operations, ensuring the outer pane carries the full load. Windows have rounded corners to distribute stress evenly, a design lesson learned from the de Havilland Comet accidents of the 1950s. The window shade may be manually operated or, on newer aircraft, electronically dimmable.",
+    "componentIds": ["pax-window"],
+    "aircraftIds": []
+  },
+  {
+    "id": "pitot-static-system",
+    "title": "Pitot-Static System",
+    "category": "HowItWorks",
+    "content": "The pitot-static system measures air pressure to determine airspeed, altitude, and vertical speed. Pitot tubes face forward into the airstream to measure total pressure (static plus dynamic). Static ports on the fuselage sides measure ambient atmospheric pressure. Airspeed is calculated from the difference between pitot (total) and static pressure. Altitude is derived from static pressure alone using the standard atmosphere model. Vertical speed comes from the rate of change of static pressure. Each aircraft has multiple independent pitot-static systems for redundancy. Heating elements in the pitot tubes and static ports prevent ice blockage, which could cause erroneous readings. Pitot-static system failures have been implicated in several accidents, making their proper maintenance critically important.",
+    "componentIds": ["pitot-tubes"],
+    "aircraftIds": []
+  },
+  {
+    "id": "airspeed-measurement",
+    "title": "Airspeed Measurement and Types",
+    "category": "HowItWorks",
+    "content": "Airspeed is measured by comparing pitot pressure to static pressure, but several different types of airspeed are used in aviation. Indicated Airspeed (IAS) is the raw reading from the pitot-static system. Calibrated Airspeed (CAS) corrects for instrument and position errors. Equivalent Airspeed (EAS) accounts for air compressibility at high speeds. True Airspeed (TAS) corrects for altitude and temperature to show actual speed through the air. Ground speed is determined separately using GPS or inertial navigation. Pilots primarily fly using indicated airspeed because it directly relates to aerodynamic forces on the aircraft regardless of altitude. Stall speed, structural limits, and approach speeds are all defined in terms of indicated airspeed.",
+    "componentIds": ["pitot-tubes"],
+    "aircraftIds": []
+  },
+  {
+    "id": "icing-protection",
+    "title": "Ice Protection Systems",
+    "category": "Safety",
+    "content": "Ice formation on aircraft surfaces is extremely dangerous because it disrupts airflow, reduces lift, increases drag, and adds weight. Aircraft use several anti-icing and de-icing systems. Engine inlets and wing leading edges on most Boeing aircraft use hot bleed air ducted from the engines through piccolo tubes to prevent ice formation. Pitot tubes, static ports, and angle-of-attack vanes have electrical heating elements. Windshields use embedded heating wires or conductive coatings. Some aircraft use inflatable rubber de-icing boots on the wing leading edges that crack off accumulated ice. Pilots monitor outside air temperature and visible moisture conditions to determine when to activate anti-ice systems, as using them unnecessarily wastes engine bleed air and reduces performance.",
+    "componentIds": ["pitot-tubes"],
+    "aircraftIds": []
+  },
+  {
+    "id": "thunderstorm-avoidance",
+    "title": "Thunderstorm Avoidance Procedures",
+    "category": "Operations",
+    "content": "Thunderstorms present multiple hazards to aircraft including severe turbulence, hail, lightning, icing, and windshear. Pilots use weather radar to identify storm cells by their precipitation intensity and give them wide clearance of at least 20 nautical miles from any cell showing red returns. At night or in clouds when visual avoidance is impossible, radar becomes the primary tool for storm avoidance. Pilots request deviations from air traffic control for weather avoidance, and controllers expect and accommodate these requests. Windshear, a sudden change in wind speed or direction, is particularly dangerous near the ground during takeoff and landing. Modern aircraft have predictive windshear systems that detect microbursts several seconds before the aircraft enters them, providing critical escape guidance.",
+    "componentIds": ["weather-radar"],
+    "aircraftIds": []
+  },
+  {
+    "id": "aircraft-systems-overview",
+    "title": "Aircraft Systems Management",
+    "category": "HowItWorks",
+    "content": "The overhead panel in the cockpit provides centralized control and monitoring of all major aircraft systems. From left to right, it typically contains switches and indicators for the electrical system, hydraulic system, fuel system, air conditioning and pressurization, anti-ice, lighting, and fire protection. Each system has multiple layers of redundancy, and the overhead panel allows pilots to manage system configurations, select alternate sources, and respond to failures. Normal operations require minimal overhead panel interaction, as most systems operate automatically. The panel becomes critical during non-normal situations when pilots must isolate failed components, activate backup systems, or configure the aircraft for single-engine or emergency operations.",
+    "componentIds": ["overhead-panel"],
+    "aircraftIds": []
+  },
+  {
+    "id": "apu-operations",
+    "title": "Auxiliary Power Unit Operations",
+    "category": "HowItWorks",
+    "content": "The Auxiliary Power Unit, or APU, is a small gas turbine engine typically located in the tail cone of the aircraft. It serves two primary functions: generating electrical power and providing compressed air (bleed air) for air conditioning and engine starting. On the ground, the APU allows the aircraft to operate its systems independently without ground support equipment or running the main engines. The APU is started using battery power and reaches full operating speed within about one minute. In flight, the APU can provide backup electrical power and bleed air if a main engine fails or its generator malfunctions. APU usage on the ground reduces noise and emissions at gates compared to running main engines.",
+    "componentIds": ["apu-exhaust"],
+    "aircraftIds": []
+  },
+  {
+    "id": "ground-power",
+    "title": "Ground Power and Pre-Flight Preparation",
+    "category": "Operations",
+    "content": "Aircraft at the gate can receive electrical power and conditioned air from two sources: the APU or external ground equipment. Ground power units supply 115V 400Hz AC power through a standardized plug on the aircraft's belly. Pre-conditioned air carts or fixed bridge air supplies provide heated or cooled air through a duct connection, maintaining cabin temperature without running engines or the APU. Using ground power reduces fuel consumption, noise, and emissions at the gate. Before departure, the crew typically starts the APU and switches from ground power to APU power, then uses APU bleed air to start the main engines. Once both engines are running, the APU can be shut down and the engines supply all electrical and pneumatic needs.",
+    "componentIds": ["apu-exhaust"],
+    "aircraftIds": []
+  },
+  {
+    "id": "ground-operations",
+    "title": "Ground Operations and Aircraft Servicing",
+    "category": "Operations",
+    "content": "Aircraft turnaround at the gate involves a choreographed sequence of ground operations. After passengers deplane through the forward door, cleaning crews enter through the aft door while ground handlers simultaneously unload baggage and cargo from the lower holds. Fuel trucks connect to underwing fueling points. Catering trucks service the galleys through dedicated service doors. Lavatory service and potable water replenishment occur at connections under the fuselage. The flight crew performs a walk-around inspection of the aircraft exterior, checking tires, brakes, engine inlets, control surfaces, and sensors for visible damage or contamination. Pushback from the gate uses a tug vehicle connected to the nose gear, as aircraft cannot taxi backwards under their own power safely.",
+    "componentIds": ["forward-exit-door", "aft-exit-door"],
+    "aircraftIds": []
+  },
+  {
+    "id": "passenger-safety-equipment",
+    "title": "Passenger Safety Equipment and Briefing",
+    "category": "Safety",
+    "content": "Every passenger seat is equipped with essential safety equipment. A seat belt with a lift-type buckle secures the passenger during turbulence and landing. An oxygen mask deploys automatically from the overhead panel service unit if cabin pressure is lost. A life vest is stowed under each seat for overwater operations, with instructions printed on the safety card. Seat cushions on most aircraft are designed to be removable and usable as flotation devices. The safety briefing card in each seat pocket provides aircraft-specific information on emergency exits, brace positions, and equipment locations. Flight attendants demonstrate safety procedures before each flight, and illuminated exit signs and floor-level escape path lighting guide passengers to exits in emergencies.",
+    "componentIds": ["passenger-seats-row-1"],
+    "aircraftIds": []
+  },
+  {
+    "id": "pitch-control",
+    "title": "Pitch Control and Stabilizer Function",
+    "category": "HowItWorks",
+    "content": "Pitch control manages the aircraft's nose-up and nose-down attitude, directly controlling airspeed in conjunction with thrust. The elevator on the trailing edge of the horizontal stabilizer provides immediate pitch authority for maneuvering. For sustained pitch changes, the adjustable horizontal stabilizer shifts to a new angle, relieving the elevator of continuous force and reducing pilot workload. During approach, precise pitch control maintains the proper glidepath angle and airspeed. The pitch trim system automatically adjusts the stabilizer as speed, configuration, and weight change. In fly-by-wire aircraft, pitch control computers add stability augmentation and prevent the pilot from exceeding structural or aerodynamic limits through angle-of-attack protection.",
+    "componentIds": ["elevator"],
+    "aircraftIds": []
+  },
+  {
+    "id": "electrical-system",
+    "title": "Aircraft Electrical Power System",
+    "category": "HowItWorks",
+    "content": "The electrical power system provides energy for avionics, lighting, galley equipment, entertainment systems, and flight-critical computers. Primary power comes from engine-driven generators producing 115V AC at 400 Hz. The system is divided into independent buses that can be cross-tied for redundancy. If a generator fails, the remaining generator can power essential systems through automatic bus transfer. The APU provides backup AC power both on the ground and in flight. A battery system powers essential instruments and communication during the brief interval between power source transitions. Transformer-rectifier units convert AC to 28V DC for instruments and computers. The overhead panel displays bus status and allows pilots to manage generator connections, bus ties, and load shedding during abnormal situations.",
+    "componentIds": ["overhead-panel"],
+    "aircraftIds": []
+  },
+  {
+    "id": "hydraulic-system",
+    "title": "Aircraft Hydraulic Power System",
+    "category": "HowItWorks",
+    "content": "Hydraulic systems provide the muscle for moving flight control surfaces, landing gear, flaps, brakes, thrust reversers, and cargo doors. Operating at 3,000 PSI, the hydraulic fluid transmits force from pumps to actuators through a network of pipes and valves. Most aircraft have two or three independent hydraulic systems for redundancy, each powered by engine-driven pumps and supplemented by electric motor-driven pumps. If all engine-driven pumps fail, electric pumps maintain hydraulic pressure using electrical power from generators or the APU. A ram air turbine (on some aircraft) can deploy into the airstream as a last-resort power source. Hydraulic fluid is continuously filtered, cooled through heat exchangers, and monitored for quantity and temperature.",
+    "componentIds": ["overhead-panel"],
+    "aircraftIds": []
+  },
+  {
+    "id": "door-mechanisms",
+    "title": "Aircraft Door Mechanism Design",
+    "category": "Design",
+    "content": "Aircraft doors use a sophisticated plug-type mechanism where the door is slightly larger than the frame opening. The opening sequence involves rotating a handle that first retracts locking pins from the door frame, then translates the door inward and upward (or sideways) to clear the frame before swinging it open. This sequence is mechanically enforced so the door cannot be opened while the cabin is pressurized, as the internal pressure holds the oversized door firmly against the frame with tons of force. The door mechanism includes a gust lock to prevent wind from slamming the door, an integral slide mechanism, and an arming lever that connects or disconnects the escape slide from the door. Status sensors report door position to the cockpit display system.",
+    "componentIds": ["forward-exit-door"],
+    "aircraftIds": []
+  },
+  {
+    "id": "overwing-evacuation",
+    "title": "Overwing Evacuation Procedures",
+    "category": "Safety",
+    "content": "Overwing exits provide escape routes directly onto the wing surface. The exit hatch is opened by an able-bodied passenger pulling a handle and removing or jettisoning the hatch. Passengers step through the opening onto the wing, which features anti-slip surfaces and marked pathways leading to the trailing edge where an inflatable wing slide or step-down area allows descent to the ground. At night, emergency lighting illuminates the wing surface and exit path. Passengers in overwing exit rows are briefed before departure and must be physically capable of lifting the approximately 40-pound hatch, understanding the opening procedure, and assisting others. Overwing exits are positioned over the wing's strongest structural area and provide the most direct escape route from the cabin's center section.",
+    "componentIds": ["overwing-exit-left", "overwing-exit-right"],
+    "aircraftIds": []
+  },
+  {
+    "id": "aircraft-structures",
+    "title": "Aircraft Fuselage Structure and Windows",
+    "category": "Design",
+    "content": "The aircraft fuselage is a semi-monocoque structure built from aluminum alloy skin panels riveted to an internal skeleton of frames (rings) and stringers (longitudinal stiffeners). This structure must withstand pressurization loads (the equivalent of supporting 18,000 pounds per square foot of skin), aerodynamic forces, landing impacts, and gust loads, all while remaining as light as possible. Window openings are reinforced with doublers (extra layers of material) because the cutouts interrupt the load path through the skin. Fatigue from repeated pressurization cycles is managed through careful material selection, controlled rivet hole drilling, and regular inspection programs. Modern aircraft use advanced alloys and composite materials to achieve strength-to-weight ratios that enable longer fuselage life and reduced maintenance.",
+    "componentIds": ["pax-window"],
+    "aircraftIds": []
+  },
+  {
+    "id": "bleed-air-system",
+    "title": "Engine Bleed Air System",
+    "category": "HowItWorks",
+    "content": "Bleed air is high-pressure, high-temperature air extracted from the jet engine compressor stages. It serves multiple essential functions: providing cabin pressurization and air conditioning through air cycle machines that cool it to comfortable temperatures, supplying hot air for wing and engine inlet anti-icing, driving hydraulic pumps on some aircraft, and pressurizing the water system. The bleed air system is controlled from the overhead panel, where pilots can select which engine stage to bleed from and can shut off bleed air from a specific engine if contamination is suspected (such as oil fumes entering the bleed duct). The APU also provides bleed air for ground operations and engine starting. Modern aircraft like the 787 have moved away from bleed air in favor of electrically driven systems, but most current aircraft still rely on this proven technology.",
+    "componentIds": ["apu-exhaust"],
+    "aircraftIds": []
+  },
+  {
+    "id": "autoland",
+    "title": "Automatic Landing Systems",
+    "category": "Operations",
+    "content": "Autoland capability allows the aircraft to perform a fully automatic approach, flare, and touchdown in extremely low visibility conditions. The system requires precision ILS signals (Category II or III), redundant autopilot engagement, and functional autothrottle. During a Category IIIA autoland, the aircraft can land with a decision height as low as 50 feet and runway visual range of 600 feet. Category IIIB allows landing with no decision height and 150-foot visual range. The autopilot follows the ILS localizer and glideslope signals with extreme precision, commands the flare maneuver based on radio altimeter data, and maintains runway alignment through rollout. Autoland requires specific crew training, aircraft equipment certification, and airport facility approval to be used operationally.",
+    "componentIds": ["mcp"],
+    "aircraftIds": []
+  }
+]

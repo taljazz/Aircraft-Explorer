@@ -1,0 +1,705 @@
+{
+  "id": "boeing-737-800",
+  "name": "Boeing 737-800",
+  "manufacturer": "Boeing",
+  "variant": "737-800",
+  "description": "The Boeing 737-800 is the most popular variant of the 737 Next Generation family, a short-to-medium-range narrow-body airliner. First delivered in 1998, it features CFM56-7B engines and a typical two-class configuration seating approximately 162-189 passengers. The 737-800 replaced the 737-400 and became the best-selling variant of the 737NG series with over 4,900 deliveries.",
+  "dimensions": {
+    "lengthMeters": 39.5,
+    "wingspanMeters": 35.8,
+    "heightMeters": 12.5,
+    "cabinWidthMeters": 3.54
+  },
+  "gridBounds": {
+    "minX": -36,
+    "maxX": 36,
+    "minY": 0,
+    "maxY": 79,
+    "minZ": 0,
+    "maxZ": 25
+  },
+  "entryPosition": [0, 12, 7],
+  "cockpitSeatPosition": [-1, 2, 7],
+  "zones": [
+    {
+      "name": "Cockpit",
+      "type": "Cockpit",
+      "description": "The flight deck of the 737-800 features a modern glass cockpit with six large LCD displays, replacing the traditional analog instruments of earlier 737 variants. The cockpit seats two pilots and includes a full suite of avionics for CAT IIIb autoland capability.",
+      "minBound": [-3, 0, 6],
+      "maxBound": [3, 4, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Galley",
+      "type": "ForwardGalley",
+      "description": "The forward galley is located just aft of the cockpit bulkhead, used for meal and beverage preparation for business and forward economy class passengers.",
+      "minBound": [-3, 5, 6],
+      "maxBound": [3, 8, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Lavatory",
+      "type": "ForwardLavatory",
+      "description": "A single lavatory located in the forward cabin area, typically reserved for business class passengers on configured aircraft.",
+      "minBound": [-3, 9, 6],
+      "maxBound": [-1, 11, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Vestibule",
+      "type": "Vestibule",
+      "description": "The forward entry vestibule at door 1L/1R, the primary boarding door for passengers. Contains the forward left (1L) and forward right (1R) passenger doors.",
+      "minBound": [-3, 11, 6],
+      "maxBound": [3, 13, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin",
+      "type": "ForwardCabin",
+      "description": "The forward passenger cabin typically seats business class and the first rows of economy class in a 3-3 configuration with 30-32 inch seat pitch. Rows 1-15 approximately.",
+      "minBound": [-3, 14, 6],
+      "maxBound": [3, 36, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin",
+      "type": "MidCabin",
+      "description": "The center section of the passenger cabin containing economy class seating in a standard 3-3 abreast configuration. Overwing emergency exits are located in this section at rows 16-17.",
+      "minBound": [-3, 37, 6],
+      "maxBound": [3, 55, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin",
+      "type": "AftCabin",
+      "description": "The rear passenger cabin section with economy class seating. Passengers seated here experience slightly more engine noise due to proximity to the wing-mounted CFM56 engines.",
+      "minBound": [-3, 56, 6],
+      "maxBound": [3, 68, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Vestibule",
+      "type": "Vestibule",
+      "description": "The aft entry vestibule at door 2L/2R, used for rear boarding and as an emergency exit. Contains the aft left and aft right passenger doors.",
+      "minBound": [-3, 69, 6],
+      "maxBound": [3, 71, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Galley",
+      "type": "AftGalley",
+      "description": "The aft galley serves the majority of economy class passengers. It is the primary galley for in-flight service on most 737-800 configurations.",
+      "minBound": [-3, 72, 6],
+      "maxBound": [3, 75, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Lavatory",
+      "type": "AftLavatory",
+      "description": "Two aft lavatories located behind the last row of economy seating, serving the majority of passengers in the rear cabin.",
+      "minBound": [-3, 72, 6],
+      "maxBound": [3, 75, 10],
+      "isExterior": false
+    },
+    {
+      "name": "Nose",
+      "type": "Nose",
+      "description": "The nose section houses the weather radar antenna behind a radome, the nose landing gear bay, and various avionics equipment. The radome is made of fiberglass composite to allow radar signals to pass through.",
+      "minBound": [-2, 0, 0],
+      "maxBound": [2, 6, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Forward Fuselage",
+      "type": "ForwardFuselage",
+      "description": "The forward lower fuselage contains the forward cargo hold (compartment 1), capable of holding LD3-45 containers or bulk cargo. It also houses avionics bays and environmental control system components.",
+      "minBound": [-4, 7, 0],
+      "maxBound": [4, 30, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Mid Fuselage",
+      "type": "MidFuselage",
+      "description": "The center lower fuselage houses the wing box carry-through structure, the main landing gear wheel wells, and the center fuel tank. This is the strongest structural section of the aircraft.",
+      "minBound": [-4, 31, 0],
+      "maxBound": [4, 52, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Aft Fuselage",
+      "type": "AftFuselage",
+      "description": "The aft lower fuselage contains the aft cargo hold (compartment 2) and the bulk cargo compartment. The fuselage begins to taper toward the tail cone in this section.",
+      "minBound": [-4, 53, 0],
+      "maxBound": [4, 70, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Tail",
+      "type": "Tail",
+      "description": "The tail cone section houses the auxiliary power unit (APU), the tail skid, and the empennage attachment structures. The distinctive 737 tail shape is visible here.",
+      "minBound": [-3, 71, 0],
+      "maxBound": [3, 79, 10],
+      "isExterior": true
+    },
+    {
+      "name": "Left Wing",
+      "type": "LeftWing",
+      "description": "The port wing spans 17.9 meters from the fuselage centerline and contains integral fuel tanks with a combined capacity of approximately 26,020 liters. It features leading-edge slats, trailing-edge flaps, ailerons, and spoilers.",
+      "minBound": [-36, 30, 4],
+      "maxBound": [-4, 52, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Right Wing",
+      "type": "RightWing",
+      "description": "The starboard wing is identical in structure to the port wing, containing integral fuel tanks and the full suite of flight control surfaces including ailerons, flaps, slats, and spoilers.",
+      "minBound": [4, 30, 4],
+      "maxBound": [36, 52, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Left Engine",
+      "type": "LeftEngine",
+      "description": "The left CFM56-7B26 engine is mounted on a pylon beneath the port wing. The CFM56-7B produces 27,300 lbs of thrust and features a 61-inch fan diameter. The 737's engines are distinctively non-circular at the bottom to maintain ground clearance.",
+      "minBound": [-20, 33, 1],
+      "maxBound": [-12, 40, 5],
+      "isExterior": true
+    },
+    {
+      "name": "Right Engine",
+      "type": "RightEngine",
+      "description": "The right CFM56-7B26 engine is mounted on a pylon beneath the starboard wing, identical to the left engine. The flat-bottomed nacelle is a distinctive feature of the 737 family due to the low-slung wing design.",
+      "minBound": [12, 33, 1],
+      "maxBound": [20, 40, 5],
+      "isExterior": true
+    },
+    {
+      "name": "Left Main Gear",
+      "type": "LeftMainGear",
+      "description": "The left main landing gear is a dual-wheel unit that retracts inward into the wing root/fuselage area. Each main gear tire is rated for takeoff weights up to 174,200 lbs (79,016 kg).",
+      "minBound": [-6, 38, 0],
+      "maxBound": [-3, 42, 4],
+      "isExterior": true
+    },
+    {
+      "name": "Right Main Gear",
+      "type": "RightMainGear",
+      "description": "The right main landing gear is identical to the left unit, retracting inward into the wing root/fuselage area. The main gear supports the aircraft during taxi, takeoff, and landing.",
+      "minBound": [3, 38, 0],
+      "maxBound": [6, 42, 4],
+      "isExterior": true
+    },
+    {
+      "name": "Nose Gear",
+      "type": "NoseGear",
+      "description": "The nose landing gear is a steerable dual-wheel unit that retracts forward into the nose wheel well. It provides directional control during ground operations via the tiller or rudder pedals.",
+      "minBound": [-2, 8, 0],
+      "maxBound": [2, 12, 4],
+      "isExterior": true
+    },
+    {
+      "name": "Vertical Stabilizer",
+      "type": "VerticalStabilizer",
+      "description": "The vertical stabilizer (fin) provides directional stability and supports the rudder. The 737-800 has a 7.16m tall vertical stabilizer with a swept leading edge.",
+      "minBound": [-1, 68, 10],
+      "maxBound": [1, 79, 25],
+      "isExterior": true
+    },
+    {
+      "name": "Horizontal Stabilizer",
+      "type": "HorizontalStabilizer",
+      "description": "The horizontal stabilizer provides pitch stability and supports the elevators. It is a trimmable unit that adjusts angle of incidence for pitch trim. Span is approximately 12.7 meters.",
+      "minBound": [-13, 73, 10],
+      "maxBound": [13, 79, 13],
+      "isExterior": true
+    },
+    {
+      "name": "APU",
+      "type": "APU",
+      "description": "The Honeywell 131-9B Auxiliary Power Unit is located in the tail cone and provides electrical power and bleed air for engine starting and ground operations when main engines are not running.",
+      "minBound": [-1, 77, 4],
+      "maxBound": [1, 79, 7],
+      "isExterior": true
+    }
+  ],
+  "components": [
+    {
+      "id": "captain-yoke",
+      "name": "Captain's Control Yoke",
+      "category": "CockpitInstrument",
+      "description": "The captain's control column and yoke, used to command pitch and roll inputs. The 737 uses a traditional yoke design rather than a sidestick.",
+      "position": [-1, 2, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Grasp the captain's yoke. Turn left or right to command aileron deflection (roll), push forward or pull back to command elevator deflection (pitch).",
+      "educationTopicIds": ["flight-controls-overview", "yoke-vs-sidestick", "fly-by-wire"]
+    },
+    {
+      "id": "first-officer-yoke",
+      "name": "First Officer's Control Yoke",
+      "category": "CockpitInstrument",
+      "description": "The first officer's control column and yoke, mechanically linked to the captain's yoke. Both move in unison during normal operation.",
+      "position": [1, 2, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Grasp the first officer's yoke. It moves in sync with the captain's yoke through a mechanical linkage system.",
+      "educationTopicIds": ["flight-controls-overview", "dual-control-system"]
+    },
+    {
+      "id": "throttle-quadrant",
+      "name": "Throttle Quadrant",
+      "category": "CockpitInstrument",
+      "description": "The center pedestal throttle quadrant with two thrust levers for the left and right CFM56-7B engines. Includes reverse thrust levers and speedbrake handle.",
+      "position": [0, 3, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Advance the thrust levers forward to increase engine power, pull back to reduce. Lift the reverse thrust levers after landing to slow the aircraft.",
+      "educationTopicIds": ["engine-thrust-management", "autothrottle-system", "cfm56-engine"]
+    },
+    {
+      "id": "rudder-pedals",
+      "name": "Rudder Pedals",
+      "category": "CockpitInstrument",
+      "description": "Dual rudder pedal assemblies for both pilots, controlling the rudder and nose wheel steering. Also used for differential braking during ground operations.",
+      "position": [0, 1, 6],
+      "interactionRadius": 1.0,
+      "interactionText": "Press the left pedal to deflect the rudder left and yaw the nose left. Press the right pedal for right yaw. Toe brakes are at the top of each pedal.",
+      "educationTopicIds": ["rudder-control", "yaw-damper", "crosswind-technique"]
+    },
+    {
+      "id": "pfd",
+      "name": "Primary Flight Display (PFD)",
+      "category": "CockpitInstrument",
+      "description": "The Primary Flight Display shows the artificial horizon, airspeed, altitude, vertical speed, heading, and flight director commands on a single integrated LCD screen.",
+      "position": [-2, 1, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "Examine the PFD showing attitude, airspeed tape, altimeter, vertical speed indicator, heading, and flight mode annunciations. This is the pilot's primary scan instrument.",
+      "educationTopicIds": ["primary-flight-display", "attitude-indicator", "glass-cockpit"]
+    },
+    {
+      "id": "nd",
+      "name": "Navigation Display (ND)",
+      "category": "CockpitInstrument",
+      "description": "The Navigation Display shows a plan or map view of the aircraft's position relative to waypoints, airports, terrain, and weather. Can be set to various range and mode settings.",
+      "position": [-2, 1, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "View the navigation display showing the flight plan route, nearby airports, terrain, and weather radar returns overlaid on a moving map.",
+      "educationTopicIds": ["navigation-display", "flight-planning", "weather-radar"]
+    },
+    {
+      "id": "eicas",
+      "name": "Engine Indicating and Crew Alerting System",
+      "category": "CockpitInstrument",
+      "description": "The upper center display showing engine parameters (N1, N2, EGT, fuel flow, oil pressure/temperature) and crew alerts. Critical for monitoring engine health.",
+      "position": [0, 1, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "Monitor engine N1 and N2 spool speeds, exhaust gas temperature, fuel flow rate, and oil pressure. Caution and warning messages appear here.",
+      "educationTopicIds": ["engine-instruments", "cfm56-engine", "crew-alerting"]
+    },
+    {
+      "id": "overhead-panel",
+      "name": "Overhead Panel",
+      "category": "CockpitInstrument",
+      "description": "The overhead panel contains systems controls for electrical, hydraulic, pneumatic, pressurization, lighting, and fire protection systems. Organized by system with standardized switch guards.",
+      "position": [0, 2, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Scan the overhead panel with hundreds of switches and indicators organized by aircraft system: electrical, hydraulic, fuel, air conditioning, pressurization, and more.",
+      "educationTopicIds": ["aircraft-systems-overview", "electrical-system", "hydraulic-system", "pressurization"]
+    },
+    {
+      "id": "mcp",
+      "name": "Mode Control Panel (MCP)",
+      "category": "CockpitInstrument",
+      "description": "The Mode Control Panel sits above the main instrument panel and provides the primary interface for the autopilot and autothrottle systems. Pilots set desired speed, heading, altitude, and vertical speed here.",
+      "position": [0, 1, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Set the desired speed, heading, altitude, and vertical speed on the MCP. Engage or disengage autopilot modes including LNAV, VNAV, HDG SEL, and APP.",
+      "educationTopicIds": ["autopilot-modes", "mode-control-panel", "autoflight-system"]
+    },
+    {
+      "id": "fmc",
+      "name": "Flight Management Computer (FMC)",
+      "category": "Avionics",
+      "description": "The FMC CDU (Control Display Unit) on the center pedestal allows pilots to program the flight plan, performance calculations, and navigation database queries. The 737 uses dual FMCs for redundancy.",
+      "position": [0, 3, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "Access the FMC to program routes, enter performance data, review fuel predictions, and manage the navigation database. Type on the alphanumeric keypad and select line-select keys.",
+      "educationTopicIds": ["flight-management-system", "performance-calculations", "navigation-database"]
+    },
+    {
+      "id": "forward-exit-door",
+      "name": "Forward Left Entry Door (1L)",
+      "category": "Door",
+      "description": "The main boarding door located on the forward left side of the fuselage. This plug-type door swings inward and upward to open, and is equipped with an inflatable evacuation slide.",
+      "position": [-3, 12, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the forward left entry door. In normal mode, the evacuation slide is armed and will deploy automatically if the door is opened. Crew must disarm the slide before opening for normal operations.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures", "door-mechanisms"]
+    },
+    {
+      "id": "forward-right-door",
+      "name": "Forward Right Entry Door (1R)",
+      "category": "Door",
+      "description": "The forward right entry door, typically used for catering and service access. Identical in construction to door 1L.",
+      "position": [3, 12, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the forward right service door. This door is typically used for catering cart loading and service access rather than passenger boarding.",
+      "educationTopicIds": ["aircraft-doors", "ground-operations"]
+    },
+    {
+      "id": "aft-exit-door",
+      "name": "Aft Left Entry Door (2L)",
+      "category": "Door",
+      "description": "The aft left entry door, used for rear boarding when dual-door boarding is employed. Equipped with an inflatable evacuation slide.",
+      "position": [-3, 70, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the aft left entry door. This door enables dual-boarding operations to speed up passenger loading and unloading.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+    },
+    {
+      "id": "overwing-exit-left",
+      "name": "Left Overwing Emergency Exit",
+      "category": "Door",
+      "description": "The left overwing emergency exit located over the wing at approximately row 16-17. This is a hatch-type exit unique to narrow-body aircraft that opens by pulling inward and stowing.",
+      "position": [-3, 42, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Examine the overwing exit. In an emergency, pull the handle, remove the hatch, and place it on the seats. Step onto the wing and slide down the trailing edge.",
+      "educationTopicIds": ["emergency-exits", "overwing-evacuation", "737-exit-configuration"]
+    },
+    {
+      "id": "overwing-exit-right",
+      "name": "Right Overwing Emergency Exit",
+      "category": "Door",
+      "description": "The right overwing emergency exit, identical to the left overwing exit. The 737-800 has two pairs of overwing exits for a total of four overwing hatches.",
+      "position": [3, 42, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Examine the overwing exit hatch. Extra legroom seats near these exits require passengers capable of operating the exit in an emergency.",
+      "educationTopicIds": ["emergency-exits", "overwing-evacuation"]
+    },
+    {
+      "id": "emergency-slide-fwd",
+      "name": "Forward Evacuation Slide",
+      "category": "EmergencyEquipment",
+      "description": "An inflatable evacuation slide packed into the forward left door. When armed and the door is opened, the slide automatically deploys and inflates within 6 seconds.",
+      "position": [-3, 12, 6],
+      "interactionRadius": 1.5,
+      "interactionText": "The evacuation slide is packed in a container attached to the door sill. When armed, opening the door pulls the inflation lanyard, deploying the slide in under 6 seconds.",
+      "educationTopicIds": ["evacuation-slides", "emergency-equipment", "evacuation-procedures"]
+    },
+    {
+      "id": "forward-galley-unit",
+      "name": "Forward Galley Unit",
+      "category": "Galley",
+      "description": "The forward galley contains beverage carts, a coffee maker, ovens for heating meals, and storage for service items. Serves the forward cabin section.",
+      "position": [0, 6, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the galley carts and compartments. The galley includes standard ATLAS containers, hot water boilers, and convection ovens for heating pre-prepared meals.",
+      "educationTopicIds": ["galley-equipment", "cabin-service"]
+    },
+    {
+      "id": "aft-galley-unit",
+      "name": "Aft Galley Unit",
+      "category": "Galley",
+      "description": "The main aft galley serves the majority of economy class passengers. It is larger than the forward galley and contains more carts and storage.",
+      "position": [0, 73, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "The aft galley is the primary service point for economy class. Multiple beverage and meal carts are stored here between services.",
+      "educationTopicIds": ["galley-equipment", "cabin-service"]
+    },
+    {
+      "id": "overhead-bins",
+      "name": "Overhead Storage Bins",
+      "category": "OverheadBin",
+      "description": "Pivot-style overhead bins run the length of the cabin on both sides, providing approximately 2.4 cubic feet of storage per passenger. The 737-800 Sky Interior bins are 48% larger than earlier models.",
+      "position": [0, 40, 9],
+      "interactionRadius": 3.0,
+      "interactionText": "Open the overhead bin by pressing the latch and pivoting the bin down. The Boeing Sky Interior bins can accommodate standard roller bags placed on their sides.",
+      "educationTopicIds": ["cabin-interior-design", "sky-interior"]
+    },
+    {
+      "id": "passenger-seats-row-1",
+      "name": "Row 1 Passenger Seats",
+      "category": "Seat",
+      "description": "The first row of passenger seats, typically configured as business class or extra-legroom economy. Row 1 offers the most legroom in the forward cabin.",
+      "position": [0, 15, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a row 1 seat. Examine the seat belt, tray table in the armrest, overhead reading light, and passenger service unit with oxygen mask above.",
+      "educationTopicIds": ["passenger-safety-equipment", "seat-design", "oxygen-system"]
+    },
+    {
+      "id": "passenger-seats-forward-mid",
+      "name": "Forward Economy Seats",
+      "category": "Seat",
+      "description": "Economy class seating in a 3-3 configuration, with seats labeled A through F. Standard seat pitch is 30-31 inches. Each seat has a fold-down tray table on the seatback ahead and a recline button on the armrest.",
+      "position": [0, 26, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a forward economy seat. The 3-3 layout means seats A, B, C on the left and D, E, F on the right. Check the seat pocket, tray table, and overhead reading light.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "passenger-seats-mid-cabin",
+      "name": "Mid Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Economy seats in the mid cabin near the overwing emergency exits. Exit row seats offer significantly more legroom but the tray tables are in the armrests rather than on the seatback ahead. Window seats in the exit row may have a partially obstructed view due to the wing.",
+      "position": [0, 46, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a mid cabin seat near the overwing exits. Notice the extra legroom in exit rows. The emergency exit placards are illuminated and clearly visible. Window passengers can see the wing, flaps, and spoilers from here.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "emergency-exits"]
+    },
+    {
+      "id": "passenger-seats-aft-cabin",
+      "name": "Aft Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Economy seats in the aft cabin section. These seats are closer to the engines and may experience more noise. The last few rows may have limited recline due to the rear bulkhead. Aft cabin passengers are typically last to deplane but first to receive meal service on some airlines.",
+      "position": [0, 62, 7],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in an aft cabin seat. You can feel the proximity to the engines. The rear galley and lavatories are just behind. Check the seat belt, overhead bin, and passenger service unit.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "pax-window",
+      "name": "Passenger Cabin Window",
+      "category": "Window",
+      "description": "Standard 737 cabin windows measure approximately 10.3 by 14.2 inches. Each window assembly consists of an outer structural pane, an inner pane, and a scratch pane with a sliding shade.",
+      "position": [-3, 25, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the triple-layer cabin window. The tiny hole in the middle pane equalizes pressure between the panes and prevents fogging.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "left-engine",
+      "name": "Left CFM56-7B26 Engine",
+      "category": "Engine",
+      "description": "The left CFM56-7B26 turbofan engine produces up to 27,300 lbs of thrust. The CFM56-7B is a high-bypass ratio turbofan jointly manufactured by CFM International (GE and Safran).",
+      "position": [-16, 36, 3],
+      "interactionRadius": 3.0,
+      "interactionText": "Examine the CFM56-7B engine. Note the flat-bottomed nacelle unique to the 737 for ground clearance. The engine has a 61-inch fan with 24 blades and a bypass ratio of 5.1:1.",
+      "educationTopicIds": ["cfm56-engine", "turbofan-principles", "engine-components", "bypass-ratio"]
+    },
+    {
+      "id": "right-engine",
+      "name": "Right CFM56-7B26 Engine",
+      "category": "Engine",
+      "description": "The right CFM56-7B26 turbofan engine, identical to the left engine. Both engines are monitored through the EICAS display in the cockpit.",
+      "position": [16, 36, 3],
+      "interactionRadius": 3.0,
+      "interactionText": "Examine the right engine nacelle. The thrust reverser uses a cascade-type system that redirects exhaust forward to help slow the aircraft after landing.",
+      "educationTopicIds": ["cfm56-engine", "thrust-reversers", "engine-maintenance"]
+    },
+    {
+      "id": "nose-gear-assembly",
+      "name": "Nose Landing Gear Assembly",
+      "category": "LandingGear",
+      "description": "The nose gear features dual wheels and is steerable up to 78 degrees for ground maneuvering. It retracts forward into the nose wheel well and uses a hydraulic shimmy damper.",
+      "position": [0, 10, 1],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the nose landing gear. The dual wheels are steerable for taxiing and use oleo-pneumatic shock absorbers. Note the gear door actuators and retraction mechanism.",
+      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering", "oleo-strut"]
+    },
+    {
+      "id": "left-main-gear",
+      "name": "Left Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The left main gear is a dual-wheel unit with carbon brakes. It retracts inward into the wing root area and supports the majority of the aircraft's weight during ground operations.",
+      "position": [-5, 40, 1],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the left main gear. Each tire is rated for the aircraft's maximum landing weight. The carbon brakes can absorb enormous energy during a rejected takeoff.",
+      "educationTopicIds": ["landing-gear-systems", "braking-systems", "carbon-brakes"]
+    },
+    {
+      "id": "right-main-gear",
+      "name": "Right Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The right main gear is identical to the left main gear. Together, the two main gear assemblies bear approximately 95% of the aircraft's weight on the ground.",
+      "position": [5, 40, 1],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the right main gear. The anti-skid braking system prevents wheel lockup and optimizes braking performance on all runway surfaces.",
+      "educationTopicIds": ["landing-gear-systems", "anti-skid-system"]
+    },
+    {
+      "id": "left-aileron",
+      "name": "Left Aileron",
+      "category": "ControlSurface",
+      "description": "The left outboard aileron on the trailing edge of the left wing. The 737 uses a single aileron per wing, assisted by flight spoilers for roll control at higher speeds.",
+      "position": [-30, 45, 6],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the left aileron. It deflects upward when the yoke is turned left, reducing lift on the left wing and causing the aircraft to roll left.",
+      "educationTopicIds": ["how-ailerons-work", "roll-control", "flight-controls-overview"]
+    },
+    {
+      "id": "right-aileron",
+      "name": "Right Aileron",
+      "category": "ControlSurface",
+      "description": "The right outboard aileron on the trailing edge of the right wing. Works in opposition to the left aileron to create differential lift for roll control.",
+      "position": [30, 45, 6],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the right aileron. When the left aileron goes up, the right aileron deflects downward, increasing lift on the right wing to roll the aircraft left.",
+      "educationTopicIds": ["how-ailerons-work", "roll-control"]
+    },
+    {
+      "id": "left-flap",
+      "name": "Left Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "The left wing double-slotted trailing edge flaps extend and lower to increase wing camber and area, generating more lift at lower speeds for takeoff and landing.",
+      "position": [-15, 48, 5],
+      "interactionRadius": 2.5,
+      "interactionText": "Observe the double-slotted Fowler flaps. They extend rearward and downward in settings of 1, 2, 5, 10, 15, 25, 30, and 40 degrees for various phases of flight.",
+      "educationTopicIds": ["how-flaps-work", "high-lift-devices", "takeoff-configuration"]
+    },
+    {
+      "id": "right-flap",
+      "name": "Right Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "The right wing double-slotted trailing edge flaps, identical to the left side. Both sides deploy symmetrically to maintain balanced lift during configuration changes.",
+      "position": [15, 48, 5],
+      "interactionRadius": 2.5,
+      "interactionText": "Watch the flaps extend on rails, moving aft and down. The double-slotted design creates a gap that energizes airflow over the flap surface for greater lift.",
+      "educationTopicIds": ["how-flaps-work", "high-lift-devices"]
+    },
+    {
+      "id": "left-slat",
+      "name": "Left Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Leading edge slats on the left wing extend forward and down from the wing leading edge, increasing the wing's effective camber and delaying stall to higher angles of attack.",
+      "position": [-20, 34, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "Examine the leading edge slats. They deploy automatically with flap extension, creating a slot that allows high-energy air to flow over the upper wing surface.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention", "high-lift-devices"]
+    },
+    {
+      "id": "right-slat",
+      "name": "Right Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Leading edge slats on the right wing, operating symmetrically with the left slats. The 737 has both sealed and slotted slat sections.",
+      "position": [20, 34, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "The right leading edge slats deploy in concert with the left side. The sealed inboard sections and slotted outboard sections work together to delay stall.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "elevator",
+      "name": "Elevator",
+      "category": "ControlSurface",
+      "description": "The elevators are hinged to the trailing edge of the horizontal stabilizer and control aircraft pitch. The 737 uses a conventional elevator with a trimmable horizontal stabilizer.",
+      "position": [0, 77, 11],
+      "interactionRadius": 2.5,
+      "interactionText": "Examine the elevator surfaces. When the yoke is pulled back, the elevators deflect upward, pushing the tail down and the nose up. The stabilizer trim adjusts the neutral position.",
+      "educationTopicIds": ["how-elevators-work", "pitch-control", "stabilizer-trim"]
+    },
+    {
+      "id": "rudder",
+      "name": "Rudder",
+      "category": "ControlSurface",
+      "description": "The rudder is hinged to the trailing edge of the vertical stabilizer and controls yaw. The 737's rudder uses a dual-actuator system following the rudder hardover investigations.",
+      "position": [0, 77, 18],
+      "interactionRadius": 2.5,
+      "interactionText": "Examine the rudder. It deflects left or right to yaw the aircraft. The 737 rudder has a standby hydraulic actuator and a yaw damper for Dutch roll suppression.",
+      "educationTopicIds": ["how-rudder-works", "yaw-control", "dutch-roll", "rudder-system-safety"]
+    },
+    {
+      "id": "spoilers",
+      "name": "Wing Spoilers / Speed Brakes",
+      "category": "ControlSurface",
+      "description": "The 737-800 has multiple spoiler panels on each wing upper surface. They serve as speed brakes in flight, ground spoilers after landing, and assist ailerons in roll control.",
+      "position": [-10, 42, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "Observe the spoiler panels on the wing upper surface. In flight, they deploy symmetrically as speed brakes. On the ground, all panels deploy fully to destroy lift and improve braking.",
+      "educationTopicIds": ["spoiler-systems", "speed-brakes", "ground-spoilers", "roll-augmentation"]
+    },
+    {
+      "id": "pitot-tubes",
+      "name": "Pitot Tubes",
+      "category": "Avionics",
+      "description": "Three pitot tubes mounted on the forward fuselage measure ram air pressure to determine airspeed. The 737 has captain, first officer, and standby pitot systems for redundancy.",
+      "position": [-2, 4, 6],
+      "interactionRadius": 1.5,
+      "interactionText": "Examine the heated pitot tubes. They measure the total pressure of incoming air to calculate indicated airspeed. Heaters prevent ice blockage in flight.",
+      "educationTopicIds": ["pitot-static-system", "airspeed-measurement", "icing-protection"]
+    },
+    {
+      "id": "static-ports",
+      "name": "Static Ports",
+      "category": "Avionics",
+      "description": "Static ports on both sides of the fuselage measure ambient atmospheric pressure for altitude, airspeed, and vertical speed calculations. Dual ports prevent errors from sideslip.",
+      "position": [3, 10, 6],
+      "interactionRadius": 1.0,
+      "interactionText": "Locate the flush-mounted static ports on the fuselage skin. They measure undisturbed atmospheric pressure for the altimeter, airspeed indicator, and vertical speed indicator.",
+      "educationTopicIds": ["pitot-static-system", "altimetry", "pressure-instruments"]
+    },
+    {
+      "id": "apu-exhaust",
+      "name": "APU Exhaust",
+      "category": "APU",
+      "description": "The APU exhaust outlet at the tail cone of the aircraft. The Honeywell 131-9B APU provides 90 kVA of electrical power and bleed air at up to 40 psi.",
+      "position": [0, 79, 5],
+      "interactionRadius": 1.5,
+      "interactionText": "Examine the APU exhaust pipe at the aircraft tail. The APU is started before the main engines to provide electrical power and bleed air for engine starting and air conditioning on the ground.",
+      "educationTopicIds": ["apu-operations", "ground-power", "bleed-air-system"]
+    },
+    {
+      "id": "weather-radar",
+      "name": "Weather Radar Antenna",
+      "category": "Avionics",
+      "description": "The Collins WXR-2100 MultiScan weather radar is housed in the nose radome. It automatically adjusts tilt and gain to detect weather at multiple altitudes ahead of the aircraft.",
+      "position": [0, 1, 4],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the weather radar antenna behind the radome. The MultiScan radar simultaneously scans at different tilt angles to detect storms at various distances and altitudes.",
+      "educationTopicIds": ["weather-radar", "thunderstorm-avoidance", "radome-design"]
+    }
+  ],
+  "controlSurfaces": [
+    {
+      "id": "cs-ailerons",
+      "name": "Ailerons",
+      "axis": "roll",
+      "movementDescription": "Yoke turned left: left aileron deflects upward, right aileron deflects downward. Yoke turned right: opposite deflection.",
+      "flightEffect": "Differential lift between wings causes the aircraft to roll. Left yoke input rolls the aircraft left, banking the wings and initiating a turn to the left.",
+      "componentId": "left-aileron"
+    },
+    {
+      "id": "cs-elevator",
+      "name": "Elevator",
+      "axis": "pitch",
+      "movementDescription": "Yoke pulled back: elevators deflect upward. Yoke pushed forward: elevators deflect downward.",
+      "flightEffect": "Upward elevator deflection creates a downward aerodynamic force on the tail, pitching the nose up. This increases angle of attack and causes the aircraft to climb. Forward yoke pitches the nose down.",
+      "componentId": "elevator"
+    },
+    {
+      "id": "cs-rudder",
+      "name": "Rudder",
+      "axis": "yaw",
+      "movementDescription": "Left rudder pedal pressed: rudder deflects to the left. Right rudder pedal pressed: rudder deflects to the right.",
+      "flightEffect": "Rudder deflection creates a lateral aerodynamic force on the vertical stabilizer, yawing the aircraft nose in the direction of the deflection. Used for coordinated turns, crosswind correction, and asymmetric thrust situations.",
+      "componentId": "rudder"
+    },
+    {
+      "id": "cs-flaps",
+      "name": "Trailing Edge Flaps",
+      "axis": "pitch",
+      "movementDescription": "Flap lever moved from UP through detents 1, 2, 5, 10, 15, 25, 30, 40. Flaps extend rearward and downward progressively.",
+      "flightEffect": "Extending flaps increases wing camber and area, generating more lift at lower speeds. This reduces takeoff and landing speeds but increases drag. Higher flap settings produce more drag for steeper approach angles.",
+      "componentId": "left-flap"
+    },
+    {
+      "id": "cs-slats",
+      "name": "Leading Edge Slats",
+      "axis": "pitch",
+      "movementDescription": "Slats extend automatically with flap selection. At flaps 1, leading edge devices deploy. Full extension at higher flap settings.",
+      "flightEffect": "Extended slats increase the wing's maximum angle of attack before stall by energizing airflow over the upper wing surface. This allows the aircraft to fly safely at lower speeds during takeoff and landing.",
+      "componentId": "left-slat"
+    },
+    {
+      "id": "cs-spoilers",
+      "name": "Spoilers / Speed Brakes",
+      "axis": "roll",
+      "movementDescription": "Speed brake lever raised: spoiler panels deploy symmetrically on both wings. During roll, flight spoilers deploy asymmetrically to assist ailerons.",
+      "flightEffect": "Symmetric spoiler deployment disrupts airflow over the wing upper surface, reducing lift and increasing drag. Used to increase descent rate without gaining speed. On the ground, full deployment destroys remaining lift for maximum braking effectiveness.",
+      "componentId": "spoilers"
+    },
+    {
+      "id": "cs-stabilizer-trim",
+      "name": "Horizontal Stabilizer Trim",
+      "axis": "pitch",
+      "movementDescription": "Trim switches on yoke or trim wheel on center pedestal rotate the entire horizontal stabilizer angle. Nose-up trim tilts the leading edge of the stabilizer up.",
+      "flightEffect": "Adjusting stabilizer trim changes the neutral pitch position of the aircraft, relieving continuous control column pressure. Essential for maintaining trimmed flight as speed, configuration, and center of gravity change.",
+      "componentId": "elevator"
+    }
+  ]
+}

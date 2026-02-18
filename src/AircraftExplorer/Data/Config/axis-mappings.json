@@ -1,0 +1,8 @@
+{
+  "axes": [
+    { "function": "pitch", "axisIndex": 1, "invert": false, "deadzone": 0.05 },
+    { "function": "roll", "axisIndex": 0, "invert": false, "deadzone": 0.05 },
+    { "function": "yaw", "axisIndex": 2, "invert": false, "deadzone": 0.05 },
+    { "function": "throttle", "axisIndex": 3, "invert": true, "deadzone": 0.02 }
+  ]
+}

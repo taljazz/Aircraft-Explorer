@@ -1,0 +1,655 @@
+{
+  "id": "boeing-777-200",
+  "name": "Boeing 777-200",
+  "manufacturer": "Boeing",
+  "variant": "777-200",
+  "description": "The Boeing 777-200 is the original variant of the 777 family, a long-range wide-body twin-engine airliner. First delivered in 1995, it was the first commercial aircraft designed entirely by computer. The 777-200 typically seats 300-314 passengers in a three-class configuration and features the largest diameter turbofan engines of any aircraft. It introduced fly-by-wire flight controls to Boeing's commercial lineup.",
+  "dimensions": {
+    "lengthMeters": 63.7,
+    "wingspanMeters": 60.9,
+    "heightMeters": 18.5,
+    "cabinWidthMeters": 5.87
+  },
+  "gridBounds": {
+    "minX": -61,
+    "maxX": 61,
+    "minY": 0,
+    "maxY": 127,
+    "minZ": 0,
+    "maxZ": 37
+  },
+  "entryPosition": [0, 18, 9],
+  "cockpitSeatPosition": [-1, 3, 10],
+  "zones": [
+    {
+      "name": "Cockpit",
+      "type": "Cockpit",
+      "description": "The 777 flight deck features a state-of-the-art glass cockpit with six large flat-panel LCD displays, fly-by-wire controls, and a fully integrated avionics suite. It was the first Boeing aircraft with a fly-by-wire flight control system.",
+      "minBound": [-4, 0, 8],
+      "maxBound": [4, 6, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Galley",
+      "type": "ForwardGalley",
+      "description": "The forward galley serves first and business class passengers, with larger capacity for premium meal service.",
+      "minBound": [-5, 7, 8],
+      "maxBound": [5, 12, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Lavatory",
+      "type": "ForwardLavatory",
+      "description": "Forward lavatories located near the first/business class cabin, typically more spacious than economy lavatories.",
+      "minBound": [-5, 13, 8],
+      "maxBound": [-2, 16, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Vestibule",
+      "type": "Vestibule",
+      "description": "The forward entry vestibule at door 1L/1R. The wide-body doors accommodate higher passenger flow during boarding.",
+      "minBound": [-5, 16, 8],
+      "maxBound": [5, 19, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin",
+      "type": "ForwardCabin",
+      "description": "The forward cabin houses first and business class in configurations ranging from 1-2-1 to 2-3-2 abreast. The wide 5.87m cabin allows comfortable premium seating layouts.",
+      "minBound": [-5, 20, 8],
+      "maxBound": [5, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin",
+      "type": "MidCabin",
+      "description": "The center cabin section typically configured as premium economy or economy class in a 3-3-3 or 3-4-3 abreast layout. Located over the wing center section.",
+      "minBound": [-5, 49, 8],
+      "maxBound": [5, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin",
+      "type": "AftCabin",
+      "description": "The aft cabin houses economy class seating, typically in a 3-3-3 or 3-4-3 configuration depending on the airline.",
+      "minBound": [-5, 81, 8],
+      "maxBound": [5, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Vestibule",
+      "type": "Vestibule",
+      "description": "The aft entry vestibule with the rear boarding doors, used for dual-door boarding on wide-body operations.",
+      "minBound": [-5, 109, 8],
+      "maxBound": [5, 112, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Galley",
+      "type": "AftGalley",
+      "description": "The aft galley serves the economy cabin. The wide-body configuration allows for significantly more galley capacity than narrow-body aircraft.",
+      "minBound": [-5, 113, 8],
+      "maxBound": [5, 117, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Lavatory",
+      "type": "AftLavatory",
+      "description": "Multiple aft lavatories serving the economy cabin, typically 4-5 units across the rear of the aircraft.",
+      "minBound": [-5, 118, 8],
+      "maxBound": [5, 121, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Nose",
+      "type": "Nose",
+      "description": "The nose section with the large weather radar antenna, radome, and forward avionics bay.",
+      "minBound": [-3, 0, 0],
+      "maxBound": [3, 10, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Forward Fuselage",
+      "type": "ForwardFuselage",
+      "description": "The forward lower fuselage contains the forward cargo hold, large enough for LD3 containers in a wide-body configuration.",
+      "minBound": [-6, 11, 0],
+      "maxBound": [6, 45, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Mid Fuselage",
+      "type": "MidFuselage",
+      "description": "The center lower fuselage with the wing box, center fuel tank, and main gear wheel wells. The 777's wing box is one of the largest composite structures in commercial aviation.",
+      "minBound": [-6, 46, 0],
+      "maxBound": [6, 82, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Aft Fuselage",
+      "type": "AftFuselage",
+      "description": "The aft lower fuselage with the rear cargo hold and bulk cargo compartment. Houses the aft equipment bay.",
+      "minBound": [-6, 83, 0],
+      "maxBound": [6, 112, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Tail",
+      "type": "Tail",
+      "description": "The tail section with APU and empennage structures. The 777's tail is proportionally larger than the 737 due to the aircraft's greater size.",
+      "minBound": [-4, 113, 0],
+      "maxBound": [4, 127, 15],
+      "isExterior": true
+    },
+    {
+      "name": "Left Wing",
+      "type": "LeftWing",
+      "description": "The port wing spans 30.4 meters from centerline with a supercritical airfoil profile. It contains integral fuel tanks and features folding wingtips on some variants.",
+      "minBound": [-61, 46, 5],
+      "maxBound": [-6, 82, 12],
+      "isExterior": true
+    },
+    {
+      "name": "Right Wing",
+      "type": "RightWing",
+      "description": "The starboard wing is identical to the port wing, with fuel tanks, ailerons, flaperons, slats, and spoilers.",
+      "minBound": [6, 46, 5],
+      "maxBound": [61, 82, 12],
+      "isExterior": true
+    },
+    {
+      "name": "Left Engine",
+      "type": "LeftEngine",
+      "description": "The left GE90-94B engine produces 94,000 lbs of thrust. The GE90 has a 128-inch fan diameter, the largest in aviation at the time of its introduction.",
+      "minBound": [-35, 50, 1],
+      "maxBound": [-22, 62, 9],
+      "isExterior": true
+    },
+    {
+      "name": "Right Engine",
+      "type": "RightEngine",
+      "description": "The right GE90-94B engine, identical to the left. The massive nacelle diameter is larger than the fuselage of a 737.",
+      "minBound": [22, 50, 1],
+      "maxBound": [35, 62, 9],
+      "isExterior": true
+    },
+    {
+      "name": "Left Main Gear",
+      "type": "LeftMainGear",
+      "description": "The left main landing gear is a six-wheel bogie unit, one of the largest in commercial aviation. It retracts inward into the fuselage belly.",
+      "minBound": [-10, 62, 0],
+      "maxBound": [-4, 70, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Right Main Gear",
+      "type": "RightMainGear",
+      "description": "The right main gear is a six-wheel bogie identical to the left unit, together supporting the 777's maximum takeoff weight of up to 247,200 kg.",
+      "minBound": [4, 62, 0],
+      "maxBound": [10, 70, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Nose Gear",
+      "type": "NoseGear",
+      "description": "The steerable nose gear with dual wheels, retracting forward. Larger than the 737 nose gear to support the 777's greater weight.",
+      "minBound": [-3, 14, 0],
+      "maxBound": [3, 20, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Vertical Stabilizer",
+      "type": "VerticalStabilizer",
+      "description": "The vertical stabilizer is 9.8 meters tall, providing directional stability for the large twin-engine aircraft.",
+      "minBound": [-2, 110, 15],
+      "maxBound": [2, 127, 37],
+      "isExterior": true
+    },
+    {
+      "name": "Horizontal Stabilizer",
+      "type": "HorizontalStabilizer",
+      "description": "The trimmable horizontal stabilizer spans approximately 21.3 meters and provides pitch stability for the aircraft.",
+      "minBound": [-21, 118, 14],
+      "maxBound": [21, 127, 18],
+      "isExterior": true
+    },
+    {
+      "name": "APU",
+      "type": "APU",
+      "description": "The Honeywell 331-500 APU in the tail cone provides 225 kVA of electrical power for ground operations.",
+      "minBound": [-2, 124, 6],
+      "maxBound": [2, 127, 10],
+      "isExterior": true
+    }
+  ],
+  "components": [
+    {
+      "id": "captain-yoke",
+      "name": "Captain's Control Column",
+      "category": "CockpitInstrument",
+      "description": "The captain's control column with yoke. Unlike the 737, the 777's fly-by-wire system means the yoke sends electronic signals rather than mechanical inputs to the control surfaces.",
+      "position": [-1, 3, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Grasp the captain's yoke. The 777's fly-by-wire system converts yoke movements to electronic signals processed by the Primary Flight Computers.",
+      "educationTopicIds": ["flight-controls-overview", "fly-by-wire", "777-flight-controls"]
+    },
+    {
+      "id": "first-officer-yoke",
+      "name": "First Officer's Control Column",
+      "category": "CockpitInstrument",
+      "description": "The first officer's fly-by-wire control column, electronically linked to the captain's controls.",
+      "position": [1, 3, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "The first officer's yoke is electronically linked via the fly-by-wire system, with independent authority.",
+      "educationTopicIds": ["flight-controls-overview", "fly-by-wire"]
+    },
+    {
+      "id": "throttle-quadrant",
+      "name": "Throttle Quadrant",
+      "category": "CockpitInstrument",
+      "description": "The center pedestal with two thrust levers for the GE90-94B engines. Includes autothrottle servo motors for automated thrust management.",
+      "position": [0, 4, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Advance the thrust levers to command the GE90 engines. The autothrottle system manages thrust automatically in most flight phases.",
+      "educationTopicIds": ["engine-thrust-management", "autothrottle-system", "ge90-engine"]
+    },
+    {
+      "id": "rudder-pedals",
+      "name": "Rudder Pedals",
+      "category": "CockpitInstrument",
+      "description": "Rudder pedal assemblies for both pilots. The 777's fly-by-wire rudder system provides variable ratio rudder authority based on airspeed.",
+      "position": [0, 2, 9],
+      "interactionRadius": 1.0,
+      "interactionText": "Press left or right pedal for yaw control. The fly-by-wire system automatically limits rudder authority at higher speeds.",
+      "educationTopicIds": ["rudder-control", "fly-by-wire", "speed-dependent-controls"]
+    },
+    {
+      "id": "pfd",
+      "name": "Primary Flight Display (PFD)",
+      "category": "CockpitInstrument",
+      "description": "Large-format PFD with attitude, airspeed, altitude, heading, and flight mode information on an LCD panel.",
+      "position": [-3, 2, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "The large PFD displays attitude, speeds, altitude, and flight mode annunciations on a high-resolution LCD.",
+      "educationTopicIds": ["primary-flight-display", "glass-cockpit", "777-avionics"]
+    },
+    {
+      "id": "nd",
+      "name": "Navigation Display (ND)",
+      "category": "CockpitInstrument",
+      "description": "The Navigation Display showing route, traffic, terrain, and weather information with selectable range and modes.",
+      "position": [-3, 2, 10],
+      "interactionRadius": 1.5,
+      "interactionText": "View the navigation display with TCAS traffic, EGPWS terrain, weather overlay, and flight plan route.",
+      "educationTopicIds": ["navigation-display", "tcas", "egpws"]
+    },
+    {
+      "id": "eicas",
+      "name": "Engine Indicating and Crew Alerting System",
+      "category": "CockpitInstrument",
+      "description": "The EICAS displays engine parameters for both GE90 engines and provides crew alerts on dual screens.",
+      "position": [0, 2, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "Monitor the GE90 engine parameters: N1, N2, N3, EGT, fuel flow, oil pressure and temperature on the upper EICAS display.",
+      "educationTopicIds": ["engine-instruments", "ge90-engine", "crew-alerting"]
+    },
+    {
+      "id": "overhead-panel",
+      "name": "Overhead Panel",
+      "category": "CockpitInstrument",
+      "description": "The overhead systems panel controlling electrical, hydraulic, pneumatic, pressurization, and fire protection for the larger 777 systems.",
+      "position": [0, 3, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "The 777 overhead panel has systems controls organized by ATA chapter, with dark cockpit philosophy for normal operations.",
+      "educationTopicIds": ["aircraft-systems-overview", "dark-cockpit-philosophy"]
+    },
+    {
+      "id": "mcp",
+      "name": "Mode Control Panel (MCP)",
+      "category": "CockpitInstrument",
+      "description": "The autopilot and autothrottle interface panel with speed, heading, altitude, and vertical speed selectors.",
+      "position": [0, 2, 12],
+      "interactionRadius": 1.5,
+      "interactionText": "Set autopilot targets for speed, heading, altitude, and vertical speed. The 777 MCP supports LNAV, VNAV, and autoland modes.",
+      "educationTopicIds": ["autopilot-modes", "mode-control-panel", "autoland"]
+    },
+    {
+      "id": "fmc",
+      "name": "Flight Management Computer (FMC)",
+      "category": "Avionics",
+      "description": "The triple-redundant FMC with CDU interface for flight planning and performance management on the 777's long-range missions.",
+      "position": [0, 4, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "Program routes spanning continents on the FMC. The 777's FMC handles complex oceanic and ETOPS routing.",
+      "educationTopicIds": ["flight-management-system", "etops", "oceanic-navigation"]
+    },
+    {
+      "id": "forward-exit-door",
+      "name": "Forward Left Entry Door (1L)",
+      "category": "Door",
+      "description": "The main wide-body boarding door, significantly larger than narrow-body doors to accommodate higher passenger volume.",
+      "position": [-5, 17, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "The wide-body entry door with dual-lane evacuation slide. Door assist mechanisms help crew operate the heavy door.",
+      "educationTopicIds": ["aircraft-doors", "wide-body-evacuation"]
+    },
+    {
+      "id": "aft-exit-door",
+      "name": "Aft Left Entry Door (4L)",
+      "category": "Door",
+      "description": "The aft left entry door for rear boarding. The 777 has multiple door pairs along the fuselage for efficient evacuation.",
+      "position": [-5, 110, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "The aft wide-body door enables rapid evacuation. All 777 doors meet the 90-second evacuation certification requirement.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+    },
+    {
+      "id": "forward-galley-unit",
+      "name": "Forward Galley Unit",
+      "category": "Galley",
+      "description": "The premium class forward galley with extensive meal preparation facilities for first and business class service.",
+      "position": [0, 9, 9],
+      "interactionRadius": 2.5,
+      "interactionText": "The wide-body forward galley accommodates full meal service with multiple ovens, chillers, and beverage stations.",
+      "educationTopicIds": ["galley-equipment", "premium-cabin-service"]
+    },
+    {
+      "id": "aft-galley-unit",
+      "name": "Aft Galley Unit",
+      "category": "Galley",
+      "description": "The aft economy galley, larger than narrow-body galleys to serve the 777's higher passenger count.",
+      "position": [0, 115, 9],
+      "interactionRadius": 2.5,
+      "interactionText": "The aft galley serves over 200 economy passengers with multiple cart positions and preparation stations.",
+      "educationTopicIds": ["galley-equipment", "cabin-service"]
+    },
+    {
+      "id": "overhead-bins",
+      "name": "Overhead Storage Bins",
+      "category": "OverheadBin",
+      "description": "Wide-body overhead bins on both sides and center of the cabin, accommodating bags for the 9 or 10 abreast seating.",
+      "position": [0, 60, 12],
+      "interactionRadius": 3.0,
+      "interactionText": "The 777 has three rows of overhead bins: left, center, and right, providing ample storage for wide-body passenger counts.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "passenger-seats-row-1",
+      "name": "Row 1 First Class Seats",
+      "category": "Seat",
+      "description": "The first row of first class seats, typically configured as spacious suites in a 1-2-1 layout with direct aisle access.",
+      "position": [0, 21, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the first class suite with lie-flat bed, personal entertainment screen, privacy partition, and premium amenities.",
+      "educationTopicIds": ["passenger-safety-equipment", "first-class-design"]
+    },
+    {
+      "id": "passenger-seats-forward-economy",
+      "name": "Forward Cabin Business Class Seats",
+      "category": "Seat",
+      "description": "Business class seats in a 2-3-2 configuration in the forward cabin. These lie-flat seats offer direct aisle access from window positions and feature personal entertainment screens, power outlets, and adjustable privacy dividers.",
+      "position": [0, 35, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a forward cabin business class seat. The 2-3-2 layout gives most passengers direct aisle access. Adjust the lie-flat mechanism, check the personal entertainment screen, and find the power outlet in the center console.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
+    },
+    {
+      "id": "passenger-seats-mid-cabin",
+      "name": "Mid Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Economy class seats in the mid cabin in a 3-3-3 configuration, typical for the 777-200. The wide-body fuselage allows nine-abreast seating with two aisles. Seat pitch is typically 31-32 inches. Each seat has a personal seatback entertainment screen.",
+      "position": [0, 65, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a mid cabin economy seat. The twin-aisle 3-3-3 layout is spacious for economy class. Each seat has a personal entertainment screen, USB charging port, and adjustable headrest. The wide cabin gives a more open feeling than narrow-body aircraft.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
+    },
+    {
+      "id": "passenger-seats-aft-cabin",
+      "name": "Aft Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Economy seats in the aft cabin section of the 777-200. The rear of the aircraft may experience more motion in turbulence. Last-row seats often have limited recline. Aft passengers are closest to the rear galleys and lavatories.",
+      "position": [0, 95, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in an aft economy seat. You are in the rear section of this wide-body aircraft. The twin aisles allow efficient boarding and deplaning. Check the seatback screen, tray table, and life vest under the seat.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
+    },
+    {
+      "id": "pax-window",
+      "name": "Passenger Cabin Window",
+      "category": "Window",
+      "description": "The 777 cabin windows are larger than the 737's, measuring approximately 15 inches tall, providing a better view for passengers.",
+      "position": [-5, 40, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the larger 777 cabin window. The triple-layer construction includes a structural outer pane, inner pane, and scratch pane.",
+      "educationTopicIds": ["cabin-windows", "pressurization"]
+    },
+    {
+      "id": "left-engine",
+      "name": "Left GE90-94B Engine",
+      "category": "Engine",
+      "description": "The left General Electric GE90-94B turbofan produces 94,000 lbs of thrust. Its 128-inch fan diameter was the world's largest when introduced.",
+      "position": [-28, 56, 5],
+      "interactionRadius": 3.0,
+      "interactionText": "Examine the massive GE90 engine. The 128-inch fan with 22 composite blades generates enormous thrust for transoceanic flight.",
+      "educationTopicIds": ["ge90-engine", "turbofan-principles", "composite-fan-blades"]
+    },
+    {
+      "id": "right-engine",
+      "name": "Right GE90-94B Engine",
+      "category": "Engine",
+      "description": "The right GE90-94B engine, identical to the left. The nacelle diameter of the GE90 is larger than the fuselage cross-section of a 737.",
+      "position": [28, 56, 5],
+      "interactionRadius": 3.0,
+      "interactionText": "The right GE90 nacelle is so large it could fit a 737 fuselage inside. The engine features a full-authority digital engine control (FADEC).",
+      "educationTopicIds": ["ge90-engine", "fadec", "engine-maintenance"]
+    },
+    {
+      "id": "nose-gear-assembly",
+      "name": "Nose Landing Gear Assembly",
+      "category": "LandingGear",
+      "description": "The 777 nose gear with dual wheels, larger and heavier-duty than narrow-body nose gear to support the aircraft's weight.",
+      "position": [0, 17, 2],
+      "interactionRadius": 2.0,
+      "interactionText": "The 777 nose gear is steerable and retracts forward. It is significantly larger than 737 nose gear.",
+      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering"]
+    },
+    {
+      "id": "left-main-gear",
+      "name": "Left Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The left main gear is a six-wheel bogie with three axles, one of the largest landing gear assemblies in commercial aviation.",
+      "position": [-7, 66, 2],
+      "interactionRadius": 2.5,
+      "interactionText": "Inspect the six-wheel bogie with carbon brakes on each wheel. The gear absorbs the impact of landing at weights up to 213,000 kg.",
+      "educationTopicIds": ["landing-gear-systems", "bogie-gear", "carbon-brakes"]
+    },
+    {
+      "id": "right-main-gear",
+      "name": "Right Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The right main gear six-wheel bogie, identical to the left. Together they support the 777's maximum landing weight.",
+      "position": [7, 66, 2],
+      "interactionRadius": 2.5,
+      "interactionText": "The six-wheel configuration distributes the aircraft's weight for operation on a wide range of runway surfaces.",
+      "educationTopicIds": ["landing-gear-systems", "weight-distribution"]
+    },
+    {
+      "id": "left-aileron",
+      "name": "Left Aileron",
+      "category": "ControlSurface",
+      "description": "The left outboard aileron, controlled by the fly-by-wire system. The 777 also has inboard flaperons that assist roll control.",
+      "position": [-50, 70, 8],
+      "interactionRadius": 2.0,
+      "interactionText": "The fly-by-wire aileron is controlled by hydraulic actuators commanded by the Primary Flight Computers.",
+      "educationTopicIds": ["how-ailerons-work", "fly-by-wire", "777-flight-controls"]
+    },
+    {
+      "id": "right-aileron",
+      "name": "Right Aileron",
+      "category": "ControlSurface",
+      "description": "The right outboard aileron, working in opposition to the left for roll control through the fly-by-wire system.",
+      "position": [50, 70, 8],
+      "interactionRadius": 2.0,
+      "interactionText": "The right aileron deflects opposite to the left, with authority automatically limited at high speeds by the flight computers.",
+      "educationTopicIds": ["how-ailerons-work", "fly-by-wire"]
+    },
+    {
+      "id": "left-flap",
+      "name": "Left Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "The left wing single-slotted Fowler flaps and inboard flaperon, providing high-lift capability for the 777's heavy weight operations.",
+      "position": [-25, 75, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "The 777 uses single-slotted Fowler flaps that extend on tracks, plus flaperons that combine flap and aileron functions.",
+      "educationTopicIds": ["how-flaps-work", "flaperon", "high-lift-devices"]
+    },
+    {
+      "id": "right-flap",
+      "name": "Right Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "The right wing flaps and flaperon, deploying symmetrically with the left side.",
+      "position": [25, 75, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "Watch the flaps extend rearward on tracks while the flaperon droops to augment lift.",
+      "educationTopicIds": ["how-flaps-work", "flaperon"]
+    },
+    {
+      "id": "left-slat",
+      "name": "Left Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Full-span leading edge slats on the left wing, extending to increase the wing's maximum lift coefficient.",
+      "position": [-35, 52, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "The full-span slats extend from the wing leading edge, delaying stall and enabling lower approach speeds.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "right-slat",
+      "name": "Right Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Full-span leading edge slats on the right wing, operating symmetrically with the left side.",
+      "position": [35, 52, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "The right slats deploy in concert with the left, maintaining symmetric lift generation.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "elevator",
+      "name": "Elevator",
+      "category": "ControlSurface",
+      "description": "The fly-by-wire elevators on the horizontal stabilizer provide pitch control with envelope protection against excessive pitch attitudes.",
+      "position": [0, 124, 16],
+      "interactionRadius": 2.5,
+      "interactionText": "The fly-by-wire elevator includes envelope protection that prevents the pilot from exceeding safe pitch angles.",
+      "educationTopicIds": ["how-elevators-work", "fly-by-wire", "envelope-protection"]
+    },
+    {
+      "id": "rudder",
+      "name": "Rudder",
+      "category": "ControlSurface",
+      "description": "The fly-by-wire rudder with speed-dependent authority limiting. Three independent hydraulic actuators provide redundancy.",
+      "position": [0, 124, 26],
+      "interactionRadius": 2.5,
+      "interactionText": "The 777 rudder has three hydraulic actuators and automatic authority reduction at higher speeds to prevent structural overload.",
+      "educationTopicIds": ["how-rudder-works", "fly-by-wire", "rudder-limiting"]
+    },
+    {
+      "id": "spoilers",
+      "name": "Wing Spoilers / Speed Brakes",
+      "category": "ControlSurface",
+      "description": "Multiple spoiler panels per wing serve as speed brakes, ground spoilers, and roll control augmentation on the 777.",
+      "position": [-15, 65, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "The spoiler panels deploy symmetrically as speed brakes or differentially to augment roll control at all speeds.",
+      "educationTopicIds": ["spoiler-systems", "speed-brakes", "fly-by-wire"]
+    },
+    {
+      "id": "pitot-tubes",
+      "name": "Pitot Tubes",
+      "category": "Avionics",
+      "description": "Multiple pitot probes on the forward fuselage measuring total air pressure for airspeed computation.",
+      "position": [-3, 6, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "The heated pitot probes provide airspeed data to the air data computers. Multiple probes ensure redundancy.",
+      "educationTopicIds": ["pitot-static-system", "airspeed-measurement"]
+    },
+    {
+      "id": "apu-exhaust",
+      "name": "APU Exhaust",
+      "category": "APU",
+      "description": "The Honeywell 331-500 APU exhaust at the tail. The 777's APU is significantly more powerful than narrow-body APUs.",
+      "position": [0, 127, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "The 331-500 APU provides 225 kVA of electrical power for ground operations and in-flight backup.",
+      "educationTopicIds": ["apu-operations", "ground-power"]
+    },
+    {
+      "id": "weather-radar",
+      "name": "Weather Radar Antenna",
+      "category": "Avionics",
+      "description": "The weather radar in the 777's large nose radome, providing long-range weather detection for transoceanic routes.",
+      "position": [0, 2, 5],
+      "interactionRadius": 2.0,
+      "interactionText": "The 777's weather radar has extended range for detecting weather hundreds of miles ahead on long-haul routes.",
+      "educationTopicIds": ["weather-radar", "thunderstorm-avoidance"]
+    }
+  ],
+  "controlSurfaces": [
+    {
+      "id": "cs-ailerons",
+      "name": "Ailerons",
+      "axis": "roll",
+      "movementDescription": "Yoke turned left: left aileron up, right aileron down. Fly-by-wire computers modulate deflection based on airspeed.",
+      "flightEffect": "Differential lift rolls the aircraft. The fly-by-wire system provides roll rate limiting and envelope protection to prevent excessive bank angles.",
+      "componentId": "left-aileron"
+    },
+    {
+      "id": "cs-elevator",
+      "name": "Elevator",
+      "axis": "pitch",
+      "movementDescription": "Yoke pulled back: elevators deflect upward. Yoke pushed forward: elevators deflect downward. Fly-by-wire provides pitch rate control.",
+      "flightEffect": "Elevator deflection commands pitch rate changes. The fly-by-wire system includes pitch envelope protection preventing stall and overspeed.",
+      "componentId": "elevator"
+    },
+    {
+      "id": "cs-rudder",
+      "name": "Rudder",
+      "axis": "yaw",
+      "movementDescription": "Left pedal pressed: rudder deflects left. Right pedal: rudder deflects right. Authority automatically limited at higher speeds.",
+      "flightEffect": "Rudder yaws the aircraft. Speed-dependent authority limiting prevents structural damage from excessive sideslip at high speeds.",
+      "componentId": "rudder"
+    },
+    {
+      "id": "cs-flaps",
+      "name": "Trailing Edge Flaps",
+      "axis": "pitch",
+      "movementDescription": "Flap lever positions: UP, 1, 5, 15, 20, 25, 30. Single-slotted Fowler flaps extend rearward and downward.",
+      "flightEffect": "Flap extension increases wing camber and area for lower takeoff and landing speeds at the 777's higher weights.",
+      "componentId": "left-flap"
+    },
+    {
+      "id": "cs-slats",
+      "name": "Leading Edge Slats",
+      "axis": "pitch",
+      "movementDescription": "Slats deploy automatically with flap lever movement. Full-span deployment at landing configurations.",
+      "flightEffect": "Slats increase maximum angle of attack before stall, critical for the 777's heavy-weight approach and landing performance.",
+      "componentId": "left-slat"
+    },
+    {
+      "id": "cs-spoilers",
+      "name": "Spoilers / Speed Brakes",
+      "axis": "roll",
+      "movementDescription": "Speedbrake lever up: symmetric deployment. Roll input: asymmetric deployment augments ailerons.",
+      "flightEffect": "Speed brakes increase drag for descent management. Ground spoilers deploy automatically on landing to dump lift and improve braking.",
+      "componentId": "spoilers"
+    },
+    {
+      "id": "cs-flaperon",
+      "name": "Flaperons",
+      "axis": "roll",
+      "movementDescription": "Flaperons droop with flap extension and deflect differentially for roll control. Unique to the 777 design.",
+      "flightEffect": "Flaperons combine flap and aileron functions, providing both high-lift augmentation and roll control in a single surface.",
+      "componentId": "left-flap"
+    }
+  ]
+}

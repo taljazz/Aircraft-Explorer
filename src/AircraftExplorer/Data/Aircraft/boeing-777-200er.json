@@ -1,0 +1,635 @@
+{
+  "id": "boeing-777-200er",
+  "name": "Boeing 777-200ER",
+  "manufacturer": "Boeing",
+  "variant": "777-200ER",
+  "description": "The Boeing 777-200ER (Extended Range) is the most popular variant of the original 777-200, with increased fuel capacity and higher maximum takeoff weight for extended range operations. First delivered in 1997, it can fly up to 7,065 nautical miles, enabling nonstop transpacific and transatlantic routes. The 777-200ER was the workhorse of many airlines' long-haul fleets before the 777-300ER entered service.",
+  "dimensions": {
+    "lengthMeters": 63.7,
+    "wingspanMeters": 60.9,
+    "heightMeters": 18.5,
+    "cabinWidthMeters": 5.87
+  },
+  "gridBounds": {
+    "minX": -61,
+    "maxX": 61,
+    "minY": 0,
+    "maxY": 127,
+    "minZ": 0,
+    "maxZ": 37
+  },
+  "entryPosition": [0, 18, 9],
+  "cockpitSeatPosition": [-1, 3, 10],
+  "zones": [
+    {
+      "name": "Cockpit",
+      "type": "Cockpit",
+      "description": "The 777-200ER flight deck is identical to the base 777-200, with fly-by-wire controls and six LCD displays.",
+      "minBound": [-4, 0, 8],
+      "maxBound": [4, 6, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Galley",
+      "type": "ForwardGalley",
+      "description": "The forward galley for first and business class service on long-haul extended range routes.",
+      "minBound": [-5, 7, 8],
+      "maxBound": [5, 12, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Lavatory",
+      "type": "ForwardLavatory",
+      "description": "Forward lavatories near the premium class cabin. Extended range flights require higher usage rates.",
+      "minBound": [-5, 13, 8],
+      "maxBound": [-2, 16, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Vestibule",
+      "type": "Vestibule",
+      "description": "The forward entry vestibule at door 1L/1R for primary passenger boarding.",
+      "minBound": [-5, 16, 8],
+      "maxBound": [5, 19, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin",
+      "type": "ForwardCabin",
+      "description": "The forward cabin with first and business class seating. Many airlines configure the 777-200ER with lie-flat business class for long-haul routes.",
+      "minBound": [-5, 20, 8],
+      "maxBound": [5, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin",
+      "type": "MidCabin",
+      "description": "The center cabin over the wing box, typically premium economy or forward economy class seating.",
+      "minBound": [-5, 49, 8],
+      "maxBound": [5, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin",
+      "type": "AftCabin",
+      "description": "The aft economy cabin. On extended range flights of 12+ hours, passenger comfort becomes especially important in this section.",
+      "minBound": [-5, 81, 8],
+      "maxBound": [5, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Vestibule",
+      "type": "Vestibule",
+      "description": "The aft entry vestibule with rear boarding doors.",
+      "minBound": [-5, 109, 8],
+      "maxBound": [5, 112, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Galley",
+      "type": "AftGalley",
+      "description": "The aft galley with extended provisions for long-haul flights requiring multiple meal services.",
+      "minBound": [-5, 113, 8],
+      "maxBound": [5, 117, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Lavatory",
+      "type": "AftLavatory",
+      "description": "Multiple aft lavatories serving the economy cabin on extended range missions.",
+      "minBound": [-5, 118, 8],
+      "maxBound": [5, 121, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Nose",
+      "type": "Nose",
+      "description": "The nose section with weather radar and forward avionics bay, identical to the 777-200.",
+      "minBound": [-3, 0, 0],
+      "maxBound": [3, 10, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Forward Fuselage",
+      "type": "ForwardFuselage",
+      "description": "The forward lower fuselage with the forward cargo hold for LD3 containers.",
+      "minBound": [-6, 11, 0],
+      "maxBound": [6, 45, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Mid Fuselage",
+      "type": "MidFuselage",
+      "description": "The center lower fuselage with wing box and additional fuel capacity in the center tank for extended range missions.",
+      "minBound": [-6, 46, 0],
+      "maxBound": [6, 82, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Aft Fuselage",
+      "type": "AftFuselage",
+      "description": "The aft lower fuselage with the rear cargo hold.",
+      "minBound": [-6, 83, 0],
+      "maxBound": [6, 112, 8],
+      "isExterior": true
+    },
+    {
+      "name": "Tail",
+      "type": "Tail",
+      "description": "The tail section with APU and empennage structures.",
+      "minBound": [-4, 113, 0],
+      "maxBound": [4, 127, 15],
+      "isExterior": true
+    },
+    {
+      "name": "Left Wing",
+      "type": "LeftWing",
+      "description": "The port wing with increased fuel capacity for extended range operations. Additional structural reinforcement supports the higher maximum takeoff weight.",
+      "minBound": [-61, 46, 5],
+      "maxBound": [-6, 82, 12],
+      "isExterior": true
+    },
+    {
+      "name": "Right Wing",
+      "type": "RightWing",
+      "description": "The starboard wing with matching fuel capacity and structural reinforcement for ER operations.",
+      "minBound": [6, 46, 5],
+      "maxBound": [61, 82, 12],
+      "isExterior": true
+    },
+    {
+      "name": "Left Engine",
+      "type": "LeftEngine",
+      "description": "The left GE90-94B engine rated at 94,000 lbs thrust, same as the base 777-200. Some operators chose PW4090 or Trent 892 engines.",
+      "minBound": [-35, 50, 1],
+      "maxBound": [-22, 62, 9],
+      "isExterior": true
+    },
+    {
+      "name": "Right Engine",
+      "type": "RightEngine",
+      "description": "The right GE90-94B engine, identical to the left.",
+      "minBound": [22, 50, 1],
+      "maxBound": [35, 62, 9],
+      "isExterior": true
+    },
+    {
+      "name": "Left Main Gear",
+      "type": "LeftMainGear",
+      "description": "The left six-wheel bogie main gear, strengthened for the 777-200ER's higher maximum takeoff weight of 297,550 kg.",
+      "minBound": [-10, 62, 0],
+      "maxBound": [-4, 70, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Right Main Gear",
+      "type": "RightMainGear",
+      "description": "The right six-wheel bogie main gear, identical to the left unit.",
+      "minBound": [4, 62, 0],
+      "maxBound": [10, 70, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Nose Gear",
+      "type": "NoseGear",
+      "description": "The steerable nose gear with dual wheels.",
+      "minBound": [-3, 14, 0],
+      "maxBound": [3, 20, 6],
+      "isExterior": true
+    },
+    {
+      "name": "Vertical Stabilizer",
+      "type": "VerticalStabilizer",
+      "description": "The vertical stabilizer providing directional stability, identical to the base 777-200.",
+      "minBound": [-2, 110, 15],
+      "maxBound": [2, 127, 37],
+      "isExterior": true
+    },
+    {
+      "name": "Horizontal Stabilizer",
+      "type": "HorizontalStabilizer",
+      "description": "The trimmable horizontal stabilizer with elevators for pitch control.",
+      "minBound": [-21, 118, 14],
+      "maxBound": [21, 127, 18],
+      "isExterior": true
+    },
+    {
+      "name": "APU",
+      "type": "APU",
+      "description": "The Honeywell 331-500 APU in the tail cone for ground power and ETOPS dispatch requirements.",
+      "minBound": [-2, 124, 6],
+      "maxBound": [2, 127, 10],
+      "isExterior": true
+    }
+  ],
+  "components": [
+    {
+      "id": "captain-yoke",
+      "name": "Captain's Control Column",
+      "category": "CockpitInstrument",
+      "description": "The captain's fly-by-wire control column with yoke for pitch and roll commands.",
+      "position": [-1, 3, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Grasp the captain's yoke. The fly-by-wire system converts inputs to electronic signals for the flight computers.",
+      "educationTopicIds": ["flight-controls-overview", "fly-by-wire"]
+    },
+    {
+      "id": "first-officer-yoke",
+      "name": "First Officer's Control Column",
+      "category": "CockpitInstrument",
+      "description": "The first officer's fly-by-wire control column, electronically linked to the captain's controls.",
+      "position": [1, 3, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "The first officer's yoke provides independent fly-by-wire control authority.",
+      "educationTopicIds": ["flight-controls-overview", "fly-by-wire"]
+    },
+    {
+      "id": "throttle-quadrant",
+      "name": "Throttle Quadrant",
+      "category": "CockpitInstrument",
+      "description": "Twin thrust levers for the GE90-94B engines with autothrottle capability for long-haul fuel efficiency.",
+      "position": [0, 4, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "The thrust levers control the GE90 engines. On ER missions, fuel management across wing and center tanks is critical.",
+      "educationTopicIds": ["engine-thrust-management", "ge90-engine", "fuel-management"]
+    },
+    {
+      "id": "rudder-pedals",
+      "name": "Rudder Pedals",
+      "category": "CockpitInstrument",
+      "description": "Fly-by-wire rudder pedals with speed-dependent authority limiting.",
+      "position": [0, 2, 9],
+      "interactionRadius": 1.0,
+      "interactionText": "Press pedals for yaw control. Authority automatically reduces at higher airspeeds.",
+      "educationTopicIds": ["rudder-control", "fly-by-wire"]
+    },
+    {
+      "id": "pfd",
+      "name": "Primary Flight Display (PFD)",
+      "category": "CockpitInstrument",
+      "description": "Large-format PFD identical to the base 777-200.",
+      "position": [-3, 2, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "The PFD shows attitude, airspeed, altitude, heading, and all flight mode annunciations.",
+      "educationTopicIds": ["primary-flight-display", "glass-cockpit"]
+    },
+    {
+      "id": "nd",
+      "name": "Navigation Display (ND)",
+      "category": "CockpitInstrument",
+      "description": "Navigation display with extended range map modes essential for transoceanic ETOPS navigation.",
+      "position": [-3, 2, 10],
+      "interactionRadius": 1.5,
+      "interactionText": "View the navigation display showing oceanic tracks, ETOPS diversion airports, and equal-time points.",
+      "educationTopicIds": ["navigation-display", "etops", "oceanic-navigation"]
+    },
+    {
+      "id": "eicas",
+      "name": "Engine Indicating and Crew Alerting System",
+      "category": "CockpitInstrument",
+      "description": "EICAS dual-screen display monitoring both GE90-94B engines and aircraft systems.",
+      "position": [0, 2, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "Monitor engine parameters and fuel state across all tanks. Extended range operations require careful fuel monitoring.",
+      "educationTopicIds": ["engine-instruments", "ge90-engine", "fuel-management"]
+    },
+    {
+      "id": "overhead-panel",
+      "name": "Overhead Panel",
+      "category": "CockpitInstrument",
+      "description": "Systems control panel with additional fuel management controls for extended range tank configuration.",
+      "position": [0, 3, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "The overhead panel includes fuel crossfeed and center tank pump switches essential for ER fuel management.",
+      "educationTopicIds": ["aircraft-systems-overview", "fuel-system", "etops"]
+    },
+    {
+      "id": "mcp",
+      "name": "Mode Control Panel (MCP)",
+      "category": "CockpitInstrument",
+      "description": "Autopilot interface for managing the extended range flight profile.",
+      "position": [0, 2, 12],
+      "interactionRadius": 1.5,
+      "interactionText": "Set cruise altitude and speed for optimal fuel burn on long-haul routes. Step climbs are common as fuel burns off.",
+      "educationTopicIds": ["autopilot-modes", "cruise-optimization"]
+    },
+    {
+      "id": "fmc",
+      "name": "Flight Management Computer (FMC)",
+      "category": "Avionics",
+      "description": "Triple-redundant FMC optimized for long-range routes with ETOPS capability and oceanic navigation.",
+      "position": [0, 4, 11],
+      "interactionRadius": 1.5,
+      "interactionText": "Program transoceanic routes with ETOPS alternate airports and equal-time points for extended overwater operations.",
+      "educationTopicIds": ["flight-management-system", "etops", "oceanic-navigation"]
+    },
+    {
+      "id": "forward-exit-door",
+      "name": "Forward Left Entry Door (1L)",
+      "category": "Door",
+      "description": "The main wide-body boarding door with dual-lane evacuation slide.",
+      "position": [-5, 17, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "The wide-body entry door with powered door assist and armed evacuation slide.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+    },
+    {
+      "id": "aft-exit-door",
+      "name": "Aft Left Entry Door (4L)",
+      "category": "Door",
+      "description": "The aft left entry door for rear boarding and emergency evacuation.",
+      "position": [-5, 110, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "The aft door meets wide-body evacuation requirements for passenger loads up to 440.",
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+    },
+    {
+      "id": "forward-galley-unit",
+      "name": "Forward Galley Unit",
+      "category": "Galley",
+      "description": "Premium class galley with provisions for extended range meal services spanning multiple time zones.",
+      "position": [0, 9, 9],
+      "interactionRadius": 2.5,
+      "interactionText": "The forward galley stocks provisions for two or three meal services on extended range flights.",
+      "educationTopicIds": ["galley-equipment", "premium-cabin-service"]
+    },
+    {
+      "id": "aft-galley-unit",
+      "name": "Aft Galley Unit",
+      "category": "Galley",
+      "description": "The aft economy galley with extended storage for long-haul catering requirements.",
+      "position": [0, 115, 9],
+      "interactionRadius": 2.5,
+      "interactionText": "Extended range flights require larger aft galley provisions for multiple meal and snack services.",
+      "educationTopicIds": ["galley-equipment", "cabin-service"]
+    },
+    {
+      "id": "overhead-bins",
+      "name": "Overhead Storage Bins",
+      "category": "OverheadBin",
+      "description": "Wide-body overhead bins across three rows providing ample storage for long-haul passenger baggage.",
+      "position": [0, 60, 12],
+      "interactionRadius": 3.0,
+      "interactionText": "Three rows of overhead bins accommodate carry-on luggage for the full 9-10 abreast seating configuration.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "passenger-seats-row-1",
+      "name": "Row 1 First Class Seats",
+      "category": "Seat",
+      "description": "First class seats typically configured as enclosed suites with lie-flat beds for ER long-haul routes.",
+      "position": [0, 21, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "First class suites feature lie-flat beds, personal IFE screens, and premium amenities for flights exceeding 12 hours.",
+      "educationTopicIds": ["passenger-safety-equipment", "first-class-design"]
+    },
+    {
+      "id": "passenger-seats-forward-economy",
+      "name": "Forward Cabin Business Class Seats",
+      "category": "Seat",
+      "description": "Business class seats configured for long-haul comfort on extended range routes. The 777-200ER's forward cabin typically features lie-flat seats in a 2-3-2 or 1-2-1 configuration, designed for flights up to 14 hours.",
+      "position": [0, 35, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a business class seat designed for extended range flights. The seat converts to a fully flat bed for overnight routes. Find the personal entertainment system, noise-canceling headphone jack, and universal power outlet.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
+    },
+    {
+      "id": "passenger-seats-mid-cabin",
+      "name": "Mid Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Economy seats in the mid cabin of the extended range 777-200ER. Configured in 3-3-3 layout for long-haul routes. Airlines often provide enhanced in-flight entertainment and more generous meal service on the extended range routes this variant flies.",
+      "position": [0, 65, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in a mid cabin economy seat on this long-haul configured aircraft. The seatback screen offers hundreds of hours of entertainment for extended flights. Check the USB port, adjustable headrest with wings, and footrest.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
+    },
+    {
+      "id": "passenger-seats-aft-cabin",
+      "name": "Aft Cabin Economy Seats",
+      "category": "Seat",
+      "description": "Aft economy seats on the 777-200ER. On long-haul extended range routes, aft cabin passengers benefit from proximity to rear lavatories and galleys. The last few rows may have limited recline. The GE90 or Rolls-Royce Trent engines are audible from this section.",
+      "position": [0, 95, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Sit in an aft cabin seat on this extended range aircraft. The powerful engines are closer here. Check the seatback entertainment, overhead bin, and read the safety card in the seat pocket.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
+    },
+    {
+      "id": "left-engine",
+      "name": "Left GE90-94B Engine",
+      "category": "Engine",
+      "description": "The left GE90-94B engine rated at 94,000 lbs thrust, certified for 180-minute ETOPS operations.",
+      "position": [-28, 56, 5],
+      "interactionRadius": 3.0,
+      "interactionText": "The GE90-94B is ETOPS certified, meaning the aircraft can fly up to 180 minutes from the nearest diversion airport on one engine.",
+      "educationTopicIds": ["ge90-engine", "etops", "turbofan-principles"]
+    },
+    {
+      "id": "right-engine",
+      "name": "Right GE90-94B Engine",
+      "category": "Engine",
+      "description": "The right GE90-94B engine, identical to the left. ETOPS certification requires proven engine reliability.",
+      "position": [28, 56, 5],
+      "interactionRadius": 3.0,
+      "interactionText": "Both GE90 engines must meet strict reliability standards for ETOPS extended overwater operations.",
+      "educationTopicIds": ["ge90-engine", "etops", "engine-reliability"]
+    },
+    {
+      "id": "nose-gear-assembly",
+      "name": "Nose Landing Gear Assembly",
+      "category": "LandingGear",
+      "description": "The nose gear with dual wheels, identical to the base 777-200.",
+      "position": [0, 17, 2],
+      "interactionRadius": 2.0,
+      "interactionText": "The nose gear steers the aircraft during taxi operations at airports worldwide.",
+      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering"]
+    },
+    {
+      "id": "left-main-gear",
+      "name": "Left Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The left six-wheel bogie strengthened for the ER's higher 297,550 kg MTOW.",
+      "position": [-7, 66, 2],
+      "interactionRadius": 2.5,
+      "interactionText": "The strengthened main gear supports the ER variant's higher maximum takeoff weight for extended range missions.",
+      "educationTopicIds": ["landing-gear-systems", "bogie-gear"]
+    },
+    {
+      "id": "right-main-gear",
+      "name": "Right Main Landing Gear",
+      "category": "LandingGear",
+      "description": "The right six-wheel bogie, identical to the left.",
+      "position": [7, 66, 2],
+      "interactionRadius": 2.5,
+      "interactionText": "Six wheels per main gear distribute the aircraft's weight for global airport compatibility.",
+      "educationTopicIds": ["landing-gear-systems", "weight-distribution"]
+    },
+    {
+      "id": "left-aileron",
+      "name": "Left Aileron",
+      "category": "ControlSurface",
+      "description": "The left fly-by-wire aileron on the port wing.",
+      "position": [-50, 70, 8],
+      "interactionRadius": 2.0,
+      "interactionText": "The fly-by-wire aileron is controlled by Primary Flight Computers through hydraulic actuators.",
+      "educationTopicIds": ["how-ailerons-work", "fly-by-wire"]
+    },
+    {
+      "id": "right-aileron",
+      "name": "Right Aileron",
+      "category": "ControlSurface",
+      "description": "The right fly-by-wire aileron on the starboard wing.",
+      "position": [50, 70, 8],
+      "interactionRadius": 2.0,
+      "interactionText": "The right aileron works in opposition to the left for roll control.",
+      "educationTopicIds": ["how-ailerons-work", "fly-by-wire"]
+    },
+    {
+      "id": "left-flap",
+      "name": "Left Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "Single-slotted Fowler flaps and flaperon on the left wing.",
+      "position": [-25, 75, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "The Fowler flaps extend rearward on tracks. Flaperons combine flap and aileron functions.",
+      "educationTopicIds": ["how-flaps-work", "flaperon"]
+    },
+    {
+      "id": "right-flap",
+      "name": "Right Trailing Edge Flaps",
+      "category": "ControlSurface",
+      "description": "Single-slotted Fowler flaps and flaperon on the right wing.",
+      "position": [25, 75, 7],
+      "interactionRadius": 2.5,
+      "interactionText": "The right flaps deploy symmetrically with the left for balanced lift augmentation.",
+      "educationTopicIds": ["how-flaps-work", "flaperon"]
+    },
+    {
+      "id": "left-slat",
+      "name": "Left Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Full-span leading edge slats on the left wing.",
+      "position": [-35, 52, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "Full-span slats delay stall to higher angles of attack for safe low-speed operations.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "right-slat",
+      "name": "Right Leading Edge Slats",
+      "category": "ControlSurface",
+      "description": "Full-span leading edge slats on the right wing.",
+      "position": [35, 52, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "Symmetric slat deployment maintains balanced lift during configuration changes.",
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+    },
+    {
+      "id": "elevator",
+      "name": "Elevator",
+      "category": "ControlSurface",
+      "description": "Fly-by-wire elevators with pitch envelope protection.",
+      "position": [0, 124, 16],
+      "interactionRadius": 2.5,
+      "interactionText": "The fly-by-wire elevator provides pitch control with automatic envelope protection.",
+      "educationTopicIds": ["how-elevators-work", "fly-by-wire"]
+    },
+    {
+      "id": "rudder",
+      "name": "Rudder",
+      "category": "ControlSurface",
+      "description": "Fly-by-wire rudder with triple-redundant hydraulic actuators and speed-dependent limiting.",
+      "position": [0, 124, 26],
+      "interactionRadius": 2.5,
+      "interactionText": "The rudder has three hydraulic actuators for redundancy on extended overwater operations.",
+      "educationTopicIds": ["how-rudder-works", "fly-by-wire", "etops"]
+    },
+    {
+      "id": "spoilers",
+      "name": "Wing Spoilers / Speed Brakes",
+      "category": "ControlSurface",
+      "description": "Fly-by-wire spoiler panels for speed brakes, ground spoilers, and roll augmentation.",
+      "position": [-15, 65, 10],
+      "interactionRadius": 2.5,
+      "interactionText": "Spoilers deploy symmetrically for drag or differentially for roll control.",
+      "educationTopicIds": ["spoiler-systems", "speed-brakes"]
+    },
+    {
+      "id": "weather-radar",
+      "name": "Weather Radar Antenna",
+      "category": "Avionics",
+      "description": "Long-range weather radar essential for detecting weather on transoceanic routes where diversion options are limited.",
+      "position": [0, 2, 5],
+      "interactionRadius": 2.0,
+      "interactionText": "Extended range weather detection is critical for oceanic operations where route deviations must be carefully planned.",
+      "educationTopicIds": ["weather-radar", "oceanic-navigation"]
+    },
+    {
+      "id": "apu-exhaust",
+      "name": "APU Exhaust",
+      "category": "APU",
+      "description": "The Honeywell 331-500 APU required for ETOPS dispatch as an in-flight backup power source.",
+      "position": [0, 127, 8],
+      "interactionRadius": 1.5,
+      "interactionText": "The APU must be operable for ETOPS dispatch, providing backup electrical power and bleed air if an engine fails over water.",
+      "educationTopicIds": ["apu-operations", "etops"]
+    }
+  ],
+  "controlSurfaces": [
+    {
+      "id": "cs-ailerons",
+      "name": "Ailerons",
+      "axis": "roll",
+      "movementDescription": "Yoke turned: fly-by-wire computers command aileron deflection modulated by airspeed.",
+      "flightEffect": "Differential lift rolls the aircraft with envelope protection preventing excessive bank angles.",
+      "componentId": "left-aileron"
+    },
+    {
+      "id": "cs-elevator",
+      "name": "Elevator",
+      "axis": "pitch",
+      "movementDescription": "Yoke pulled back: elevators up. Pushed forward: elevators down. Fly-by-wire provides pitch rate control.",
+      "flightEffect": "Elevator commands pitch rate changes with envelope protection against stall and overspeed.",
+      "componentId": "elevator"
+    },
+    {
+      "id": "cs-rudder",
+      "name": "Rudder",
+      "axis": "yaw",
+      "movementDescription": "Left pedal: rudder left. Right pedal: rudder right. Speed-dependent authority limiting.",
+      "flightEffect": "Rudder yaws the aircraft for coordinated turns and crosswind operations. Critical for single-engine ETOPS scenarios.",
+      "componentId": "rudder"
+    },
+    {
+      "id": "cs-flaps",
+      "name": "Trailing Edge Flaps",
+      "axis": "pitch",
+      "movementDescription": "Flap lever positions: UP, 1, 5, 15, 20, 25, 30. Fowler flaps extend on tracks.",
+      "flightEffect": "Flaps increase lift and drag for the 777-200ER's higher weight takeoff and landing operations.",
+      "componentId": "left-flap"
+    },
+    {
+      "id": "cs-slats",
+      "name": "Leading Edge Slats",
+      "axis": "pitch",
+      "movementDescription": "Slats deploy automatically with flap selection for maximum lift augmentation.",
+      "flightEffect": "Slats delay stall for safe approach speeds at the ER's higher landing weights.",
+      "componentId": "left-slat"
+    },
+    {
+      "id": "cs-spoilers",
+      "name": "Spoilers / Speed Brakes",
+      "axis": "roll",
+      "movementDescription": "Speedbrake lever: symmetric deployment. Roll input: asymmetric deployment.",
+      "flightEffect": "Speed brakes manage descent rate. Ground spoilers deploy on landing for maximum braking.",
+      "componentId": "spoilers"
+    },
+    {
+      "id": "cs-flaperon",
+      "name": "Flaperons",
+      "axis": "roll",
+      "movementDescription": "Flaperons droop with flap extension and deflect differentially for roll.",
+      "flightEffect": "Combined flap and aileron function for high-lift and roll control.",
+      "componentId": "left-flap"
+    }
+  ]
+}
