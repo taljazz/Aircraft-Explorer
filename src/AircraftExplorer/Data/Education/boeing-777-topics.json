@@ -382,5 +382,13 @@
     "content": "The 777 family achieves exceptional fuel efficiency for its size class through several design features. The high-bypass-ratio GE90 engines convert fuel into thrust more efficiently than older engine designs. The supercritical wing airfoil minimizes wave drag at cruise Mach numbers. Raked wingtips on the 777-200LR and 777-300ER reduce induced drag at the wingtips. The fly-by-wire flight control system enables drag-reducing features like maneuver load alleviation and gust load alleviation. On a per-seat basis, the 777-300ER burns approximately 20 percent less fuel than the 747-400 it often replaces, while offering similar range and passenger capacity. These efficiencies translate to lower operating costs and reduced carbon emissions per passenger-kilometer.",
     "componentIds": ["left-engine", "right-engine"],
     "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"]
+  },
+  {
+    "id": "777-cargo-configuration",
+    "title": "777 Cargo Hold Configuration",
+    "category": "Specs",
+    "content": "The Boeing 777 has three lower cargo compartments providing total volumes exceeding 5,000 cubic feet on the 777-200 and 7,000 cubic feet on the stretched 777-300. The forward hold accommodates up to 16 LD3 containers, the aft hold up to 16 LD3 containers, and a bulk cargo compartment at the rear handles loose cargo, mail, and irregularly shaped items. The wide-body fuselage allows standard LD3 containers to be loaded side by side, two abreast. Powered cargo doors on the right side of the fuselage provide access to each compartment. The cargo handling system includes powered rollers, guide rails, and container locks. The 777-200LR variant can sacrifice aft cargo space for up to three auxiliary fuel tanks that extend the aircraft's range to over 9,400 nautical miles, making it the world's longest-range commercial aircraft.",
+    "componentIds": ["fwd-cargo-containers", "aft-cargo-containers", "bulk-cargo-area"],
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
   }
 ]

@@ -22,12 +22,16 @@ public sealed class SpatialAudioService : ISpatialAudioService
     private readonly ALDevice _device;
     private readonly ALContext _context;
     private readonly bool _initialized;
+    private readonly object _lock = new();
 
     // Reusable tone buffers (keyed by frequency bucket to avoid regenerating constantly)
     private readonly Dictionary<int, int> _toneBufferCache = new();
 
     // Track one-shot sources so we can clean them up
     private readonly List<int> _activeSources = new();
+
+    // Store timer references to prevent GC collection
+    private readonly List<System.Threading.Timer> _activeTimers = new();
 
     // Beacon state
     private int _beaconSource;
@@ -115,116 +119,145 @@ public sealed class SpatialAudioService : ISpatialAudioService
     {
         if (!_initialized) return;
 
-        CleanUpFinishedSources();
+        lock (_lock)
+        {
+            CleanUpFinishedSources();
 
-        float freq = MapToFrequency(position.Z, bounds.MinZ, bounds.MaxZ);
-        int buffer = GetOrCreateToneBuffer(freq, 0.1f);
+            float freq = MapToFrequency(position.Z, bounds.MinZ, bounds.MaxZ);
+            int buffer = GetOrCreateToneBuffer(freq, 0.1f);
 
-        int source = AL.GenSource();
-        AL.Source(source, ALSourcef.Gain, 0.4f);
-        AL.Source(source, ALSourcef.Pitch, 1.0f);
-        AL.Source(source, ALSourceb.Looping, false);
+            int source = AL.GenSource();
+            AL.Source(source, ALSourcef.Gain, 0.4f);
+            AL.Source(source, ALSourcef.Pitch, 1.0f);
+            AL.Source(source, ALSourceb.Looping, false);
 
-        // Use listener-relative positioning so offset creates panning
-        AL.Source(source, ALSourceb.SourceRelative, true);
-        AL.Source(source, ALSource3f.Position, alOffsetX, alOffsetY, alOffsetZ);
-        AL.Source(source, ALSourcef.ReferenceDistance, 0.5f);
-        AL.Source(source, ALSourcef.MaxDistance, 5.0f);
+            // Use listener-relative positioning so offset creates panning
+            AL.Source(source, ALSourceb.SourceRelative, true);
+            AL.Source(source, ALSource3f.Position, alOffsetX, alOffsetY, alOffsetZ);
+            AL.Source(source, ALSourcef.ReferenceDistance, 0.5f);
+            AL.Source(source, ALSourcef.MaxDistance, 5.0f);
 
-        AL.Source(source, ALSourcei.Buffer, buffer);
-        AL.SourcePlay(source);
-        _activeSources.Add(source);
+            AL.Source(source, ALSourcei.Buffer, buffer);
+            AL.SourcePlay(source);
+            _activeSources.Add(source);
+        }
     }
 
     public void PlayBoundaryTone()
     {
         if (!_initialized) return;
 
-        CleanUpFinishedSources();
+        lock (_lock)
+        {
+            CleanUpFinishedSources();
 
-        int buffer = GetOrCreateToneBuffer(BoundaryFrequency, 0.2f);
+            int buffer = GetOrCreateToneBuffer(BoundaryFrequency, 0.2f);
 
-        int source = AL.GenSource();
-        AL.Source(source, ALSourcef.Gain, 0.6f);
-        AL.Source(source, ALSourceb.SourceRelative, true); // play at listener position
-        AL.Source(source, ALSource3f.Position, 0f, 0f, 0f);
-        AL.Source(source, ALSourceb.Looping, false);
+            int source = AL.GenSource();
+            AL.Source(source, ALSourcef.Gain, 0.6f);
+            AL.Source(source, ALSourceb.SourceRelative, true); // play at listener position
+            AL.Source(source, ALSource3f.Position, 0f, 0f, 0f);
+            AL.Source(source, ALSourceb.Looping, false);
 
-        AL.Source(source, ALSourcei.Buffer, buffer);
-        AL.SourcePlay(source);
-        _activeSources.Add(source);
+            AL.Source(source, ALSourcei.Buffer, buffer);
+            AL.SourcePlay(source);
+            _activeSources.Add(source);
+        }
     }
 
     public void PlayZoneTransitionTone(bool ascending)
     {
         if (!_initialized) return;
 
-        CleanUpFinishedSources();
-
-        float freq1 = ascending ? 400f : 600f;
-        float freq2 = ascending ? 600f : 400f;
-
-        // First note — immediate
-        int buffer1 = GetOrCreateToneBuffer(freq1, 0.1f);
-        int source1 = AL.GenSource();
-        AL.Source(source1, ALSourcef.Gain, 0.35f);
-        AL.Source(source1, ALSourceb.SourceRelative, true);
-        AL.Source(source1, ALSource3f.Position, 0f, 0f, 0f);
-        AL.Source(source1, ALSourceb.Looping, false);
-        AL.Source(source1, ALSourcei.Buffer, buffer1);
-        AL.SourcePlay(source1);
-        _activeSources.Add(source1);
-
-        // Second note — delayed by ~120ms via a timer
-        int buffer2 = GetOrCreateToneBuffer(freq2, 0.1f);
-        var timer = new System.Threading.Timer(_ =>
+        lock (_lock)
         {
-            if (_disposed) return;
-            int source2 = AL.GenSource();
-            AL.Source(source2, ALSourcef.Gain, 0.35f);
-            AL.Source(source2, ALSourceb.SourceRelative, true);
-            AL.Source(source2, ALSource3f.Position, 0f, 0f, 0f);
-            AL.Source(source2, ALSourceb.Looping, false);
-            AL.Source(source2, ALSourcei.Buffer, buffer2);
-            AL.SourcePlay(source2);
-            _activeSources.Add(source2);
-        }, null, 120, Timeout.Infinite);
+            CleanUpFinishedSources();
+
+            float freq1 = ascending ? 400f : 600f;
+            float freq2 = ascending ? 600f : 400f;
+
+            // First note — immediate
+            int buffer1 = GetOrCreateToneBuffer(freq1, 0.1f);
+            int source1 = AL.GenSource();
+            AL.Source(source1, ALSourcef.Gain, 0.35f);
+            AL.Source(source1, ALSourceb.SourceRelative, true);
+            AL.Source(source1, ALSource3f.Position, 0f, 0f, 0f);
+            AL.Source(source1, ALSourceb.Looping, false);
+            AL.Source(source1, ALSourcei.Buffer, buffer1);
+            AL.SourcePlay(source1);
+            _activeSources.Add(source1);
+
+            // Second note — delayed by ~120ms via a timer
+            int buffer2 = GetOrCreateToneBuffer(freq2, 0.1f);
+            var timer = new System.Threading.Timer(_ =>
+            {
+                if (_disposed) return;
+                lock (_lock)
+                {
+                    if (_disposed) return;
+                    int source2 = AL.GenSource();
+                    AL.Source(source2, ALSourcef.Gain, 0.35f);
+                    AL.Source(source2, ALSourceb.SourceRelative, true);
+                    AL.Source(source2, ALSource3f.Position, 0f, 0f, 0f);
+                    AL.Source(source2, ALSourceb.Looping, false);
+                    AL.Source(source2, ALSourcei.Buffer, buffer2);
+                    AL.SourcePlay(source2);
+                    _activeSources.Add(source2);
+                }
+            }, null, 120, Timeout.Infinite);
+            _activeTimers.Add(timer);
+        }
     }
 
     public void StartComponentBeacon(Coordinate3D componentPosition, double distance)
     {
         if (!_initialized) return;
 
-        StopComponentBeacon();
+        lock (_lock)
+        {
+            StopComponentBeaconCore();
 
-        _beaconPosition = componentPosition;
-        _beaconBuffer = GetOrCreateToneBuffer(BeaconFrequency, 0.06f);
+            _beaconPosition = componentPosition;
+            _beaconBuffer = GetOrCreateToneBuffer(BeaconFrequency, 0.06f);
 
-        _beaconSource = AL.GenSource();
-        AL.Source(_beaconSource, ALSourcef.Gain, 0.4f);
-        AL.Source(_beaconSource, ALSourcef.ReferenceDistance, 1.0f);
-        AL.Source(_beaconSource, ALSourcef.MaxDistance, 15.0f);
-        AL.Source(_beaconSource, ALSourceb.Looping, false);
-        AL.Source(_beaconSource, ALSource3f.Position,
-            componentPosition.X, componentPosition.Z, -componentPosition.Y);
-        AL.Source(_beaconSource, ALSourcei.Buffer, _beaconBuffer);
+            _beaconSource = AL.GenSource();
+            AL.Source(_beaconSource, ALSourcef.Gain, 0.4f);
+            AL.Source(_beaconSource, ALSourcef.ReferenceDistance, 1.0f);
+            AL.Source(_beaconSource, ALSourcef.MaxDistance, 15.0f);
+            AL.Source(_beaconSource, ALSourceb.Looping, false);
+            AL.Source(_beaconSource, ALSource3f.Position,
+                componentPosition.X, componentPosition.Z, -componentPosition.Y);
+            AL.Source(_beaconSource, ALSourcei.Buffer, _beaconBuffer);
 
-        _beaconActive = true;
+            _beaconActive = true;
 
-        // Start pulsing via timer
-        int intervalMs = DistanceToInterval(distance);
-        _beaconTimer = new System.Threading.Timer(BeaconPulse, null, 0, intervalMs);
+            // Start pulsing via timer
+            int intervalMs = DistanceToInterval(distance);
+            _beaconTimer = new System.Threading.Timer(BeaconPulse, null, 0, intervalMs);
+        }
     }
 
     public void UpdateComponentBeacon(double distance)
     {
-        if (!_beaconActive || _beaconTimer is null) return;
+        lock (_lock)
+        {
+            if (!_beaconActive || _beaconTimer is null) return;
 
-        int intervalMs = DistanceToInterval(distance);
-        _beaconTimer.Change(0, intervalMs);
+            int intervalMs = DistanceToInterval(distance);
+            _beaconTimer.Change(0, intervalMs);
+        }
     }
 
     public void StopComponentBeacon()
+    {
+        lock (_lock)
+        {
+            StopComponentBeaconCore();
+        }
+    }
+
+    // Must be called under _lock
+    private void StopComponentBeaconCore()
     {
         _beaconActive = false;
 
@@ -244,19 +277,22 @@ public sealed class SpatialAudioService : ISpatialAudioService
 
     private void BeaconPulse(object? state)
     {
-        if (!_beaconActive || _disposed || _beaconSource == 0) return;
+        lock (_lock)
+        {
+            if (!_beaconActive || _disposed || _beaconSource == 0) return;
 
-        try
-        {
-            AL.GetSource(_beaconSource, ALGetSourcei.SourceState, out int stateValue);
-            if ((ALSourceState)stateValue != ALSourceState.Playing)
+            try
             {
-                AL.SourcePlay(_beaconSource);
+                AL.GetSource(_beaconSource, ALGetSourcei.SourceState, out int stateValue);
+                if ((ALSourceState)stateValue != ALSourceState.Playing)
+                {
+                    AL.SourcePlay(_beaconSource);
+                }
             }
-        }
-        catch
-        {
-            // Source may have been deleted
+            catch
+            {
+                // Source may have been deleted
+            }
         }
     }
 
@@ -264,28 +300,36 @@ public sealed class SpatialAudioService : ISpatialAudioService
     {
         if (!_initialized) return;
 
-        StopComponentBeacon();
-        CleanUpFinishedSources();
-
-        int buffer = GetOrCreateToneBuffer(BeaconFrequency, 0.06f);
-
-        // Three rapid beeps at 0ms, 80ms, 160ms
-        for (int i = 0; i < 3; i++)
+        lock (_lock)
         {
-            int delayMs = i * 80;
-            int capturedBuffer = buffer;
-            var timer = new System.Threading.Timer(_ =>
+            StopComponentBeaconCore();
+            CleanUpFinishedSources();
+
+            int buffer = GetOrCreateToneBuffer(BeaconFrequency, 0.06f);
+
+            // Three rapid beeps at 0ms, 80ms, 160ms
+            for (int i = 0; i < 3; i++)
             {
-                if (_disposed) return;
-                int src = AL.GenSource();
-                AL.Source(src, ALSourcef.Gain, 0.5f);
-                AL.Source(src, ALSourceb.SourceRelative, true);
-                AL.Source(src, ALSource3f.Position, 0f, 0f, 0f);
-                AL.Source(src, ALSourceb.Looping, false);
-                AL.Source(src, ALSourcei.Buffer, capturedBuffer);
-                AL.SourcePlay(src);
-                _activeSources.Add(src);
-            }, null, delayMs, Timeout.Infinite);
+                int delayMs = i * 80;
+                int capturedBuffer = buffer;
+                var timer = new System.Threading.Timer(_ =>
+                {
+                    if (_disposed) return;
+                    lock (_lock)
+                    {
+                        if (_disposed) return;
+                        int src = AL.GenSource();
+                        AL.Source(src, ALSourcef.Gain, 0.5f);
+                        AL.Source(src, ALSourceb.SourceRelative, true);
+                        AL.Source(src, ALSource3f.Position, 0f, 0f, 0f);
+                        AL.Source(src, ALSourceb.Looping, false);
+                        AL.Source(src, ALSourcei.Buffer, capturedBuffer);
+                        AL.SourcePlay(src);
+                        _activeSources.Add(src);
+                    }
+                }, null, delayMs, Timeout.Infinite);
+                _activeTimers.Add(timer);
+            }
         }
     }
 
@@ -332,6 +376,7 @@ public sealed class SpatialAudioService : ISpatialAudioService
         return samples;
     }
 
+    // Must be called under _lock
     private void CleanUpFinishedSources()
     {
         for (int i = _activeSources.Count - 1; i >= 0; i--)
@@ -343,6 +388,18 @@ public sealed class SpatialAudioService : ISpatialAudioService
             {
                 AL.DeleteSource(source);
                 _activeSources.RemoveAt(i);
+            }
+        }
+
+        // Clean up completed one-shot timers
+        for (int i = _activeTimers.Count - 1; i >= 0; i--)
+        {
+            // Dispose and remove timers that have already fired (one-shot timers)
+            // We keep them briefly to prevent GC; safe to clean up after sources are done
+            if (_activeSources.Count == 0 && _activeTimers.Count > 0)
+            {
+                _activeTimers[i].Dispose();
+                _activeTimers.RemoveAt(i);
             }
         }
     }
@@ -365,20 +422,28 @@ public sealed class SpatialAudioService : ISpatialAudioService
         if (_disposed) return;
         _disposed = true;
 
-        StopComponentBeacon();
-
-        // Clean up all active sources
-        foreach (int source in _activeSources)
+        lock (_lock)
         {
-            AL.SourceStop(source);
-            AL.DeleteSource(source);
-        }
-        _activeSources.Clear();
+            StopComponentBeaconCore();
 
-        // Clean up cached buffers
-        foreach (int buffer in _toneBufferCache.Values)
-            AL.DeleteBuffer(buffer);
-        _toneBufferCache.Clear();
+            // Dispose all stored timers
+            foreach (var timer in _activeTimers)
+                timer.Dispose();
+            _activeTimers.Clear();
+
+            // Clean up all active sources
+            foreach (int source in _activeSources)
+            {
+                AL.SourceStop(source);
+                AL.DeleteSource(source);
+            }
+            _activeSources.Clear();
+
+            // Clean up cached buffers
+            foreach (int buffer in _toneBufferCache.Values)
+                AL.DeleteBuffer(buffer);
+            _toneBufferCache.Clear();
+        }
 
         try
         {

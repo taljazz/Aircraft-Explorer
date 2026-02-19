@@ -10,7 +10,8 @@ public class SettingsMode : IAppMode
         "Step Size",
         "Verbosity",
         "Announce Zone Changes",
-        "Announce Nearby Components"
+        "Announce Nearby Components",
+        "Throttle Axis"
     ];
 
     private int _selectedIndex;
@@ -57,6 +58,11 @@ public class SettingsMode : IAppMode
                 AdjustSetting(1);
                 return ModeResult.Stay;
 
+            case InputAction.Select:
+                if (_selectedIndex == 4)
+                    return ModeResult.PushMode(new ThrottleCalibrationMode());
+                return ModeResult.Stay;
+
             case InputAction.Back:
                 return ModeResult.Pop;
 
@@ -87,6 +93,8 @@ public class SettingsMode : IAppMode
             case 3: // Announce Nearby Components
                 _settings.Navigation.AnnounceNearbyComponents = !_settings.Navigation.AnnounceNearbyComponents;
                 break;
+            case 4: // Throttle Axis — use Enter to auto-detect
+                break;
         }
 
         _context.Speech.Speak(GetCurrentSettingAnnouncement(), true);
@@ -106,6 +114,7 @@ public class SettingsMode : IAppMode
             },
             2 => _settings.Navigation.AnnounceZoneChanges ? "On" : "Off",
             3 => _settings.Navigation.AnnounceNearbyComponents ? "On" : "Off",
+            4 => $"{_settings.ThrottleAxis}. Press Enter to detect",
             _ => "Unknown"
         };
 
@@ -114,8 +123,19 @@ public class SettingsMode : IAppMode
 
     public void OnExit()
     {
-        _context.Speech.Speak("Settings saved.", true);
+        try
+        {
+            _settings.Save(_context.SettingsFilePath);
+            _context.Speech.Speak("Settings saved.", true);
+        }
+        catch
+        {
+            _context.Speech.Speak("Settings changed but could not be saved to disk.", true);
+        }
     }
 
-    public void OnResume() { }
+    public void OnResume()
+    {
+        _context.Speech.Speak(GetCurrentSettingAnnouncement(), true);
+    }
 }

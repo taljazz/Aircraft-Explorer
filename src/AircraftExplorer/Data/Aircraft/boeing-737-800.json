@@ -54,26 +54,74 @@
       "isExterior": false
     },
     {
-      "name": "Forward Cabin",
-      "type": "ForwardCabin",
-      "description": "The forward passenger cabin typically seats business class and the first rows of economy class in a 3-3 configuration with 30-32 inch seat pitch. Rows 1-15 approximately.",
+      "name": "Forward Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left seat section of the forward cabin in a 3-abreast configuration. Seats A, B, and C are positioned along the port side with overhead bins above. Row 1 typically offers extra legroom.",
       "minBound": [-3, 14, 6],
+      "maxBound": [-1, 36, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Aisle",
+      "type": "Aisle",
+      "description": "The single aisle running through the forward cabin section, connecting the forward vestibule to the mid cabin. Passengers and crew use this narrow passage for boarding and in-flight service.",
+      "minBound": [0, 14, 6],
+      "maxBound": [0, 36, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right seat section of the forward cabin in a 3-abreast configuration. Seats D, E, and F are positioned along the starboard side with overhead bins above.",
+      "minBound": [1, 14, 6],
       "maxBound": [3, 36, 9],
       "isExterior": false
     },
     {
-      "name": "Mid Cabin",
-      "type": "MidCabin",
-      "description": "The center section of the passenger cabin containing economy class seating in a standard 3-3 abreast configuration. Overwing emergency exits are located in this section at rows 16-17.",
+      "name": "Mid Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left seat section of the mid cabin containing economy class seating in a 3-abreast configuration. Overwing emergency exits are located in this section, providing extra legroom in exit rows.",
       "minBound": [-3, 37, 6],
+      "maxBound": [-1, 55, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Aisle",
+      "type": "Aisle",
+      "description": "The single aisle running through the mid cabin section between the overwing emergency exits. The beverage cart service typically begins from the forward or aft galley and works through this section.",
+      "minBound": [0, 37, 6],
+      "maxBound": [0, 55, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right seat section of the mid cabin containing economy class seating in a 3-abreast configuration. Window seats in this section offer views of the wing, engine, and flight control surfaces.",
+      "minBound": [1, 37, 6],
       "maxBound": [3, 55, 9],
       "isExterior": false
     },
     {
-      "name": "Aft Cabin",
-      "type": "AftCabin",
-      "description": "The rear passenger cabin section with economy class seating. Passengers seated here experience slightly more engine noise due to proximity to the wing-mounted CFM56 engines.",
+      "name": "Aft Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left seat section of the aft cabin with economy class seating. Passengers here experience slightly more engine noise due to proximity to the wing-mounted CFM56 engines.",
       "minBound": [-3, 56, 6],
+      "maxBound": [-1, 68, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Aisle",
+      "type": "Aisle",
+      "description": "The single aisle running through the aft cabin section, connecting the mid cabin to the aft vestibule. Aft cabin passengers are typically last to deplane.",
+      "minBound": [0, 56, 6],
+      "maxBound": [0, 68, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right seat section of the aft cabin with economy class seating. The last few rows may have limited recline due to the rear bulkhead proximity.",
+      "minBound": [1, 56, 6],
       "maxBound": [3, 68, 9],
       "isExterior": false
     },
@@ -88,17 +136,41 @@
     {
       "name": "Aft Galley",
       "type": "AftGalley",
-      "description": "The aft galley serves the majority of economy class passengers. It is the primary galley for in-flight service on most 737-800 configurations.",
-      "minBound": [-3, 72, 6],
+      "description": "The aft galley serves the majority of economy class passengers. It is the primary galley for in-flight service on most 737-800 configurations. Located on the starboard side aft of the vestibule.",
+      "minBound": [0, 72, 6],
       "maxBound": [3, 75, 9],
       "isExterior": false
     },
     {
       "name": "Aft Lavatory",
       "type": "AftLavatory",
-      "description": "Two aft lavatories located behind the last row of economy seating, serving the majority of passengers in the rear cabin.",
+      "description": "Two aft lavatories located on the port side behind the last row of economy seating, serving the majority of passengers in the rear cabin.",
       "minBound": [-3, 72, 6],
-      "maxBound": [3, 75, 10],
+      "maxBound": [-1, 75, 9],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cargo Hold",
+      "type": "ForwardCargoHold",
+      "description": "The forward cargo hold (compartment 1) beneath the forward cabin floor, capable of holding LD3-45 containers or bulk cargo. Accessed via the forward cargo door on the starboard side of the fuselage. Temperature-controlled to protect luggage and live animals.",
+      "minBound": [-2, 14, 2],
+      "maxBound": [2, 30, 5],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cargo Hold",
+      "type": "AftCargoHold",
+      "description": "The aft cargo hold (compartment 2) beneath the aft cabin floor, providing additional containerized cargo capacity. Accessed via the aft cargo door on the starboard side. Combined with the forward hold, the 737-800 offers approximately 45 cubic meters of cargo volume.",
+      "minBound": [-2, 56, 2],
+      "maxBound": [2, 68, 5],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cargo Access",
+      "type": "CargoAccess",
+      "description": "The forward cargo access shaft connecting the cabin level to the forward cargo hold below. Used by ground crew for loading and by maintenance personnel for accessing under-floor equipment and avionics bays.",
+      "minBound": [0, 8, 2],
+      "maxBound": [0, 9, 6],
       "isExterior": false
     },
     {
@@ -398,7 +470,7 @@
       "name": "Aft Galley Unit",
       "category": "Galley",
       "description": "The main aft galley serves the majority of economy class passengers. It is larger than the forward galley and contains more carts and storage.",
-      "position": [0, 73, 7],
+      "position": [1, 73, 7],
       "interactionRadius": 2.0,
       "interactionText": "The aft galley is the primary service point for economy class. Multiple beverage and meal carts are stored here between services.",
       "educationTopicIds": ["galley-equipment", "cabin-service"]
@@ -408,7 +480,7 @@
       "name": "Overhead Storage Bins",
       "category": "OverheadBin",
       "description": "Pivot-style overhead bins run the length of the cabin on both sides, providing approximately 2.4 cubic feet of storage per passenger. The 737-800 Sky Interior bins are 48% larger than earlier models.",
-      "position": [0, 40, 9],
+      "position": [-2, 40, 9],
       "interactionRadius": 3.0,
       "interactionText": "Open the overhead bin by pressing the latch and pivoting the bin down. The Boeing Sky Interior bins can accommodate standard roller bags placed on their sides.",
       "educationTopicIds": ["cabin-interior-design", "sky-interior"]
@@ -418,7 +490,7 @@
       "name": "Row 1 Passenger Seats",
       "category": "Seat",
       "description": "The first row of passenger seats, typically configured as business class or extra-legroom economy. Row 1 offers the most legroom in the forward cabin.",
-      "position": [0, 15, 7],
+      "position": [-2, 15, 7],
       "interactionRadius": 2.0,
       "interactionText": "Sit in a row 1 seat. Examine the seat belt, tray table in the armrest, overhead reading light, and passenger service unit with oxygen mask above.",
       "educationTopicIds": ["passenger-safety-equipment", "seat-design", "oxygen-system"]
@@ -428,7 +500,7 @@
       "name": "Forward Economy Seats",
       "category": "Seat",
       "description": "Economy class seating in a 3-3 configuration, with seats labeled A through F. Standard seat pitch is 30-31 inches. Each seat has a fold-down tray table on the seatback ahead and a recline button on the armrest.",
-      "position": [0, 26, 7],
+      "position": [2, 26, 7],
       "interactionRadius": 2.0,
       "interactionText": "Sit in a forward economy seat. The 3-3 layout means seats A, B, C on the left and D, E, F on the right. Check the seat pocket, tray table, and overhead reading light.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
@@ -438,7 +510,7 @@
       "name": "Mid Cabin Economy Seats",
       "category": "Seat",
       "description": "Economy seats in the mid cabin near the overwing emergency exits. Exit row seats offer significantly more legroom but the tray tables are in the armrests rather than on the seatback ahead. Window seats in the exit row may have a partially obstructed view due to the wing.",
-      "position": [0, 46, 7],
+      "position": [-2, 46, 7],
       "interactionRadius": 2.0,
       "interactionText": "Sit in a mid cabin seat near the overwing exits. Notice the extra legroom in exit rows. The emergency exit placards are illuminated and clearly visible. Window passengers can see the wing, flaps, and spoilers from here.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment", "emergency-exits"]
@@ -448,9 +520,209 @@
       "name": "Aft Cabin Economy Seats",
       "category": "Seat",
       "description": "Economy seats in the aft cabin section. These seats are closer to the engines and may experience more noise. The last few rows may have limited recline due to the rear bulkhead. Aft cabin passengers are typically last to deplane but first to receive meal service on some airlines.",
-      "position": [0, 62, 7],
+      "position": [2, 62, 7],
       "interactionRadius": 2.0,
       "interactionText": "Sit in an aft cabin seat. You can feel the proximity to the engines. The rear galley and lavatories are just behind. Check the seat belt, overhead bin, and passenger service unit.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "overhead-bins-fwd-left",
+      "name": "Forward Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Pivot-style overhead storage bins along the left side of the forward cabin, featuring the Boeing Sky Interior design with 48% more volume than earlier 737 models.",
+      "position": [-2, 25, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Press the latch and pivot the bin down toward you. The Sky Interior bins accommodate standard roller bags placed on their sides. The bin closes with a satisfying click as the latch engages.",
+      "educationTopicIds": ["cabin-interior-design", "sky-interior"]
+    },
+    {
+      "id": "overhead-bins-fwd-right",
+      "name": "Forward Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Pivot-style overhead storage bins along the right side of the forward cabin, matching the left side in capacity and design.",
+      "position": [2, 25, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Press the latch and pivot the starboard overhead bin down. These bins mirror the port side, offering the same generous Sky Interior storage volume for carry-on luggage.",
+      "educationTopicIds": ["cabin-interior-design", "sky-interior"]
+    },
+    {
+      "id": "overhead-bins-mid-left",
+      "name": "Mid Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins along the left side of the mid cabin section, located above the overwing emergency exit rows.",
+      "position": [-2, 46, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the mid cabin port-side overhead bin. Near the overwing exits, these bins may be slightly smaller to accommodate emergency lighting and exit signage above.",
+      "educationTopicIds": ["cabin-interior-design", "sky-interior"]
+    },
+    {
+      "id": "overhead-bins-mid-right",
+      "name": "Mid Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins along the right side of the mid cabin, positioned above the starboard overwing exit area.",
+      "position": [2, 46, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the starboard mid cabin overhead bin. The bin latches securely to prevent opening during turbulence. Emergency exit lighting runs along the bin rail.",
+      "educationTopicIds": ["cabin-interior-design", "sky-interior"]
+    },
+    {
+      "id": "overhead-bins-aft-left",
+      "name": "Aft Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins along the left side of the aft cabin, serving the rear economy passengers.",
+      "position": [-2, 62, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the aft cabin port-side overhead bin. Passengers in the rear of the aircraft often find more available bin space as the aft section boards last.",
+      "educationTopicIds": ["cabin-interior-design", "sky-interior"]
+    },
+    {
+      "id": "overhead-bins-aft-right",
+      "name": "Aft Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins along the right side of the aft cabin, completing the continuous overhead storage throughout the passenger cabin.",
+      "position": [2, 62, 9],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the starboard aft cabin overhead bin. The last few bins before the aft bulkhead are popular with passengers who board early and stow bags near their seats.",
+      "educationTopicIds": ["cabin-interior-design", "sky-interior"]
+    },
+    {
+      "id": "pax-window-fwd-left",
+      "name": "Forward Cabin Left Window",
+      "category": "Window",
+      "description": "A passenger window on the left side of the forward cabin. The triple-pane assembly provides structural integrity, thermal insulation, and a scratch-resistant inner surface.",
+      "position": [-3, 25, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the forward left window. From here you can see the airport terminal, ground equipment, and the nose of the aircraft ahead. The tiny breather hole in the middle pane equalizes pressure between layers.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-fwd-right",
+      "name": "Forward Cabin Right Window",
+      "category": "Window",
+      "description": "A passenger window on the right side of the forward cabin, offering views of the airport and ramp area during ground operations.",
+      "position": [3, 25, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the forward right window. On the ground, you can see baggage carts, fuel trucks, and other aircraft at adjacent gates. The window shade slides up and down for light control.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-mid-left",
+      "name": "Mid Cabin Left Window",
+      "category": "Window",
+      "description": "A passenger window on the left side of the mid cabin, positioned over the wing with views of the engine, leading edge slats, and trailing edge flaps.",
+      "position": [-3, 46, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the mid cabin left window. The wing stretches out below with the CFM56 engine visible on its pylon. Watch the slats and flaps deploy during takeoff and landing configuration changes.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-mid-right",
+      "name": "Mid Cabin Right Window",
+      "category": "Window",
+      "description": "A passenger window on the right side of the mid cabin over the starboard wing, offering symmetrical views of the wing and engine.",
+      "position": [3, 46, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the mid cabin right window. The starboard wing and engine are visible below. During flight, you can watch the spoilers rise on landing and the ailerons deflect in turns.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-aft-left",
+      "name": "Aft Cabin Left Window",
+      "category": "Window",
+      "description": "A passenger window on the left side of the aft cabin, offering views behind the wing trailing edge toward the tail and ground below.",
+      "position": [-3, 62, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the aft cabin left window. Behind the wing, you can see the ground below and the horizontal stabilizer at the tail. During approach, the runway appears to slide beneath you.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-aft-right",
+      "name": "Aft Cabin Right Window",
+      "category": "Window",
+      "description": "A passenger window on the right side of the aft cabin with views of the tail section and ground below during flight.",
+      "position": [3, 62, 7],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the aft cabin right window. You can see the vertical stabilizer rising above the tail and the ground stretching out behind the aircraft. The engine exhaust shimmer is sometimes visible.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "exit-row-seats-left",
+      "name": "Left Exit Row Seats",
+      "category": "Seat",
+      "description": "Exit row seats on the left side adjacent to the overwing emergency exit. These seats offer significantly more legroom than standard economy but come with the responsibility of assisting in an emergency evacuation.",
+      "position": [-2, 42, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the left exit row seat. Notice the extra legroom ahead of you where the overwing exit hatch is located. The tray table folds out from the armrest instead of the seatback. The safety briefing card shows how to operate the exit.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "emergency-exits"]
+    },
+    {
+      "id": "exit-row-seats-right",
+      "name": "Right Exit Row Seats",
+      "category": "Seat",
+      "description": "Exit row seats on the right side adjacent to the overwing emergency exit, matching the left side in extra legroom and evacuation responsibilities.",
+      "position": [2, 42, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the right exit row seat. The extra space ahead gives ample legroom. Passengers seated here must confirm they are willing and able to assist with emergency evacuation if needed.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment", "emergency-exits"]
+    },
+    {
+      "id": "window-seat-fwd-left",
+      "name": "Forward Left Window Seat",
+      "category": "Seat",
+      "description": "A window seat on the left side of the forward cabin, offering views of the airport during ground operations and the landscape during flight.",
+      "position": [-3, 20, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the left window seat. Lean against the fuselage wall and look out at the airport. The window shade gives you control over light and views. The seat is slightly narrower than the aisle seat due to the fuselage curvature.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "window-seat-fwd-right",
+      "name": "Forward Right Window Seat",
+      "category": "Seat",
+      "description": "A window seat on the right side of the forward cabin, positioned at seat F with direct access to the window shade and fuselage wall for leaning.",
+      "position": [3, 20, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the right window seat. You have a direct view outside and can rest against the cabin wall. The reading light above can be directed onto your lap without disturbing neighboring passengers.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "aisle-seat-mid-left",
+      "name": "Mid Cabin Left Aisle Seat",
+      "category": "Seat",
+      "description": "An aisle seat on the left side of the mid cabin at seat C, offering easy access to the aisle for stretching and lavatory visits without disturbing other passengers.",
+      "position": [-1, 50, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the left aisle seat. You can easily step into the aisle without climbing over neighbors. The armrest on the aisle side lifts up for easier entry and exit. Watch for the beverage cart coming through.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "aisle-seat-mid-right",
+      "name": "Mid Cabin Right Aisle Seat",
+      "category": "Seat",
+      "description": "An aisle seat on the right side of the mid cabin at seat D, the mirror of seat C with identical aisle access convenience.",
+      "position": [1, 50, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the right aisle seat. Direct aisle access makes this a popular choice for frequent flyers. The overhead bin is easily reachable from here. Keep your elbow tucked in when the cart passes.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "last-row-seats-left",
+      "name": "Last Row Left Seats",
+      "category": "Seat",
+      "description": "The last row of seats on the left side of the aft cabin, directly against the rear bulkhead. These seats have limited or no recline and are close to the aft galley and lavatories.",
+      "position": [-2, 68, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the last row. The seat recline is limited by the bulkhead behind you. You can hear the galley activity and lavatory doors. On the plus side, you are first to be served meals from the aft galley.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "last-row-seats-right",
+      "name": "Last Row Right Seats",
+      "category": "Seat",
+      "description": "The last row of seats on the right side of the aft cabin, adjacent to the rear bulkhead with limited recline. Proximity to the aft galley means quick meal service but also galley noise.",
+      "position": [2, 68, 7],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the last row on the right. The seat barely reclines due to the bulkhead. Galley sounds and lavatory traffic are constant companions, but you will be among the first served during meal service.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
     },
     {
@@ -462,6 +734,66 @@
       "interactionRadius": 1.0,
       "interactionText": "Look through the triple-layer cabin window. The tiny hole in the middle pane equalizes pressure between the panes and prevents fogging.",
       "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "fwd-cargo-containers",
+      "name": "Forward Cargo Containers",
+      "category": "CargoEquipment",
+      "description": "LD3-45 cargo containers stacked on loading rails in the forward cargo hold. These half-width containers are specifically designed for narrow-body aircraft like the 737, each holding up to 1,500 lbs of baggage or freight.",
+      "position": [0, 22, 3],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the LD3-45 containers secured on the cargo loading rails. Each aluminum container is contoured to fit the lower fuselage shape. Ground crews slide them along the powered roller system during loading.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "fwd-cargo-net",
+      "name": "Forward Cargo Restraint Net",
+      "category": "CargoEquipment",
+      "description": "A heavy-duty cargo net and barrier system in the forward cargo hold that prevents load shifting during flight. The nets are rated to withstand 9g forward loads per FAA certification requirements.",
+      "position": [0, 26, 4],
+      "interactionRadius": 1.5,
+      "interactionText": "Inspect the cargo restraint net stretched across the hold. The woven nylon barrier clips to floor-mounted fittings and prevents cargo from shifting during turbulence or emergency maneuvers.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "fwd-cargo-door",
+      "name": "Forward Cargo Door Mechanism",
+      "category": "CargoEquipment",
+      "description": "The powered forward cargo door on the starboard side of the fuselage. The door is electrically actuated and features multiple locking mechanisms and a pressure seal to maintain cabin pressurization.",
+      "position": [2, 18, 3],
+      "interactionRadius": 1.5,
+      "interactionText": "Examine the forward cargo door mechanism. The door lifts upward on powered actuators. Multiple lock pins engage sequentially, and a pressure seal inflates around the door frame to maintain pressurization.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-containers",
+      "name": "Aft Cargo Containers",
+      "category": "CargoEquipment",
+      "description": "LD3-45 cargo containers and bulk-loaded baggage in the aft cargo hold. This compartment typically carries checked passenger baggage and additional freight.",
+      "position": [0, 62, 3],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the aft cargo containers on their loading rails. Passenger checked bags are typically loaded here, with fragile and priority items placed last for first off-loading at the destination.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-net",
+      "name": "Aft Cargo Restraint Net",
+      "category": "CargoEquipment",
+      "description": "Cargo barrier and restraint netting in the aft cargo hold, securing loose baggage and preventing load shift that could affect the aircraft's center of gravity.",
+      "position": [0, 65, 4],
+      "interactionRadius": 1.5,
+      "interactionText": "Inspect the aft cargo net. Proper cargo restraint is critical for maintaining the aircraft's weight and balance within safe limits throughout the flight.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-door",
+      "name": "Aft Cargo Door Mechanism",
+      "category": "CargoEquipment",
+      "description": "The powered aft cargo door on the starboard side, providing access to the aft cargo hold. Features the same multi-lock and pressure seal design as the forward cargo door.",
+      "position": [2, 59, 3],
+      "interactionRadius": 1.5,
+      "interactionText": "Examine the aft cargo door. Like the forward door, it lifts upward with powered actuators. Safety interlocks prevent the door from being opened when the cabin is pressurized.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
     },
     {
       "id": "left-engine",

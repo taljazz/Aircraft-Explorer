@@ -30,8 +30,22 @@ public class NavigationGrid : INavigationSpace
             };
         }
 
+        var targetZone = GetZoneAt(target);
+        if (targetZone is null)
+        {
+            return new MovementResult
+            {
+                Success = false,
+                NewPosition = from,
+                CurrentZone = GetZoneAt(from),
+                PreviousZone = GetZoneAt(from),
+                BoundaryMessage = "You can't go that way.",
+                NearbyComponents = GetNearbyComponents(from)
+            };
+        }
+
         var previousZone = GetZoneAt(from);
-        var currentZone = GetZoneAt(target);
+        var currentZone = targetZone;
         var nearby = GetNearbyComponents(target);
 
         return new MovementResult

@@ -214,5 +214,13 @@
     "content": "Static ports supply ambient atmospheric pressure to three critical flight instruments. The altimeter uses static pressure to determine altitude above a reference datum. The vertical speed indicator measures the rate of change of static pressure to show climb or descent rate in feet per minute. The airspeed indicator compares pitot total pressure against static pressure to determine indicated airspeed. The 737 has static ports on both sides of the fuselage to average out any sideslip-induced pressure errors. An alternate static source inside the cockpit provides backup if external ports become blocked by ice or contamination. Accurate static pressure is so critical that even a small blockage can cause dangerously erroneous instrument readings.",
     "componentIds": ["pitot-tubes", "static-ports"],
     "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+  },
+  {
+    "id": "737-cargo-configuration",
+    "title": "737 Cargo Hold Configuration",
+    "category": "Specs",
+    "content": "The Boeing 737 NG has two lower cargo compartments. The forward cargo hold (compartment 1) is located under the forward cabin and typically accommodates LD3-45 containers or bulk cargo, with a volume of approximately 625 cubic feet on the 737-800. The aft cargo hold (compartment 2) is beneath the aft cabin with approximately 486 cubic feet of volume. Both holds are accessed through powered cargo doors on the right side of the fuselage. The 737's narrow-body fuselage limits container size to LD3-45 units, which are smaller than the LD3 containers used on wide-body aircraft. The cargo floor features a ball mat and roller system for efficient loading. Total cargo volume varies by variant, with the 737-900 offering additional capacity due to its stretched fuselage.",
+    "componentIds": ["fwd-cargo-containers", "aft-cargo-containers"],
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
   }
 ]

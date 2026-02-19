@@ -32,6 +32,10 @@ bld/
 ## Claude Code
 .claude/
 
+## Publish / Release artifacts
+publish/
+*.zip
+
 ## OS files
 Thumbs.db
 ehthumbs.db

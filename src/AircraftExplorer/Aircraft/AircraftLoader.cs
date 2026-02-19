@@ -25,7 +25,14 @@ public static class AircraftLoader
 
         foreach (var file in Directory.GetFiles(directoryPath, "*.json"))
         {
-            aircraft.Add(LoadFromFile(file));
+            try
+            {
+                aircraft.Add(LoadFromFile(file));
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Skipping {file}: {ex.Message}");
+            }
         }
 
         return aircraft;

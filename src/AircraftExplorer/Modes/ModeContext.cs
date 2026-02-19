@@ -15,6 +15,7 @@ public class ModeContext
     public required IEducationProvider EducationProvider { get; init; }
     public required AppSettings Settings { get; init; }
     public required InputManager InputManager { get; init; }
+    public required string SettingsFilePath { get; init; }
 
     // Set when an aircraft is selected
     public AircraftModel? SelectedAircraft { get; set; }

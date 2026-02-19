@@ -13,6 +13,7 @@ var configuration = new ConfigurationBuilder()
     .AddJsonFile(Path.Combine("Data", "Config", "appsettings.json"), optional: true, reloadOnChange: false)
     .Build();
 
+var settingsFilePath = Path.Combine(AppContext.BaseDirectory, "Data", "Config", "appsettings.json");
 var appSettings = new AppSettings();
 configuration.Bind(appSettings);
 
@@ -24,13 +25,11 @@ services.AddSingleton(appSettings);
 // Audio
 services.AddSingleton<ISpeechService, TolkSpeechService>();
 services.AddSingleton<ISpatialAudioService, SpatialAudioService>();
-services.AddSingleton<SpeechQueue>(sp =>
-    new SpeechQueue(sp.GetRequiredService<ISpeechService>(), appSettings.Speech.DebounceMilliseconds));
-
 // Input — register KeyboardInputProvider both as concrete and as IInputProvider
 services.AddSingleton<KeyboardInputProvider>();
 services.AddSingleton<IInputProvider>(sp => sp.GetRequiredService<KeyboardInputProvider>());
-services.AddSingleton<IInputProvider, FlightHardwareInputProvider>();
+services.AddSingleton<IInputProvider>(sp =>
+    new FlightHardwareInputProvider(sp.GetRequiredService<AppSettings>()));
 services.AddSingleton<InputManager>();
 
 // Data
@@ -56,7 +55,8 @@ services.AddSingleton<ModeContext>(sp => new ModeContext
     AircraftRegistry = sp.GetRequiredService<AircraftRegistry>(),
     EducationProvider = sp.GetRequiredService<IEducationProvider>(),
     Settings = sp.GetRequiredService<AppSettings>(),
-    InputManager = sp.GetRequiredService<InputManager>()
+    InputManager = sp.GetRequiredService<InputManager>(),
+    SettingsFilePath = settingsFilePath
 });
 
 // App host

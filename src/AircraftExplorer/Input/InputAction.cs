@@ -21,5 +21,13 @@ public enum InputAction
     VolumeUp,
     VolumeDown,
     ReadTopic,
-    JumpToComponent
+    JumpToComponent,
+    PitchForward,
+    PitchBack,
+    RollLeft,
+    RollRight,
+    RudderLeft,
+    RudderRight,
+    ThrottleUp,
+    ThrottleDown
 }

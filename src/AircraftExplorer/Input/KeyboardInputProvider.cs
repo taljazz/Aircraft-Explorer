@@ -22,6 +22,8 @@ public sealed class KeyboardInputProvider : IInputProvider
 
     public AxisState? GetAxisState() => null;
 
+    public static bool IsMappedKey(Keys key) => MapKey(key) is not null;
+
     private static InputAction? MapKey(Keys key) => key switch
     {
         Keys.Up => InputAction.MoveForward,
@@ -42,6 +44,14 @@ public sealed class KeyboardInputProvider : IInputProvider
         Keys.Oemplus => InputAction.VolumeUp,
         Keys.R => InputAction.ReadTopic,
         Keys.J => InputAction.JumpToComponent,
+        Keys.NumPad8 => InputAction.PitchForward,
+        Keys.NumPad2 => InputAction.PitchBack,
+        Keys.NumPad4 => InputAction.RollLeft,
+        Keys.NumPad6 => InputAction.RollRight,
+        Keys.Insert => InputAction.RudderLeft,
+        Keys.Delete => InputAction.RudderRight,
+        Keys.Home => InputAction.ThrottleUp,
+        Keys.End => InputAction.ThrottleDown,
         _ => null
     };
 }

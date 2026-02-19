@@ -54,26 +54,122 @@
       "isExterior": false
     },
     {
-      "name": "Forward Cabin",
-      "type": "ForwardCabin",
-      "description": "The forward cabin houses first and business class in configurations ranging from 1-2-1 to 2-3-2 abreast. The wide 5.87m cabin allows comfortable premium seating layouts.",
+      "name": "Forward Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left window and middle seats in the forward cabin, typically configured as first or business class in a 2-abreast section. The 777's wide fuselage allows spacious premium seating along the left side.",
       "minBound": [-5, 20, 8],
+      "maxBound": [-3, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Left Aisle",
+      "type": "Aisle",
+      "description": "The left aisle of the forward cabin, one of the twin aisles that define the wide-body 777 cabin layout. Provides access between the forward vestibule and the mid cabin.",
+      "minBound": [-2, 20, 8],
+      "maxBound": [-2, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Center Seats",
+      "type": "SeatSection",
+      "description": "Center seats in the forward cabin between the twin aisles. In first class, this section typically has a 2-abreast center configuration with direct aisle access from both sides.",
+      "minBound": [-1, 20, 8],
+      "maxBound": [1, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Right Aisle",
+      "type": "Aisle",
+      "description": "The right aisle of the forward cabin, providing a second path through the premium class section for efficient passenger movement.",
+      "minBound": [2, 20, 8],
+      "maxBound": [2, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right window and middle seats in the forward cabin, mirroring the left side premium class configuration with views through the 777's large cabin windows.",
+      "minBound": [3, 20, 8],
       "maxBound": [5, 48, 12],
       "isExterior": false
     },
     {
-      "name": "Mid Cabin",
-      "type": "MidCabin",
-      "description": "The center cabin section typically configured as premium economy or economy class in a 3-3-3 or 3-4-3 abreast layout. Located over the wing center section.",
+      "name": "Mid Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left seat section in the mid cabin, typically configured as 3-abreast economy or premium economy seating along the port side of the aircraft over the wing.",
       "minBound": [-5, 49, 8],
+      "maxBound": [-3, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Left Aisle",
+      "type": "Aisle",
+      "description": "The left aisle of the mid cabin section, running over the wing box area. One of two parallel aisles serving the economy class section.",
+      "minBound": [-2, 49, 8],
+      "maxBound": [-2, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Center Seats",
+      "type": "SeatSection",
+      "description": "Center seats in the mid cabin between the twin aisles, typically configured as 3-abreast in a 3-3-3 economy layout. The center section has no window access but offers proximity to both aisles.",
+      "minBound": [-1, 49, 8],
+      "maxBound": [1, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Right Aisle",
+      "type": "Aisle",
+      "description": "The right aisle of the mid cabin, providing the second path through the economy section for service carts and passenger movement.",
+      "minBound": [2, 49, 8],
+      "maxBound": [2, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right seat section in the mid cabin, configured as 3-abreast economy seating along the starboard side with window views over the right wing.",
+      "minBound": [3, 49, 8],
       "maxBound": [5, 80, 12],
       "isExterior": false
     },
     {
-      "name": "Aft Cabin",
-      "type": "AftCabin",
-      "description": "The aft cabin houses economy class seating, typically in a 3-3-3 or 3-4-3 configuration depending on the airline.",
+      "name": "Aft Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left seat section in the aft cabin, configured as 3-abreast economy seating. Aft passengers are nearest to the rear galleys and lavatories.",
       "minBound": [-5, 81, 8],
+      "maxBound": [-3, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Left Aisle",
+      "type": "Aisle",
+      "description": "The left aisle of the aft cabin, connecting the mid cabin to the aft vestibule and rear service areas.",
+      "minBound": [-2, 81, 8],
+      "maxBound": [-2, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Center Seats",
+      "type": "SeatSection",
+      "description": "Center seats in the aft cabin between the twin aisles. The last rows of the center section may have limited recline due to the aft bulkhead.",
+      "minBound": [-1, 81, 8],
+      "maxBound": [1, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Right Aisle",
+      "type": "Aisle",
+      "description": "The right aisle of the aft cabin, providing access to the rear boarding doors and aft service areas.",
+      "minBound": [2, 81, 8],
+      "maxBound": [2, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right seat section in the aft cabin, mirroring the left side economy configuration. Window seats here offer views of the aft fuselage and horizontal stabilizer.",
+      "minBound": [3, 81, 8],
       "maxBound": [5, 108, 12],
       "isExterior": false
     },
@@ -99,6 +195,38 @@
       "description": "Multiple aft lavatories serving the economy cabin, typically 4-5 units across the rear of the aircraft.",
       "minBound": [-5, 118, 8],
       "maxBound": [5, 121, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cargo Hold",
+      "type": "ForwardCargoHold",
+      "description": "The forward lower-deck cargo hold beneath the forward cabin, accommodating LD3 containers side by side in the wide-body fuselage. Heated and pressurized for temperature-sensitive cargo and live animals.",
+      "minBound": [-4, 20, 2],
+      "maxBound": [4, 48, 7],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cargo Hold",
+      "type": "AftCargoHold",
+      "description": "The aft lower-deck cargo hold beneath the mid and aft cabins, providing the largest cargo volume on the aircraft. Accommodates LD3 containers and bulk freight with powered cargo handling systems.",
+      "minBound": [-4, 70, 2],
+      "maxBound": [4, 108, 7],
+      "isExterior": false
+    },
+    {
+      "name": "Bulk Cargo Hold",
+      "type": "BulkCargoHold",
+      "description": "The bulk cargo compartment aft of the main cargo holds, used for loose-loaded baggage and small freight items that do not require containerization.",
+      "minBound": [-3, 109, 2],
+      "maxBound": [3, 117, 7],
+      "isExterior": false
+    },
+    {
+      "name": "Cargo Access",
+      "type": "CargoAccess",
+      "description": "The forward cargo access passage connecting the main deck to the lower cargo holds, used by ground crew during loading operations.",
+      "minBound": [0, 12, 2],
+      "maxBound": [0, 13, 8],
       "isExterior": false
     },
     {
@@ -378,7 +506,7 @@
       "name": "Row 1 First Class Seats",
       "category": "Seat",
       "description": "The first row of first class seats, typically configured as spacious suites in a 1-2-1 layout with direct aisle access.",
-      "position": [0, 21, 9],
+      "position": [-4, 21, 9],
       "interactionRadius": 2.0,
       "interactionText": "Examine the first class suite with lie-flat bed, personal entertainment screen, privacy partition, and premium amenities.",
       "educationTopicIds": ["passenger-safety-equipment", "first-class-design"]
@@ -388,7 +516,7 @@
       "name": "Forward Cabin Business Class Seats",
       "category": "Seat",
       "description": "Business class seats in a 2-3-2 configuration in the forward cabin. These lie-flat seats offer direct aisle access from window positions and feature personal entertainment screens, power outlets, and adjustable privacy dividers.",
-      "position": [0, 35, 9],
+      "position": [4, 35, 9],
       "interactionRadius": 2.0,
       "interactionText": "Sit in a forward cabin business class seat. The 2-3-2 layout gives most passengers direct aisle access. Adjust the lie-flat mechanism, check the personal entertainment screen, and find the power outlet in the center console.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
@@ -398,7 +526,7 @@
       "name": "Mid Cabin Economy Seats",
       "category": "Seat",
       "description": "Economy class seats in the mid cabin in a 3-3-3 configuration, typical for the 777-200. The wide-body fuselage allows nine-abreast seating with two aisles. Seat pitch is typically 31-32 inches. Each seat has a personal seatback entertainment screen.",
-      "position": [0, 65, 9],
+      "position": [-4, 65, 9],
       "interactionRadius": 2.0,
       "interactionText": "Sit in a mid cabin economy seat. The twin-aisle 3-3-3 layout is spacious for economy class. Each seat has a personal entertainment screen, USB charging port, and adjustable headrest. The wide cabin gives a more open feeling than narrow-body aircraft.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
@@ -408,7 +536,7 @@
       "name": "Aft Cabin Economy Seats",
       "category": "Seat",
       "description": "Economy seats in the aft cabin section of the 777-200. The rear of the aircraft may experience more motion in turbulence. Last-row seats often have limited recline. Aft passengers are closest to the rear galleys and lavatories.",
-      "position": [0, 95, 9],
+      "position": [4, 95, 9],
       "interactionRadius": 2.0,
       "interactionText": "Sit in an aft economy seat. You are in the rear section of this wide-body aircraft. The twin aisles allow efficient boarding and deplaning. Check the seatback screen, tray table, and life vest under the seat.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior"]
@@ -422,6 +550,286 @@
       "interactionRadius": 1.0,
       "interactionText": "Look through the larger 777 cabin window. The triple-layer construction includes a structural outer pane, inner pane, and scratch pane.",
       "educationTopicIds": ["cabin-windows", "pressurization"]
+    },
+    {
+      "id": "overhead-bins-fwd-left",
+      "name": "Forward Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the left seats in the forward cabin. The 777's three-row bin system provides left, center, and right bins across the wide cabin.",
+      "position": [-4, 34, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the left overhead bin above the forward cabin seats. The wide-body bins are deeper than narrow-body bins, accommodating larger carry-on bags.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-fwd-right",
+      "name": "Forward Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the right seats in the forward cabin, mirroring the left side configuration.",
+      "position": [4, 34, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the right overhead bin in the forward cabin. Premium class bins may have additional space due to lower passenger density.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-mid-left",
+      "name": "Mid Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the left seats in the mid cabin over the wing section.",
+      "position": [-4, 64, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the left overhead bin in the mid cabin. These bins serve the economy class passengers seated along the port side.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-mid-right",
+      "name": "Mid Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the right seats in the mid cabin, mirroring the left side.",
+      "position": [4, 64, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the right overhead bin in the mid cabin. The starboard bins serve passengers on the right side of the aircraft.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-aft-left",
+      "name": "Aft Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the left seats in the aft economy cabin.",
+      "position": [-4, 94, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the left overhead bin in the aft cabin. Bins in the rear section fill up last during boarding.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-aft-right",
+      "name": "Aft Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the right seats in the aft economy cabin.",
+      "position": [4, 94, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the right overhead bin in the aft cabin. The last overhead bins before the aft vestibule and galley areas.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "pax-window-fwd-left",
+      "name": "Forward Cabin Left Window",
+      "category": "Window",
+      "description": "A cabin window on the left side of the forward cabin, offering views of the airport terminal during boarding or the sky at cruise altitude.",
+      "position": [-5, 34, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the forward cabin left window. In first or business class, the larger window spacing gives premium passengers a generous view of the world below.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-fwd-right",
+      "name": "Forward Cabin Right Window",
+      "category": "Window",
+      "description": "A cabin window on the right side of the forward cabin, providing views from the starboard side of the aircraft.",
+      "position": [5, 34, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the forward cabin right window. The 777's windows are approximately 15 inches tall, noticeably larger than narrow-body aircraft windows.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-mid-left",
+      "name": "Mid Cabin Left Window",
+      "category": "Window",
+      "description": "A cabin window on the left side of the mid cabin, positioned over the wing with views of the engine and leading edge slats.",
+      "position": [-5, 64, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the mid cabin left window over the wing. You can see the left GE90 engine nacelle, the leading edge slats, and the wing fuel vents.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-mid-right",
+      "name": "Mid Cabin Right Window",
+      "category": "Window",
+      "description": "A cabin window on the right side of the mid cabin, offering views over the starboard wing and engine.",
+      "position": [5, 64, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the mid cabin right window. The right GE90 engine and wing are visible, along with the spoiler panels on the wing upper surface.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-aft-left",
+      "name": "Aft Cabin Left Window",
+      "category": "Window",
+      "description": "A cabin window on the left side of the aft cabin, offering views of the wing trailing edge and the ground below.",
+      "position": [-5, 94, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the aft cabin left window. You can see the trailing edge of the wing, the flap track fairings, and the ground far below.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-aft-right",
+      "name": "Aft Cabin Right Window",
+      "category": "Window",
+      "description": "A cabin window on the right side of the aft cabin, with views aft toward the horizontal stabilizer.",
+      "position": [5, 94, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the aft cabin right window. Looking aft, you can see the horizontal stabilizer and the sky stretching to the horizon.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "fwd-exit-row-seats",
+      "name": "Forward Exit Row Seats",
+      "category": "Seat",
+      "description": "Exit row seats in the forward cabin with significantly more legroom due to the overwing emergency exit positioning. Passengers seated here must be able to assist in an evacuation.",
+      "position": [-5, 28, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the forward exit row seat. Notice the extra legroom and the emergency exit door beside you. Read the special safety briefing card for exit row passengers.",
+      "educationTopicIds": ["seat-design", "emergency-exits", "passenger-safety-equipment"]
+    },
+    {
+      "id": "fwd-window-seat",
+      "name": "Forward Cabin Window Seat",
+      "category": "Seat",
+      "description": "A window seat in the forward business class cabin with panoramic views through the 777's large cabin windows. The window seat offers privacy from the aisle and a wall to lean against.",
+      "position": [5, 40, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in a forward cabin window seat. The 777's larger windows give you a wide view of the clouds and terrain below. Adjust the window shade and settle into the premium seat.",
+      "educationTopicIds": ["seat-design", "cabin-windows", "wide-body-interior"]
+    },
+    {
+      "id": "fwd-center-seat",
+      "name": "Forward Cabin Center Seat",
+      "category": "Seat",
+      "description": "A center section seat in the forward business class cabin, positioned between the twin aisles with easy access to both sides of the aircraft.",
+      "position": [0, 44, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in a forward cabin center seat between the aisles. In business class, center seats often feature privacy partitions and direct aisle access from both sides.",
+      "educationTopicIds": ["seat-design", "wide-body-interior"]
+    },
+    {
+      "id": "mid-exit-row-seats",
+      "name": "Mid Cabin Exit Row Seats",
+      "category": "Seat",
+      "description": "Exit row seats at the overwing emergency exits in the mid cabin. These seats have the most legroom in economy class and are positioned adjacent to the Type III overwing exits.",
+      "position": [-5, 55, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the overwing exit row. You have several extra inches of legroom. The emergency exit hatch is beside you. Review the exit row briefing card carefully.",
+      "educationTopicIds": ["seat-design", "emergency-exits", "passenger-safety-equipment"]
+    },
+    {
+      "id": "mid-window-seat",
+      "name": "Mid Cabin Window Seat",
+      "category": "Seat",
+      "description": "A window seat in the mid cabin economy section, positioned over the wing with views of the engine and flight control surfaces.",
+      "position": [5, 70, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in a mid cabin window seat over the wing. Watch the flaps and slats deploy during approach. The GE90 engine is visible forward on the wing.",
+      "educationTopicIds": ["seat-design", "cabin-windows", "wide-body-interior"]
+    },
+    {
+      "id": "mid-center-seat",
+      "name": "Mid Cabin Center Seat",
+      "category": "Seat",
+      "description": "A center section seat in the mid cabin economy class. In the 3-3-3 configuration, the center seat has aisle access from both sides but no window view.",
+      "position": [0, 60, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in a center economy seat. While there is no window, you have convenient access to both aisles. The personal seatback screen provides entertainment for the flight.",
+      "educationTopicIds": ["seat-design", "wide-body-interior"]
+    },
+    {
+      "id": "aft-exit-row-seats",
+      "name": "Aft Cabin Exit Row Seats",
+      "category": "Seat",
+      "description": "Exit row seats in the aft cabin near the rear emergency exits, offering extra legroom and responsibility for assisting with evacuation if needed.",
+      "position": [5, 85, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the aft exit row with extra legroom. The emergency exit is within arm's reach. Familiarize yourself with the exit operation procedure on the briefing card.",
+      "educationTopicIds": ["seat-design", "emergency-exits", "passenger-safety-equipment"]
+    },
+    {
+      "id": "aft-window-seat",
+      "name": "Aft Cabin Window Seat",
+      "category": "Seat",
+      "description": "A window seat in the aft economy cabin. From here, passengers can see the wing trailing edge and the ground below, with the horizontal stabilizer visible aft.",
+      "position": [-5, 100, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in an aft cabin window seat. Looking out, you can see the trailing edge of the wing and the flap track fairings. The ground scrolls by far below.",
+      "educationTopicIds": ["seat-design", "cabin-windows", "wide-body-interior"]
+    },
+    {
+      "id": "aft-last-row-seat",
+      "name": "Last Row Economy Seat",
+      "category": "Seat",
+      "description": "The very last row of economy seats before the aft bulkhead. These seats have limited recline but are closest to the rear lavatories and galleys.",
+      "position": [0, 107, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the last row of economy. The seat recline is limited by the bulkhead behind you, but you are steps from the lavatories and galley for snack runs.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "fwd-cargo-containers",
+      "name": "Forward Cargo LD3 Containers",
+      "category": "CargoEquipment",
+      "description": "LD3 unit load devices stacked in the forward cargo hold. The 777's wide-body cross-section accommodates LD3 containers two abreast on the lower deck.",
+      "position": [0, 34, 4],
+      "interactionRadius": 2.5,
+      "interactionText": "Examine the LD3 cargo containers in the forward hold. Each aluminum container holds up to 1,588 kg and is designed to fit the curved lower fuselage contour.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "fwd-cargo-net",
+      "name": "Forward Cargo Restraint Net",
+      "category": "CargoEquipment",
+      "description": "The cargo restraint net system in the forward hold, securing LD3 containers and preventing cargo shift during flight maneuvers and turbulence.",
+      "position": [0, 40, 5],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the cargo net restraint system. Heavy-duty nylon nets with quick-release fittings secure containers against the 9g forward load certification requirement.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "fwd-cargo-door",
+      "name": "Forward Cargo Door",
+      "category": "CargoEquipment",
+      "description": "The powered forward cargo door on the right side of the fuselage, providing access to the forward lower-deck cargo hold for LD3 container loading.",
+      "position": [4, 28, 4],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the powered forward cargo door. Hydraulic actuators open the large door upward, and a ball-mat transfer system inside guides containers into position.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-containers",
+      "name": "Aft Cargo LD3 Containers",
+      "category": "CargoEquipment",
+      "description": "LD3 containers in the aft cargo hold, the largest cargo compartment on the 777-200. This hold accommodates the majority of containerized baggage and freight.",
+      "position": [0, 89, 4],
+      "interactionRadius": 2.5,
+      "interactionText": "Examine the LD3 containers in the aft hold. The aft compartment is the largest on the aircraft, holding the majority of passenger baggage and cargo freight.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-net",
+      "name": "Aft Cargo Restraint Net",
+      "category": "CargoEquipment",
+      "description": "The cargo restraint system in the aft hold, securing containers and pallets during all phases of flight.",
+      "position": [0, 95, 5],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the aft cargo restraint nets. The system must secure cargo against forces up to 9g forward, 1.5g sideward, and 2g upward.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-door",
+      "name": "Aft Cargo Door",
+      "category": "CargoEquipment",
+      "description": "The powered aft cargo door providing access to the rear lower-deck cargo hold. Located on the right side of the fuselage behind the wing.",
+      "position": [4, 83, 4],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the aft cargo door. Like the forward door, it opens upward with hydraulic assistance and has a powered drive system for container loading.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "bulk-cargo-area",
+      "name": "Bulk Cargo Loading Area",
+      "category": "CargoEquipment",
+      "description": "The bulk cargo compartment at the rear of the lower deck, used for loose-loaded baggage, mail, and small freight that does not require containerization.",
+      "position": [0, 113, 4],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the bulk cargo area. Loose baggage and mail are hand-loaded through a small door. A conveyor belt assists with loading irregularly shaped items.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
     },
     {
       "id": "left-engine",

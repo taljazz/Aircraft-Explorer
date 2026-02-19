@@ -54,26 +54,122 @@
       "isExterior": false
     },
     {
-      "name": "Forward Cabin",
-      "type": "ForwardCabin",
-      "description": "The forward cabin configured for premium passengers on ultra-long-haul routes. Airlines typically offer generous business class seating due to the LR's lower total passenger count.",
+      "name": "Forward Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left window and middle seats in the forward cabin, configured for premium passengers on ultra-long-haul routes. The Worldliner's lower passenger count allows more generous seating along the port side.",
       "minBound": [-5, 20, 8],
+      "maxBound": [-3, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Left Aisle",
+      "type": "Aisle",
+      "description": "The left aisle of the forward cabin, one of the twin aisles serving the premium class section on flights lasting up to 19 hours.",
+      "minBound": [-2, 20, 8],
+      "maxBound": [-2, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Center Seats",
+      "type": "SeatSection",
+      "description": "Center seats in the forward cabin between the twin aisles. On the Worldliner, generous business class configurations provide maximum comfort for the longest nonstop flights in aviation.",
+      "minBound": [-1, 20, 8],
+      "maxBound": [1, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Right Aisle",
+      "type": "Aisle",
+      "description": "The right aisle of the forward cabin, providing a second service path through the premium section on ultra-long-haul operations.",
+      "minBound": [2, 20, 8],
+      "maxBound": [2, 48, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right window and middle seats in the forward cabin, mirroring the left side premium seating. Window seats offer views of multiple continents on the Worldliner's globe-spanning routes.",
+      "minBound": [3, 20, 8],
       "maxBound": [5, 48, 12],
       "isExterior": false
     },
     {
-      "name": "Mid Cabin",
-      "type": "MidCabin",
-      "description": "The center cabin section with premium economy or economy seating. The LR typically seats fewer passengers than other 777-200 variants to accommodate fuel tank weight.",
+      "name": "Mid Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left seat section in the mid cabin. The Worldliner typically seats fewer passengers than other 777-200 variants, so this section may feel less crowded on ultra-long-haul flights.",
       "minBound": [-5, 49, 8],
+      "maxBound": [-3, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Left Aisle",
+      "type": "Aisle",
+      "description": "The left aisle of the mid cabin, running over the wing box that houses the main fuel tanks enabling the Worldliner's extraordinary range.",
+      "minBound": [-2, 49, 8],
+      "maxBound": [-2, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Center Seats",
+      "type": "SeatSection",
+      "description": "Center seats in the mid cabin between the twin aisles. With the Worldliner's reduced passenger count, some airlines configure enhanced seat pitch for ultra-long-haul comfort.",
+      "minBound": [-1, 49, 8],
+      "maxBound": [1, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Right Aisle",
+      "type": "Aisle",
+      "description": "The right aisle of the mid cabin, used for meal and beverage service on flights lasting nearly a full day.",
+      "minBound": [2, 49, 8],
+      "maxBound": [2, 80, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Mid Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right seat section in the mid cabin, with economy seating along the starboard side. Window seats offer views over the raked-wingtip wing during ultra-long flights.",
+      "minBound": [3, 49, 8],
       "maxBound": [5, 80, 12],
       "isExterior": false
     },
     {
-      "name": "Aft Cabin",
-      "type": "AftCabin",
-      "description": "The aft economy cabin, typically with reduced seating capacity compared to other 777-200 variants due to the LR's focus on range over density.",
+      "name": "Aft Cabin Left Seats",
+      "type": "SeatSection",
+      "description": "Left seat section in the aft cabin with reduced seating capacity compared to other 777-200 variants. The Worldliner prioritizes range over passenger density.",
       "minBound": [-5, 81, 8],
+      "maxBound": [-3, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Left Aisle",
+      "type": "Aisle",
+      "description": "The left aisle of the aft cabin, connecting the mid cabin to the aft vestibule on ultra-long-haul routes.",
+      "minBound": [-2, 81, 8],
+      "maxBound": [-2, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Center Seats",
+      "type": "SeatSection",
+      "description": "Center seats in the aft cabin between the twin aisles. Beneath this section, auxiliary fuel tanks in the cargo hold enable the aircraft's record-breaking range.",
+      "minBound": [-1, 81, 8],
+      "maxBound": [1, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Right Aisle",
+      "type": "Aisle",
+      "description": "The right aisle of the aft cabin, providing access to the rear doors and galley on flights spanning nearly 20 hours.",
+      "minBound": [2, 81, 8],
+      "maxBound": [2, 108, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cabin Right Seats",
+      "type": "SeatSection",
+      "description": "Right seat section in the aft cabin, mirroring the port side. Window seats here offer aft views toward the horizontal stabilizer during the Worldliner's hemisphere-spanning flights.",
+      "minBound": [3, 81, 8],
       "maxBound": [5, 108, 12],
       "isExterior": false
     },
@@ -99,6 +195,38 @@
       "description": "Aft lavatories serving the economy cabin on routes lasting up to 19 hours.",
       "minBound": [-5, 118, 8],
       "maxBound": [5, 121, 12],
+      "isExterior": false
+    },
+    {
+      "name": "Forward Cargo Hold",
+      "type": "ForwardCargoHold",
+      "description": "The forward lower-deck cargo hold beneath the forward cabin. On the Worldliner, this hold retains full cargo capacity while auxiliary fuel tanks are installed in the aft hold.",
+      "minBound": [-4, 20, 2],
+      "maxBound": [4, 48, 7],
+      "isExterior": false
+    },
+    {
+      "name": "Aft Cargo Hold",
+      "type": "AftCargoHold",
+      "description": "The aft lower-deck cargo hold, which on the Worldliner can house up to three auxiliary fuel tanks displacing cargo capacity but extending range beyond 9,000 nautical miles.",
+      "minBound": [-4, 70, 2],
+      "maxBound": [4, 108, 7],
+      "isExterior": false
+    },
+    {
+      "name": "Bulk Cargo Hold",
+      "type": "BulkCargoHold",
+      "description": "The bulk cargo compartment at the rear of the lower deck, used for loose-loaded baggage on ultra-long-haul routes where cargo capacity is reduced by auxiliary fuel tanks.",
+      "minBound": [-3, 109, 2],
+      "maxBound": [3, 117, 7],
+      "isExterior": false
+    },
+    {
+      "name": "Cargo Access",
+      "type": "CargoAccess",
+      "description": "The forward cargo access passage connecting the main deck to the lower cargo holds for ground loading operations.",
+      "minBound": [0, 12, 2],
+      "maxBound": [0, 13, 8],
       "isExterior": false
     },
     {
@@ -378,7 +506,7 @@
       "name": "Row 1 Business Class Seats",
       "category": "Seat",
       "description": "Premium seating designed for maximum comfort on the world's longest nonstop routes.",
-      "position": [0, 21, 9],
+      "position": [-4, 21, 9],
       "interactionRadius": 2.0,
       "interactionText": "Business class seats on the Worldliner feature lie-flat beds essential for flights lasting 17+ hours.",
       "educationTopicIds": ["passenger-safety-equipment", "ultra-long-haul-comfort"]
@@ -388,7 +516,7 @@
       "name": "Forward Cabin Business Class Seats",
       "category": "Seat",
       "description": "Premium business class seats on the Worldliner, configured for the longest nonstop flights in commercial aviation. With routes exceeding 17 hours, these seats are designed for maximum rest with full lie-flat capability and enhanced personal space.",
-      "position": [0, 35, 9],
+      "position": [4, 35, 9],
       "interactionRadius": 2.0,
       "interactionText": "Sit in a Worldliner business class seat designed for ultra-long-haul comfort. The fully flat bed and direct aisle access are essential on 17-plus hour flights. Find the large entertainment screen, multiple power outlets, and personal storage compartment.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior", "ultra-long-haul-comfort"]
@@ -398,7 +526,7 @@
       "name": "Mid Cabin Economy Seats",
       "category": "Seat",
       "description": "Economy seats in the mid cabin of the 777-200LR Worldliner. With fewer total passengers than other 777-200 variants due to auxiliary fuel tanks, the mid cabin may feel less crowded. Seats are configured for ultra-long-haul comfort with enhanced pitch on some airlines.",
-      "position": [0, 65, 9],
+      "position": [-4, 65, 9],
       "interactionRadius": 2.0,
       "interactionText": "Sit in a mid cabin economy seat on the Worldliner. This aircraft can fly over 17 hours nonstop. The reduced passenger count means a potentially quieter cabin. Check the entertainment system, designed with extra content for ultra-long flights.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior", "ultra-long-haul-comfort"]
@@ -408,10 +536,290 @@
       "name": "Aft Cabin Economy Seats",
       "category": "Seat",
       "description": "Aft economy seats on the 777-200LR. Beneath this section, auxiliary fuel tanks in the cargo hold enable the aircraft's record-breaking range of over 9,400 nautical miles. The reduced passenger capacity means fewer seats in this section compared to the standard 777-200.",
-      "position": [0, 95, 9],
+      "position": [4, 95, 9],
       "interactionRadius": 2.0,
       "interactionText": "Sit in an aft cabin seat on the Worldliner. The auxiliary fuel tanks below enable flights like New York to Singapore. Check the seatback screen, overhead bin, and safety card.",
       "educationTopicIds": ["seat-design", "passenger-safety-equipment", "wide-body-interior", "ultra-long-haul-comfort"]
+    },
+    {
+      "id": "overhead-bins-fwd-left",
+      "name": "Forward Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the left seats in the forward cabin. With the Worldliner's lower passenger count, bins are less likely to fill up.",
+      "position": [-4, 34, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the left overhead bin in the forward cabin. The Worldliner's reduced passenger count means more overhead space per passenger.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-fwd-right",
+      "name": "Forward Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the right seats in the forward cabin, mirroring the left side.",
+      "position": [4, 34, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the right overhead bin in the forward cabin. Premium class passengers on the Worldliner have generous overhead storage.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-mid-left",
+      "name": "Mid Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the left seats in the mid cabin over the wing section.",
+      "position": [-4, 64, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the left overhead bin in the mid cabin. These bins serve passengers on the port side of the Worldliner.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-mid-right",
+      "name": "Mid Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the right seats in the mid cabin.",
+      "position": [4, 64, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the right overhead bin in the mid cabin. Starboard bins serve passengers on the right side of the aircraft.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-aft-left",
+      "name": "Aft Cabin Left Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the left seats in the aft economy cabin on ultra-long-haul routes.",
+      "position": [-4, 94, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the left overhead bin in the aft cabin. With fewer passengers on the Worldliner, aft bins typically have space available.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "overhead-bins-aft-right",
+      "name": "Aft Cabin Right Overhead Bins",
+      "category": "OverheadBin",
+      "description": "Overhead storage bins above the right seats in the aft economy cabin.",
+      "position": [4, 94, 12],
+      "interactionRadius": 2.0,
+      "interactionText": "Open the right overhead bin in the aft cabin. The last bins before the aft vestibule on the Worldliner.",
+      "educationTopicIds": ["cabin-interior-design", "wide-body-interior"]
+    },
+    {
+      "id": "pax-window-fwd-left",
+      "name": "Forward Cabin Left Window",
+      "category": "Window",
+      "description": "A cabin window on the left side of the forward cabin, offering views across multiple continents on the Worldliner's globe-spanning routes.",
+      "position": [-5, 34, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the forward cabin left window. On the Worldliner's ultra-long-haul routes, you may cross multiple oceans and continents in a single flight.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-fwd-right",
+      "name": "Forward Cabin Right Window",
+      "category": "Window",
+      "description": "A cabin window on the right side of the forward cabin, providing views on routes that can span nearly half the globe.",
+      "position": [5, 34, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the forward cabin right window. The 777's larger windows offer generous views on flights that can last nearly 20 hours.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-mid-left",
+      "name": "Mid Cabin Left Window",
+      "category": "Window",
+      "description": "A cabin window on the left side of the mid cabin over the wing, with views of the GE90-115BL engine and raked wingtips.",
+      "position": [-5, 64, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the mid cabin left window over the wing. The massive GE90-115BL engine nacelle is visible, along with the distinctive raked wingtips unique to the LR.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-mid-right",
+      "name": "Mid Cabin Right Window",
+      "category": "Window",
+      "description": "A cabin window on the right side of the mid cabin with views over the starboard wing and its raked wingtip.",
+      "position": [5, 64, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the mid cabin right window. The right GE90-115BL engine and raked wingtip are visible on the extended-span wing.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-aft-left",
+      "name": "Aft Cabin Left Window",
+      "category": "Window",
+      "description": "A cabin window on the left side of the aft cabin, offering views of the wing trailing edge during ultra-long flights.",
+      "position": [-5, 94, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the aft cabin left window. On a 17-hour Worldliner flight, watch the sun set and rise again as you cross time zones and hemispheres.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "pax-window-aft-right",
+      "name": "Aft Cabin Right Window",
+      "category": "Window",
+      "description": "A cabin window on the right side of the aft cabin with views toward the horizontal stabilizer on the world's longest flights.",
+      "position": [5, 94, 10],
+      "interactionRadius": 1.0,
+      "interactionText": "Look through the aft cabin right window on the Worldliner. The horizontal stabilizer is visible aft as the aircraft crosses the globe.",
+      "educationTopicIds": ["cabin-windows", "pressurization", "aircraft-structures"]
+    },
+    {
+      "id": "fwd-exit-row-seats",
+      "name": "Forward Exit Row Seats",
+      "category": "Seat",
+      "description": "Exit row seats in the forward cabin with extra legroom. On the Worldliner's ultra-long flights of 17+ hours, the additional space is highly prized.",
+      "position": [-5, 28, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the forward exit row seat. On a 17-hour Worldliner flight, the extra legroom is invaluable. Read the exit row safety briefing card.",
+      "educationTopicIds": ["seat-design", "emergency-exits", "passenger-safety-equipment"]
+    },
+    {
+      "id": "fwd-window-seat",
+      "name": "Forward Cabin Window Seat",
+      "category": "Seat",
+      "description": "A window seat in the forward business class cabin on the Worldliner, with panoramic views on routes spanning nearly half the globe.",
+      "position": [5, 40, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in a Worldliner forward cabin window seat. On ultra-long-haul routes, you may see multiple sunrises and sunsets through this window.",
+      "educationTopicIds": ["seat-design", "cabin-windows", "wide-body-interior"]
+    },
+    {
+      "id": "fwd-center-seat",
+      "name": "Forward Cabin Center Seat",
+      "category": "Seat",
+      "description": "A center section seat in the forward business class cabin on the Worldliner, positioned between the twin aisles for easy access on ultra-long flights.",
+      "position": [0, 44, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in a Worldliner center seat with direct aisle access from both sides. Privacy partitions create a personal suite for the 17+ hour journey.",
+      "educationTopicIds": ["seat-design", "wide-body-interior"]
+    },
+    {
+      "id": "mid-exit-row-seats",
+      "name": "Mid Cabin Exit Row Seats",
+      "category": "Seat",
+      "description": "Exit row seats at the overwing exits in the mid cabin of the Worldliner, offering the most legroom in economy for ultra-long flights.",
+      "position": [-5, 55, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the overwing exit row on the Worldliner. On flights lasting nearly 20 hours, this extra legroom is a significant advantage. Review the exit row briefing card.",
+      "educationTopicIds": ["seat-design", "emergency-exits", "passenger-safety-equipment"]
+    },
+    {
+      "id": "mid-window-seat",
+      "name": "Mid Cabin Window Seat",
+      "category": "Seat",
+      "description": "A window seat in the mid cabin over the wing, with views of the world's most powerful jet engine and the raked wingtips unique to the Worldliner.",
+      "position": [5, 70, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in a mid cabin window seat over the wing. The massive GE90-115BL engine is visible ahead, and the distinctive raked wingtips extend beyond the wing.",
+      "educationTopicIds": ["seat-design", "cabin-windows", "wide-body-interior"]
+    },
+    {
+      "id": "mid-center-seat",
+      "name": "Mid Cabin Center Seat",
+      "category": "Seat",
+      "description": "A center section seat in the mid cabin economy class of the Worldliner. The reduced passenger count may mean an empty middle seat beside you on some routes.",
+      "position": [0, 60, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in a center economy seat on the Worldliner. The entertainment system has extensive content for ultra-long flights, and the twin aisles provide easy movement.",
+      "educationTopicIds": ["seat-design", "wide-body-interior"]
+    },
+    {
+      "id": "aft-exit-row-seats",
+      "name": "Aft Cabin Exit Row Seats",
+      "category": "Seat",
+      "description": "Exit row seats in the aft cabin of the Worldliner near the rear emergency exits, with extra legroom for ultra-long flights.",
+      "position": [5, 85, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the aft exit row on the Worldliner. The extra legroom is especially welcome on flights lasting up to 19 hours. Review the exit operation procedure.",
+      "educationTopicIds": ["seat-design", "emergency-exits", "passenger-safety-equipment"]
+    },
+    {
+      "id": "aft-window-seat",
+      "name": "Aft Cabin Window Seat",
+      "category": "Seat",
+      "description": "A window seat in the aft economy cabin of the Worldliner. Beneath this section, auxiliary fuel tanks enable the record-breaking range.",
+      "position": [-5, 100, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in an aft cabin window seat on the Worldliner. Below you, auxiliary fuel tanks hold the fuel for this globe-spanning flight. Watch the world scroll by.",
+      "educationTopicIds": ["seat-design", "cabin-windows", "wide-body-interior"]
+    },
+    {
+      "id": "aft-last-row-seat",
+      "name": "Last Row Economy Seat",
+      "category": "Seat",
+      "description": "The very last row of economy seats on the Worldliner. Limited recline but closest to rear facilities, useful on ultra-long flights lasting up to 19 hours.",
+      "position": [0, 107, 9],
+      "interactionRadius": 1.5,
+      "interactionText": "Sit in the last row on the Worldliner. Limited recline, but easy access to lavatories and the galley for snacks on this nearly 20-hour flight.",
+      "educationTopicIds": ["seat-design", "passenger-safety-equipment"]
+    },
+    {
+      "id": "fwd-cargo-containers",
+      "name": "Forward Cargo LD3 Containers",
+      "category": "CargoEquipment",
+      "description": "LD3 unit load devices in the forward cargo hold. The Worldliner's forward hold retains full cargo capacity while auxiliary fuel tanks occupy the aft hold.",
+      "position": [0, 34, 4],
+      "interactionRadius": 2.5,
+      "interactionText": "Examine the LD3 containers in the forward hold. On the Worldliner, the forward hold carries most of the cargo since the aft hold may contain auxiliary fuel tanks.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "fwd-cargo-net",
+      "name": "Forward Cargo Restraint Net",
+      "category": "CargoEquipment",
+      "description": "The cargo restraint net system in the forward hold, securing LD3 containers during ultra-long flights that may encounter turbulence across multiple weather systems.",
+      "position": [0, 40, 5],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the cargo net restraint system. Heavy-duty nets secure containers against the 9g forward load requirement during the Worldliner's long flights.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "fwd-cargo-door",
+      "name": "Forward Cargo Door",
+      "category": "CargoEquipment",
+      "description": "The powered forward cargo door providing access to the forward lower-deck cargo hold, the primary cargo compartment on the Worldliner.",
+      "position": [4, 28, 4],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the forward cargo door. On the Worldliner, this door accesses the main cargo hold since the aft hold may house auxiliary fuel tanks.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-containers",
+      "name": "Aft Cargo LD3 Containers",
+      "category": "CargoEquipment",
+      "description": "LD3 containers in the aft cargo hold. On the Worldliner, up to three auxiliary fuel tanks can replace cargo containers in this hold, reducing cargo capacity but extending range beyond 9,000 nm.",
+      "position": [0, 89, 4],
+      "interactionRadius": 2.5,
+      "interactionText": "Examine the aft hold. When auxiliary fuel tanks are installed here, cargo capacity is reduced but the Worldliner achieves its record-breaking range.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-net",
+      "name": "Aft Cargo Restraint Net",
+      "category": "CargoEquipment",
+      "description": "The cargo restraint system in the aft hold, which must also secure auxiliary fuel tanks when installed for ultra-long-range operations.",
+      "position": [0, 95, 5],
+      "interactionRadius": 2.0,
+      "interactionText": "Inspect the aft cargo restraints. When auxiliary fuel tanks are installed, specialized fittings secure the heavy tanks in place of standard cargo containers.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "aft-cargo-door",
+      "name": "Aft Cargo Door",
+      "category": "CargoEquipment",
+      "description": "The powered aft cargo door. On the Worldliner, this door also provides access for installing and removing auxiliary fuel tanks.",
+      "position": [4, 83, 4],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the aft cargo door. Auxiliary fuel tanks are loaded through this door when configuring the Worldliner for its longest routes.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
+    },
+    {
+      "id": "bulk-cargo-area",
+      "name": "Bulk Cargo Loading Area",
+      "category": "CargoEquipment",
+      "description": "The bulk cargo compartment at the rear of the lower deck, used for loose-loaded baggage on the Worldliner's ultra-long-haul routes.",
+      "position": [0, 113, 4],
+      "interactionRadius": 2.0,
+      "interactionText": "Examine the bulk cargo area. On the Worldliner, this compartment handles overflow baggage when the aft hold is occupied by auxiliary fuel tanks.",
+      "educationTopicIds": ["cargo-hold-operations", "cargo-container-types", "cargo-door-systems"]
     },
     {
       "id": "left-engine",

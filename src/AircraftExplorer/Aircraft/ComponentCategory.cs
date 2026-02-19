@@ -19,5 +19,6 @@ public enum ComponentCategory
     EmergencyEquipment,
     Structural,
     Avionics,
-    APU
+    APU,
+    CargoEquipment
 }

@@ -60,6 +60,10 @@ public sealed class MainForm : Form
     {
         base.OnShown(e);
 
+        // Restore saved tone volume
+        float savedVolume = _context.Settings.ToneVolume;
+        _context.SpatialAudio.AdjustToneVolume(savedVolume - _context.SpatialAudio.ToneVolume);
+
         _speech.Speak("Welcome to Aircraft Explorer.", true);
         UpdateStatus("Welcome to Aircraft Explorer");
         _modeManager.Push(new MainMenuMode(), _context);
@@ -69,9 +73,12 @@ public sealed class MainForm : Form
 
     private void OnKeyDown(object? sender, KeyEventArgs e)
     {
-        _keyboard.HandleKeyDown(e.KeyCode);
-        e.Handled = true;
-        e.SuppressKeyPress = true;
+        if (KeyboardInputProvider.IsMappedKey(e.KeyCode))
+        {
+            _keyboard.HandleKeyDown(e.KeyCode);
+            e.Handled = true;
+            e.SuppressKeyPress = true;
+        }
     }
 
     private void OnTick(object? sender, EventArgs e)
@@ -95,6 +102,7 @@ public sealed class MainForm : Form
         {
             float delta = action == InputAction.VolumeUp ? 0.1f : -0.1f;
             _context.SpatialAudio.AdjustToneVolume(delta);
+            _context.Settings.ToneVolume = _context.SpatialAudio.ToneVolume;
             int percent = (int)(_context.SpatialAudio.ToneVolume * 100);
             _speech.Speak($"Tone volume {percent} percent.", true);
             return;
@@ -145,7 +153,14 @@ public sealed class MainForm : Form
     private void OnFormClosing(object? sender, FormClosingEventArgs e)
     {
         _tickTimer.Stop();
-        _tickTimer.Dispose();
+
+        try { _context.Settings.Save(_context.SettingsFilePath); }
+        catch { /* best-effort save */ }
+    }
+
+    protected override void WndProc(ref Message m)
+    {
+        base.WndProc(ref m);
     }
 
     protected override void Dispose(bool disposing)

@@ -1,3 +1,4 @@
+using AircraftExplorer.Config;
 using SharpDX.DirectInput;
 
 namespace AircraftExplorer.Input;
@@ -6,11 +7,13 @@ public sealed class FlightHardwareInputProvider : IInputProvider, IDisposable
 {
     private readonly DirectInput? _directInput;
     private readonly Joystick? _joystick;
+    private readonly AppSettings _settings;
     private bool _isAvailable;
     private bool _disposed;
 
-    public FlightHardwareInputProvider()
+    public FlightHardwareInputProvider(AppSettings settings)
     {
+        _settings = settings;
         try
         {
             _directInput = new DirectInput();
@@ -90,7 +93,7 @@ public sealed class FlightHardwareInputProvider : IInputProvider, IDisposable
                 Pitch = NormalizeAxis(state.Y),
                 Roll = NormalizeAxis(state.X),
                 Yaw = NormalizeAxis(state.RotationZ),
-                Throttle = NormalizeThrottle(state.Sliders[0])
+                Throttle = NormalizeThrottle(GetThrottleRawValue(state), _settings.InvertThrottle)
             };
         }
         catch
@@ -106,10 +109,55 @@ public sealed class FlightHardwareInputProvider : IInputProvider, IDisposable
         return (raw - 32767.5f) / 32767.5f;
     }
 
-    private static float NormalizeThrottle(int raw)
+    private int GetThrottleRawValue(JoystickState state)
+    {
+        return _settings.ThrottleAxis switch
+        {
+            "X" => state.X,
+            "Y" => state.Y,
+            "Z" => state.Z,
+            "RotationX" => state.RotationX,
+            "RotationY" => state.RotationY,
+            "RotationZ" => state.RotationZ,
+            "Slider1" => state.Sliders[1],
+            _ => state.Sliders[0] // Default: Slider0
+        };
+    }
+
+    private static float NormalizeThrottle(int raw, bool invert)
     {
         // Raw range is 0-65535. Normalize to 0.0..1.0.
-        return raw / 65535f;
+        float value = raw / 65535f;
+        return invert ? 1f - value : value;
+    }
+
+    public Dictionary<string, int>? GetRawAxes()
+    {
+        if (!_isAvailable || _joystick is null)
+            return null;
+
+        try
+        {
+            _joystick.Poll();
+            var state = _joystick.GetCurrentState();
+
+            return new Dictionary<string, int>
+            {
+                ["X"] = state.X,
+                ["Y"] = state.Y,
+                ["Z"] = state.Z,
+                ["RotationX"] = state.RotationX,
+                ["RotationY"] = state.RotationY,
+                ["RotationZ"] = state.RotationZ,
+                ["Slider0"] = state.Sliders[0],
+                ["Slider1"] = state.Sliders[1]
+            };
+        }
+        catch
+        {
+            _isAvailable = false;
+            return null;
+        }
     }
 
     public void Dispose()

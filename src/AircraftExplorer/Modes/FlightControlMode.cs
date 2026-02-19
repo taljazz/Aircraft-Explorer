@@ -10,12 +10,40 @@ public class FlightControlMode : IAppMode
     private const float DeadZone = 0.15f;
     private const float ModerateZone = 0.6f;
 
+    // Keyboard virtual axis step sizes
+    private const float AxisStep = 0.4f;
+    private const float ThrottleStep = 0.25f;
+
     // Track previous zone per axis to announce only on changes
     private int _prevPitchZone;
     private int _prevRollZone;
     private int _prevYawZone;
     private int _prevThrottleZone;
     private bool _hardwareDetected;
+
+    // Hardware axes only announce after they've moved from their initial zone.
+    // This prevents idle axes (e.g. no rudder pedals) from overriding keyboard input.
+    private int _hwInitPitchZone;
+    private int _hwInitRollZone;
+    private int _hwInitYawZone;
+    private int _hwInitThrottleZone;
+    private bool _hwPitchActive;
+    private bool _hwRollActive;
+    private bool _hwYawActive;
+    private bool _hwThrottleActive;
+
+    // Last hardware zone seen in OnTick — used to reset init zone
+    // when keyboard takes over an axis.
+    private int _lastHwPitchZone;
+    private int _lastHwRollZone;
+    private int _lastHwYawZone;
+    private int _lastHwThrottleZone;
+
+    // Keyboard virtual axis state
+    private float _keyPitch;
+    private float _keyRoll;
+    private float _keyYaw;
+    private float _keyThrottle;
 
     public string ModeName => "Flight Controls";
 
@@ -26,6 +54,12 @@ public class FlightControlMode : IAppMode
         var state = context.InputManager.GetAxisState();
         _hardwareDetected = state is not null;
 
+        // Reset keyboard virtual axes
+        _keyPitch = 0f;
+        _keyRoll = 0f;
+        _keyYaw = 0f;
+        _keyThrottle = 0f;
+
         if (_hardwareDetected)
         {
             // Initialize zones from current position so we don't announce on entry
@@ -34,18 +68,33 @@ public class FlightControlMode : IAppMode
             _prevYawZone = GetAxisZone(state.Yaw);
             _prevThrottleZone = GetThrottleZone(state.Throttle);
 
-            context.Speech.Speak(
-                "Flight controls active. Move your yoke, pedals, and throttle to explore control surfaces. " +
-                "Press Escape to return.",
-                true);
+            // Record initial zones — hardware axes only start announcing
+            // once they've moved away from these values.
+            _hwInitPitchZone = _prevPitchZone;
+            _hwInitRollZone = _prevRollZone;
+            _hwInitYawZone = _prevYawZone;
+            _hwInitThrottleZone = _prevThrottleZone;
+            _lastHwPitchZone = _prevPitchZone;
+            _lastHwRollZone = _prevRollZone;
+            _lastHwYawZone = _prevYawZone;
+            _lastHwThrottleZone = _prevThrottleZone;
         }
         else
         {
-            context.Speech.Speak(
-                "Flight controls mode. No flight hardware detected. " +
-                "Connect a yoke or joystick and restart. Press Escape to return.",
-                true);
+            _prevPitchZone = 0;
+            _prevRollZone = 0;
+            _prevYawZone = 0;
+            _prevThrottleZone = 0;
         }
+
+        context.Speech.Speak(
+            "Flight controls active. " +
+            (_hardwareDetected
+                ? "Move your yoke, pedals, and throttle to explore control surfaces. "
+                : "No flight hardware detected. ") +
+            "Use numpad 8 and 2 for pitch, 4 and 6 for roll, Insert and Delete for rudder, " +
+            "Home and End for throttle. Press Escape to return.",
+            true);
     }
 
     public ModeResult HandleInput(InputAction action)
@@ -57,11 +106,14 @@ public class FlightControlMode : IAppMode
 
             case InputAction.Help:
                 _context.Speech.Speak(
-                    _hardwareDetected
-                        ? "Flight control mode. Move your yoke forward and back for pitch. " +
-                          "Turn left and right for roll. Rudder pedals for yaw. Throttle lever for thrust. " +
-                          "Escape to return."
-                        : "No flight hardware detected. Press Escape to return.",
+                    "Flight control mode. " +
+                    (_hardwareDetected
+                        ? "Move your yoke forward and back for pitch. " +
+                          "Turn left and right for roll. Rudder pedals for yaw. Throttle lever for thrust. "
+                        : "") +
+                    "Numpad 8 and 2 for pitch. Numpad 4 and 6 for roll. " +
+                    "Insert and Delete for rudder. Home and End for throttle. " +
+                    "C to announce current position. Escape to return.",
                     true);
                 return ModeResult.Stay;
 
@@ -69,8 +121,85 @@ public class FlightControlMode : IAppMode
                 AnnounceCurrentAxes();
                 return ModeResult.Stay;
 
+            case InputAction.PitchForward:
+            case InputAction.MoveForward:
+                DeactivateHardwareAxis(ref _hwPitchActive, ref _hwInitPitchZone, _lastHwPitchZone);
+                AdjustKeyAxis(ref _keyPitch, -AxisStep, ref _prevPitchZone, AnnouncePitch);
+                return ModeResult.Stay;
+
+            case InputAction.PitchBack:
+            case InputAction.MoveBackward:
+                DeactivateHardwareAxis(ref _hwPitchActive, ref _hwInitPitchZone, _lastHwPitchZone);
+                AdjustKeyAxis(ref _keyPitch, AxisStep, ref _prevPitchZone, AnnouncePitch);
+                return ModeResult.Stay;
+
+            case InputAction.RollLeft:
+            case InputAction.MoveLeft:
+                DeactivateHardwareAxis(ref _hwRollActive, ref _hwInitRollZone, _lastHwRollZone);
+                AdjustKeyAxis(ref _keyRoll, -AxisStep, ref _prevRollZone, AnnounceRoll);
+                return ModeResult.Stay;
+
+            case InputAction.RollRight:
+            case InputAction.MoveRight:
+                DeactivateHardwareAxis(ref _hwRollActive, ref _hwInitRollZone, _lastHwRollZone);
+                AdjustKeyAxis(ref _keyRoll, AxisStep, ref _prevRollZone, AnnounceRoll);
+                return ModeResult.Stay;
+
+            case InputAction.RudderLeft:
+                DeactivateHardwareAxis(ref _hwYawActive, ref _hwInitYawZone, _lastHwYawZone);
+                AdjustKeyAxis(ref _keyYaw, -AxisStep, ref _prevYawZone, AnnounceYaw);
+                return ModeResult.Stay;
+
+            case InputAction.RudderRight:
+                DeactivateHardwareAxis(ref _hwYawActive, ref _hwInitYawZone, _lastHwYawZone);
+                AdjustKeyAxis(ref _keyYaw, AxisStep, ref _prevYawZone, AnnounceYaw);
+                return ModeResult.Stay;
+
+            case InputAction.ThrottleUp:
+                DeactivateHardwareAxis(ref _hwThrottleActive, ref _hwInitThrottleZone, _lastHwThrottleZone);
+                AdjustKeyThrottle(ThrottleStep);
+                return ModeResult.Stay;
+
+            case InputAction.ThrottleDown:
+                DeactivateHardwareAxis(ref _hwThrottleActive, ref _hwInitThrottleZone, _lastHwThrottleZone);
+                AdjustKeyThrottle(-ThrottleStep);
+                return ModeResult.Stay;
+
             default:
                 return ModeResult.Stay;
+        }
+    }
+
+    /// <summary>
+    /// Deactivate a hardware axis so it stops overriding keyboard input.
+    /// Resets the init zone to the current hardware position so the axis
+    /// must physically move again before it re-activates.
+    /// </summary>
+    private static void DeactivateHardwareAxis(ref bool active, ref int initZone, int currentHwZone)
+    {
+        active = false;
+        initZone = currentHwZone;
+    }
+
+    private void AdjustKeyAxis(ref float axis, float delta, ref int prevZone, Action<int> announce)
+    {
+        axis = Math.Clamp(axis + delta, -0.8f, 0.8f);
+        int zone = GetAxisZone(axis);
+        if (zone != prevZone)
+        {
+            prevZone = zone;
+            announce(zone);
+        }
+    }
+
+    private void AdjustKeyThrottle(float delta)
+    {
+        _keyThrottle = Math.Clamp(_keyThrottle + delta, 0f, 1f);
+        int zone = GetThrottleZone(_keyThrottle);
+        if (zone != _prevThrottleZone)
+        {
+            _prevThrottleZone = zone;
+            AnnounceThrottle(zone);
         }
     }
 
@@ -88,23 +217,36 @@ public class FlightControlMode : IAppMode
         int yawZone = GetAxisZone(state.Yaw);
         int throttleZone = GetThrottleZone(state.Throttle);
 
-        // Announce only when crossing zone boundaries
-        if (pitchZone != _prevPitchZone)
+        _lastHwPitchZone = pitchZone;
+        _lastHwRollZone = rollZone;
+        _lastHwYawZone = yawZone;
+        _lastHwThrottleZone = throttleZone;
+
+        // Activate hardware axes once they move from their initial zone.
+        // Idle axes (e.g. no rudder pedals) stay inactive and don't
+        // interfere with keyboard controls for those axes.
+        if (!_hwPitchActive && pitchZone != _hwInitPitchZone) _hwPitchActive = true;
+        if (!_hwRollActive && rollZone != _hwInitRollZone) _hwRollActive = true;
+        if (!_hwYawActive && yawZone != _hwInitYawZone) _hwYawActive = true;
+        if (!_hwThrottleActive && throttleZone != _hwInitThrottleZone) _hwThrottleActive = true;
+
+        // Announce only when crossing zone boundaries on active axes
+        if (_hwPitchActive && pitchZone != _prevPitchZone)
         {
             _prevPitchZone = pitchZone;
             AnnouncePitch(pitchZone);
         }
-        else if (rollZone != _prevRollZone)
+        else if (_hwRollActive && rollZone != _prevRollZone)
         {
             _prevRollZone = rollZone;
             AnnounceRoll(rollZone);
         }
-        else if (yawZone != _prevYawZone)
+        else if (_hwYawActive && yawZone != _prevYawZone)
         {
             _prevYawZone = yawZone;
             AnnounceYaw(yawZone);
         }
-        else if (throttleZone != _prevThrottleZone)
+        else if (_hwThrottleActive && throttleZone != _prevThrottleZone)
         {
             _prevThrottleZone = throttleZone;
             AnnounceThrottle(throttleZone);
@@ -173,14 +315,25 @@ public class FlightControlMode : IAppMode
 
     private void AnnounceCurrentAxes()
     {
+        float pitch, roll, yaw, throttle;
+
         var state = _context.InputManager.GetAxisState();
-        if (state is null)
+        if (state is not null)
         {
-            _context.Speech.Speak("No flight hardware detected.", true);
-            return;
+            pitch = state.Pitch;
+            roll = state.Roll;
+            yaw = state.Yaw;
+            throttle = state.Throttle;
+        }
+        else
+        {
+            pitch = _keyPitch;
+            roll = _keyRoll;
+            yaw = _keyYaw;
+            throttle = _keyThrottle;
         }
 
-        string pitch = state.Pitch switch
+        string pitchDesc = pitch switch
         {
             < -0.5f => "full forward",
             < -0.15f => "forward",
@@ -188,7 +341,7 @@ public class FlightControlMode : IAppMode
             > 0.15f => "back",
             _ => "centered"
         };
-        string roll = state.Roll switch
+        string rollDesc = roll switch
         {
             < -0.5f => "full left",
             < -0.15f => "left",
@@ -196,9 +349,18 @@ public class FlightControlMode : IAppMode
             > 0.15f => "right",
             _ => "wings level"
         };
+        string yawDesc = yaw switch
+        {
+            < -0.5f => "full left",
+            < -0.15f => "left",
+            > 0.5f => "full right",
+            > 0.15f => "right",
+            _ => "centered"
+        };
 
-        _context.Speech.Speak($"Yoke {pitch}, {roll}. " +
-            $"Throttle at {(int)(state.Throttle * 100)} percent.", true);
+        _context.Speech.Speak($"Yoke {pitchDesc}, {rollDesc}. " +
+            $"Rudder {yawDesc}. " +
+            $"Throttle at {(int)(throttle * 100)} percent.", true);
     }
 
     public void OnExit()

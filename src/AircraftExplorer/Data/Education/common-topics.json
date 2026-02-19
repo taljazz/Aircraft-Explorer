@@ -582,5 +582,29 @@
     "content": "Autoland capability allows the aircraft to perform a fully automatic approach, flare, and touchdown in extremely low visibility conditions. The system requires precision ILS signals (Category II or III), redundant autopilot engagement, and functional autothrottle. During a Category IIIA autoland, the aircraft can land with a decision height as low as 50 feet and runway visual range of 600 feet. Category IIIB allows landing with no decision height and 150-foot visual range. The autopilot follows the ILS localizer and glideslope signals with extreme precision, commands the flare maneuver based on radio altimeter data, and maintains runway alignment through rollout. Autoland requires specific crew training, aircraft equipment certification, and airport facility approval to be used operationally.",
     "componentIds": ["mcp"],
     "aircraftIds": []
+  },
+  {
+    "id": "cargo-hold-operations",
+    "title": "Cargo Hold Operations and Loading",
+    "category": "Operations",
+    "content": "Aircraft cargo holds are divided into compartments below the passenger cabin, each accessible through powered cargo doors on the aircraft's lower fuselage. Cargo is loaded as either containerized unit load devices (ULDs) or bulk items. ULDs are pre-packed at the airline's cargo facility and rolled into the hold on a system of powered rollers and ball mats built into the cargo floor. Each container locks into position using latches that engage with fittings in the floor. Weight and balance is critical: cargo must be distributed to keep the aircraft's center of gravity within certified limits. The loadmaster creates a load plan specifying which containers go in which positions. Forward and aft holds typically carry containerized cargo, while a smaller bulk compartment at the rear handles irregularly shaped items, mail, and late-arriving bags.",
+    "componentIds": ["fwd-cargo-containers", "aft-cargo-containers"],
+    "aircraftIds": []
+  },
+  {
+    "id": "cargo-container-types",
+    "title": "Cargo Container Types and ULD Standards",
+    "category": "Design",
+    "content": "Unit Load Devices (ULDs) are standardized containers and pallets used to load cargo, baggage, and mail onto aircraft. The most common types are the LD3 (used on wide-body aircraft like the 777, with a contoured shape matching the lower fuselage curvature), the LD3-45 (a smaller contoured container used on narrow-body aircraft like the 737), and the LD1 (used on some wide-bodies). Standard pallets measuring 88 by 125 inches or 96 by 125 inches carry freight secured with nets. All ULDs comply with IATA standards for dimensions, weight limits, and locking mechanisms. Containers are made from aluminum sheet with aluminum or fiberglass panels, designed to be lightweight yet durable enough for thousands of loading cycles. Each ULD has a unique identification number tracked through the airline's cargo system.",
+    "componentIds": ["fwd-cargo-containers", "aft-cargo-containers"],
+    "aircraftIds": []
+  },
+  {
+    "id": "cargo-door-systems",
+    "title": "Cargo Door Systems and Safety",
+    "category": "Design",
+    "content": "Cargo doors on commercial aircraft are large powered panels on the lower fuselage that open outward and upward to provide access to the cargo compartments. They are operated by hydraulic actuators controlled from a panel near the door. Multiple locking mechanisms secure the door in the closed position, and a series of mechanical and electrical interlocks prevent the aircraft from being pressurized unless all cargo doors are properly closed and locked. The cockpit displays door status to the flight crew, and a warning horn sounds if pressurization is attempted with an open door. Cargo door design received increased scrutiny after the Turkish Airlines Flight 981 accident in 1974, leading to mandatory improvements including vent doors that prevent fuselage pressurization if cargo door latches are not fully engaged. Modern cargo doors include pressure relief valves and are designed to be plug-type, using cabin pressure to reinforce the seal.",
+    "componentIds": ["fwd-cargo-door", "aft-cargo-door"],
+    "aircraftIds": []
   }
 ]

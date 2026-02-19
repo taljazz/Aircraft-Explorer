@@ -38,4 +38,19 @@ public sealed class InputManager
 
         return null;
     }
+
+    public Dictionary<string, int>? GetRawAxes()
+    {
+        foreach (var provider in _providers)
+        {
+            if (!provider.IsAvailable)
+                continue;
+
+            var axes = provider.GetRawAxes();
+            if (axes is not null)
+                return axes;
+        }
+
+        return null;
+    }
 }
