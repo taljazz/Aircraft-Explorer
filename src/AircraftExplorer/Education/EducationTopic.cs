@@ -21,6 +21,9 @@ public class EducationTopic
 
     [JsonPropertyName("aircraftIds")]
     public List<string> AircraftIds { get; set; } = [];
+
+    [JsonPropertyName("quizQuestions")]
+    public List<QuizQuestion> QuizQuestions { get; set; } = [];
 }
 
 [JsonConverter(typeof(JsonStringEnumConverter))]

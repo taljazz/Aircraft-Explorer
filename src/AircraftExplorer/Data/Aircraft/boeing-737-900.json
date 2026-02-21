@@ -343,7 +343,14 @@
       "position": [-2, 1, 8],
       "interactionRadius": 1.5,
       "interactionText": "View the PFD with attitude indicator, airspeed and altitude tapes, vertical speed, and flight mode annunciations.",
-      "educationTopicIds": ["primary-flight-display", "glass-cockpit"]
+      "educationTopicIds": ["primary-flight-display", "glass-cockpit"],
+      "interactionSteps": [
+        "The PFD shows the attitude indicator in the center — a blue sky over brown ground divided by the horizon line. Wings-level flight.",
+        "Left side: the airspeed tape scrolls showing current speed with a magenta bug for the target speed. Speed trend vector predicts where airspeed will be in 10 seconds.",
+        "Right side: the altimeter tape showing current altitude with the selected altitude bug. Barometric pressure setting is displayed below.",
+        "Bottom: the heading display with the current magnetic heading and selected heading bug. Flight path vector shows where the aircraft is actually going.",
+        "Top: the Flight Mode Annunciator showing active autopilot modes — speed mode, lateral mode, and vertical mode across three columns."
+      ]
     },
     {
       "id": "nd",
@@ -373,7 +380,14 @@
       "position": [0, 2, 9],
       "interactionRadius": 2.0,
       "interactionText": "Scan the overhead panel systems: electrical, hydraulic, fuel, air conditioning, and pressurization controls.",
-      "educationTopicIds": ["aircraft-systems-overview", "electrical-system"]
+      "educationTopicIds": ["aircraft-systems-overview", "electrical-system"],
+      "interactionSteps": [
+        "Starting at the top left of the overhead panel: electrical system. The battery switch is on, generator switches are set to auto.",
+        "Moving right: hydraulic system A and B pressure indicators show normal. Electric hydraulic pump switches are set to auto.",
+        "Center section: air conditioning packs are on auto, pressurization is set for the destination airport elevation.",
+        "Lower section: fuel system with crossfeed valve closed, fuel pump switches on. Anti-ice switches are off, awaiting conditions.",
+        "Panel scan complete. All switches are in their normal positions with no amber or red caution lights illuminated."
+      ]
     },
     {
       "id": "mcp",
@@ -383,7 +397,14 @@
       "position": [0, 1, 9],
       "interactionRadius": 1.5,
       "interactionText": "Set desired speed, heading, altitude, and vertical speed. Engage LNAV, VNAV, HDG SEL, and APP modes.",
-      "educationTopicIds": ["autopilot-modes", "mode-control-panel"]
+      "educationTopicIds": ["autopilot-modes", "mode-control-panel"],
+      "interactionSteps": [
+        "The Mode Control Panel spans the glare shield. Starting from left: the course selector knob for VOR/ILS navigation.",
+        "IAS/Mach speed window showing the selected airspeed. The speed intervention button below allows temporary speed overrides.",
+        "Center: heading selector with the HDG SEL and LNAV buttons. LNAV follows the FMC route; HDG SEL follows the selected heading.",
+        "Right side: altitude selector showing the assigned altitude. VNAV and VS buttons control vertical navigation modes.",
+        "Far right: autopilot engage buttons A and B, and the autothrottle ARM switch. Disengage bar is in the normal position."
+      ]
     },
     {
       "id": "fmc",
@@ -393,7 +414,14 @@
       "position": [0, 3, 8],
       "interactionRadius": 1.5,
       "interactionText": "Program routes, enter performance data, and manage navigation via the FMC keypad and line-select keys.",
-      "educationTopicIds": ["flight-management-system", "navigation-database"]
+      "educationTopicIds": ["flight-management-system", "navigation-database"],
+      "interactionSteps": [
+        "The FMC Control Display Unit glows green on the center pedestal. The IDENT page shows aircraft type, engine type, and navigation database dates.",
+        "Switch to the ROUTE page. Enter the origin and destination airports, then the flight number. The FMC accesses its navigation database to build the route.",
+        "The LEGS page displays each waypoint with distances, courses, and estimated times. Review the route for accuracy.",
+        "The PERF INIT page requires entry of gross weight, fuel, cruise altitude, and cost index to calculate optimal speeds and fuel predictions.",
+        "Programming complete. The route appears on the Navigation Display as a magenta line from origin to destination. The FMC is ready for departure."
+      ]
     },
     {
       "id": "forward-exit-door",
@@ -403,7 +431,13 @@
       "position": [-3, 12, 7],
       "interactionRadius": 2.0,
       "interactionText": "The forward entry door with armed evacuation slide. Crew must disarm before opening for normal operations.",
-      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"],
+      "interactionSteps": [
+        "The forward left entry door is closed and sealed. The slide is armed — a gust lock holds the evacuation slide pack in the armed position.",
+        "The crew disarms the slide by moving the gust lock handle to the disarmed position. A red flag disappears from the viewing window.",
+        "The door handle rotates upward, releasing the latch mechanisms. The plug-type door swings inward slightly and then pivots upward into the ceiling.",
+        "The door is fully open, revealing the jet bridge or airstairs. Fresh air rushes into the cabin from outside."
+      ]
     },
     {
       "id": "aft-exit-door",
@@ -773,7 +807,14 @@
       "position": [-16, 38, 3],
       "interactionRadius": 3.0,
       "interactionText": "Examine the CFM56-7B engine with its 61-inch fan and 5.1:1 bypass ratio.",
-      "educationTopicIds": ["cfm56-engine", "turbofan-principles"]
+      "educationTopicIds": ["cfm56-engine", "turbofan-principles"],
+      "interactionSteps": [
+        "The engine is cold and silent. You can hear the wind whistling across the inlet cowling.",
+        "The starter motor engages with a rising whine. The N2 core spool begins to rotate, building from a low whir to a steady hum.",
+        "Fuel is introduced to the combustion chamber. You hear a muffled ignition whoosh as the burner cans light off.",
+        "The engine accelerates to idle. The fan picks up speed with a deep whooshing sound, pushing a steady stream of warm exhaust air backward. N1 stabilizes at idle.",
+        "Engine running at ground idle. A low rumble and steady vibration. The fan blades spin in a blur, drawing air through the distinctive flat-bottomed CFM56 nacelle."
+      ]
     },
     {
       "id": "right-engine",
@@ -783,7 +824,14 @@
       "position": [16, 38, 3],
       "interactionRadius": 3.0,
       "interactionText": "Examine the right engine with cascade-type thrust reverser system.",
-      "educationTopicIds": ["cfm56-engine", "thrust-reversers"]
+      "educationTopicIds": ["cfm56-engine", "thrust-reversers"],
+      "interactionSteps": [
+        "The engine is cold and silent. You can hear the wind whistling across the inlet cowling.",
+        "The starter motor engages with a rising whine. The N2 core spool begins to rotate, building from a low whir to a steady hum.",
+        "Fuel is introduced to the combustion chamber. You hear a muffled ignition whoosh as the burner cans light off.",
+        "The engine accelerates to idle. The fan picks up speed with a deep whooshing sound, pushing a steady stream of warm exhaust air backward. N1 stabilizes at idle.",
+        "Engine running at ground idle. A low rumble and steady vibration. The fan blades spin in a blur, drawing air through the distinctive flat-bottomed CFM56 nacelle."
+      ]
     },
     {
       "id": "nose-gear-assembly",
@@ -793,7 +841,12 @@
       "position": [0, 10, 1],
       "interactionRadius": 2.0,
       "interactionText": "Inspect the nose gear with oleo-pneumatic shock absorbers and shimmy damper.",
-      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering"]
+      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering"],
+      "interactionSteps": [
+        "The nose landing gear is extended and locked. Two tires sit on the ground, the oleo strut compressed under the aircraft's nose weight.",
+        "Gear retraction begins. Hydraulic actuators push the nose gear forward and upward as the gear doors swing open.",
+        "The nose gear folds forward into the wheel well beneath the cockpit floor. The doors close behind it, restoring the aerodynamic profile. Two green lights extinguish on the gear indicator."
+      ]
     },
     {
       "id": "left-main-gear",
@@ -803,7 +856,12 @@
       "position": [-5, 42, 1],
       "interactionRadius": 2.0,
       "interactionText": "Inspect the main gear with carbon brakes rated for maximum landing weight.",
-      "educationTopicIds": ["landing-gear-systems", "braking-systems"]
+      "educationTopicIds": ["landing-gear-systems", "braking-systems"],
+      "interactionSteps": [
+        "The main landing gear stands firm with two wheels per assembly. The oleo strut absorbs the aircraft's weight, compressed about halfway.",
+        "Gear retraction initiated. The main gear begins retracting inward toward the wing root, the wheels rotating to fit into the wheel well.",
+        "The main gear is up and locked. The wheel well doors close, creating a smooth underside. Green gear-down lights have been replaced by red in-transit and then off."
+      ]
     },
     {
       "id": "right-main-gear",
@@ -813,7 +871,12 @@
       "position": [5, 42, 1],
       "interactionRadius": 2.0,
       "interactionText": "Inspect the right main gear with anti-skid braking system.",
-      "educationTopicIds": ["landing-gear-systems", "anti-skid-system"]
+      "educationTopicIds": ["landing-gear-systems", "anti-skid-system"],
+      "interactionSteps": [
+        "The main landing gear stands firm with two wheels per assembly. The oleo strut absorbs the aircraft's weight, compressed about halfway.",
+        "Gear retraction initiated. The main gear begins retracting inward toward the wing root, the wheels rotating to fit into the wheel well.",
+        "The main gear is up and locked. The wheel well doors close, creating a smooth underside. Green gear-down lights have been replaced by red in-transit and then off."
+      ]
     },
     {
       "id": "left-aileron",
@@ -843,7 +906,15 @@
       "position": [-15, 50, 5],
       "interactionRadius": 2.5,
       "interactionText": "The Fowler flaps extend rearward and downward in settings from 1 to 40 degrees.",
-      "educationTopicIds": ["how-flaps-work", "high-lift-devices"]
+      "educationTopicIds": ["how-flaps-work", "high-lift-devices"],
+      "interactionSteps": [
+        "Flaps are fully retracted, flush with the wing trailing edge. The clean wing configuration is optimized for cruise speed.",
+        "Flaps 1. The leading edge slats extend and the trailing edge flaps move to 1 degree. A hydraulic whirring sound accompanies the movement.",
+        "Flaps 5. The trailing edge flaps extend further. You can see gaps forming between the wing and flap sections as the slotted Fowler mechanism activates.",
+        "Flaps 15. The flaps are now clearly extended, increasing the wing's curvature. Air flowing through the slots adds energy to the upper surface boundary layer.",
+        "Flaps 30. Near maximum extension for a typical landing. The wing area is significantly larger, generating much more lift at low speed, but also much more drag.",
+        "Flaps 40. Full extension. The flaps are fully deployed creating maximum lift and drag for a short-field landing approach."
+      ]
     },
     {
       "id": "right-flap",
@@ -853,7 +924,15 @@
       "position": [15, 50, 5],
       "interactionRadius": 2.5,
       "interactionText": "Watch the flaps extend on rails for additional lift during takeoff and landing.",
-      "educationTopicIds": ["how-flaps-work", "high-lift-devices"]
+      "educationTopicIds": ["how-flaps-work", "high-lift-devices"],
+      "interactionSteps": [
+        "Flaps are fully retracted, flush with the wing trailing edge. The clean wing configuration is optimized for cruise speed.",
+        "Flaps 1. The leading edge slats extend and the trailing edge flaps move to 1 degree. A hydraulic whirring sound accompanies the movement.",
+        "Flaps 5. The trailing edge flaps extend further. You can see gaps forming between the wing and flap sections as the slotted Fowler mechanism activates.",
+        "Flaps 15. The flaps are now clearly extended, increasing the wing's curvature. Air flowing through the slots adds energy to the upper surface boundary layer.",
+        "Flaps 30. Near maximum extension for a typical landing. The wing area is significantly larger, generating much more lift at low speed, but also much more drag.",
+        "Flaps 40. Full extension. The flaps are fully deployed creating maximum lift and drag for a short-field landing approach."
+      ]
     },
     {
       "id": "left-slat",
@@ -863,7 +942,12 @@
       "position": [-20, 36, 7],
       "interactionRadius": 2.5,
       "interactionText": "The slats deploy with flap extension, delaying stall to higher angles of attack.",
-      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"],
+      "interactionSteps": [
+        "Slats are sealed against the wing leading edge in the retracted position, forming a smooth aerodynamic surface.",
+        "The slats begin to extend forward and downward on their tracks. You can hear the hydraulic actuators driving them out.",
+        "Slats are fully extended. A gap has opened between the slat and the main wing, allowing high-energy air from below to flow over the upper wing surface, preventing stall at high angles of attack."
+      ]
     },
     {
       "id": "right-slat",
@@ -873,7 +957,12 @@
       "position": [20, 36, 7],
       "interactionRadius": 2.5,
       "interactionText": "Right leading edge slats deploy in concert with the left side.",
-      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"],
+      "interactionSteps": [
+        "Slats are sealed against the wing leading edge in the retracted position, forming a smooth aerodynamic surface.",
+        "The slats begin to extend forward and downward on their tracks. You can hear the hydraulic actuators driving them out.",
+        "Slats are fully extended. A gap has opened between the slat and the main wing, allowing high-energy air from below to flow over the upper wing surface, preventing stall at high angles of attack."
+      ]
     },
     {
       "id": "elevator",
@@ -903,7 +992,13 @@
       "position": [-10, 44, 7],
       "interactionRadius": 2.5,
       "interactionText": "Spoilers deploy symmetrically as speed brakes or asymmetrically to assist roll control.",
-      "educationTopicIds": ["spoiler-systems", "speed-brakes"]
+      "educationTopicIds": ["spoiler-systems", "speed-brakes"],
+      "interactionSteps": [
+        "Spoiler panels lie flush with the upper wing surface, barely visible among the wing skin panels.",
+        "Speed brakes armed. On touchdown, the ground spoilers will deploy automatically.",
+        "Ground spoilers deploy! All panels snap upward simultaneously, disrupting airflow across the entire upper wing. Lift is instantly destroyed, pressing the wheels firmly onto the runway.",
+        "Maximum braking. With the spoilers fully raised, the wheels carry the aircraft's full weight, making the brakes maximally effective. The aircraft decelerates rapidly."
+      ]
     },
     {
       "id": "weather-radar",
@@ -923,7 +1018,13 @@
       "position": [0, 84, 5],
       "interactionRadius": 1.5,
       "interactionText": "The APU provides ground power and bleed air for engine starting.",
-      "educationTopicIds": ["apu-operations", "ground-power"]
+      "educationTopicIds": ["apu-operations", "ground-power"],
+      "interactionSteps": [
+        "The APU exhaust port at the tail cone is silent and cold.",
+        "APU start initiated from the overhead panel. The starter motor spins up the small gas turbine with a high-pitched whine.",
+        "The APU ignites and accelerates to operating speed. You hear a steady high-pitched hum from the tail. The APU generator comes online, providing electrical power.",
+        "APU bleed air valve opens. Pneumatic pressure is now available for air conditioning and engine starting. The APU is running at full capacity."
+      ]
     }
   ],
   "controlSurfaces": [

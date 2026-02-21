@@ -199,6 +199,52 @@ public abstract class NavigationModeBase : IAppMode
         return ModeResult.PushMode(new ComponentListMode(components));
     }
 
+    protected ModeResult GatherQuizQuestions(double radius = 2.0)
+    {
+        var nearby = Navigator.GetNearbyComponents(Position, radius);
+
+        if (nearby.Count == 0)
+        {
+            Context.Speech.Speak("No components nearby to quiz on.", true);
+            return ModeResult.Stay;
+        }
+
+        var aircraftId = Context.SelectedAircraft!.Id;
+        var questions = new List<QuizQuestion>();
+        var seen = new HashSet<string>();
+
+        foreach (var component in nearby)
+        {
+            foreach (var topic in Context.EducationProvider.GetTopicsForComponent(component.Id))
+            {
+                if (topic.AircraftIds.Count > 0 && !topic.AircraftIds.Contains(aircraftId))
+                    continue;
+
+                foreach (var q in topic.QuizQuestions)
+                {
+                    if (seen.Add(q.Id))
+                        questions.Add(q);
+                }
+            }
+        }
+
+        if (questions.Count == 0)
+        {
+            Context.Speech.Speak("No quiz questions available for nearby components.", true);
+            return ModeResult.Stay;
+        }
+
+        // Shuffle questions
+        var rng = new Random();
+        for (int i = questions.Count - 1; i > 0; i--)
+        {
+            int j = rng.Next(i + 1);
+            (questions[i], questions[j]) = (questions[j], questions[i]);
+        }
+
+        return ModeResult.PushMode(new QuizMode(questions));
+    }
+
     protected void StartBeaconIfNearComponent()
     {
         var aircraft = Context.SelectedAircraft;

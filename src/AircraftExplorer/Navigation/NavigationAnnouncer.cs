@@ -88,6 +88,71 @@ public static class NavigationAnnouncer
         return string.Join(". ", descriptions);
     }
 
+    /// <summary>
+    /// Describes structural edges when inside an exterior zone — wing tips, leading/trailing edges,
+    /// stabilizer tips, fin top, engine inlet/exhaust, nose tip, tail cone.
+    /// Returns null if no structural edge is nearby or zone is not exterior.
+    /// </summary>
+    public static string? DescribeStructuralEdges(Coordinate3D pos, Zone? zone)
+    {
+        if (zone is null || !zone.IsExterior)
+            return null;
+
+        var descriptions = new List<string>();
+        int minX = zone.MinBound[0], maxX = zone.MaxBound[0];
+        int minY = zone.MinBound[1], maxY = zone.MaxBound[1];
+        int minZ = zone.MinBound[2], maxZ = zone.MaxBound[2];
+
+        switch (zone.Type)
+        {
+            case ZoneType.LeftWing:
+                if (pos.X <= minX + BoundaryWarningDistance) descriptions.Add("Approaching port wingtip");
+                if (pos.Y <= minY + BoundaryWarningDistance) descriptions.Add("Approaching wing leading edge");
+                if (pos.Y >= maxY - BoundaryWarningDistance) descriptions.Add("Approaching wing trailing edge");
+                if (pos.Z <= minZ) descriptions.Add("Near the wing underside");
+                if (pos.Z >= maxZ) descriptions.Add("On top of the wing");
+                break;
+
+            case ZoneType.RightWing:
+                if (pos.X >= maxX - BoundaryWarningDistance) descriptions.Add("Approaching starboard wingtip");
+                if (pos.Y <= minY + BoundaryWarningDistance) descriptions.Add("Approaching wing leading edge");
+                if (pos.Y >= maxY - BoundaryWarningDistance) descriptions.Add("Approaching wing trailing edge");
+                if (pos.Z <= minZ) descriptions.Add("Near the wing underside");
+                if (pos.Z >= maxZ) descriptions.Add("On top of the wing");
+                break;
+
+            case ZoneType.HorizontalStabilizer:
+                if (pos.X <= minX + BoundaryWarningDistance) descriptions.Add("Approaching port stabilizer tip");
+                if (pos.X >= maxX - BoundaryWarningDistance) descriptions.Add("Approaching starboard stabilizer tip");
+                if (pos.Y <= minY + BoundaryWarningDistance) descriptions.Add("Approaching stabilizer leading edge");
+                if (pos.Y >= maxY - BoundaryWarningDistance) descriptions.Add("Approaching stabilizer trailing edge");
+                break;
+
+            case ZoneType.VerticalStabilizer:
+                if (pos.Z >= maxZ - BoundaryWarningDistance) descriptions.Add("Approaching top of the fin");
+                if (pos.Z <= minZ) descriptions.Add("At the base of the vertical stabilizer");
+                if (pos.Y <= minY + BoundaryWarningDistance) descriptions.Add("Approaching fin leading edge");
+                if (pos.Y >= maxY - BoundaryWarningDistance) descriptions.Add("At the trailing edge of the fin");
+                break;
+
+            case ZoneType.LeftEngine:
+            case ZoneType.RightEngine:
+                if (pos.Y <= minY + BoundaryWarningDistance) descriptions.Add("At the engine inlet");
+                if (pos.Y >= maxY - BoundaryWarningDistance) descriptions.Add("At the engine exhaust");
+                break;
+
+            case ZoneType.Nose:
+                if (pos.Y <= minY + BoundaryWarningDistance) descriptions.Add("At the nose tip");
+                break;
+
+            case ZoneType.Tail:
+                if (pos.Y >= maxY - BoundaryWarningDistance) descriptions.Add("At the tail cone");
+                break;
+        }
+
+        return descriptions.Count > 0 ? string.Join(". ", descriptions) : null;
+    }
+
     /// <summary>Returns a boundary warning if within 2 steps of any edge, or null.</summary>
     public static string? DescribeBoundaryProximity(Coordinate3D pos, GridBounds bounds)
     {
@@ -129,6 +194,14 @@ public static class NavigationAnnouncer
         var componentDesc = DescribeNearbyComponents(position, result.NearbyComponents);
         if (componentDesc is not null)
             parts.Add(componentDesc);
+
+        // Structural edge descriptions for exterior zones
+        if (result.CurrentZone is { IsExterior: true })
+        {
+            var edgeDesc = DescribeStructuralEdges(position, result.CurrentZone);
+            if (edgeDesc is not null)
+                parts.Add(edgeDesc);
+        }
 
         // Boundary warnings
         var boundaryWarning = DescribeBoundaryProximity(position, aircraft.GridBounds);

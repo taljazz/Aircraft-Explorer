@@ -29,5 +29,8 @@ public class Component
     [JsonPropertyName("educationTopicIds")]
     public List<string> EducationTopicIds { get; set; } = [];
 
+    [JsonPropertyName("interactionSteps")]
+    public List<string> InteractionSteps { get; set; } = [];
+
     public Coordinate3D Coordinate => new(Position[0], Position[1], Position[2]);
 }

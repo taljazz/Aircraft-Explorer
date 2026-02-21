@@ -67,10 +67,13 @@ public class InteriorExplorationMode : NavigationModeBase
             case InputAction.JumpToComponent:
                 return ShowJumpList();
 
+            case InputAction.Quiz:
+                return GatherQuizQuestions();
+
             case InputAction.Help:
                 Context.Speech.Speak(
                     "Interior exploration. Arrow keys to move. C to announce position. " +
-                    "I for information. J to jump to a component. Enter at cockpit seat for flight controls. " +
+                    "I for information. K for quiz. J to jump to a component. Enter at cockpit seat for flight controls. " +
                     "T for exterior view. Escape to go back.",
                     true);
                 return ModeResult.Stay;
@@ -105,7 +108,12 @@ public class InteriorExplorationMode : NavigationModeBase
         if (nearby.Count > 0)
         {
             var component = nearby[0];
-            if (!string.IsNullOrEmpty(component.InteractionText))
+            if (component.InteractionSteps.Count > 0)
+            {
+                Context.SpatialAudio.StopComponentBeacon();
+                return ModeResult.PushMode(new ComponentInteractionMode(component));
+            }
+            else if (!string.IsNullOrEmpty(component.InteractionText))
             {
                 Context.Speech.Speak(component.InteractionText, true);
             }

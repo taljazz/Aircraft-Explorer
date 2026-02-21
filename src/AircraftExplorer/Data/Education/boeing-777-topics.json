@@ -13,7 +13,33 @@
     "category": "Specs",
     "content": "The Boeing 777 is powered by the world's most powerful commercial jet engines. The GE90-115B, used on the 777-200LR and 777-300ER, holds the world record for thrust at 127,900 pounds, set during certification testing. The engine features a 128-inch diameter composite fan with 22 blades, making it the largest turbofan in service. The GE90 family achieves a bypass ratio of approximately 9:1, contributing to exceptional fuel efficiency for its thrust class. The engine's 10-stage high-pressure compressor operates at a 23:1 pressure ratio, and it uses a triple-redundant FADEC system for engine control.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "ge90-engine-q1",
+        "question": "What is the diameter of the GE90 engine's fan, making it the largest turbofan in service?",
+        "options": [
+          "96 inches",
+          "112 inches",
+          "128 inches",
+          "144 inches"
+        ],
+        "correctIndex": 2,
+        "explanation": "The GE90 features a 128-inch diameter composite fan with 22 blades, making it the largest turbofan engine in commercial service."
+      },
+      {
+        "id": "ge90-engine-q2",
+        "question": "What world record does the GE90-115B hold?",
+        "options": [
+          "Lightest commercial jet engine",
+          "Most fuel-efficient engine per pound of thrust",
+          "Highest thrust produced by a commercial jet engine at 127,900 pounds",
+          "Longest time between overhauls"
+        ],
+        "correctIndex": 2,
+        "explanation": "The GE90-115B holds the world record for thrust at 127,900 pounds, achieved during certification testing. It is the most powerful commercial jet engine ever produced."
+      }
+    ]
   },
   {
     "id": "777-fly-by-wire",
@@ -21,7 +47,21 @@
     "category": "Design",
     "content": "The Boeing 777 was the first Boeing commercial aircraft to use a fly-by-wire flight control system, replacing traditional mechanical cables and hydraulic linkages with electronic signals. Pilot inputs on the control column are converted to electrical signals processed by three primary flight computers and three actuator control electronics. The system uses triple-redundant channels with dissimilar software to prevent common-mode failures. Unlike Airbus fly-by-wire, Boeing chose to retain conventional control feel through a backdrive actuator that moves the yoke to reflect autopilot inputs, maintaining pilot situational awareness.",
     "componentIds": ["left-aileron", "right-aileron", "elevator", "rudder"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "777-fly-by-wire-q1",
+        "question": "What made the 777 historically significant in Boeing's commercial aircraft lineup?",
+        "options": [
+          "It was the first Boeing aircraft with winglets",
+          "It was the first Boeing commercial aircraft to use fly-by-wire flight controls",
+          "It was the first Boeing aircraft with composite wings",
+          "It was the first Boeing aircraft designed for ETOPS"
+        ],
+        "correctIndex": 1,
+        "explanation": "The 777 was Boeing's first commercial aircraft to use a fly-by-wire flight control system, replacing traditional mechanical cables and hydraulic linkages with electronic signals."
+      }
+    ]
   },
   {
     "id": "777-etops",
@@ -29,7 +69,21 @@
     "category": "Operations",
     "content": "The Boeing 777 holds Extended Twin-engine Operations (ETOPS) certification of up to 330 minutes, meaning it can fly routes that take it up to five and a half hours from the nearest suitable diversion airport. This certification was groundbreaking for a twin-engine aircraft and opened vast oceanic routes previously restricted to three- and four-engine planes. Achieving ETOPS-330 required demonstrating exceptional engine and systems reliability through rigorous in-service monitoring. This capability enables airlines to operate the 777 on transoceanic routes like transpolar flights and remote Pacific crossings with full regulatory approval.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "777-etops-q1",
+        "question": "What does the 777's ETOPS-330 certification allow it to do?",
+        "options": [
+          "Fly at altitudes up to 33,000 feet",
+          "Carry up to 330 passengers in a single class",
+          "Fly routes up to five and a half hours from the nearest diversion airport",
+          "Operate for 330 hours between engine overhauls"
+        ],
+        "correctIndex": 2,
+        "explanation": "ETOPS-330 means the 777 can fly routes that take it up to 330 minutes (five and a half hours) from the nearest suitable diversion airport, opening vast oceanic routes for twin-engine operations."
+      }
+    ]
   },
   {
     "id": "777-composite-materials",
@@ -53,7 +107,21 @@
     "category": "HowItWorks",
     "content": "The Boeing 777 features the largest landing gear assembly ever fitted to a twin-engine commercial aircraft. Each of the two main gear legs carries a six-wheel bogie, giving a total of 12 main wheels plus two nose wheels. This 14-wheel configuration distributes the aircraft's maximum takeoff weight of up to 775,000 pounds across a large footprint, allowing operations from standard runways without special pavement strength requirements. The main gear retracts inward into the fuselage belly, and the gear doors are designed to minimize aerodynamic drag. The carbon brakes and anti-skid system provide reliable stopping performance in all conditions.",
     "componentIds": ["left-main-gear", "right-main-gear", "nose-gear-assembly"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "777-landing-gear-q1",
+        "question": "How many wheels does the 777 have in total, including nose and main gear?",
+        "options": [
+          "10 wheels",
+          "12 wheels",
+          "14 wheels",
+          "16 wheels"
+        ],
+        "correctIndex": 2,
+        "explanation": "The 777 has 14 wheels total: two nose wheels plus 12 main wheels (each of the two main gear legs carries a six-wheel bogie with three axles and two wheels each)."
+      }
+    ]
   },
   {
     "id": "777-fuel-capacity",
@@ -69,7 +137,21 @@
     "category": "Design",
     "content": "The 777 flight control system uses three primary flight computers (PFCs) and three actuator control electronics (ACEs) units, each running dissimilar software to prevent common-mode failures. The PFCs are built by three different manufacturers using different processors and programming languages. This design philosophy ensures that a software bug in one channel cannot affect the others. The system provides full-time stability augmentation, envelope protection, and autopilot functions. Control surfaces are moved by hydraulic actuators commanded electronically, with mechanical backup available for the horizontal stabilizer. The architecture provides graceful degradation: if computers fail progressively, the system steps down through reduced capability modes while always maintaining basic controllability.",
     "componentIds": ["captain-yoke", "first-officer-yoke", "left-aileron", "right-aileron", "elevator", "rudder"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "777-flight-controls-q1",
+        "question": "Why are the 777's three primary flight computers built by different manufacturers using different processors?",
+        "options": [
+          "To reduce manufacturing costs through competitive bidding",
+          "To prevent a software bug in one channel from affecting all others",
+          "To allow each computer to specialize in different flight phases",
+          "To meet requirements from different airline customers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Using dissimilar hardware and software from different manufacturers prevents common-mode failures. A bug in one computer's software cannot affect the others because they use different processors and programming languages."
+      }
+    ]
   },
   {
     "id": "777-avionics",
@@ -77,7 +159,21 @@
     "category": "Design",
     "content": "The 777 cockpit features the Airplane Information Management System (AIMS), which integrates multiple avionics functions onto shared computing hardware. Rather than having separate dedicated computers for each function, AIMS uses common cabinets hosting multiple software applications including flight management, thrust management, display processing, and data communication. This architecture reduces weight, power consumption, and maintenance complexity. The cockpit has six identical flat-panel displays that can be reconfigured to show any combination of primary flight, navigation, engine, and system information. The 777 was also the first commercial aircraft to feature an electronic checklist system integrated with the EICAS display.",
     "componentIds": ["pfd", "nd", "eicas"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "777-avionics-q1",
+        "question": "What is the key advantage of the AIMS architecture used in the 777 cockpit?",
+        "options": [
+          "It uses separate dedicated computers for maximum reliability",
+          "It integrates multiple avionics functions on shared hardware, reducing weight and maintenance",
+          "It requires no software updates throughout the aircraft's life",
+          "It eliminates the need for display screens in the cockpit"
+        ],
+        "correctIndex": 1,
+        "explanation": "The Airplane Information Management System (AIMS) integrates functions like flight management, display processing, and data communication onto shared computing hardware, reducing weight, power consumption, and maintenance complexity."
+      }
+    ]
   },
   {
     "id": "common-type-rating",
@@ -85,7 +181,21 @@
     "category": "Operations",
     "content": "All 777 variants share a common type rating, meaning a pilot certified on any 777 model can fly any other variant with minimal differences training rather than a full type rating course. This is possible because Boeing maintained consistent cockpit layout, control logic, and system architecture across the entire family. The flight handling characteristics are similar enough that pilots can transition between the short-body 777-200 and the stretched 777-300 with just a few hours of ground school covering the differences in performance, weights, and systems. This commonality provides airlines tremendous scheduling flexibility and reduces the total number of type ratings their pilots need to maintain.",
     "componentIds": ["captain-yoke", "overhead-panel"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "common-type-rating-q1",
+        "question": "What benefit does a common type rating across all 777 variants provide to airlines?",
+        "options": [
+          "Pilots need fewer total type ratings and can fly any 777 variant with minimal differences training",
+          "All 777 variants can carry exactly the same number of passengers",
+          "Maintenance crews only need one set of tools",
+          "Airlines can use the same fuel type across all variants"
+        ],
+        "correctIndex": 0,
+        "explanation": "A common type rating means a pilot certified on any 777 model can fly any other variant with just a few hours of differences training, providing tremendous scheduling flexibility and reducing training costs."
+      }
+    ]
   },
   {
     "id": "dark-cockpit-philosophy",
@@ -93,7 +203,21 @@
     "category": "Design",
     "content": "The 777 cockpit follows the dark cockpit philosophy where all annunciator lights and warning indicators are dark when systems are operating normally. Pilots can instantly identify any abnormal condition by scanning for illuminated indicators rather than having to interpret the state of numerous always-on lights. This reduces workload and prevents alert fatigue. The overhead panel uses push-button switches with built-in status lights that illuminate only when a system is in a non-normal configuration. This philosophy extends to the EICAS display, which shows a clean engine indication page during normal operations and only displays system status pages when cautions or warnings are active.",
     "componentIds": ["overhead-panel"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "dark-cockpit-philosophy-q1",
+        "question": "In the dark cockpit philosophy, when are cockpit indicator lights illuminated?",
+        "options": [
+          "They are always illuminated to show system status",
+          "They illuminate only when a system is in a non-normal configuration",
+          "They cycle through colors to indicate different operational phases",
+          "They illuminate only during takeoff and landing"
+        ],
+        "correctIndex": 1,
+        "explanation": "In the dark cockpit philosophy, all lights are dark when systems operate normally. Pilots can instantly spot abnormal conditions by scanning for any illuminated indicator, reducing workload and preventing alert fatigue."
+      }
+    ]
   },
   {
     "id": "envelope-protection",
@@ -101,7 +225,21 @@
     "category": "Safety",
     "content": "The 777 fly-by-wire system includes envelope protection features that prevent the aircraft from exceeding safe operating limits. Bank angle protection resists control inputs beyond 75 degrees of bank and automatically recovers if 90 degrees is reached. Pitch protection limits nose-up commands to prevent stalling and nose-down commands to prevent overspeed. Overspeed protection automatically pitches the nose up if maximum speed is approached. Unlike Airbus hard-limit protections, Boeing's system uses increasing resistance (control force feedback) as limits are approached, allowing pilots to override protections in extreme emergencies where exceeding a limit might be necessary to avoid a greater hazard. This philosophy preserves ultimate pilot authority.",
     "componentIds": ["elevator", "left-aileron", "right-aileron"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "envelope-protection-q1",
+        "question": "How does Boeing's fly-by-wire envelope protection differ from Airbus's approach?",
+        "options": [
+          "Boeing has no envelope protection at all",
+          "Boeing uses hard limits that cannot be overridden",
+          "Boeing uses increasing control resistance, allowing pilots to override protections in emergencies",
+          "Boeing only protects against overspeed, not stall"
+        ],
+        "correctIndex": 2,
+        "explanation": "Boeing's system uses increasing resistance as limits are approached rather than hard stops. This preserves ultimate pilot authority, allowing overrides in extreme emergencies where exceeding a limit might avoid a greater hazard."
+      }
+    ]
   },
   {
     "id": "speed-dependent-controls",
@@ -109,7 +247,21 @@
     "category": "HowItWorks",
     "content": "The 777 fly-by-wire system automatically adjusts control surface deflection limits based on airspeed. At low speeds during takeoff and landing, full surface deflection is available for maximum maneuverability. As speed increases, the flight computers progressively limit the maximum deflection to prevent structural overload from excessive aerodynamic forces. The rudder travel limiter is particularly important, reducing available rudder deflection from approximately 27 degrees at low speed to about 3 degrees at high speed. This speed-dependent limiting is transparent to the pilot, who experiences consistent control feel regardless of speed because the feel system adjusts resistance to match the available authority.",
     "componentIds": ["rudder-pedals"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "speed-dependent-controls-q1",
+        "question": "How much does the 777's maximum rudder deflection change between low speed and high speed?",
+        "options": [
+          "From 15 degrees at low speed to 10 degrees at high speed",
+          "From 27 degrees at low speed to about 3 degrees at high speed",
+          "It stays constant at all speeds",
+          "From 45 degrees at low speed to 20 degrees at high speed"
+        ],
+        "correctIndex": 1,
+        "explanation": "The rudder travel limiter reduces available deflection from approximately 27 degrees at low speed to about 3 degrees at high speed, preventing structural overload from excessive aerodynamic forces."
+      }
+    ]
   },
   {
     "id": "flaperon",
@@ -117,7 +269,21 @@
     "category": "HowItWorks",
     "content": "The 777 uses flaperons, surfaces that combine the functions of flaps and ailerons, on the inboard trailing edge of each wing. During cruise flight, the flaperons function as ailerons, deflecting differentially to assist with roll control. During low-speed operations when flaps are extended, the flaperons droop with the flaps to increase lift, while still maintaining their differential roll control function. This dual-purpose design maximizes the use of the wing trailing edge, providing both high-lift capability and roll authority without the complexity and weight of separate surfaces. The flaperon is a key advantage of the fly-by-wire system, which seamlessly blends the flap and aileron commands based on flight phase.",
     "componentIds": ["left-flap", "right-flap"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "flaperon-q1",
+        "question": "What makes flaperons unique compared to conventional ailerons?",
+        "options": [
+          "They can only move in one direction",
+          "They combine the functions of flaps and ailerons in a single surface",
+          "They are made entirely of composite materials",
+          "They are controlled manually without fly-by-wire"
+        ],
+        "correctIndex": 1,
+        "explanation": "Flaperons are dual-purpose surfaces that function as ailerons during cruise for roll control and droop with the flaps during low-speed operations to increase lift, while still maintaining their roll control function."
+      }
+    ]
   },
   {
     "id": "composite-fan-blades",
@@ -125,7 +291,21 @@
     "category": "Design",
     "content": "The GE90 engine was the first commercial engine to use composite fan blades made from carbon fiber reinforced epoxy. Each of the 22 fan blades is over four feet long and is fabricated by stacking and curing hundreds of layers of carbon fiber tape. Composite blades are approximately one-third lighter than equivalent titanium blades, reducing centrifugal loads on the fan disc and shaft. Despite their light weight, they are extraordinarily strong, capable of withstanding bird strikes and containment tests. Each blade has a titanium leading edge bonded to the composite structure for erosion protection. The weight savings from composite fan blades improves fuel efficiency and allows a larger fan diameter for higher bypass ratio.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "composite-fan-blades-q1",
+        "question": "How much lighter are the GE90's composite fan blades compared to equivalent titanium blades?",
+        "options": [
+          "About 10 percent lighter",
+          "About one-quarter lighter",
+          "About one-third lighter",
+          "About one-half lighter"
+        ],
+        "correctIndex": 2,
+        "explanation": "Composite fan blades are approximately one-third lighter than equivalent titanium blades. This weight savings reduces centrifugal loads on the fan disc and shaft, improving fuel efficiency."
+      }
+    ]
   },
   {
     "id": "fadec",
@@ -133,7 +313,21 @@
     "category": "HowItWorks",
     "content": "FADEC, or Full Authority Digital Engine Control, is the computerized brain of a modern jet engine. It replaces mechanical fuel control units with electronic computers that precisely manage fuel flow, variable stator vanes, bleed valves, and other engine parameters. The FADEC receives the pilot's thrust lever input as an electronic signal and computes the optimal fuel flow based on altitude, temperature, airspeed, and engine condition. It prevents the engine from exceeding temperature, speed, or pressure limits, and it manages engine starting automatically. The GE90 uses a triple-redundant FADEC system where three independent channels compare results, ensuring continued safe operation even if one channel fails. FADEC has dramatically improved engine reliability and reduced pilot workload.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "fadec-q1",
+        "question": "What does FADEC replace in modern jet engine design?",
+        "options": [
+          "The pilot's throttle lever",
+          "Mechanical fuel control units",
+          "The engine oil system",
+          "The turbine blade cooling system"
+        ],
+        "correctIndex": 1,
+        "explanation": "FADEC replaces mechanical fuel control units with electronic computers that precisely manage fuel flow, variable stator vanes, bleed valves, and other engine parameters for optimal performance."
+      }
+    ]
   },
   {
     "id": "engine-performance",
@@ -141,7 +335,21 @@
     "category": "Specs",
     "content": "The GE90 family offers thrust ratings from 76,000 to 115,300 pounds depending on the variant. The GE90-76B powers the base 777-200, while the GE90-94B serves the 777-200ER. The GE90-115B, the most powerful production engine ever built, powers the 777-200LR and 777-300ER. Engine performance varies with conditions: thrust decreases with higher temperatures and altitude due to lower air density. Airlines use derated takeoff thrust when full power is not needed, reducing engine wear and maintenance costs. The FADEC automatically adjusts for ambient conditions, ensuring the pilot always receives the requested thrust level up to the engine's maximum capability for the current conditions.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "engine-performance-q1",
+        "question": "Why do airlines sometimes use derated takeoff thrust instead of full power?",
+        "options": [
+          "To comply with noise regulations at all airports",
+          "To reduce engine wear and maintenance costs when full power is not needed",
+          "Because air traffic control requires it",
+          "To conserve fuel during the takeoff roll"
+        ],
+        "correctIndex": 1,
+        "explanation": "Airlines use derated takeoff thrust when full power is not required for the conditions. This reduces thermal and mechanical stress on the engines, extending their service life and lowering maintenance costs."
+      }
+    ]
   },
   {
     "id": "engine-reliability",
@@ -149,7 +357,21 @@
     "category": "Specs",
     "content": "The GE90 engine family has established an outstanding reliability record since entering service in 1995. The engine consistently achieves in-flight shutdown rates well below regulatory requirements, with dispatch reliability exceeding 99.96 percent. This exceptional reliability was crucial in earning ETOPS-330 certification for the 777, allowing twin-engine operations up to five and a half hours from the nearest diversion airport. The engine's reliability stems from conservative design margins, extensive use of single-crystal turbine blades that resist high-temperature creep, advanced bearing designs, and comprehensive health monitoring systems that detect deterioration trends long before they could cause in-flight problems.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "engine-reliability-q1",
+        "question": "What dispatch reliability rate does the GE90 engine family consistently achieve?",
+        "options": [
+          "Exceeding 99.5 percent",
+          "Exceeding 99.7 percent",
+          "Exceeding 99.9 percent",
+          "Exceeding 99.96 percent"
+        ],
+        "correctIndex": 3,
+        "explanation": "The GE90 consistently achieves dispatch reliability exceeding 99.96 percent, which was crucial in earning the 777 its record-breaking ETOPS-330 certification."
+      }
+    ]
   },
   {
     "id": "ge90-115b",
@@ -157,7 +379,21 @@
     "category": "Specs",
     "content": "The GE90-115B is the most powerful commercial jet engine ever produced, rated at 115,300 pounds of thrust and certified at a record-breaking 127,900 pounds during testing. It powers the 777-200LR and 777-300ER, enabling these variants to carry heavy payloads on ultra-long-range routes. The engine's 128-inch diameter fan produces about 80 percent of total thrust through the bypass duct. Compared to the original GE90-76B, the -115B features improved high-pressure turbine materials, a more efficient combustor, and an upgraded fan design. Despite its enormous power, the engine meets all Stage 4 noise requirements through careful nacelle acoustic treatment and the inherently quiet high-bypass-ratio design.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "ge90-115b-q1",
+        "question": "What percentage of the GE90-115B's total thrust comes from the bypass duct through the fan?",
+        "options": [
+          "About 50 percent",
+          "About 65 percent",
+          "About 80 percent",
+          "About 95 percent"
+        ],
+        "correctIndex": 2,
+        "explanation": "The 128-inch diameter fan produces about 80 percent of total thrust through the bypass duct. This high bypass ratio is what makes the engine both powerful and relatively fuel-efficient."
+      }
+    ]
   },
   {
     "id": "world-records",
@@ -165,7 +401,21 @@
     "category": "History",
     "content": "The Boeing 777 holds several world records in commercial aviation. In November 2005, a 777-200LR set the record for the longest nonstop flight by a commercial aircraft, flying 11,664 nautical miles eastbound from Hong Kong to London in 22 hours and 42 minutes. The GE90-115B engine holds the world record for thrust produced by a commercial engine at 127,900 pounds. The 777 was also the first twinjet to be approved for ETOPS-180 at entry into service, rather than having to prove reliability over years of operation. The aircraft's combination of range, payload, and reliability has made it the backbone of long-haul operations for airlines worldwide.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "world-records-q1",
+        "question": "How far did the 777-200LR fly nonstop in its 2005 world record flight from Hong Kong to London?",
+        "options": [
+          "8,500 nautical miles",
+          "10,200 nautical miles",
+          "11,664 nautical miles",
+          "13,000 nautical miles"
+        ],
+        "correctIndex": 2,
+        "explanation": "In November 2005, a 777-200LR set the record by flying 11,664 nautical miles eastbound from Hong Kong to London in 22 hours and 42 minutes, the longest nonstop flight by a commercial aircraft."
+      }
+    ]
   },
   {
     "id": "bogie-gear",
@@ -173,7 +423,21 @@
     "category": "Design",
     "content": "Each main landing gear on the 777 uses a six-wheel bogie configuration, three axles with two wheels each, for a total of 12 main gear wheels. This design distributes the aircraft's enormous weight over a large contact area, keeping pavement loading within airport design limits without requiring special high-strength runways. The bogie tilts during retraction to fit within the fuselage wheel well, a complex mechanism given the gear's size. The six-wheel arrangement also provides braking redundancy; even with multiple brake or tire failures, sufficient braking capacity remains for a safe stop. The tires are pressurized to approximately 220 PSI and are rated for speeds exceeding 235 miles per hour.",
     "componentIds": ["left-main-gear", "right-main-gear"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "bogie-gear-q1",
+        "question": "What is the approximate tire pressure of the 777's main gear tires?",
+        "options": [
+          "About 120 PSI",
+          "About 175 PSI",
+          "About 220 PSI",
+          "About 300 PSI"
+        ],
+        "correctIndex": 2,
+        "explanation": "The 777's tires are pressurized to approximately 220 PSI and are rated for speeds exceeding 235 miles per hour, reflecting the enormous loads they must bear during landing and takeoff."
+      }
+    ]
   },
   {
     "id": "semi-levered-gear",
@@ -181,7 +445,21 @@
     "category": "Design",
     "content": "The 777-300 and 777-300ER use a semi-levered main landing gear design that allows the body to sit slightly closer to the ground than the standard 777 gear. This design change was necessary to manage tail strike risk on the stretched fuselage during rotation at takeoff. The semi-levered mechanism allows the gear to compress further during the rotation phase, effectively lowering the aircraft's pivot point and providing additional tail clearance. The gear also incorporates a longer oleo strut travel to absorb the higher energy of the heavier stretched variants during landing. This innovation avoided the need for a third main gear leg that would have added significant weight and complexity.",
     "componentIds": ["left-main-gear", "right-main-gear"],
-    "aircraftIds": ["boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "semi-levered-gear-q1",
+        "question": "Why does the 777-300 use a semi-levered landing gear design?",
+        "options": [
+          "To reduce the aircraft's overall weight",
+          "To allow higher landing speeds",
+          "To manage tail strike risk during takeoff rotation on the stretched fuselage",
+          "To improve ground handling during taxiing"
+        ],
+        "correctIndex": 2,
+        "explanation": "The semi-levered gear allows the body to sit closer to the ground and compresses further during rotation, providing additional tail clearance needed for the 777-300's stretched fuselage."
+      }
+    ]
   },
   {
     "id": "weight-distribution",
@@ -189,7 +467,21 @@
     "category": "Operations",
     "content": "Proper weight distribution is critical for the 777 given its wide range of operating weights, from around 300,000 pounds empty to 775,000 pounds maximum takeoff weight on the heaviest variant. The center of gravity must remain within a narrow range relative to the wing's aerodynamic center to ensure controllable handling. Load controllers carefully plan cargo and passenger distribution across forward and aft holds and cabin zones. Fuel loading sequence also affects center of gravity, as fuel is stored in wing tanks and a center tank at different fuselage stations. The flight management computer includes a center of gravity calculation that adjusts trim and stabilizer settings automatically based on the loaded weight and balance.",
     "componentIds": ["left-main-gear", "right-main-gear"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "weight-distribution-q1",
+        "question": "What is the maximum takeoff weight of the heaviest 777 variant?",
+        "options": [
+          "About 450,000 pounds",
+          "About 575,000 pounds",
+          "About 660,000 pounds",
+          "About 775,000 pounds"
+        ],
+        "correctIndex": 3,
+        "explanation": "The heaviest 777 variant has a maximum takeoff weight of up to 775,000 pounds, requiring careful weight distribution and center of gravity management across cargo holds, cabin zones, and fuel tanks."
+      }
+    ]
   },
   {
     "id": "stretched-fuselage-challenges",
@@ -197,7 +489,21 @@
     "category": "Design",
     "content": "Stretching the 777 fuselage by over 33 feet to create the 777-300 introduced several engineering challenges. The longer fuselage has a greater tail strike angle during takeoff rotation, requiring a tail skid bumper and modified landing gear geometry. The longer cabin requires additional emergency exits and modified evacuation procedures to meet the 90-second evacuation requirement. Structural loads along the longer fuselage required reinforced frames and skin panels. The increased cabin volume demands more powerful air conditioning to maintain comfortable temperatures and pressure. Despite these challenges, the 777-300 achieved its design goals of carrying up to 550 passengers in a two-class configuration while maintaining the same airport compatibility as the shorter variants.",
     "componentIds": ["tail-skid"],
-    "aircraftIds": ["boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "stretched-fuselage-challenges-q1",
+        "question": "By how many feet was the 777 fuselage stretched to create the 777-300?",
+        "options": [
+          "About 15 feet",
+          "About 23 feet",
+          "About 33 feet",
+          "About 45 feet"
+        ],
+        "correctIndex": 2,
+        "explanation": "The 777-300 fuselage is over 33 feet longer than the 777-200, introducing challenges including increased tail strike risk, additional emergency exits, and reinforced structural elements."
+      }
+    ]
   },
   {
     "id": "tail-strike-prevention",
@@ -205,7 +511,21 @@
     "category": "Safety",
     "content": "The 777-300 series includes multiple systems to prevent tail strikes, which occur when the aft fuselage contacts the runway during takeoff rotation or landing flare. A retractable tail skid mounted under the aft fuselage acts as a mechanical bumper, protecting the pressure vessel from ground contact. The semi-levered main gear provides additional body clearance during rotation. Cockpit displays include a tail strike pitch limit indicator that shows pilots the maximum pitch angle available before tail contact. The fly-by-wire system also incorporates tail strike protection logic that limits the rate of pitch change during rotation if ground proximity is detected by the radio altimeter. These combined systems have effectively prevented tail strike incidents on the 777-300 fleet.",
     "componentIds": ["elevator", "left-main-gear", "right-main-gear", "tail-skid"],
-    "aircraftIds": ["boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "tail-strike-prevention-q1",
+        "question": "Which of the following is NOT a tail strike prevention measure on the 777-300?",
+        "options": [
+          "A retractable tail skid under the aft fuselage",
+          "A cockpit tail strike pitch limit indicator",
+          "Fly-by-wire logic limiting pitch rate near the ground",
+          "An automatic nose-down thrust from the engines"
+        ],
+        "correctIndex": 3,
+        "explanation": "The 777-300 uses a tail skid, pitch limit indicators, semi-levered gear, and fly-by-wire protection logic, but not automatic engine thrust for tail strike prevention. The systems work together to prevent the aft fuselage from contacting the runway."
+      }
+    ]
   },
   {
     "id": "wide-body-evacuation",
@@ -213,7 +533,21 @@
     "category": "Safety",
     "content": "Evacuating a wide-body aircraft like the 777 presents unique challenges compared to narrow-body aircraft. The cabin can be up to 10 abreast in economy with two aisles, meaning passengers in window seats must cross multiple seat rows to reach an aisle. The larger door sizes accommodate higher passenger flow rates, and the slides are proportionally larger and steeper due to the higher door sill height. Flight attendants are trained to manage dual-aisle evacuation flow and to redirect passengers away from blocked exits. The 777-300, with up to 550 passengers, must demonstrate full evacuation in 90 seconds using only half the available exits, which is achieved through careful exit placement, aisle width, and crew training.",
     "componentIds": ["forward-exit-door", "aft-exit-door"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "wide-body-evacuation-q1",
+        "question": "How quickly must a fully loaded 777-300 demonstrate it can be evacuated using only half its exits?",
+        "options": [
+          "60 seconds",
+          "90 seconds",
+          "120 seconds",
+          "180 seconds"
+        ],
+        "correctIndex": 1,
+        "explanation": "All commercial aircraft, including the 777-300 with up to 550 passengers, must demonstrate full evacuation in 90 seconds using only half the available exits. This requirement ensures safety even if some exits are blocked."
+      }
+    ]
   },
   {
     "id": "evacuation-requirements",
@@ -221,7 +555,21 @@
     "category": "Safety",
     "content": "The 777-300's stretched fuselage required additional certification testing to prove it could meet the 90-second evacuation requirement with the increased passenger capacity. Boeing added an additional pair of exit doors to the 777-300, bringing the total to five door pairs (ten doors), compared to four pairs on the 777-200. The additional exits reduce the maximum distance any passenger must travel to reach an exit. Emergency lighting, exit marking, and floor-level escape path lighting were enhanced for the longer cabin. The successful evacuation demonstration proved that all passengers and crew could exit through half the available exits within the required time, using realistic conditions including simulated darkness and blocked exits.",
     "componentIds": ["forward-exit-door", "aft-exit-door"],
-    "aircraftIds": ["boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "evacuation-requirements-q1",
+        "question": "How many door pairs does the 777-300 have compared to the 777-200?",
+        "options": [
+          "Three pairs vs two pairs",
+          "Four pairs vs three pairs",
+          "Five pairs vs four pairs",
+          "Six pairs vs four pairs"
+        ],
+        "correctIndex": 2,
+        "explanation": "The 777-300 has five door pairs (ten doors) compared to four pairs on the 777-200. The additional exits reduce the maximum distance any passenger must travel to reach an exit in the stretched cabin."
+      }
+    ]
   },
   {
     "id": "wide-body-interior",
@@ -229,7 +577,21 @@
     "category": "Design",
     "content": "The 777 features the widest interior cabin cross-section of any twin-aisle aircraft at 19 feet 3 inches, allowing flexible seating configurations from 8-abreast in premium two-class layouts to 10-abreast in high-density economy. The wide cabin enables comfortable seats, generous aisles, and spacious overhead bins. Airlines can install lie-flat business class seats, first class suites, and premium economy products without sacrificing total seat count. The ceiling height and window placement create an open, airy feel compared to narrower wide-bodies. Modern 777 interiors feature curved architecture, mood lighting, and larger overhead bins that pivot downward for easier access.",
     "componentIds": ["overhead-bins"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "wide-body-interior-q1",
+        "question": "What is the width of the 777's interior cabin, making it the widest of any twin-aisle aircraft?",
+        "options": [
+          "16 feet 8 inches",
+          "17 feet 11 inches",
+          "19 feet 3 inches",
+          "21 feet 0 inches"
+        ],
+        "correctIndex": 2,
+        "explanation": "The 777 has the widest interior cabin cross-section of any twin-aisle aircraft at 19 feet 3 inches, allowing flexible seating from 8-abreast premium layouts to 10-abreast high-density economy."
+      }
+    ]
   },
   {
     "id": "first-class-design",
@@ -237,7 +599,21 @@
     "category": "Design",
     "content": "The 777's spacious cabin width makes it an ideal platform for premium products. Many airlines install fully enclosed first class suites with sliding doors, lie-flat beds, personal entertainment screens exceeding 30 inches, and direct aisle access from every suite. Business class cabins commonly feature reverse herringbone or staggered configurations that provide lie-flat beds and direct aisle access in a 1-2-1 layout. The wide-body cabin allows these premium products to be installed while still maintaining a viable economy section. Some airlines have introduced shower spas, onboard bars, and chef-prepared dining in their 777 first class cabins, reflecting the aircraft's role as a premium long-haul platform.",
     "componentIds": ["passenger-seats-row-1"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "first-class-design-q1",
+        "question": "What seating layout is commonly used in 777 business class to provide lie-flat beds with direct aisle access?",
+        "options": [
+          "A standard 2-3-2 layout",
+          "A reverse herringbone or staggered 1-2-1 configuration",
+          "A circular pod arrangement around a central galley",
+          "A traditional 3-4-3 economy configuration with extra legroom"
+        ],
+        "correctIndex": 1,
+        "explanation": "Many airlines install reverse herringbone or staggered 1-2-1 configurations in 777 business class, providing lie-flat beds and direct aisle access from every seat thanks to the wide cabin cross-section."
+      }
+    ]
   },
   {
     "id": "premium-cabin-service",
@@ -245,7 +621,21 @@
     "category": "Operations",
     "content": "The forward galley on wide-body aircraft like the 777 is typically dedicated to first and business class service, featuring specialized equipment for premium meal preparation. This includes larger convection ovens for multi-course meals, espresso machines, wine chillers, and preparation surfaces for plating dishes. Some airlines install dedicated chef galleys where onboard chefs prepare meals to order. The galley space accommodates fresh ingredients loaded from premium catering facilities at the departure airport. Service timing is carefully coordinated to deliver multi-course meals over several hours on long-haul flights, with separate beverage and snack services between meals.",
     "componentIds": ["forward-galley-unit"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "premium-cabin-service-q1",
+        "question": "What specialized equipment might be found in a 777 premium class forward galley?",
+        "options": [
+          "Only a basic microwave and drink cart storage",
+          "Convection ovens, espresso machines, wine chillers, and meal preparation surfaces",
+          "A full commercial kitchen with gas ranges",
+          "Only pre-packaged meal warming trays"
+        ],
+        "correctIndex": 1,
+        "explanation": "Premium forward galleys feature specialized equipment including larger convection ovens, espresso machines, wine chillers, and preparation surfaces for plating multi-course meals, with some airlines installing dedicated chef galleys."
+      }
+    ]
   },
   {
     "id": "ultra-long-haul-operations",
@@ -253,7 +643,21 @@
     "category": "Operations",
     "content": "The 777-200LR enables ultra-long-haul flights exceeding 16 hours, requiring special operational considerations. Crew rest facilities behind the cockpit and in the cabin ceiling space allow pilots and flight attendants to take regulated rest breaks in dedicated bunks. Fuel planning for these flights includes reserves for significant weather deviations and consideration of ETOPS diversion airports along the entire route. Catering includes multiple meal services and continuous snack availability. Passenger comfort measures include enhanced air circulation, lower cabin altitude, and activity programs to reduce fatigue and health risks from prolonged immobility. Airlines typically operate these routes with augmented flight crews of three or four pilots.",
     "componentIds": ["forward-galley-unit"],
-    "aircraftIds": ["boeing-777-200lr"]
+    "aircraftIds": ["boeing-777-200lr"],
+    "quizQuestions": [
+      {
+        "id": "ultra-long-haul-operations-q1",
+        "question": "Why do ultra-long-haul 777-200LR flights require augmented flight crews?",
+        "options": [
+          "Because the aircraft is too heavy for two pilots to control",
+          "Because regulations require more pilots for international flights",
+          "Because flights over 16 hours require crew rest breaks in dedicated bunks",
+          "Because the cockpit instruments are more complicated on long routes"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ultra-long-haul flights exceeding 16 hours require three or four pilots to allow regulated rest breaks. Crew rest facilities behind the cockpit and in the cabin ceiling space provide dedicated sleeping bunks."
+      }
+    ]
   },
   {
     "id": "ultra-long-haul-comfort",
@@ -261,7 +665,21 @@
     "category": "Design",
     "content": "On flights exceeding 16 hours, passenger comfort becomes critical. Airlines operating the 777-200LR on ultra-long routes typically install premium-heavy cabin configurations with wider seats, more legroom, and reduced passenger counts. Business class seats convert to fully flat beds for sleeping. The air conditioning system maintains lower cabin altitudes where possible, reducing fatigue and dehydration. Larger lavatories, mood lighting programs synchronized to destination time zones, and enhanced entertainment systems with extensive content libraries help passengers manage the extended flight time. Some airlines serve four meal services with snack bars available throughout the flight.",
     "componentIds": ["passenger-seats-row-1"],
-    "aircraftIds": ["boeing-777-200lr"]
+    "aircraftIds": ["boeing-777-200lr"],
+    "quizQuestions": [
+      {
+        "id": "ultra-long-haul-comfort-q1",
+        "question": "How do airlines typically configure 777-200LR cabins for ultra-long-haul routes?",
+        "options": [
+          "Maximum economy seating to carry the most passengers",
+          "Premium-heavy configurations with wider seats, more legroom, and reduced passenger counts",
+          "All first class seating with no economy section",
+          "Standard seating with extra emergency equipment"
+        ],
+        "correctIndex": 1,
+        "explanation": "Airlines operating ultra-long routes install premium-heavy configurations because passenger comfort is critical on flights exceeding 16 hours. This means wider seats, more legroom, lie-flat business class, and fewer total passengers."
+      }
+    ]
   },
   {
     "id": "raked-wingtips",
@@ -269,7 +687,21 @@
     "category": "Design",
     "content": "The 777-200LR and 777-300ER feature raked wingtips, where the outboard portion of the wing sweeps aft at a higher angle than the rest of the wing. This design reduces induced drag by spreading the wingtip vortex over a larger area, similar to winglets but with lower weight and less manufacturing complexity. The raked tips extend the wingspan by approximately 12 feet compared to the standard 777 wing. Wind tunnel testing showed that raked tips provide a fuel efficiency improvement of approximately 2 percent compared to the baseline wing, translating to significant fuel savings over the life of the aircraft. The raked tip design was later adopted for the Boeing 787 Dreamliner.",
     "componentIds": ["left-aileron", "right-aileron"],
-    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "raked-wingtips-q1",
+        "question": "How do raked wingtips reduce fuel consumption?",
+        "options": [
+          "By making the wing shorter and lighter",
+          "By spreading the wingtip vortex over a larger area to reduce induced drag",
+          "By deflecting exhaust gases away from the wing",
+          "By increasing the wing's sweep angle at the tip"
+        ],
+        "correctIndex": 1,
+        "explanation": "Raked wingtips spread the wingtip vortex over a larger area, reducing induced drag. This provides approximately 2 percent fuel efficiency improvement compared to the baseline wing."
+      }
+    ]
   },
   {
     "id": "777-lr-fuel",
@@ -277,7 +709,21 @@
     "category": "Specs",
     "content": "The 777-200LR Worldliner achieves its record-breaking range through an auxiliary fuel system that supplements the standard wing and center tanks. Up to three auxiliary tanks can be installed in the aft cargo hold, each adding approximately 3,200 US gallons of capacity. With all auxiliary tanks installed, total fuel capacity reaches approximately 53,450 US gallons, compared to 45,220 for the 777-200ER. The auxiliary tank fuel is transferred automatically to the main tanks during flight, managed by the fuel management computer. Despite the additional fuel weight, the 777-200LR can carry a full passenger load of 317 passengers in a two-class configuration on routes up to 9,395 nautical miles.",
     "componentIds": ["overhead-panel"],
-    "aircraftIds": ["boeing-777-200lr"]
+    "aircraftIds": ["boeing-777-200lr"],
+    "quizQuestions": [
+      {
+        "id": "777-lr-fuel-q1",
+        "question": "Where are auxiliary fuel tanks installed on the 777-200LR to achieve its record-breaking range?",
+        "options": [
+          "In the wing leading edges",
+          "In the aft cargo hold",
+          "In the tail cone",
+          "Above the cabin ceiling"
+        ],
+        "correctIndex": 1,
+        "explanation": "Up to three auxiliary tanks can be installed in the aft cargo hold, each adding approximately 3,200 US gallons. This brings total capacity to about 53,450 gallons for a range of 9,395 nautical miles."
+      }
+    ]
   },
   {
     "id": "etops",
@@ -285,7 +731,21 @@
     "category": "Operations",
     "content": "ETOPS (Extended Twin-engine Operations) certification allows twin-engine aircraft to fly routes that take them more than 60 minutes from a suitable diversion airport. The certification level indicates the maximum diversion time permitted. ETOPS-180 allows operations up to three hours from the nearest airport, while ETOPS-330 extends this to five and a half hours. Earning ETOPS certification requires demonstrating exceptional engine and systems reliability, carrying additional fuel reserves for diversions, and maintaining specialized maintenance programs. Aircraft must have redundant systems for critical functions including electrical power, hydraulics, fire suppression, and communication. ETOPS certification transformed twin-engine operations, allowing aircraft like the 777 to replace four-engine aircraft on oceanic routes.",
     "componentIds": ["left-engine", "right-engine", "apu-exhaust"],
-    "aircraftIds": ["boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "etops-q1",
+        "question": "What redundant systems must an aircraft demonstrate to earn ETOPS certification?",
+        "options": [
+          "Only engine reliability and fuel capacity",
+          "Redundant electrical power, hydraulics, fire suppression, communication, and engine reliability",
+          "Only dual engines and backup navigation",
+          "Only fire suppression and passenger oxygen systems"
+        ],
+        "correctIndex": 1,
+        "explanation": "ETOPS certification requires demonstrating redundancy across multiple critical systems including electrical power, hydraulics, fire suppression, communication, and exceptional engine reliability."
+      }
+    ]
   },
   {
     "id": "oceanic-navigation",
@@ -293,7 +753,21 @@
     "category": "Operations",
     "content": "Oceanic flights beyond radar coverage require specialized navigation and communication procedures. The 777 uses a combination of GPS, inertial reference systems, and satellite navigation for position determination over oceans. Communication with air traffic control uses high-frequency radio and satellite communication (SATCOM) links, as VHF radio range is limited to line-of-sight. Aircraft on oceanic tracks use automated position reporting via data link, reducing the workload of voice position reports. The North Atlantic Organized Track System assigns daily routes based on jet stream position, with tracks changing twice daily for eastbound and westbound traffic. The 777's navigation accuracy allows tighter oceanic spacing, increasing airspace capacity.",
     "componentIds": ["fmc", "nd"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "oceanic-navigation-q1",
+        "question": "Why is satellite communication (SATCOM) necessary for oceanic flights on the 777?",
+        "options": [
+          "Because GPS does not work over water",
+          "Because VHF radio range is limited to line-of-sight and cannot reach over the horizon",
+          "Because passengers need internet access during flights",
+          "Because oceanic weather requires satellite data to navigate"
+        ],
+        "correctIndex": 1,
+        "explanation": "VHF radio has line-of-sight range limitations and cannot reach air traffic control over the ocean beyond radar coverage. SATCOM and HF radio provide the necessary communication links for oceanic flights."
+      }
+    ]
   },
   {
     "id": "polar-navigation",
@@ -301,7 +775,21 @@
     "category": "Operations",
     "content": "The 777-200LR's ultra-long range enables polar routes that fly over or near the North Pole, reducing distance between city pairs like New York to Hong Kong. Polar navigation presents unique challenges: magnetic compasses become unreliable near the magnetic pole, requiring reliance on inertial and GPS navigation. Communication is complicated by limited satellite coverage at extreme latitudes. Solar radiation exposure increases at polar latitudes, monitored by onboard dosimeters. ETOPS requirements become more complex as diversion airports near the poles are scarce and remote. Weather forecasting in polar regions is less reliable due to fewer observation stations. Despite these challenges, polar routes can save several hours of flight time and thousands of pounds of fuel compared to traditional routing.",
     "componentIds": ["fmc", "nd", "weather-radar"],
-    "aircraftIds": ["boeing-777-200lr"]
+    "aircraftIds": ["boeing-777-200lr"],
+    "quizQuestions": [
+      {
+        "id": "polar-navigation-q1",
+        "question": "Why do magnetic compasses become unreliable on polar routes?",
+        "options": [
+          "Because the cold temperatures affect the compass fluid",
+          "Because the aircraft flies too fast for the compass to track",
+          "Because proximity to the magnetic pole causes erratic compass behavior",
+          "Because solar radiation degausses the compass magnets"
+        ],
+        "correctIndex": 2,
+        "explanation": "Near the magnetic pole, the horizontal component of Earth's magnetic field becomes very weak and the vertical component dominates, causing magnetic compasses to become unreliable. Aircraft must rely on inertial and GPS navigation instead."
+      }
+    ]
   },
   {
     "id": "fuel-management",
@@ -309,7 +797,21 @@
     "category": "Operations",
     "content": "Fuel management on the 777 involves monitoring fuel quantity, balance, and consumption rate throughout the flight. The EICAS displays total fuel remaining, individual tank quantities, fuel flow per engine, and predicted fuel at destination. Pilots compare actual fuel consumption against the FMC's planned values to detect any discrepancies that might indicate a fuel leak or unexpectedly strong headwinds. The fuel system automatically manages tank sequencing, drawing from the center tank first to keep wing tanks full longer, which provides structural relief by counteracting wing bending loads. On ETOPS routes, fuel planning includes mandatory reserves for diversion to the most distant alternate airport along the route, accounting for possible headwinds and one engine inoperative performance.",
     "componentIds": ["throttle-quadrant", "eicas", "overhead-panel"],
-    "aircraftIds": ["boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "fuel-management-q1",
+        "question": "Why does the 777 fuel system draw from the center tank first during flight?",
+        "options": [
+          "Because center tank fuel is a higher grade",
+          "To keep wing tanks full longer, providing structural relief by counteracting wing bending",
+          "Because the center tank pumps are more powerful",
+          "To maintain the aircraft's forward center of gravity"
+        ],
+        "correctIndex": 1,
+        "explanation": "The fuel system draws from the center tank first to keep wing tanks full longer. The weight of fuel in the wings counteracts upward aerodynamic bending loads, reducing structural fatigue on the wing structure."
+      }
+    ]
   },
   {
     "id": "fuel-system",
@@ -317,7 +819,21 @@
     "category": "HowItWorks",
     "content": "The 777 fuel system consists of two main wing tanks, a center fuselage tank, and optional auxiliary tanks in the aft cargo hold on long-range variants. Boost pumps in each tank pressurize fuel for delivery to the engines through manifolds with crossfeed capability, allowing either engine to draw from any tank. Override and jettison pumps in the wing tanks can dump fuel overboard to reduce weight in an emergency landing scenario. Fuel quantity is measured by capacitance probes in each tank, with the fuel quantity processing unit computing volume and mass based on fuel density and temperature. The fuel management computer automatically sequences tank usage to optimize center of gravity position and wing structural loading throughout the flight.",
     "componentIds": ["overhead-panel"],
-    "aircraftIds": ["boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "fuel-system-q1",
+        "question": "What is the purpose of the fuel jettison system on the 777?",
+        "options": [
+          "To spray fuel over icy runways for de-icing",
+          "To dump fuel overboard to reduce weight for an emergency landing",
+          "To transfer fuel between different aircraft in flight",
+          "To empty tanks before maintenance work"
+        ],
+        "correctIndex": 1,
+        "explanation": "Override and jettison pumps can dump fuel overboard to reduce the aircraft's weight in an emergency landing scenario, as the maximum landing weight is significantly lower than maximum takeoff weight."
+      }
+    ]
   },
   {
     "id": "cost-index",
@@ -325,7 +841,21 @@
     "category": "Operations",
     "content": "The cost index is a parameter entered into the FMC that represents the ratio of time-related costs to fuel costs, allowing the airline to optimize the trade-off between flying faster (saving time but burning more fuel) and flying slower (saving fuel but taking longer). A cost index of zero commands maximum range speed (minimum fuel consumption), while the maximum value commands maximum speed. Airlines set cost index values based on fuel prices, crew costs, maintenance costs, and passenger connection requirements. On the 777-300ER, a change in cost index can vary cruise speed by 30 to 40 knots and affect fuel consumption by several thousand pounds on a long-haul flight. The FMC continuously optimizes speed based on the cost index, current winds, and remaining distance.",
     "componentIds": ["mcp", "fmc"],
-    "aircraftIds": ["boeing-777-300er"]
+    "aircraftIds": ["boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "cost-index-q1",
+        "question": "What does a cost index of zero command the FMC to optimize for?",
+        "options": [
+          "Maximum speed to minimize flight time",
+          "Maximum range speed to minimize fuel consumption",
+          "A balance between speed and fuel",
+          "Maximum altitude for best efficiency"
+        ],
+        "correctIndex": 1,
+        "explanation": "A cost index of zero tells the FMC to fly at maximum range speed, prioritizing minimum fuel consumption over time. The maximum cost index value commands maximum speed, prioritizing time savings."
+      }
+    ]
   },
   {
     "id": "step-climbs",
@@ -333,7 +863,21 @@
     "category": "Operations",
     "content": "As the 777 burns fuel during a long flight, its weight decreases and the optimal cruise altitude increases. Step climbs are planned altitude increases during cruise that keep the aircraft near its optimum altitude as weight reduces. The FMC continuously calculates the ideal cruise altitude based on current weight, temperature, and wind, displaying a recommended step climb point to the crew. Typically, a long-haul 777 flight might step climb from FL340 to FL360 to FL380 over the course of a 14-hour flight. Each step reduces fuel consumption by maintaining the aircraft in the thinner air where its engines operate more efficiently. Air traffic control clearance is required for each step, and step climbs must be coordinated with other traffic on oceanic routes.",
     "componentIds": ["mcp"],
-    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "step-climbs-q1",
+        "question": "Why does the optimal cruise altitude increase as a 777 burns fuel during a long flight?",
+        "options": [
+          "Because winds are more favorable at higher altitudes later in the flight",
+          "Because the aircraft gets lighter as fuel is burned, making it more efficient to fly higher in thinner air",
+          "Because air traffic control requires higher altitudes over certain regions",
+          "Because the engines produce more power as they warm up during the flight"
+        ],
+        "correctIndex": 1,
+        "explanation": "As fuel burns off, the aircraft becomes lighter. A lighter aircraft achieves better fuel efficiency at higher altitudes where the air is thinner, so step climbs keep the aircraft near its optimum altitude as weight decreases."
+      }
+    ]
   },
   {
     "id": "cruise-optimization",
@@ -341,7 +885,21 @@
     "category": "Operations",
     "content": "Optimizing cruise performance on the 777 involves balancing multiple factors: altitude, speed, engine power setting, and aircraft configuration. The FMC computes the most efficient cruise speed and altitude based on aircraft weight, outside air temperature, wind, and the cost index. Flying at the optimum altitude for the current weight typically saves 3 to 5 percent fuel compared to flying 4,000 feet below optimum. Maintaining the correct Mach number is important because flying just 0.01 Mach above the optimum can increase fuel consumption by 1 percent. On very long flights, fuel savings from optimization compound significantly. The MCP autopilot modes LNAV and VNAV work together to fly the FMC-computed profile automatically, maintaining optimal performance throughout cruise.",
     "componentIds": ["mcp"],
-    "aircraftIds": ["boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200er", "boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "cruise-optimization-q1",
+        "question": "How much additional fuel can be consumed by flying just 0.01 Mach above the optimum cruise speed?",
+        "options": [
+          "About 0.1 percent more",
+          "About 0.5 percent more",
+          "About 1 percent more",
+          "About 3 percent more"
+        ],
+        "correctIndex": 2,
+        "explanation": "Flying just 0.01 Mach above the optimum can increase fuel consumption by 1 percent. On very long flights, these small deviations compound significantly, making precise speed management important."
+      }
+    ]
   },
   {
     "id": "predictive-windshear",
@@ -349,7 +907,21 @@
     "category": "Safety",
     "content": "The 777-300ER's weather radar system includes a predictive windshear detection function that identifies microbursts and windshear events ahead of the aircraft during approach and departure. Unlike reactive windshear systems that detect windshear only after the aircraft enters it, predictive systems scan the air ahead using Doppler radar techniques to detect the velocity changes associated with microbursts. When a hazard is detected, the system provides both visual and aural warnings, displaying a windshear icon on the navigation display showing the location and extent of the threat. This advance warning of 10 to 25 seconds gives the crew time to avoid the hazard entirely by executing a go-around or altering the approach path, rather than having to escape a windshear encounter already in progress.",
     "componentIds": ["weather-radar"],
-    "aircraftIds": ["boeing-777-300er"]
+    "aircraftIds": ["boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "predictive-windshear-q1",
+        "question": "How does predictive windshear detection differ from reactive windshear systems?",
+        "options": [
+          "It uses pilot reports instead of sensors",
+          "It detects windshear ahead of the aircraft using Doppler radar before the aircraft enters it",
+          "It only works on the ground before takeoff",
+          "It measures wind changes after the aircraft has already encountered turbulence"
+        ],
+        "correctIndex": 1,
+        "explanation": "Predictive systems scan the air ahead using Doppler radar to detect velocity changes associated with microbursts, providing 10 to 25 seconds of advance warning. Reactive systems only detect windshear after the aircraft enters it."
+      }
+    ]
   },
   {
     "id": "tcas",
@@ -357,7 +929,21 @@
     "category": "Safety",
     "content": "TCAS, the Traffic Collision Avoidance System, provides the last line of defense against mid-air collisions. The system interrogates transponders on nearby aircraft to determine their range, bearing, altitude, and closure rate. It operates independently of air traffic control radar. When another aircraft is projected to come within a defined threat volume, TCAS issues a Traffic Advisory (TA) alerting the crew to look for the traffic. If the threat continues to converge, a Resolution Advisory (RA) commands a specific vertical maneuver, such as climb, descend, or maintain vertical speed. Both aircraft receive coordinated, complementary RAs to ensure they maneuver apart. Pilots are required to follow RAs immediately, even if they conflict with ATC instructions. The ND can display TCAS traffic symbols showing the relative position and altitude of nearby aircraft.",
     "componentIds": ["nd"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "tcas-q1",
+        "question": "What must pilots do when they receive a TCAS Resolution Advisory, even if it conflicts with ATC instructions?",
+        "options": [
+          "Ignore the RA and follow ATC instructions",
+          "Request clarification from ATC before acting",
+          "Follow the Resolution Advisory immediately",
+          "Turn off TCAS and maintain current altitude"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pilots are required to follow TCAS Resolution Advisories immediately, even if they conflict with ATC instructions. TCAS provides the last line of defense against mid-air collisions, and both aircraft receive coordinated, complementary maneuver commands."
+      }
+    ]
   },
   {
     "id": "egpws",
@@ -365,7 +951,21 @@
     "category": "Safety",
     "content": "EGPWS, the Enhanced Ground Proximity Warning System, protects against controlled flight into terrain by combining radio altimeter data with a worldwide terrain database and GPS position. The basic GPWS modes warn of excessive descent rate, terrain closure, altitude loss after takeoff, unsafe terrain clearance, and descent below the glideslope. The enhanced version adds a forward-looking terrain awareness function that compares the aircraft's projected flight path against the terrain database, providing warnings up to 60 seconds before a potential impact. Visual terrain displays on the ND show nearby terrain in green, amber, or red based on proximity to the aircraft's altitude. EGPWS has virtually eliminated controlled-flight-into-terrain accidents among equipped aircraft, once the leading cause of commercial aviation fatalities.",
     "componentIds": ["nd"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "egpws-q1",
+        "question": "What capability does EGPWS add beyond the basic GPWS modes?",
+        "options": [
+          "Engine performance monitoring during approach",
+          "A forward-looking terrain awareness function using a terrain database and GPS",
+          "Automatic go-around capability when terrain is detected",
+          "Communication with nearby aircraft about terrain hazards"
+        ],
+        "correctIndex": 1,
+        "explanation": "EGPWS adds a forward-looking function that compares the aircraft's projected flight path against a worldwide terrain database, providing warnings up to 60 seconds before potential impact, rather than relying solely on radio altimeter data."
+      }
+    ]
   },
   {
     "id": "rudder-limiting",
@@ -373,7 +973,21 @@
     "category": "Safety",
     "content": "The 777 fly-by-wire system includes an automatic rudder travel limiter that progressively reduces the maximum rudder deflection as airspeed increases. At low speeds during takeoff and landing, the full rudder travel of approximately 27 degrees is available to handle crosswinds and engine-out situations. As speed increases through the climb and into cruise, the maximum deflection reduces to as little as 3 degrees at high Mach numbers. This limiting prevents structural overload from excessive rudder forces at high speed, where even a small rudder deflection produces enormous side loads on the vertical stabilizer. The limiting is implemented in the primary flight computers and is transparent to the pilot, who experiences consistent pedal force characteristics regardless of the reduced travel at high speed.",
     "componentIds": ["rudder"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "rudder-limiting-q1",
+        "question": "Why does the 777 automatically limit rudder deflection at high speeds?",
+        "options": [
+          "To conserve hydraulic pressure for other flight controls",
+          "Because the rudder becomes mechanically stiff at high speeds",
+          "To prevent structural overload on the vertical stabilizer from excessive side forces",
+          "Because the fly-by-wire system cannot process rudder inputs at high speed"
+        ],
+        "correctIndex": 2,
+        "explanation": "At high speeds, even a small rudder deflection produces enormous aerodynamic side forces on the vertical stabilizer. The automatic limiter reduces maximum deflection to as little as 3 degrees at high Mach to prevent structural overload."
+      }
+    ]
   },
   {
     "id": "fuel-efficiency",
@@ -381,7 +995,21 @@
     "category": "Specs",
     "content": "The 777 family achieves exceptional fuel efficiency for its size class through several design features. The high-bypass-ratio GE90 engines convert fuel into thrust more efficiently than older engine designs. The supercritical wing airfoil minimizes wave drag at cruise Mach numbers. Raked wingtips on the 777-200LR and 777-300ER reduce induced drag at the wingtips. The fly-by-wire flight control system enables drag-reducing features like maneuver load alleviation and gust load alleviation. On a per-seat basis, the 777-300ER burns approximately 20 percent less fuel than the 747-400 it often replaces, while offering similar range and passenger capacity. These efficiencies translate to lower operating costs and reduced carbon emissions per passenger-kilometer.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200lr", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "fuel-efficiency-q1",
+        "question": "Approximately how much less fuel per seat does the 777-300ER burn compared to the 747-400 it often replaces?",
+        "options": [
+          "About 5 percent less",
+          "About 10 percent less",
+          "About 20 percent less",
+          "About 35 percent less"
+        ],
+        "correctIndex": 2,
+        "explanation": "The 777-300ER burns approximately 20 percent less fuel per seat than the 747-400, thanks to high-bypass-ratio GE90 engines, a supercritical wing airfoil, raked wingtips, and fly-by-wire drag reduction features."
+      }
+    ]
   },
   {
     "id": "777-cargo-configuration",
@@ -389,6 +1017,20 @@
     "category": "Specs",
     "content": "The Boeing 777 has three lower cargo compartments providing total volumes exceeding 5,000 cubic feet on the 777-200 and 7,000 cubic feet on the stretched 777-300. The forward hold accommodates up to 16 LD3 containers, the aft hold up to 16 LD3 containers, and a bulk cargo compartment at the rear handles loose cargo, mail, and irregularly shaped items. The wide-body fuselage allows standard LD3 containers to be loaded side by side, two abreast. Powered cargo doors on the right side of the fuselage provide access to each compartment. The cargo handling system includes powered rollers, guide rails, and container locks. The 777-200LR variant can sacrifice aft cargo space for up to three auxiliary fuel tanks that extend the aircraft's range to over 9,400 nautical miles, making it the world's longest-range commercial aircraft.",
     "componentIds": ["fwd-cargo-containers", "aft-cargo-containers", "bulk-cargo-area"],
-    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"]
+    "aircraftIds": ["boeing-777-200", "boeing-777-200er", "boeing-777-200lr", "boeing-777-300", "boeing-777-300er"],
+    "quizQuestions": [
+      {
+        "id": "777-cargo-configuration-q1",
+        "question": "How many LD3 containers can the 777 load side by side in its wide-body cargo holds?",
+        "options": [
+          "One container per row",
+          "Two containers abreast",
+          "Three containers abreast",
+          "Four containers abreast"
+        ],
+        "correctIndex": 1,
+        "explanation": "The 777's wide-body fuselage allows standard LD3 containers to be loaded two abreast in the cargo holds, unlike narrow-body aircraft which use smaller containers that fit only one per row."
+      }
+    ]
   }
 ]

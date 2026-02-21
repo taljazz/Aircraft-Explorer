@@ -399,7 +399,14 @@
       "position": [-3, 2, 11],
       "interactionRadius": 1.5,
       "interactionText": "The PFD displays attitude, speeds, altitude, heading, and flight modes.",
-      "educationTopicIds": ["primary-flight-display", "glass-cockpit"]
+      "educationTopicIds": ["primary-flight-display", "glass-cockpit"],
+      "interactionSteps": [
+        "The 777's PFD uses a large LCD panel. Center: the attitude display shows wings level with pitch ladder markings.",
+        "Left tape: airspeed with speed bugs, barber pole for maximum speed, and speed trend vector. The 777 typically cruises at Mach 0.84.",
+        "Right tape: altitude with selected altitude bug. The 777 can cruise above 43,000 feet, higher than most airliners.",
+        "Bottom: compass rose with heading and track. The 777's fly-by-wire system provides flight envelope protection.",
+        "Top: Flight Mode Annunciator showing autoflight status. The 777 was the first fly-by-wire Boeing, with full autopilot integration."
+      ]
     },
     {
       "id": "nd",
@@ -429,7 +436,14 @@
       "position": [0, 3, 12],
       "interactionRadius": 2.0,
       "interactionText": "The overhead panel includes auxiliary fuel tank pump controls for managing fuel transfer from the cargo hold tanks.",
-      "educationTopicIds": ["aircraft-systems-overview", "fuel-system", "777-lr-fuel"]
+      "educationTopicIds": ["aircraft-systems-overview", "fuel-system", "777-lr-fuel"],
+      "interactionSteps": [
+        "The 777 overhead panel is organized by system. Top: electrical with primary and backup power distribution.",
+        "Hydraulic section: three independent hydraulic systems — left, center, and right — provide triple redundancy for flight controls.",
+        "Environmental: air conditioning packs, pressurization, and temperature control for the large cabin with multiple zones.",
+        "Fuel system: extensive fuel management for wing tanks, center tank, and optional auxiliary tanks for ultra-long-range variants.",
+        "Panel check complete. The 777's systems are designed for extended twin-engine operations over vast ocean distances."
+      ]
     },
     {
       "id": "mcp",
@@ -439,7 +453,14 @@
       "position": [0, 2, 12],
       "interactionRadius": 1.5,
       "interactionText": "Program step climbs as fuel burns off during 17+ hour flights to maintain optimal cruise altitude.",
-      "educationTopicIds": ["autopilot-modes", "cruise-optimization", "step-climbs"]
+      "educationTopicIds": ["autopilot-modes", "cruise-optimization", "step-climbs"],
+      "interactionSteps": [
+        "The 777 MCP is similar to the 737's but adds features for the fly-by-wire flight control system.",
+        "Speed window: set IAS or Mach number. For long cruise segments, the speed transitions from IAS to Mach automatically.",
+        "Lateral navigation: LNAV follows the FMC route precisely, essential for oceanic tracks with strict lateral requirements.",
+        "Vertical navigation: VNAV optimizes the climb, cruise, and descent profile for fuel efficiency over very long distances.",
+        "Autopilot engage. The 777's fly-by-wire system provides smooth, precise flight control through its triple-redundant flight computers."
+      ]
     },
     {
       "id": "fmc",
@@ -449,7 +470,14 @@
       "position": [0, 4, 11],
       "interactionRadius": 1.5,
       "interactionText": "Program routes spanning entire hemispheres. The FMC manages ETOPS-330 alternate airports and polar route waypoints.",
-      "educationTopicIds": ["flight-management-system", "etops", "polar-navigation"]
+      "educationTopicIds": ["flight-management-system", "etops", "polar-navigation"],
+      "interactionSteps": [
+        "The 777's FMC is more advanced than the 737's, with a larger screen and more capable flight management system.",
+        "ROUTE page: enter origin, destination, and airways. The 777's range means routes can span entire oceans without stopping.",
+        "PERF page: enter weights and cost index. The FMC calculates optimal altitude and speed for maximum fuel efficiency over thousands of miles.",
+        "For oceanic flights, the FMC manages strategic lateral offsets and position reporting through CPDLC datalink.",
+        "Route programming complete. The magenta line on the Navigation Display stretches across the map, perhaps 7,000 nautical miles to the destination."
+      ]
     },
     {
       "id": "forward-exit-door",
@@ -459,7 +487,13 @@
       "position": [-5, 17, 9],
       "interactionRadius": 2.0,
       "interactionText": "The main boarding door for the Worldliner, identical to other 777 variants.",
-      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"]
+      "educationTopicIds": ["aircraft-doors", "evacuation-procedures"],
+      "interactionSteps": [
+        "The forward left door is a large, powered door with an integrated evacuation slide. On widebody aircraft, the slides double as life rafts.",
+        "Slide disarmed. The crew moves the slide selector to manual. The door is now safe to open without the slide deploying.",
+        "The large door swings outward and forward, revealing the wide door frame designed for rapid evacuation of the double-aisle cabin.",
+        "Door fully open. The wide aperture allows two passengers abreast to board or evacuate simultaneously."
+      ]
     },
     {
       "id": "aft-exit-door",
@@ -829,7 +863,14 @@
       "position": [-30, 56, 5],
       "interactionRadius": 3.0,
       "interactionText": "The GE90-115BL holds the world record for thrust. Its 134-inch fan with composite blades produces over 115,000 lbs of thrust.",
-      "educationTopicIds": ["ge90-engine", "ge90-115b", "turbofan-principles", "world-records"]
+      "educationTopicIds": ["ge90-engine", "ge90-115b", "turbofan-principles", "world-records"],
+      "interactionSteps": [
+        "The massive GE90 engine hangs from its pylon, silent. The inlet is over 3 meters across — large enough to stand inside.",
+        "The starter motor engages. The enormous fan begins to rotate slowly with a deep bass rumble, each blade taller than a person.",
+        "Fuel ignites in the combustion chamber with a muffled roar. The engine note changes from a whine to a powerful low-frequency rumble.",
+        "The engine accelerates to idle. The massive fan creates a hurricane-force wind at the inlet, drawing in 1.5 tons of air per second.",
+        "GE90 running at ground idle. The deep thrumming vibration is felt through the ground. This is one of the most powerful jet engines ever built, capable of over 115,000 pounds of thrust."
+      ]
     },
     {
       "id": "right-engine",
@@ -839,7 +880,14 @@
       "position": [30, 56, 5],
       "interactionRadius": 3.0,
       "interactionText": "Each GE90-115BL consumes fuel at roughly 3,600 kg/hour at cruise, enabling the Worldliner's extraordinary range.",
-      "educationTopicIds": ["ge90-engine", "ge90-115b", "fuel-efficiency"]
+      "educationTopicIds": ["ge90-engine", "ge90-115b", "fuel-efficiency"],
+      "interactionSteps": [
+        "The massive GE90 engine hangs from its pylon, silent. The inlet is over 3 meters across — large enough to stand inside.",
+        "The starter motor engages. The enormous fan begins to rotate slowly with a deep bass rumble, each blade taller than a person.",
+        "Fuel ignites in the combustion chamber with a muffled roar. The engine note changes from a whine to a powerful low-frequency rumble.",
+        "The engine accelerates to idle. The massive fan creates a hurricane-force wind at the inlet, drawing in 1.5 tons of air per second.",
+        "GE90 running at ground idle. The deep thrumming vibration is felt through the ground. This is one of the most powerful jet engines ever built, capable of over 115,000 pounds of thrust."
+      ]
     },
     {
       "id": "nose-gear-assembly",
@@ -849,7 +897,12 @@
       "position": [0, 17, 2],
       "interactionRadius": 2.0,
       "interactionText": "The nose gear is identical to other 777 variants.",
-      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering"]
+      "educationTopicIds": ["landing-gear-systems", "nose-wheel-steering"],
+      "interactionSteps": [
+        "The nose gear stands tall with two wheels. The 777's nose gear is longer than most aircraft, giving the characteristic nose-high ground attitude.",
+        "Retraction sequence: the nose gear swings forward and folds upward into the belly. The doors close to seal the wheel well.",
+        "Nose gear retracted and locked up. The smooth belly reduces drag for the long-range cruise ahead."
+      ]
     },
     {
       "id": "left-main-gear",
@@ -859,7 +912,12 @@
       "position": [-7, 66, 2],
       "interactionRadius": 2.5,
       "interactionText": "The main gear supports the Worldliner's high takeoff weight fully loaded with fuel for 19-hour flights.",
-      "educationTopicIds": ["landing-gear-systems", "bogie-gear"]
+      "educationTopicIds": ["landing-gear-systems", "bogie-gear"],
+      "interactionSteps": [
+        "The main landing gear bogie carries six wheels in a three-by-two arrangement. Each main gear assembly is one of the largest in commercial aviation.",
+        "Gear retraction: the massive six-wheel bogie tilts, the wheels rotate, and the assembly folds inward into the wing root and fuselage.",
+        "Main gear stowed. The doors close over the enormous wheel wells. The twelve main wheels are now hidden inside the aircraft."
+      ]
     },
     {
       "id": "right-main-gear",
@@ -869,7 +927,12 @@
       "position": [7, 66, 2],
       "interactionRadius": 2.5,
       "interactionText": "Six wheels distribute the enormous takeoff weight across the runway surface.",
-      "educationTopicIds": ["landing-gear-systems", "weight-distribution"]
+      "educationTopicIds": ["landing-gear-systems", "weight-distribution"],
+      "interactionSteps": [
+        "The main landing gear bogie carries six wheels in a three-by-two arrangement. Each main gear assembly is one of the largest in commercial aviation.",
+        "Gear retraction: the massive six-wheel bogie tilts, the wheels rotate, and the assembly folds inward into the wing root and fuselage.",
+        "Main gear stowed. The doors close over the enormous wheel wells. The twelve main wheels are now hidden inside the aircraft."
+      ]
     },
     {
       "id": "left-aileron",
@@ -899,7 +962,14 @@
       "position": [-25, 75, 7],
       "interactionRadius": 2.5,
       "interactionText": "Fowler flaps extend on tracks. Flaperons provide combined flap and aileron function.",
-      "educationTopicIds": ["how-flaps-work", "flaperon"]
+      "educationTopicIds": ["how-flaps-work", "flaperon"],
+      "interactionSteps": [
+        "Flaps retracted. The long wing trailing edge is clean and smooth, optimized for high-speed cruise.",
+        "Flaps 1. The leading edge slats extend and trailing edge flaps begin to move. The 777's flaps use a complex triple-slotted Fowler design.",
+        "Flaps 5. Trailing edge flap panels extend rearward and downward, visibly increasing the wing chord length.",
+        "Flaps 20. The wing has transformed. Three separate flap segments are now staggered behind the wing, with air flowing through the gaps to keep the flow attached.",
+        "Flaps 30. Full landing configuration. The wing area has increased dramatically, allowing the heavy widebody to approach at relatively slow speeds."
+      ]
     },
     {
       "id": "right-flap",
@@ -909,7 +979,14 @@
       "position": [25, 75, 7],
       "interactionRadius": 2.5,
       "interactionText": "Right flaps deploy symmetrically with the left for balanced lift.",
-      "educationTopicIds": ["how-flaps-work", "flaperon"]
+      "educationTopicIds": ["how-flaps-work", "flaperon"],
+      "interactionSteps": [
+        "Flaps retracted. The long wing trailing edge is clean and smooth, optimized for high-speed cruise.",
+        "Flaps 1. The leading edge slats extend and trailing edge flaps begin to move. The 777's flaps use a complex triple-slotted Fowler design.",
+        "Flaps 5. Trailing edge flap panels extend rearward and downward, visibly increasing the wing chord length.",
+        "Flaps 20. The wing has transformed. Three separate flap segments are now staggered behind the wing, with air flowing through the gaps to keep the flow attached.",
+        "Flaps 30. Full landing configuration. The wing area has increased dramatically, allowing the heavy widebody to approach at relatively slow speeds."
+      ]
     },
     {
       "id": "left-slat",
@@ -919,7 +996,12 @@
       "position": [-37, 52, 10],
       "interactionRadius": 2.5,
       "interactionText": "Full-span slats work with the raked wingtip design to maximize low-speed lift performance.",
-      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"],
+      "interactionSteps": [
+        "Slats sealed against the leading edge. The 777's long wing has slats running nearly the full span.",
+        "Slats extending on their tracks. The leading edge pivots forward and down, opening a slot along the entire wing span.",
+        "Slats fully deployed. The gap between slat and wing allows energized air to flow over the upper surface, dramatically increasing the stall angle of attack."
+      ]
     },
     {
       "id": "right-slat",
@@ -929,7 +1011,12 @@
       "position": [37, 52, 10],
       "interactionRadius": 2.5,
       "interactionText": "Symmetric slat deployment for balanced lift augmentation.",
-      "educationTopicIds": ["leading-edge-devices", "stall-prevention"]
+      "educationTopicIds": ["leading-edge-devices", "stall-prevention"],
+      "interactionSteps": [
+        "Slats sealed against the leading edge. The 777's long wing has slats running nearly the full span.",
+        "Slats extending on their tracks. The leading edge pivots forward and down, opening a slot along the entire wing span.",
+        "Slats fully deployed. The gap between slat and wing allows energized air to flow over the upper surface, dramatically increasing the stall angle of attack."
+      ]
     },
     {
       "id": "elevator",
@@ -959,7 +1046,13 @@
       "position": [-15, 65, 10],
       "interactionRadius": 2.5,
       "interactionText": "Spoilers manage descent rate and augment roll control on the extended-span wings.",
-      "educationTopicIds": ["spoiler-systems", "speed-brakes"]
+      "educationTopicIds": ["spoiler-systems", "speed-brakes"],
+      "interactionSteps": [
+        "Spoiler panels lie flat across the wide upper wing surface, invisible among the wing skin panels.",
+        "Speed brakes armed for landing. The spoiler panels are pre-loaded to deploy on weight-on-wheels.",
+        "Touchdown! All spoiler panels snap upward across the massive wingspan, killing lift instantly. The 777's huge wings dump their lift in under a second.",
+        "Full ground spoilers deployed. The 300-ton aircraft is pressed firmly onto its wheels. Autobrakes and reverse thrust work together with the spoilers to stop the aircraft."
+      ]
     },
     {
       "id": "weather-radar",
@@ -979,7 +1072,13 @@
       "position": [0, 127, 8],
       "interactionRadius": 1.5,
       "interactionText": "The APU must be serviceable for ETOPS-330 dispatch, the highest ETOPS rating achieved by the 777.",
-      "educationTopicIds": ["apu-operations", "etops"]
+      "educationTopicIds": ["apu-operations", "etops"],
+      "interactionSteps": [
+        "The APU exhaust at the tail is dark and silent. The 777's APU is significantly larger than narrow-body APUs to power the bigger aircraft.",
+        "APU start: the gas turbine spools up with an ascending whine from the tail cone.",
+        "APU online and generating power. Two generators provide 120 kVA each, enough to power the aircraft's systems on the ground.",
+        "APU bleed air available. Pneumatic power can now start the big GE90 engines and run the air conditioning packs."
+      ]
     }
   ],
   "controlSurfaces": [

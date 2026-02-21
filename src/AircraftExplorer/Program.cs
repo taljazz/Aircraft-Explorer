@@ -7,6 +7,7 @@ using AircraftExplorer.Config;
 using AircraftExplorer.Education;
 using AircraftExplorer.Input;
 using AircraftExplorer.Modes;
+using AircraftExplorer.Tours;
 
 var configuration = new ConfigurationBuilder()
     .SetBasePath(AppContext.BaseDirectory)
@@ -46,6 +47,10 @@ services.AddSingleton<IEducationProvider>(sp =>
     return new EducationContentLoader(dataPath);
 });
 
+// Tours
+var tourDataPath = Path.Combine(AppContext.BaseDirectory, appSettings.TourDataPath);
+var availableTours = TourLoader.LoadAllFromDirectory(tourDataPath);
+
 // Mode system
 services.AddSingleton<AppModeManager>();
 services.AddSingleton<ModeContext>(sp => new ModeContext
@@ -56,7 +61,8 @@ services.AddSingleton<ModeContext>(sp => new ModeContext
     EducationProvider = sp.GetRequiredService<IEducationProvider>(),
     Settings = sp.GetRequiredService<AppSettings>(),
     InputManager = sp.GetRequiredService<InputManager>(),
-    SettingsFilePath = settingsFilePath
+    SettingsFilePath = settingsFilePath,
+    AvailableTours = availableTours
 });
 
 // App host

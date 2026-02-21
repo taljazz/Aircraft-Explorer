@@ -333,6 +333,76 @@ public sealed class SpatialAudioService : ISpatialAudioService
         }
     }
 
+    public void PlayCorrectAnswerTone()
+    {
+        if (!_initialized) return;
+
+        lock (_lock)
+        {
+            CleanUpFinishedSources();
+
+            // Ascending 3-note chime: C5 (523Hz), E5 (659Hz), G5 (784Hz)
+            float[] freqs = [523f, 659f, 784f];
+            for (int i = 0; i < freqs.Length; i++)
+            {
+                int delayMs = i * 120;
+                int buffer = GetOrCreateToneBuffer(freqs[i], 0.12f);
+                var timer = new System.Threading.Timer(_ =>
+                {
+                    if (_disposed) return;
+                    lock (_lock)
+                    {
+                        if (_disposed) return;
+                        int src = AL.GenSource();
+                        AL.Source(src, ALSourcef.Gain, 0.45f);
+                        AL.Source(src, ALSourceb.SourceRelative, true);
+                        AL.Source(src, ALSource3f.Position, 0f, 0f, 0f);
+                        AL.Source(src, ALSourceb.Looping, false);
+                        AL.Source(src, ALSourcei.Buffer, buffer);
+                        AL.SourcePlay(src);
+                        _activeSources.Add(src);
+                    }
+                }, null, delayMs, Timeout.Infinite);
+                _activeTimers.Add(timer);
+            }
+        }
+    }
+
+    public void PlayIncorrectAnswerTone()
+    {
+        if (!_initialized) return;
+
+        lock (_lock)
+        {
+            CleanUpFinishedSources();
+
+            // Descending 2-note buzz: 300Hz then 150Hz
+            float[] freqs = [300f, 150f];
+            for (int i = 0; i < freqs.Length; i++)
+            {
+                int delayMs = i * 150;
+                int buffer = GetOrCreateToneBuffer(freqs[i], 0.2f);
+                var timer = new System.Threading.Timer(_ =>
+                {
+                    if (_disposed) return;
+                    lock (_lock)
+                    {
+                        if (_disposed) return;
+                        int src = AL.GenSource();
+                        AL.Source(src, ALSourcef.Gain, 0.5f);
+                        AL.Source(src, ALSourceb.SourceRelative, true);
+                        AL.Source(src, ALSource3f.Position, 0f, 0f, 0f);
+                        AL.Source(src, ALSourceb.Looping, false);
+                        AL.Source(src, ALSourcei.Buffer, buffer);
+                        AL.SourcePlay(src);
+                        _activeSources.Add(src);
+                    }
+                }, null, delayMs, Timeout.Infinite);
+                _activeTimers.Add(timer);
+            }
+        }
+    }
+
     private int GetOrCreateToneBuffer(float frequency, float durationSeconds)
     {
         // Bucket frequency to nearest 10Hz to reuse buffers

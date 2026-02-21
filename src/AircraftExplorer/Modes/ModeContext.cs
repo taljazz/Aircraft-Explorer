@@ -4,6 +4,7 @@ using AircraftExplorer.Config;
 using AircraftExplorer.Education;
 using AircraftExplorer.Input;
 using AircraftExplorer.Navigation;
+using AircraftExplorer.Tours;
 
 namespace AircraftExplorer.Modes;
 
@@ -16,6 +17,9 @@ public class ModeContext
     public required AppSettings Settings { get; init; }
     public required InputManager InputManager { get; init; }
     public required string SettingsFilePath { get; init; }
+    public required IReadOnlyList<TourDefinition> AvailableTours { get; init; }
+
+    public QuizSession QuizSession { get; } = new();
 
     // Set when an aircraft is selected
     public AircraftModel? SelectedAircraft { get; set; }

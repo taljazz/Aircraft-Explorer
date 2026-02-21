@@ -1,0 +1,68 @@
+{
+  "id": "pre-flight-walk-around",
+  "name": "Pre-Flight Walk-Around Inspection",
+  "description": "Walk around the aircraft exterior like a pilot performing a pre-flight inspection. Visit the nose gear, engines, wings, tail, and key external components.",
+  "isExterior": true,
+  "stops": [
+    {
+      "componentId": "nose-gear-assembly",
+      "narration": "Head to the nose landing gear, located beneath the cockpit.",
+      "arrivalNarration": "The nose gear stands before you with its dual tires and oleo strut. Check the tire pressure indicators and look for hydraulic leaks around the steering mechanism. Verify the landing light is intact."
+    },
+    {
+      "componentId": "left-engine",
+      "narration": "Now walk to the left engine, mounted under the port wing.",
+      "arrivalNarration": "The left engine hangs from its pylon. During a walk-around, pilots check the fan blades for damage by slowly rotating them, inspect the cowling for fluid leaks, and verify the inlet is clear of debris."
+    },
+    {
+      "componentId": "left-flap",
+      "narration": "Move along the left wing toward the trailing edge flaps.",
+      "arrivalNarration": "The left wing flaps are in the retracted position. Inspect the flap tracks and actuators for security. Check that the flap surfaces are clean and undamaged."
+    },
+    {
+      "componentId": "left-aileron",
+      "narration": "Continue outboard along the wing toward the left aileron near the wingtip.",
+      "arrivalNarration": "The left aileron is at the outboard trailing edge of the wing. Verify it moves freely and check the hinge points. Look at the wing tip for navigation and strobe lights."
+    },
+    {
+      "componentId": "left-main-gear",
+      "narration": "Head back inboard to the left main landing gear.",
+      "arrivalNarration": "The left main gear stands firm under the wing root. Check tire condition, brake wear indicators, and look for hydraulic fluid around the actuators and brake lines."
+    },
+    {
+      "componentId": "apu-exhaust",
+      "narration": "Walk aft along the fuselage toward the tail and APU exhaust.",
+      "arrivalNarration": "The APU exhaust is at the very tail of the aircraft. Verify the exhaust area is clear and the tail cone is secure. The APU provides ground power and bleed air for engine starting."
+    },
+    {
+      "componentId": "elevator",
+      "narration": "Look up at the horizontal stabilizer and elevator.",
+      "arrivalNarration": "The horizontal stabilizer spans above you with the elevator surfaces on its trailing edge. Check that the elevator moves freely and inspect the trim jackscrew for proper lubrication."
+    },
+    {
+      "componentId": "rudder",
+      "narration": "Now look at the vertical stabilizer and rudder towering above.",
+      "arrivalNarration": "The vertical stabilizer rises high above the fuselage with the rudder on its trailing edge. Inspect the rudder for freedom of movement and check the vertical stabilizer skin for any damage."
+    },
+    {
+      "componentId": "right-main-gear",
+      "narration": "Walk forward along the starboard side to the right main gear.",
+      "arrivalNarration": "The right main landing gear. Same inspection as the left: tires, brakes, hydraulic lines, and oleo strut compression. Consistent condition on both sides is important."
+    },
+    {
+      "componentId": "right-engine",
+      "narration": "Continue forward to the right engine under the starboard wing.",
+      "arrivalNarration": "The right engine. Perform the same inspection as the left: fan blade condition, cowling integrity, inlet clear of foreign objects, and no visible fluid leaks."
+    },
+    {
+      "componentId": "pitot-tubes",
+      "narration": "Walk forward along the fuselage to find the pitot tubes near the nose.",
+      "arrivalNarration": "The pitot tubes protrude from the fuselage nose area. These thin tubes measure airspeed by sensing ram air pressure. Verify the pitot covers have been removed and the openings are clear."
+    },
+    {
+      "componentId": "weather-radar",
+      "narration": "Finally, check the weather radar in the nose radome.",
+      "arrivalNarration": "The nose radome covers the weather radar antenna. The radome should be smooth and undamaged — any dents could affect radar performance. Walk-around inspection complete!"
+    }
+  ]
+}

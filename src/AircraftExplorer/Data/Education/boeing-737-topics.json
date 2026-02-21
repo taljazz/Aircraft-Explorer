@@ -13,7 +13,33 @@
     "category": "Specs",
     "content": "The Boeing 737 NG is powered by two CFM International CFM56-7B turbofan engines, each producing between 19,500 and 27,300 pounds of thrust depending on the variant. The CFM56-7B has a bypass ratio of 5.1:1 and incorporates a wide-chord fan, double-annular combustor for reduced emissions, and full-authority digital engine control (FADEC). The engine has an exceptional reliability record with dispatch rates exceeding 99.95 percent. Each engine features a unique flat-bottomed nacelle designed to provide ground clearance on the 737's short landing gear.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "cfm56-engine-q1",
+        "question": "Why does the CFM56 engine on the 737 have a distinctive flat-bottomed nacelle?",
+        "options": [
+          "To provide ground clearance on the 737's short landing gear",
+          "To reduce engine noise during takeoff",
+          "To improve fuel efficiency at cruise altitude",
+          "To accommodate a larger fan diameter"
+        ],
+        "correctIndex": 0,
+        "explanation": "The 737's low-slung wing and short landing gear leave limited clearance between the engine and the ground, so the nacelle was given a flat bottom to maximize that clearance."
+      },
+      {
+        "id": "cfm56-engine-q2",
+        "question": "What type of engine control system does the CFM56-7B use?",
+        "options": [
+          "Mechanical fuel control unit",
+          "Hydromechanical control with manual backup",
+          "Full-authority digital engine control (FADEC)",
+          "Analog electronic engine control"
+        ],
+        "correctIndex": 2,
+        "explanation": "The CFM56-7B incorporates a full-authority digital engine control (FADEC), which precisely manages all engine parameters electronically for optimal performance and reliability."
+      }
+    ]
   },
   {
     "id": "737-winglets",
@@ -45,7 +71,21 @@
     "category": "HowItWorks",
     "content": "Each engine on the 737 NG drives an integrated drive generator (IDG) producing 90 kVA of 115V AC power at a constant 400 Hz frequency. The two generators normally power their respective AC buses independently, but a bus-tie system allows one generator to power the entire aircraft if needed. An auxiliary power unit (APU) provides ground electrical power and backup in flight. The aircraft also carries a battery for essential bus power and emergency standby instruments. A transformer-rectifier converts AC to 28V DC for avionics and lighting systems.",
     "componentIds": ["apu-exhaust"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "737-electrical-systems-q1",
+        "question": "How much electrical power does each engine-driven generator produce on the 737 NG?",
+        "options": [
+          "40 kVA at 60 Hz",
+          "90 kVA at 400 Hz",
+          "120 kVA at 50 Hz",
+          "60 kVA at 400 Hz"
+        ],
+        "correctIndex": 1,
+        "explanation": "Each integrated drive generator (IDG) on the 737 NG produces 90 kVA of 115V AC power at a constant frequency of 400 Hz."
+      }
+    ]
   },
   {
     "id": "737-fuel-system",
@@ -69,7 +109,21 @@
     "category": "Design",
     "content": "Boeing aircraft use a traditional control yoke (a U-shaped wheel on a column) rather than the sidestick used by Airbus. The yoke provides direct mechanical feedback between both pilot positions because both columns are physically connected, so the captain can feel the first officer's inputs and vice versa. This tactile interconnection enhances crew coordination and situational awareness. The yoke requires more cockpit space and adds weight compared to a sidestick, but Boeing values the feedback advantages. The yoke also allows the pilot to apply large pitch and roll inputs simultaneously with one hand while managing thrust with the other, which some pilots find more intuitive during demanding maneuvers.",
     "componentIds": ["captain-yoke"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "yoke-vs-sidestick-q1",
+        "question": "What is the key advantage of the mechanically linked control yoke used in Boeing aircraft?",
+        "options": [
+          "It weighs less than a sidestick",
+          "Both pilots can feel each other's control inputs through the connected columns",
+          "It allows faster input response than electronic controls",
+          "It requires less cockpit space than a sidestick"
+        ],
+        "correctIndex": 1,
+        "explanation": "Because both control columns are physically connected, the captain can feel the first officer's inputs and vice versa, enhancing crew coordination and situational awareness."
+      }
+    ]
   },
   {
     "id": "yaw-damper",
@@ -77,7 +131,21 @@
     "category": "HowItWorks",
     "content": "The yaw damper is an automatic system that makes small, rapid rudder deflections to counteract Dutch roll, a natural oscillation where the aircraft simultaneously yaws and rolls in a repeating cycle. The yaw damper senses yaw rate using gyroscopes and commands corrective rudder inputs faster and more precisely than a human pilot could. On the 737, the yaw damper operates through the main rudder power control unit and is engaged for all phases of flight above approximately 1,000 feet. Failure of the yaw damper is not dangerous but makes the ride uncomfortable and increases pilot workload, requiring manual rudder coordination during turns.",
     "componentIds": ["rudder-pedals"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "yaw-damper-q1",
+        "question": "What aerodynamic phenomenon does the yaw damper primarily counteract?",
+        "options": [
+          "Wing flutter at high speed",
+          "Dutch roll oscillation",
+          "Pitch instability during turbulence",
+          "Adverse yaw during turns"
+        ],
+        "correctIndex": 1,
+        "explanation": "The yaw damper makes small, rapid rudder deflections to counteract Dutch roll, a coupled yaw-and-roll oscillation that swept-wing aircraft are prone to."
+      }
+    ]
   },
   {
     "id": "dutch-roll",
@@ -85,7 +153,21 @@
     "category": "HowItWorks",
     "content": "Dutch roll is a coupled lateral-directional oscillation where the aircraft alternately yaws and rolls in a repeating motion resembling a pendulum swinging in two planes simultaneously. It occurs because swept-wing aircraft have more roll stability (dihedral effect) than yaw stability (directional stability). When the aircraft yaws to one side, the advancing wing generates more lift, causing a roll. The resulting sideslip then reverses the yaw, creating the oscillation. The phenomenon is named after the resemblance to a Dutch skating technique. Yaw dampers automatically suppress Dutch roll on modern aircraft, but pilots must be trained to recognize and manually dampen it if the yaw damper fails.",
     "componentIds": ["rudder"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "dutch-roll-q1",
+        "question": "Why are swept-wing aircraft particularly susceptible to Dutch roll?",
+        "options": [
+          "Their engines are mounted too far aft",
+          "They have more roll stability than yaw stability",
+          "Their fuselage is too long relative to wingspan",
+          "Their vertical stabilizer is too small"
+        ],
+        "correctIndex": 1,
+        "explanation": "Swept-wing aircraft have more roll stability (dihedral effect) than directional (yaw) stability, which creates the coupled yaw-and-roll oscillation known as Dutch roll."
+      }
+    ]
   },
   {
     "id": "rudder-system-safety",
@@ -93,7 +175,21 @@
     "category": "Safety",
     "content": "Following two fatal accidents in the 1990s attributed to rudder power control unit malfunctions, Boeing completely redesigned the 737 rudder system. The original single-panel rudder with a single power control unit was replaced with a dual-input servo valve that prevents the rudder from moving in the opposite direction to pilot command. The 737 NG incorporates this improved design along with a rudder system enhancement program that includes redundant input paths, force limiters, and independent pressure sources. These changes made the 737 NG rudder system one of the most thoroughly analyzed and safeguarded systems in commercial aviation.",
     "componentIds": ["rudder"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "rudder-system-safety-q1",
+        "question": "What critical improvement was made to the 737 rudder system after accidents in the 1990s?",
+        "options": [
+          "The rudder was made larger for better authority",
+          "A dual-input servo valve was added to prevent reversed rudder movement",
+          "The rudder was split into upper and lower sections",
+          "An electronic fly-by-wire rudder replaced the hydraulic system"
+        ],
+        "correctIndex": 1,
+        "explanation": "After two fatal accidents linked to rudder power control unit malfunctions, Boeing redesigned the system with a dual-input servo valve that prevents the rudder from moving opposite to pilot command."
+      }
+    ]
   },
   {
     "id": "stabilizer-trim",
@@ -101,7 +197,21 @@
     "category": "HowItWorks",
     "content": "Unlike many aircraft that use trim tabs on the elevator, the 737 uses a movable horizontal stabilizer for pitch trim. The entire horizontal tail surface pivots on a jackscrew mechanism to change its angle of incidence, providing powerful trim authority. Pilots set trim using thumb switches on the yoke or a trim wheel on the center pedestal. The stabilizer trim system is also used by the autopilot and speed trim system to maintain pitch attitude. The jackscrew is a critical component, and regular lubrication and inspection are mandatory maintenance items. Runaway stabilizer trim is addressed through a well-practiced cutout procedure that disconnects electric trim and allows manual trimming using the trim wheels.",
     "componentIds": ["elevator"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "stabilizer-trim-q1",
+        "question": "How does the 737 achieve pitch trim, unlike many other aircraft?",
+        "options": [
+          "By adjusting trim tabs on the elevator",
+          "By moving the entire horizontal stabilizer on a jackscrew",
+          "By varying the deflection angle of the elevator",
+          "By changing the angle of the vertical stabilizer"
+        ],
+        "correctIndex": 1,
+        "explanation": "The 737 uses a movable horizontal stabilizer that pivots on a jackscrew mechanism to change its angle of incidence, providing powerful pitch trim authority rather than using elevator trim tabs."
+      }
+    ]
   },
   {
     "id": "roll-augmentation",
@@ -109,7 +219,21 @@
     "category": "HowItWorks",
     "content": "On the 737, flight spoilers supplement the ailerons for roll control, particularly at high speeds where aileron authority alone may be insufficient or where large aileron deflections could cause wing twist (aeroelastic effects). When the pilot turns the control wheel, the flight spoilers on the descending wing rise proportionally to assist the roll. This asymmetric spoiler deployment increases the roll rate and reduces the aileron deflection needed, decreasing structural loads on the wing. At low speeds during approach and landing, both ailerons and spoilers work together to provide the maximum roll authority needed for crosswind corrections and go-around maneuvers.",
     "componentIds": ["spoilers"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "roll-augmentation-q1",
+        "question": "Why do flight spoilers assist the ailerons for roll control at high speeds on the 737?",
+        "options": [
+          "Because ailerons are locked out at high speeds",
+          "Because large aileron deflections at high speed could cause wing twist",
+          "Because spoilers are more aerodynamically efficient than ailerons",
+          "Because ailerons can only deflect in one direction at high speeds"
+        ],
+        "correctIndex": 1,
+        "explanation": "At high speeds, large aileron deflections could cause aeroelastic wing twist. Spoilers on the descending wing supplement the ailerons, reducing the aileron deflection needed and decreasing structural loads."
+      }
+    ]
   },
   {
     "id": "ground-spoilers",
@@ -117,7 +241,21 @@
     "category": "HowItWorks",
     "content": "The 737's ground spoiler system automatically deploys all spoiler panels to their maximum angle when certain conditions are met after landing: the aircraft must be on the ground (sensed by main gear weight-on-wheels switches), the throttles must be at idle, and the ground spoiler lever must be armed. This automatic deployment dumps wing lift within one second of touchdown, transferring the aircraft's full weight to the wheels for maximum braking effectiveness. Ground spoilers can increase braking efficiency by up to 60 percent on a wet runway compared to brakes alone. The system can also be armed for rejected takeoffs, deploying automatically if the throttles are retarded to idle above 60 knots.",
     "componentIds": ["spoilers"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "ground-spoilers-q1",
+        "question": "What is the primary purpose of ground spoiler deployment after landing?",
+        "options": [
+          "To slow the aircraft by creating aerodynamic drag",
+          "To dump wing lift and transfer weight to the wheels for maximum braking",
+          "To prevent the aircraft from becoming airborne again",
+          "To reduce engine thrust automatically"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ground spoilers dump wing lift within one second of touchdown, transferring the aircraft's full weight to the wheels. This maximizes braking effectiveness, improving braking efficiency by up to 60 percent on wet runways."
+      }
+    ]
   },
   {
     "id": "attitude-indicator",
@@ -125,7 +263,21 @@
     "category": "HowItWorks",
     "content": "The attitude indicator, displayed prominently in the center of the PFD, shows the aircraft's orientation relative to the horizon. A blue region represents sky and a brown region represents ground, divided by a horizon line. Aircraft pitch is shown by the position of the aircraft symbol relative to the horizon line, with graduated pitch bars marking each 2.5, 5, and 10 degrees. Bank angle is shown by a pointer at the top referencing a fixed arc with marks at 10, 20, 30, 45, and 60 degrees. The flight director command bars overlay the attitude display, showing the pilot where to point the aircraft to follow the selected autopilot mode. This single display replaces the traditional mechanical attitude indicator, directional gyro, and slip indicator of older cockpits.",
     "componentIds": ["pfd"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "attitude-indicator-q1",
+        "question": "On the Primary Flight Display, what do the blue and brown regions of the attitude indicator represent?",
+        "options": [
+          "Blue represents water and brown represents land",
+          "Blue represents sky and brown represents ground",
+          "Blue represents positive pitch and brown represents negative pitch",
+          "Blue represents high altitude and brown represents low altitude"
+        ],
+        "correctIndex": 1,
+        "explanation": "The attitude indicator uses blue to represent the sky and brown to represent the ground, divided by a horizon line. This intuitive color coding helps pilots instantly perceive the aircraft's orientation."
+      }
+    ]
   },
   {
     "id": "autoflight-system",
@@ -133,7 +285,21 @@
     "category": "HowItWorks",
     "content": "The 737 NG autoflight system consists of two flight director systems, a single autopilot, and an autothrottle. The flight director computes commands displayed as crosshair bars on the PFD, showing the pilot how to fly the selected mode. The autopilot physically moves the controls to follow these commands, with capability for single-channel approach and go-around. For autoland in Category IIIA conditions, both flight directors must be operational. The autothrottle maintains speed or thrust targets by moving the thrust levers through servo motors. The entire system is controlled through the mode control panel on the glareshield, with mode annunciations displayed on the flight mode annunciator above each PFD.",
     "componentIds": ["mcp"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "autoflight-system-q1",
+        "question": "How many autopilot channels does the 737 NG have for normal operations?",
+        "options": [
+          "Three independent autopilots",
+          "Two fully redundant autopilots",
+          "A single autopilot with dual flight directors",
+          "Four autopilot channels with voting logic"
+        ],
+        "correctIndex": 2,
+        "explanation": "The 737 NG has a single autopilot combined with two flight director systems. For Category IIIA autoland, both flight directors must be operational to provide the necessary redundancy."
+      }
+    ]
   },
   {
     "id": "takeoff-configuration",
@@ -141,7 +307,21 @@
     "category": "Operations",
     "content": "The 737 offers multiple takeoff flap settings, typically flaps 1, 5, 10, 15, or 25, selected based on runway length, obstacles, aircraft weight, and temperature. Lower flap settings reduce drag and improve climb performance but require higher takeoff speeds and longer runway distances. Higher flap settings reduce takeoff speed and ground roll but limit the initial climb gradient due to increased drag. The FMC calculates V-speeds for each configuration, and pilots select the optimal setting during pre-flight planning. A takeoff configuration warning horn sounds if the aircraft is not properly configured for takeoff when thrust is advanced, checking flap position, trim setting, speedbrake, and parking brake.",
     "componentIds": ["left-flap", "right-flap"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "takeoff-configuration-q1",
+        "question": "What is the trade-off when selecting a higher flap setting for takeoff on the 737?",
+        "options": [
+          "Higher speed but less fuel consumption",
+          "Lower takeoff speed but reduced climb gradient due to increased drag",
+          "Better engine performance but higher noise levels",
+          "Shorter runway needed but reduced maximum altitude"
+        ],
+        "correctIndex": 1,
+        "explanation": "Higher flap settings reduce takeoff speed and ground roll distance, but the increased drag limits the initial climb gradient. Pilots select the optimal setting based on runway length, obstacles, weight, and temperature."
+      }
+    ]
   },
   {
     "id": "oleo-strut",
@@ -149,7 +329,21 @@
     "category": "HowItWorks",
     "content": "The nose gear on the 737 uses an oleo-pneumatic shock strut to absorb landing impacts and taxi loads. The oleo strut works like a telescoping cylinder filled with hydraulic fluid and compressed nitrogen gas. During landing, the strut compresses as fluid is forced through a small orifice, converting the impact energy into heat. The nitrogen gas acts as a spring, providing the restoring force to extend the strut back to its normal position. The strut extension is checked during the pre-flight walk-around; proper extension indicates correct servicing. Oleo struts are remarkably durable, often lasting the life of the aircraft with periodic fluid and gas servicing.",
     "componentIds": ["nose-gear-assembly"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "oleo-strut-q1",
+        "question": "What two substances inside an oleo strut work together to absorb landing impacts?",
+        "options": [
+          "Compressed air and silicone gel",
+          "Hydraulic fluid and compressed nitrogen gas",
+          "Engine oil and pressurized oxygen",
+          "Brake fluid and compressed helium"
+        ],
+        "correctIndex": 1,
+        "explanation": "An oleo strut uses hydraulic fluid forced through a small orifice to convert impact energy into heat, while compressed nitrogen gas acts as a spring to restore the strut to its normal position."
+      }
+    ]
   },
   {
     "id": "engine-components",
@@ -157,7 +351,21 @@
     "category": "HowItWorks",
     "content": "A turbofan engine like the CFM56 consists of several major sections from front to back. The fan section contains the large front fan that produces most of the thrust. Behind it, the low-pressure compressor (booster) and high-pressure compressor squeeze air to high pressure and temperature. The combustion chamber mixes compressed air with atomized fuel and ignites it. The high-pressure turbine extracts energy to drive the compressor, and the low-pressure turbine drives the fan. The exhaust nozzle accelerates the remaining gases rearward. Each section contains precision-engineered rotating and stationary airfoil blades that must withstand extreme temperatures, pressures, and centrifugal forces while maintaining tight clearances measured in thousandths of an inch.",
     "componentIds": ["left-engine", "right-engine"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "engine-components-q1",
+        "question": "In a turbofan engine like the CFM56, which component produces the majority of the thrust?",
+        "options": [
+          "The high-pressure compressor",
+          "The combustion chamber",
+          "The front fan section",
+          "The exhaust nozzle"
+        ],
+        "correctIndex": 2,
+        "explanation": "The large front fan produces most of the thrust in a high-bypass turbofan engine. The bypassed air that flows around the engine core accounts for the majority of propulsive force."
+      }
+    ]
   },
   {
     "id": "737-exit-configuration",
@@ -165,7 +373,33 @@
     "category": "Safety",
     "content": "The 737-800 has eight exits: two main entry doors at the front, two service doors at the rear, and four overwing exits (two on each side). This configuration accommodates up to 189 passengers in a single-class layout. The overwing exits are Type III, measuring 20 by 36 inches, and require passengers to lift and rotate the hatch inward before stepping onto the wing. Exit row passengers must meet specific physical requirements and be willing and able to operate the exit. The 737-900ER adds an additional pair of exit doors behind the wing to meet evacuation requirements for its stretched fuselage and higher passenger capacity. Each exit has corresponding exterior markings and escape path lighting.",
     "componentIds": ["overwing-exit-left", "overwing-exit-right"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "737-exit-configuration-q1",
+        "question": "How many emergency exits does the 737-800 have in total?",
+        "options": [
+          "Six exits",
+          "Eight exits",
+          "Ten exits",
+          "Four exits"
+        ],
+        "correctIndex": 1,
+        "explanation": "The 737-800 has eight exits: two main entry doors at the front, two service doors at the rear, and four overwing exits (two on each side)."
+      },
+      {
+        "id": "737-exit-configuration-q2",
+        "question": "How must overwing exit hatches on the 737 be operated by passengers?",
+        "options": [
+          "Push the hatch outward and let it fall on the wing",
+          "Pull a handle to inflate an automatic slide",
+          "Lift and rotate the hatch inward before stepping onto the wing",
+          "Slide the hatch sideways into a wall pocket"
+        ],
+        "correctIndex": 2,
+        "explanation": "The Type III overwing exits require passengers to lift and rotate the hatch inward before stepping onto the wing. Exit row passengers must be willing and able to perform this operation."
+      }
+    ]
   },
   {
     "id": "evacuation-slides",
@@ -173,7 +407,21 @@
     "category": "Safety",
     "content": "Each main door on the 737 contains an integrated evacuation slide that inflates automatically when the door is opened with the slide armed. The slides use compressed gas cylinders to inflate in approximately 6 seconds, unfolding into a ramp from the door sill to the ground. Slides at the front doors are typically slide-rafts that can also serve as flotation devices during a water evacuation. The slide arming mechanism is controlled by a lever at each door that flight attendants set to armed before departure and disarmed after arrival. If a door is opened with the slide armed, it inflates immediately and cannot be easily re-packed, requiring maintenance to re-stow it. Slide inflation is tested periodically and the gas cylinders have a limited service life.",
     "componentIds": ["forward-exit-door"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "evacuation-slides-q1",
+        "question": "What happens if a 737 door is opened while the evacuation slide is armed?",
+        "options": [
+          "An alarm sounds but nothing else happens",
+          "The slide inflates automatically in approximately 6 seconds",
+          "The crew must manually pull a release handle to inflate the slide",
+          "The door locks and cannot be opened until the slide is disarmed"
+        ],
+        "correctIndex": 1,
+        "explanation": "When a door is opened with the slide armed, it inflates automatically using compressed gas cylinders in approximately 6 seconds. Once inflated, it cannot be easily re-packed and requires maintenance to re-stow."
+      }
+    ]
   },
   {
     "id": "emergency-equipment",
@@ -181,7 +429,21 @@
     "category": "Safety",
     "content": "The 737 carries extensive emergency equipment positioned throughout the cabin. Portable fire extinguishers are located at each flight attendant station and in the cockpit, including a Halon unit for electrical fires. Crash axes and protective breathing equipment are provided for fighting cockpit fires. Medical kits containing medications and diagnostic equipment are stowed in overhead compartments, along with an automated external defibrillator. Life vests are stored under each seat for overwater operations, and additional survival equipment including life rafts is carried on extended overwater routes. Megaphones are positioned at flight attendant stations for evacuation commands. Floor-level emergency lighting activates automatically in a power failure, guiding passengers to exits in darkness or smoke.",
     "componentIds": ["forward-exit-door"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "emergency-equipment-q1",
+        "question": "What type of emergency lighting activates automatically during a power failure on the 737?",
+        "options": [
+          "Overhead fluorescent strips",
+          "Seat-back reading lights",
+          "Floor-level emergency lighting guiding passengers to exits",
+          "Flashing strobe lights above each exit"
+        ],
+        "correctIndex": 2,
+        "explanation": "Floor-level emergency lighting activates automatically in a power failure, providing a continuous illuminated path along the cabin floor that guides passengers to exits even in darkness or smoke."
+      }
+    ]
   },
   {
     "id": "radome-design",
@@ -189,7 +451,21 @@
     "category": "Design",
     "content": "The radome is the smooth, cone-shaped nose cap that houses the weather radar antenna. It is constructed from fiberglass or composite materials that are transparent to the radar's microwave signals while providing aerodynamic streamlining and protection from bird strikes, rain erosion, and hail. The radome on the 737 contains a flat-plate antenna that mechanically tilts and rotates to scan weather at different ranges and altitudes. The radome surface includes a static discharge system and lightning diverter strips to safely conduct electrical discharges around the radar equipment. Regular inspection checks for delamination, erosion, and moisture ingress that could degrade radar performance. A damaged radome can attenuate radar signals, potentially masking hazardous weather returns.",
     "componentIds": ["weather-radar"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "radome-design-q1",
+        "question": "Why is the radome made from fiberglass or composite materials rather than metal?",
+        "options": [
+          "To reduce the overall weight of the aircraft nose",
+          "Because these materials are transparent to the radar's microwave signals",
+          "To make it easier to replace after bird strikes",
+          "Because metal would interfere with the pitot-static system"
+        ],
+        "correctIndex": 1,
+        "explanation": "The radome must be transparent to microwave signals so the weather radar antenna inside can transmit and receive signals. Metal would block these signals, making the radar useless."
+      }
+    ]
   },
   {
     "id": "sky-interior",
@@ -197,7 +473,21 @@
     "category": "Design",
     "content": "The Boeing Sky Interior, introduced as an option for the 737 NG and standard on later builds, features sculpted sidewalls and window reveals that create a greater sense of space. LED mood lighting allows airlines to program different color schemes for boarding, cruise, and arrival, simulating natural sky colors from sunrise to sunset. The overhead bins use a pivot design that opens downward, allowing passengers to load bags at shoulder height rather than lifting them overhead. The bins also offer significantly more volume than the original stowage compartments. The interior includes improved air flow distribution through individual gaspers above each seat and noise-reducing sidewall panels that make the cabin noticeably quieter.",
     "componentIds": ["overhead-bins"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "sky-interior-q1",
+        "question": "What innovative feature do the overhead bins in the Boeing Sky Interior use?",
+        "options": [
+          "They slide out horizontally from the ceiling",
+          "They use a pivot design that opens downward for shoulder-height loading",
+          "They are transparent so passengers can see their bags",
+          "They automatically lock when the seatbelt sign is on"
+        ],
+        "correctIndex": 1,
+        "explanation": "The Boeing Sky Interior overhead bins use a pivot design that opens downward, allowing passengers to load bags at shoulder height rather than lifting them overhead, while also offering significantly more volume."
+      }
+    ]
   },
   {
     "id": "altimetry",
@@ -205,7 +495,21 @@
     "category": "HowItWorks",
     "content": "Aircraft altitude is measured using the static pressure from the pitot-static system. As the aircraft climbs, atmospheric pressure decreases predictably, and the altimeter converts this pressure reading into altitude using the International Standard Atmosphere model. Pilots set the local barometric pressure (QNH) on the altimeter to correct for weather-related pressure variations, ensuring accurate altitude readings relative to sea level. Above a transition altitude (typically 18,000 feet in the US), all aircraft switch to a standard pressure setting of 29.92 inches of mercury, ensuring consistent altitude separation between aircraft. Radio altimeters supplement barometric altitude by transmitting radio waves toward the ground and measuring the return time, providing precise height above terrain for approach and landing.",
     "componentIds": ["pitot-tubes", "static-ports"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "altimetry-q1",
+        "question": "Above the transition altitude in the US, what standard pressure setting do all aircraft use on their altimeters?",
+        "options": [
+          "30.00 inches of mercury",
+          "28.92 inches of mercury",
+          "29.92 inches of mercury",
+          "The local airport barometric pressure"
+        ],
+        "correctIndex": 2,
+        "explanation": "Above the transition altitude (typically 18,000 feet in the US), all aircraft switch to 29.92 inches of mercury. This ensures consistent altitude separation between aircraft regardless of local weather conditions."
+      }
+    ]
   },
   {
     "id": "pressure-instruments",
@@ -213,7 +517,21 @@
     "category": "HowItWorks",
     "content": "Static ports supply ambient atmospheric pressure to three critical flight instruments. The altimeter uses static pressure to determine altitude above a reference datum. The vertical speed indicator measures the rate of change of static pressure to show climb or descent rate in feet per minute. The airspeed indicator compares pitot total pressure against static pressure to determine indicated airspeed. The 737 has static ports on both sides of the fuselage to average out any sideslip-induced pressure errors. An alternate static source inside the cockpit provides backup if external ports become blocked by ice or contamination. Accurate static pressure is so critical that even a small blockage can cause dangerously erroneous instrument readings.",
     "componentIds": ["pitot-tubes", "static-ports"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "pressure-instruments-q1",
+        "question": "How does the airspeed indicator determine indicated airspeed?",
+        "options": [
+          "By measuring the aircraft's GPS ground speed",
+          "By comparing pitot total pressure against static pressure",
+          "By measuring the rotation speed of a small wind turbine",
+          "By calculating the Doppler shift of radar signals"
+        ],
+        "correctIndex": 1,
+        "explanation": "The airspeed indicator compares pitot total pressure (which includes the dynamic pressure from airflow) against static ambient pressure. The difference between these two pressures is proportional to airspeed."
+      }
+    ]
   },
   {
     "id": "737-cargo-configuration",
@@ -221,6 +539,20 @@
     "category": "Specs",
     "content": "The Boeing 737 NG has two lower cargo compartments. The forward cargo hold (compartment 1) is located under the forward cabin and typically accommodates LD3-45 containers or bulk cargo, with a volume of approximately 625 cubic feet on the 737-800. The aft cargo hold (compartment 2) is beneath the aft cabin with approximately 486 cubic feet of volume. Both holds are accessed through powered cargo doors on the right side of the fuselage. The 737's narrow-body fuselage limits container size to LD3-45 units, which are smaller than the LD3 containers used on wide-body aircraft. The cargo floor features a ball mat and roller system for efficient loading. Total cargo volume varies by variant, with the 737-900 offering additional capacity due to its stretched fuselage.",
     "componentIds": ["fwd-cargo-containers", "aft-cargo-containers"],
-    "aircraftIds": ["boeing-737-800", "boeing-737-900"]
+    "aircraftIds": ["boeing-737-800", "boeing-737-900"],
+    "quizQuestions": [
+      {
+        "id": "737-cargo-configuration-q1",
+        "question": "Why does the 737 use smaller LD3-45 containers rather than standard LD3 containers?",
+        "options": [
+          "To reduce the total weight of the cargo system",
+          "Because the narrow-body fuselage limits container size",
+          "To allow more containers to fit in each hold",
+          "Because LD3 containers are no longer manufactured"
+        ],
+        "correctIndex": 1,
+        "explanation": "The 737's narrow-body fuselage limits the size of containers that can fit in the lower cargo holds. LD3-45 units are specifically designed for narrow-body aircraft, while standard LD3 containers are used on wide-body aircraft."
+      }
+    ]
   }
 ]

@@ -82,11 +82,14 @@ public class ExteriorGridMode : NavigationModeBase
             case InputAction.JumpToComponent:
                 return ShowJumpList();
 
+            case InputAction.Quiz:
+                return GatherQuizQuestions(5.0);
+
             case InputAction.Help:
                 Context.Speech.Speak(
                     "Exterior grid view. Arrows to move between sections. " +
                     "T to switch to walk-around mode. C to announce position. " +
-                    "I for information. J to jump to a component. Escape to return to interior.",
+                    "I for information. K for quiz. J to jump to a component. Escape to return to interior.",
                     true);
                 return ModeResult.Stay;
 

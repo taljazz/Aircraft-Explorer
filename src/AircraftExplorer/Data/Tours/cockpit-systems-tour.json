@@ -1,0 +1,58 @@
+{
+  "id": "cockpit-systems-tour",
+  "name": "Cockpit Systems Tour",
+  "description": "Sit in the captain's seat and explore every major instrument and control in the flight deck, from the primary flight display to the autopilot panel.",
+  "isExterior": false,
+  "stops": [
+    {
+      "componentId": "captain-yoke",
+      "narration": "Take a seat in the captain's position and find the control yoke.",
+      "arrivalNarration": "The captain's control yoke is directly in front of you. Pull back to pitch the nose up, push forward to pitch down. Turn left or right to roll the aircraft. The 737 uses a traditional yoke and column design rather than a sidestick."
+    },
+    {
+      "componentId": "rudder-pedals",
+      "narration": "Look down at the rudder pedals at your feet.",
+      "arrivalNarration": "Two pedals at your feet control the rudder. Press the left pedal to yaw left, right pedal to yaw right. The top of each pedal has toe brakes for ground braking. During crosswind landings, the rudder keeps the aircraft aligned with the runway."
+    },
+    {
+      "componentId": "pfd",
+      "narration": "Look up at the Primary Flight Display directly ahead.",
+      "arrivalNarration": "The PFD is the most important instrument. The attitude indicator in the center shows your pitch and bank angle. Airspeed is on the left tape, altitude on the right, heading at the bottom, and flight mode annunciations at the top."
+    },
+    {
+      "componentId": "nd",
+      "narration": "Now look at the Navigation Display, below or beside the PFD.",
+      "arrivalNarration": "The Navigation Display shows a map view with your flight plan route in magenta, nearby airports, terrain, and weather radar returns. You can set it to different ranges and modes depending on the phase of flight."
+    },
+    {
+      "componentId": "eicas",
+      "narration": "Look at the center displays showing engine instruments.",
+      "arrivalNarration": "The Engine Indicating and Crew Alerting System shows N1 fan speed, N2 core speed, exhaust gas temperature, fuel flow, and oil parameters for both engines. Warning and caution messages also appear here to alert the crew to system abnormalities."
+    },
+    {
+      "componentId": "mcp",
+      "narration": "Look up at the Mode Control Panel on the glare shield.",
+      "arrivalNarration": "The MCP sits above the main displays. Here you set the desired airspeed, heading, and altitude. Buttons engage autopilot modes: LNAV for lateral navigation, VNAV for vertical navigation, HDG SEL for heading select, and APP for approach mode."
+    },
+    {
+      "componentId": "overhead-panel",
+      "narration": "Look up at the overhead panel above your head.",
+      "arrivalNarration": "The overhead panel contains switches for every aircraft system: electrical, hydraulic, fuel, pressurization, air conditioning, lighting, and fire protection. During a normal flow check, pilots scan from left to right, top to bottom, verifying each switch is in its correct position."
+    },
+    {
+      "componentId": "throttle-quadrant",
+      "narration": "Reach to the center pedestal for the throttle quadrant.",
+      "arrivalNarration": "The throttle quadrant sits between the two pilots on the center pedestal. Two thrust levers control engine power — push forward for more thrust, pull back to reduce. The speed brake handle and reverse thrust levers are also here."
+    },
+    {
+      "componentId": "fmc",
+      "narration": "Look down at the Flight Management Computer on the center pedestal.",
+      "arrivalNarration": "The FMC Control Display Unit has a small screen and alphanumeric keypad. Pilots program the flight route, enter performance data, and manage navigation through this computer. It calculates optimal speeds, fuel burn, and time estimates for the entire flight."
+    },
+    {
+      "componentId": "first-officer-yoke",
+      "narration": "Finally, look across to the first officer's control yoke.",
+      "arrivalNarration": "The first officer's yoke is mechanically linked to the captain's — both move in unison. The first officer has their own PFD and ND, providing full redundancy. Either pilot can fly the aircraft from either seat. Cockpit tour complete!"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ namespace AircraftExplorer.Modes;
 
 public class MainMenuMode : IAppMode
 {
-    private readonly string[] _menuItems = ["Explore Aircraft", "Settings", "Quit"];
+    private readonly string[] _menuItems = ["Explore Aircraft", "Guided Tours", "Settings", "Quit"];
     private int _selectedIndex;
     private ModeContext _context = null!;
 
@@ -56,8 +56,9 @@ public class MainMenuMode : IAppMode
         return _selectedIndex switch
         {
             0 => ModeResult.SwitchTo(new AircraftSelectMode()),
-            1 => ModeResult.PushMode(new SettingsMode()),
-            2 => ConfirmQuit(),
+            1 => ModeResult.PushMode(new TourAircraftSelectMode()),
+            2 => ModeResult.PushMode(new SettingsMode()),
+            3 => ConfirmQuit(),
             _ => ModeResult.Stay
         };
     }

@@ -52,6 +52,7 @@ public sealed class KeyboardInputProvider : IInputProvider
         Keys.Delete => InputAction.RudderRight,
         Keys.Home => InputAction.ThrottleUp,
         Keys.End => InputAction.ThrottleDown,
+        Keys.K => InputAction.Quiz,
         _ => null
     };
 }

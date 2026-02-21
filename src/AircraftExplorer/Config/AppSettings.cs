@@ -11,6 +11,7 @@ public class AppSettings
     public float ToneVolume { get; set; } = 0.5f;
     public string AircraftDataPath { get; set; } = "Data/Aircraft";
     public string EducationDataPath { get; set; } = "Data/Education";
+    public string TourDataPath { get; set; } = "Data/Tours";
     public string ThrottleAxis { get; set; } = "Slider0";
     public bool InvertThrottle { get; set; }
 

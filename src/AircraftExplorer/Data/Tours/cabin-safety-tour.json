@@ -1,0 +1,53 @@
+{
+  "id": "cabin-safety-tour",
+  "name": "Cabin Safety Equipment Tour",
+  "description": "Explore the cabin safety features that keep passengers safe, from emergency exits and evacuation slides to oxygen systems and safety equipment.",
+  "isExterior": false,
+  "stops": [
+    {
+      "componentId": "forward-exit-door",
+      "narration": "Start at the forward left entry door, the main boarding door.",
+      "arrivalNarration": "The forward left door is the primary boarding entrance. In an emergency, this door opens to reveal an evacuation slide that inflates automatically when armed. The slide can also serve as a life raft on overwater flights."
+    },
+    {
+      "componentId": "forward-galley-unit",
+      "narration": "Move into the forward galley area just behind the cockpit.",
+      "arrivalNarration": "The forward galley contains emergency equipment storage: a fire extinguisher, crash axe, first aid kit, and megaphone. Crew members know exactly where each item is located for rapid access during emergencies."
+    },
+    {
+      "componentId": "passenger-seats-row-1",
+      "narration": "Walk into the cabin to the first row of passenger seats.",
+      "arrivalNarration": "Row 1 seats. Look in the seat pocket for the safety card — it shows emergency exit locations, brace positions, and how to use the life vest. Every passenger should review this card before every flight."
+    },
+    {
+      "componentId": "overhead-bins",
+      "narration": "Look up at the overhead bins above the seats.",
+      "arrivalNarration": "Above the overhead bins are passenger oxygen panels. If the cabin loses pressurization, these panels drop open automatically and oxygen masks fall out. Pull the mask toward you to start the flow of oxygen."
+    },
+    {
+      "componentId": "overwing-exit-left",
+      "narration": "Walk aft to the left overwing emergency exit.",
+      "arrivalNarration": "The overwing exit is a hatch-type door located over the wing. In an emergency, pull the handle, remove the hatch and place it on the seats, then step onto the wing and slide down the trailing edge. Passengers seated here must be willing and able to operate this exit."
+    },
+    {
+      "componentId": "overwing-exit-right",
+      "narration": "Cross the aisle to the right overwing exit.",
+      "arrivalNarration": "The right overwing exit is identical to the left. Having exits on both sides ensures evacuation can proceed regardless of which side has hazards like fire or debris outside."
+    },
+    {
+      "componentId": "passenger-seats-aft-cabin",
+      "narration": "Continue aft through the cabin to the rear section.",
+      "arrivalNarration": "The aft cabin seating area. Under each seat is a life vest in a pouch. In an overwater emergency, retrieve the vest, put it on over your head, pull the straps tight, but do not inflate until you exit the aircraft."
+    },
+    {
+      "componentId": "aft-galley-unit",
+      "narration": "Move to the aft galley area near the rear of the cabin.",
+      "arrivalNarration": "The aft galley also stores emergency equipment including a fire extinguisher, flashlights, and a portable oxygen bottle. There may also be additional first aid supplies and a defibrillator stored nearby."
+    },
+    {
+      "componentId": "aft-exit-door",
+      "narration": "Finally, head to the aft left entry door.",
+      "arrivalNarration": "The aft exit door is the last stop on our safety tour. Like the forward door, it has an armed evacuation slide. In a full evacuation, all usable exits are opened simultaneously. The goal is to evacuate all passengers within 90 seconds. Tour complete!"
+    }
+  ]
+}

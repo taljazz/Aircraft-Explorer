@@ -43,6 +43,12 @@ public interface ISpatialAudioService : IDisposable
     /// <summary>Plays a fast triple tone indicating arrival at a component.</summary>
     void PlayComponentArrivedTone();
 
+    /// <summary>Plays an ascending 3-note chime for a correct quiz answer.</summary>
+    void PlayCorrectAnswerTone();
+
+    /// <summary>Plays a descending 2-note buzz for an incorrect quiz answer.</summary>
+    void PlayIncorrectAnswerTone();
+
     /// <summary>Gets the current tone volume (0.0 to 1.0).</summary>
     float ToneVolume { get; }
 

@@ -29,5 +29,6 @@ public enum InputAction
     RudderLeft,
     RudderRight,
     ThrottleUp,
-    ThrottleDown
+    ThrottleDown,
+    Quiz
 }

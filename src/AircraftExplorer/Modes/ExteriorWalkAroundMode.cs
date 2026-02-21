@@ -61,6 +61,9 @@ public class ExteriorWalkAroundMode : NavigationModeBase
                 AnnounceCurrentPosition();
                 return ModeResult.Stay;
 
+            case InputAction.Select:
+                return HandleSelect();
+
             case InputAction.Info:
                 return GatherAndShowTopics(3.0);
 
@@ -71,12 +74,15 @@ public class ExteriorWalkAroundMode : NavigationModeBase
             case InputAction.JumpToComponent:
                 return ShowJumpList();
 
+            case InputAction.Quiz:
+                return GatherQuizQuestions(3.0);
+
             case InputAction.Help:
                 Context.Speech.Speak(
                     "Walk-around mode. Arrow keys to walk. " +
                     "Page Up and Page Down to move vertically. " +
                     "T to switch to grid view. C to announce position. " +
-                    "I for information. J to jump to a component. Escape to return to interior.",
+                    "I for information. K for quiz. J to jump to a component. Enter to interact. Escape to return to interior.",
                     true);
                 return ModeResult.Stay;
 
@@ -87,5 +93,34 @@ public class ExteriorWalkAroundMode : NavigationModeBase
             default:
                 return ModeResult.Stay;
         }
+    }
+
+    private ModeResult HandleSelect()
+    {
+        var nearby = Navigator.GetNearbyComponents(Position, 0.5);
+
+        if (nearby.Count > 0)
+        {
+            var component = nearby[0];
+            if (component.InteractionSteps.Count > 0)
+            {
+                Context.SpatialAudio.StopComponentBeacon();
+                return ModeResult.PushMode(new ComponentInteractionMode(component));
+            }
+            else if (!string.IsNullOrEmpty(component.InteractionText))
+            {
+                Context.Speech.Speak(component.InteractionText, true);
+            }
+            else
+            {
+                Context.Speech.Speak(component.Description, true);
+            }
+        }
+        else
+        {
+            Context.Speech.Speak("Nothing to interact with here.", true);
+        }
+
+        return ModeResult.Stay;
     }
 }
