@@ -57,7 +57,8 @@ public abstract class NavigationModeBase : IAppMode
             var zone = Navigator.GetZoneAt(Position);
             var nearby = Navigator.GetNearbyComponents(Position);
             var announcement = NavigationAnnouncer.BuildFullContextAnnouncement(
-                Position, aircraft, zone, nearby);
+                Position, aircraft, zone, nearby,
+                Context.Settings.Navigation.AnnounceNearbyComponents);
             Context.Speech.Speak($"{GetResumePrefix()}. {announcement}", true);
             return;
         }
@@ -73,13 +74,15 @@ public abstract class NavigationModeBase : IAppMode
 
         if (Context.SelectedAircraft is not null)
             Context.SpatialAudio.PlayMovementTone(Position, Context.SelectedAircraft.GridBounds);
-        StartBeaconIfNearComponent();
+        if (Context.Settings.Navigation.AnnounceNearbyComponents)
+            StartBeaconIfNearComponent();
     }
 
     protected ModeResult HandleMovement(int dx, int dy, int dz)
     {
         var result = Navigator.TryMove(Position, dx, dy, dz);
         var aircraft = Context.SelectedAircraft!;
+        var navSettings = Context.Settings.Navigation;
 
         if (!result.Success)
         {
@@ -99,14 +102,14 @@ public abstract class NavigationModeBase : IAppMode
         Context.SpatialAudio.PlayMovementTone(Position, aircraft.GridBounds, dx, dy, dz);
 
         // Zone transition chime
-        if (result.ZoneChanged)
+        if (navSettings.AnnounceZoneChanges && result.ZoneChanged)
         {
             bool ascending = Position.Y > previousPosition.Y || Position.Z > previousPosition.Z;
             Context.SpatialAudio.PlayZoneTransitionTone(ascending);
         }
 
         // Component beacon — triple tone on arrival, pulsing when approaching
-        if (result.NearbyComponents.Count > 0)
+        if (navSettings.AnnounceNearbyComponents && result.NearbyComponents.Count > 0)
         {
             var closest = result.NearbyComponents[0];
             double distance = Position.DistanceTo(closest.Coordinate);
@@ -115,13 +118,19 @@ public abstract class NavigationModeBase : IAppMode
             else
                 Context.SpatialAudio.StartComponentBeacon(closest.Coordinate, distance);
         }
+        else if (navSettings.AnnounceNearbyComponents)
+        {
+            Context.SpatialAudio.StopComponentBeacon();
+        }
         else
         {
             Context.SpatialAudio.StopComponentBeacon();
         }
 
         var announcement = NavigationAnnouncer.BuildMovementAnnouncement(
-            dx, dy, dz, result, Position, aircraft);
+            dx, dy, dz, result, Position, aircraft,
+            navSettings.AnnounceZoneChanges,
+            navSettings.AnnounceNearbyComponents);
         Context.Speech.Speak(announcement, true);
 
         return ModeResult.Stay;
@@ -134,7 +143,8 @@ public abstract class NavigationModeBase : IAppMode
         var aircraft = Context.SelectedAircraft!;
 
         var announcement = NavigationAnnouncer.BuildFullContextAnnouncement(
-            Position, aircraft, zone, nearby);
+            Position, aircraft, zone, nearby,
+            Context.Settings.Navigation.AnnounceNearbyComponents);
         Context.Speech.Speak(announcement, true);
 
         // Re-emit position tone so user can hear their spatial location

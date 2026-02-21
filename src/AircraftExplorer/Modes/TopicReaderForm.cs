@@ -9,8 +9,11 @@ namespace AircraftExplorer.Modes;
 public sealed class TopicReaderForm : Form
 {
     public TopicReaderForm(EducationTopic topic)
+        : this(topic.Title, $"{topic.Title}\r\n{topic.Category}\r\n\r\n{topic.Content}") { }
+
+    public TopicReaderForm(string title, string content)
     {
-        Text = topic.Title;
+        Text = title;
         Size = new Size(700, 500);
         StartPosition = FormStartPosition.CenterParent;
         BackColor = Color.FromArgb(30, 30, 30);
@@ -22,7 +25,7 @@ public sealed class TopicReaderForm : Form
 
         var textBox = new TextBox
         {
-            Text = $"{topic.Title}\r\n{topic.Category}\r\n\r\n{topic.Content}",
+            Text = content,
             Multiline = true,
             ReadOnly = true,
             ScrollBars = ScrollBars.Vertical,
@@ -31,7 +34,7 @@ public sealed class TopicReaderForm : Form
             ForeColor = Color.White,
             Font = new Font("Segoe UI", 12f),
             WordWrap = true,
-            AccessibleName = topic.Title,
+            AccessibleName = title,
             AccessibleRole = AccessibleRole.Text,
             TabStop = true
         };

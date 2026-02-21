@@ -176,14 +176,16 @@ public static class NavigationAnnouncer
         int dx, int dy, int dz,
         MovementResult result,
         Coordinate3D position,
-        AircraftModel aircraft)
+        AircraftModel aircraft,
+        bool announceZoneChanges = true,
+        bool announceNearbyComponents = true)
     {
         var parts = new List<string>();
 
         parts.Add(DescribeMovement(dx, dy, dz));
 
         // Zone info: name on change, description on first entry
-        if (result.ZoneChanged && result.CurrentZone is not null)
+        if (announceZoneChanges && result.ZoneChanged && result.CurrentZone is not null)
         {
             parts.Add(result.CurrentZone.Name);
             if (!string.IsNullOrWhiteSpace(result.CurrentZone.Description))
@@ -191,9 +193,12 @@ public static class NavigationAnnouncer
         }
 
         // Nearby components with bearings
-        var componentDesc = DescribeNearbyComponents(position, result.NearbyComponents);
-        if (componentDesc is not null)
-            parts.Add(componentDesc);
+        if (announceNearbyComponents)
+        {
+            var componentDesc = DescribeNearbyComponents(position, result.NearbyComponents);
+            if (componentDesc is not null)
+                parts.Add(componentDesc);
+        }
 
         // Structural edge descriptions for exterior zones
         if (result.CurrentZone is { IsExterior: true })
@@ -218,7 +223,8 @@ public static class NavigationAnnouncer
         Coordinate3D position,
         AircraftModel aircraft,
         Zone? zone,
-        IReadOnlyList<Component> nearbyComponents)
+        IReadOnlyList<Component> nearbyComponents,
+        bool announceNearbyComponents = true)
     {
         var parts = new List<string>();
 
@@ -238,9 +244,12 @@ public static class NavigationAnnouncer
         parts.Add(DescribeRelativePosition(position, aircraft));
 
         // Components with bearings
-        var componentDesc = DescribeNearbyComponents(position, nearbyComponents);
-        if (componentDesc is not null)
-            parts.Add(componentDesc);
+        if (announceNearbyComponents)
+        {
+            var componentDesc = DescribeNearbyComponents(position, nearbyComponents);
+            if (componentDesc is not null)
+                parts.Add(componentDesc);
+        }
 
         // Boundary proximity
         var boundaryWarning = DescribeBoundaryProximity(position, aircraft.GridBounds);

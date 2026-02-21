@@ -30,7 +30,8 @@ public class InteriorExplorationMode : NavigationModeBase
 
         context.SpatialAudio.UpdateListenerPosition(Position);
         context.SpatialAudio.PlayMovementTone(Position, aircraft.GridBounds);
-        StartBeaconIfNearComponent();
+        if (context.Settings.Navigation.AnnounceNearbyComponents)
+            StartBeaconIfNearComponent();
     }
 
     public override ModeResult HandleInput(InputAction action)

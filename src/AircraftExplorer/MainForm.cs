@@ -73,9 +73,9 @@ public sealed class MainForm : Form
 
     private void OnKeyDown(object? sender, KeyEventArgs e)
     {
-        if (KeyboardInputProvider.IsMappedKey(e.KeyCode))
+        if (KeyboardInputProvider.IsMappedKey(e.KeyData))
         {
-            _keyboard.HandleKeyDown(e.KeyCode);
+            _keyboard.HandleKeyDown(e.KeyData);
             e.Handled = true;
             e.SuppressKeyPress = true;
         }

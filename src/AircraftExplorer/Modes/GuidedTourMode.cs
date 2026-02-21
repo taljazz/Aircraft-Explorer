@@ -12,6 +12,7 @@ public class GuidedTourMode : NavigationModeBase
     private List<ResolvedStop> _stops = [];
     private int _currentStopIndex;
     private bool _awaitingContinue;
+    private string _lastTourMessage = "";
 
     public override string ModeName => "Guided Tour";
     protected override bool IsExteriorFilter => _tour.IsExterior;
@@ -65,7 +66,7 @@ public class GuidedTourMode : NavigationModeBase
         _awaitingContinue = false;
 
         var firstStop = _stops[0];
-        context.Speech.Speak(
+        SpeakTourMessage(
             $"Starting tour: {_tour.Name}. {_tour.Description} " +
             $"{_stops.Count} stops. First stop: {firstStop.Component.Name}. {firstStop.Stop.Narration}",
             true);
@@ -86,7 +87,7 @@ public class GuidedTourMode : NavigationModeBase
                 _currentStopIndex++;
                 if (_currentStopIndex >= _stops.Count)
                 {
-                    Context.Speech.Speak(
+                    SpeakTourMessage(
                         $"Tour complete! You have finished the {_tour.Name}.",
                         true);
                     return ModeResult.Pop;
@@ -94,7 +95,7 @@ public class GuidedTourMode : NavigationModeBase
 
                 _awaitingContinue = false;
                 var nextStop = _stops[_currentStopIndex];
-                Context.Speech.Speak(
+                SpeakTourMessage(
                     $"Next stop: {nextStop.Component.Name}. {nextStop.Stop.Narration}",
                     true);
                 StartBeaconToCurrentStop();
@@ -113,6 +114,24 @@ public class GuidedTourMode : NavigationModeBase
                 return ModeResult.Stay;
             }
 
+            if (action == InputAction.AnnounceObjective)
+            {
+                AnnounceObjectiveDirection();
+                return ModeResult.Stay;
+            }
+
+            if (action == InputAction.RepeatTourMessage)
+            {
+                RepeatLastTourMessage();
+                return ModeResult.Stay;
+            }
+
+            if (action == InputAction.ReadTopic)
+            {
+                OpenTourMessageReader();
+                return ModeResult.Stay;
+            }
+
             if (action == InputAction.Help)
             {
                 AnnounceHelp();
@@ -127,6 +146,18 @@ public class GuidedTourMode : NavigationModeBase
         {
             case InputAction.AnnouncePosition:
                 AnnouncePositionWithTourProgress();
+                return ModeResult.Stay;
+
+            case InputAction.AnnounceObjective:
+                AnnounceObjectiveDirection();
+                return ModeResult.Stay;
+
+            case InputAction.RepeatTourMessage:
+                RepeatLastTourMessage();
+                return ModeResult.Stay;
+
+            case InputAction.ReadTopic:
+                OpenTourMessageReader();
                 return ModeResult.Stay;
 
             case InputAction.Info:
@@ -180,7 +211,7 @@ public class GuidedTourMode : NavigationModeBase
                 _awaitingContinue = true;
                 Context.SpatialAudio.StopComponentBeacon();
                 Context.SpatialAudio.PlayComponentArrivedTone();
-                Context.Speech.Speak(
+                SpeakTourMessage(
                     $"Arrived at {currentTarget.Component.Name}. {currentTarget.Stop.ArrivalNarration} " +
                     $"Stop {_currentStopIndex + 1} of {_stops.Count}. Press Enter to continue.",
                     false);
@@ -207,7 +238,7 @@ public class GuidedTourMode : NavigationModeBase
             // Already at the stop
             _awaitingContinue = true;
             Context.SpatialAudio.PlayComponentArrivedTone();
-            Context.Speech.Speak(
+            SpeakTourMessage(
                 $"You are already at {target.Component.Name}. {target.Stop.ArrivalNarration} " +
                 $"Stop {_currentStopIndex + 1} of {_stops.Count}. Press Enter to continue.",
                 false);
@@ -231,6 +262,77 @@ public class GuidedTourMode : NavigationModeBase
         }
     }
 
+    private void AnnounceObjectiveDirection()
+    {
+        if (_currentStopIndex >= _stops.Count)
+        {
+            Context.Speech.Speak("Tour complete. No more stops.", true);
+            return;
+        }
+
+        var target = _stops[_currentStopIndex];
+        double distance = Position.DistanceTo(target.Component.Coordinate);
+
+        if (distance < 1.0)
+        {
+            Context.Speech.Speak(
+                $"{target.Component.Name} is within reach. Press Enter to continue.",
+                true);
+            return;
+        }
+
+        var directions = new List<string>();
+        int dy = target.Component.Coordinate.Y - Position.Y;
+        int dx = target.Component.Coordinate.X - Position.X;
+        int dz = target.Component.Coordinate.Z - Position.Z;
+
+        if (dy < 0) directions.Add("forward");
+        else if (dy > 0) directions.Add("aft");
+
+        if (dx > 0) directions.Add("starboard");
+        else if (dx < 0) directions.Add("port");
+
+        if (dz > 0) directions.Add("above");
+        else if (dz < 0) directions.Add("below");
+
+        string directionText = directions.Count > 0
+            ? string.Join(" and ", directions)
+            : "at your position";
+
+        Context.Speech.Speak(
+            $"{target.Component.Name}, {(int)Math.Round(distance)} steps away, {directionText}.",
+            true);
+    }
+
+    private void SpeakTourMessage(string message, bool interrupt)
+    {
+        _lastTourMessage = message;
+        Context.Speech.Speak(message, interrupt);
+    }
+
+    private void RepeatLastTourMessage()
+    {
+        if (string.IsNullOrEmpty(_lastTourMessage))
+        {
+            Context.Speech.Speak("No tour message to repeat.", true);
+            return;
+        }
+
+        Context.Speech.Speak(_lastTourMessage, true);
+    }
+
+    private void OpenTourMessageReader()
+    {
+        if (string.IsNullOrEmpty(_lastTourMessage))
+        {
+            Context.Speech.Speak("No tour message to read.", true);
+            return;
+        }
+
+        using var form = new TopicReaderForm("Tour Message", _lastTourMessage);
+        form.ShowDialog();
+    }
+
     private void AnnounceHelp()
     {
         Context.Speech.Speak(
@@ -238,6 +340,8 @@ public class GuidedTourMode : NavigationModeBase
             "Page Up and Page Down to move vertically. " +
             "Follow the beacon to each tour stop. " +
             "C to announce position and tour progress. " +
+            "Shift C to announce objective direction. " +
+            "Shift R to repeat last tour message. R to open it in a text window. " +
             "I for information. Enter to continue after arriving at a stop. Escape to exit tour.",
             true);
     }

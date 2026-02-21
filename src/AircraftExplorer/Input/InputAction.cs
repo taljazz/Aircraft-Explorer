@@ -30,5 +30,7 @@ public enum InputAction
     RudderRight,
     ThrottleUp,
     ThrottleDown,
-    Quiz
+    Quiz,
+    AnnounceObjective,
+    RepeatTourMessage
 }

@@ -42,11 +42,13 @@ public class ExteriorGridMode : NavigationModeBase
         {
             var nearby = Navigator.GetNearbyComponents(Position);
             var description = NavigationAnnouncer.BuildFullContextAnnouncement(
-                Position, aircraft, zones[0], nearby);
+                Position, aircraft, zones[0], nearby,
+                context.Settings.Navigation.AnnounceNearbyComponents);
             context.Speech.Speak($"Exterior view. {description} Use arrows to navigate sections. T to walk around.", true);
             context.SpatialAudio.UpdateListenerPosition(Position);
             context.SpatialAudio.PlayMovementTone(Position, aircraft.GridBounds);
-            StartBeaconIfNearComponent();
+            if (context.Settings.Navigation.AnnounceNearbyComponents)
+                StartBeaconIfNearComponent();
         }
         else
         {
