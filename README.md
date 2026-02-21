@@ -17,6 +17,7 @@ A screen-reader-accessible Windows application for exploring Boeing 737 and 777 
 - **Arrival indicator** — A fast triple tone plays when you reach a component
 - **Zone transition chimes** — Ascending or descending two-note chimes when crossing zone boundaries
 - **Boundary warnings** — A low tone when you reach the edge of the navigable area
+- All audio cues respect settings — disable nearby component or zone change announcements in Settings
 
 ### Flight Hardware Support
 - Connect a yoke, joystick, or throttle quadrant via USB
@@ -46,6 +47,9 @@ A screen-reader-accessible Windows application for exploring Boeing 737 and 777 
   - **Cabin Safety Equipment** (9 interior stops) — emergency exits, slides, oxygen, life vests
   - **Cockpit Systems** (10 interior stops) — sit in the captain's seat and learn every instrument
 - Audio beacon guides you to each stop with narration on arrival
+- **Shift+C** — Announce distance and direction to the current tour objective
+- **Shift+R** — Repeat the last tour narration message
+- **R** — Open the last tour message in a readable text window for review at your own pace
 
 ### Education System
 - 148 education topics covering flight controls, cockpit instruments, engines, landing gear, cabin systems, safety equipment, and more
@@ -90,6 +94,14 @@ Seven Boeing variants are included, each with detailed 3D component layouts, zon
 | H / F1 | Help for the current mode |
 | \- / = | Decrease / increase tone volume |
 | Q | Quit |
+
+### Guided Tour Keys
+
+| Key | Action |
+|-----|--------|
+| Shift+C | Announce distance and direction to current tour objective |
+| Shift+R | Repeat the last tour narration message |
+| R | Open the last tour message in a readable text window |
 
 ## Requirements
 
