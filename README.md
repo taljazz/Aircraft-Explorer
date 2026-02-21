@@ -24,6 +24,29 @@ A screen-reader-accessible Windows application for exploring Boeing 737 and 777 
 - Button mapping for Select (trigger) and Back (secondary button)
 - Supported via SharpDX DirectInput
 
+### Component Interactions
+- Press **Enter** at a component for multi-step interaction walkthroughs
+- Engine startup sequences, flap extension stages, landing gear retraction, cockpit instrument scans, door operations, and more
+- 473 interaction steps across all 7 aircraft with vivid, sensory-rich descriptions
+
+### Structural Shape Announcements
+- In exterior mode, hear announcements as you approach structural edges
+- Wing tips, leading and trailing edges, stabilizer tips, fin top, engine inlet and exhaust, nose tip, tail cone
+- Helps build a mental model of the aircraft's 3D shape while walking around
+
+### Quiz System
+- Press **K** near any component to start a location-based quiz
+- 216 multiple-choice questions drawn from nearby education topics
+- Audio feedback — ascending chime for correct, descending buzz for incorrect
+- Explanations after each answer with running score tracking
+
+### Guided Tours
+- Three beacon-guided tours accessible from the main menu:
+  - **Pre-Flight Walk-Around** (12 exterior stops) — inspect the aircraft like a pilot
+  - **Cabin Safety Equipment** (9 interior stops) — emergency exits, slides, oxygen, life vests
+  - **Cockpit Systems** (10 interior stops) — sit in the captain's seat and learn every instrument
+- Audio beacon guides you to each stop with narration on arrival
+
 ### Education System
 - 148 education topics covering flight controls, cockpit instruments, engines, landing gear, cabin systems, safety equipment, and more
 - Topics are context-aware — press **I** near a component to see relevant topics
@@ -56,9 +79,10 @@ Seven Boeing variants are included, each with detailed 3D component layouts, zon
 |-----|--------|
 | Arrow Keys | Move forward, backward, left, right |
 | Page Up / Page Down | Move up / down (vertical) |
-| Enter | Select / interact |
+| Enter | Select / interact with component |
 | Escape | Go back |
 | I | Show education topics for nearby components |
+| K | Start a quiz on nearby components |
 | R | Open selected topic in a readable text window |
 | J | Jump to a component from a list |
 | T | Toggle between exterior walk-around and grid view |
@@ -70,9 +94,9 @@ Seven Boeing variants are included, each with detailed 3D component layouts, zon
 ## Requirements
 
 - Windows 10 or later
-- .NET 8.0 Runtime (win-x64)
 - A screen reader (NVDA, JAWS, or similar) for speech output
 - Optional: USB flight yoke, joystick, or throttle for flight control mode
+- .NET 8.0 Runtime only needed if building from source (the release download is self-contained)
 
 ## Building
 
